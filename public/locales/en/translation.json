@@ -1,0 +1,7 @@
+{
+  "greeting": "hello world",
+  "description": {
+    "line1": "welcome to this world",
+    "line2": "take a seat and enjoy the trip"
+  }
+}
