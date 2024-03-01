@@ -1,9 +1,9 @@
 import { Navigate, createBrowserRouter } from "react-router-dom";
-import Home from "./pages/Home";
-import NotFound from "./pages/NotFound";
+import Home from "./pages/default/Home";
+import NotFound from "./pages/default/NotFound";
 // import GuestLayout from "./components/GuestLayout";
 import DefaultLayout from "./components/DefaultLayout";
-import Rooms from "./pages/Rooms";
+import Rooms from "./pages/default/Rooms";
 // import Dashboard from "./pages/dashboard/Dashboard";
 
 const router = createBrowserRouter([
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "rooms",
+        path: "/rooms",
         element: <Rooms />,
       },
     ],
