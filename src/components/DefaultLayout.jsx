@@ -7,9 +7,10 @@ import { useState } from "react";
 const DefaultLayout = () => {
   const [hidden, setHidden] = useState(false);
   const { scrollY } = useScroll();
+  const vheight = window.innerHeight;
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
-    if (latest > previous && latest > 150) {
+    if (latest > previous && latest > vheight + 150) {
       setHidden(true);
     } else {
       setHidden(false);
@@ -17,9 +18,9 @@ const DefaultLayout = () => {
   });
   return (
     <>
-      <div className="snap-y">
+      <div className="">
         {/* To call color from tailwind.config, use -{nameOfKey} ex: text-primary */}
-        <header className="w-full h-screen snap-center bg-secondary"></header>
+        <header className="w-full h-screen bg-secondary"></header>
         <motion.div
           variants={{
             visible: { y: 0 },
@@ -27,14 +28,26 @@ const DefaultLayout = () => {
           }}
           animate={hidden ? "hidden" : "visible"}
           transition={{ duration: 0.35, ease: "easeInOut" }}
-          className="snap-center bg-neutral-950 sticky top-0"
+          className="bg-neutral-950 sticky top-0"
         >
           <nav>
             <ShiftingDropDown />
           </nav>
         </motion.div>
         <Outlet />
-        <footer className="h-screen snap-center">
+        <footer className="h-screen">
+          <Footer />
+        </footer>
+        <footer className="h-screen">
+          <Footer />
+        </footer>
+        <footer className="h-screen">
+          <Footer />
+        </footer>
+        <footer className="h-screen">
+          <Footer />
+        </footer>
+        <footer className="h-screen">
           <Footer />
         </footer>
       </div>
