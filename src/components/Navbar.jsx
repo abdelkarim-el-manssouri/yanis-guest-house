@@ -18,13 +18,13 @@ export const ShiftingDropDown = () => {
           <img
             src="https://yanisguesthouse.com/images/logo.png"
             alt="logo"
-            className="w-28 h-14 -mt-1"
+            className="w-28 h-14"
           />
         </Link>
-        <div className="flex justify-between md:justify-end lg:justify-between pl-1.5 md:pr-3 lg:pl-14 mt-4 md:mt-0 gap-3 md:gap-0 md:col-span-2">
+        <div className="flex justify-between items-center md:justify-end lg:justify-between pl-1.5 md:pr-3 lg:pl-14 mt-4 md:mt-0 gap-3 md:gap-0 md:col-span-2">
           <Tabs />
           <div className="md:flex">
-            <Link className="flex items-center  gap-1 rounded-full w-fit h-8 px-3 py-1.5 text-sm capitalize transition-colors hover:bg-neutral-800 hover:text-neutral-100 text-neutral-400">
+            <Link className="flex items-center gap-1 rounded-full w-fit h-8 px-3 py-1.5 text-sm capitalize transition-colors hover:bg-neutral-800 hover:text-neutral-100 text-neutral-400">
               Book now
             </Link>
           </div>

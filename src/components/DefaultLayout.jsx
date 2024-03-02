@@ -1,6 +1,5 @@
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { Outlet } from "react-router-dom";
-import "../App.css";
 import { ShiftingDropDown } from "./Navbar";
 import Footer from "./Footer";
 import { useState } from "react";
@@ -18,7 +17,7 @@ const DefaultLayout = () => {
   });
   return (
     <>
-      <div className="grid-content snap-y">
+      <div className="snap-y">
         {/* To call color from tailwind.config, use -{nameOfKey} ex: text-primary */}
         <header className="w-full h-screen snap-center bg-secondary"></header>
         <motion.div
@@ -35,18 +34,6 @@ const DefaultLayout = () => {
           </nav>
         </motion.div>
         <Outlet />
-        <footer className="h-screen snap-center">
-          <Footer />
-        </footer>
-        <footer className="h-screen snap-center">
-          <Footer />
-        </footer>
-        <footer className="h-screen snap-center">
-          <Footer />
-        </footer>
-        <footer className="h-screen snap-center">
-          <Footer />
-        </footer>
         <footer className="h-screen snap-center">
           <Footer />
         </footer>
