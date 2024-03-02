@@ -12,19 +12,25 @@ import { useTranslation } from "react-i18next";
 
 export const ShiftingDropDown = () => {
   return (
-    <div className="flex max-h-fit w-full bg-neutral-950 p-6 text-neutral-200 justify-center md:justify-between relative">
-      <Link to="/home">
-        <img
-          src="https://yanisguesthouse.com/images/logo.png"
-          alt="logo"
-          className="w-28 h-14 -mt-1 absolute -left-48 md:left-auto"
-        />
-      </Link>
-      <Tabs />
-      <Link className="flex items-center gap-1 rounded-full h-8 px-3 py-1.5 text-sm capitalize transition-colors hover:bg-neutral-800 hover:text-neutral-100 text-neutral-400">
-        Book now
-      </Link>
-    </div>
+    <>
+      <div className="md:grid md:grid-cols-3 justify-center md:gap-0 max-h-fit w-full bg-neutral-950 p-6 text-neutral-200">
+        <Link to="/home" className="flex justify-center md:justify-start">
+          <img
+            src="https://yanisguesthouse.com/images/logo.png"
+            alt="logo"
+            className="w-28 h-14 -mt-1"
+          />
+        </Link>
+        <div className="flex justify-between md:justify-end lg:justify-between pl-1.5 md:pr-3 lg:pl-14 mt-4 md:mt-0 gap-3 md:gap-0 md:col-span-2">
+          <Tabs />
+          <div className="md:flex">
+            <Link className="flex items-center  gap-1 rounded-full w-fit h-8 px-3 py-1.5 text-sm capitalize transition-colors hover:bg-neutral-800 hover:text-neutral-100 text-neutral-400">
+              Book now
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
@@ -45,7 +51,7 @@ const Tabs = () => {
   return (
     <div
       onMouseLeave={() => handleSetSelected(null)}
-      className="relative flex h-fit gap-2"
+      className="relative flex md:justify-center items-center h-fit gap-2"
     >
       {TABS.map((t) => {
         return (
