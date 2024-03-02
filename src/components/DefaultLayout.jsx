@@ -6,7 +6,8 @@ const DefaultLayout = () => {
   return (
     <>
       <div className="grid-content">
-        <header className="w-full h-screen bg-slate-500"></header>
+        {/* To call color from tailwind.config, use -{nameOfKey} ex: text-primary */}
+        <header className="w-full h-screen bg-secondary"></header>
         <div className="h-screen bg-neutral-950">
           <nav>
             <ShiftingDropDown />
