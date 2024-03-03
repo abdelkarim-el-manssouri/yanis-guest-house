@@ -8,3 +8,5 @@ i18n.use(LanguageDetector).use(initReactI18next).use(Backend).init({
   fallbackLng: "en",
   returnObjects: true,
 });
+
+export default i18n;

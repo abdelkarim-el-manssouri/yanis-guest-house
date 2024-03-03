@@ -11,10 +11,14 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 export const ShiftingDropDown = () => {
+  const { t } = useTranslation("translation");
   return (
     <>
       <div className="md:grid md:grid-cols-3 justify-center md:gap-0 max-h-fit w-full bg-neutral-950 p-6 text-neutral-200">
-        <Link to="/home" className="flex justify-center md:justify-start">
+        <Link
+          to="/home"
+          className="flex justify-center md:justify-start md:w-fit"
+        >
           <img
             src="https://yanisguesthouse.com/images/logo.png"
             alt="logo"
@@ -25,7 +29,7 @@ export const ShiftingDropDown = () => {
           <Tabs />
           <div className="md:flex">
             <Link className="flex items-center gap-1 rounded-full w-fit h-8 px-3 py-1.5 text-sm capitalize transition-colors hover:bg-neutral-800 hover:text-neutral-100 text-neutral-400">
-              Book now
+              {t("navContent.book")}
             </Link>
           </div>
         </div>
@@ -187,14 +191,13 @@ const Language = () => {
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
   };
-  // const { t } = useTranslation();
-  // const { line1, line2 } = t("description");
+  const [t] = useTranslation(["translation", "footer"]);
+
   return (
     <>
       <h3 className="mb-2 text-sm font-medium capitalize">
-        Select your prefered Language
+        {t("navContent.language")}
       </h3>
-      {/* <h2>{t("greeting")}</h2> */}
       <div className="flex justify-around">
         {languages.map((lng) => {
           return (
@@ -213,68 +216,69 @@ const Language = () => {
 };
 
 const Pages = () => {
+  const { t } = useTranslation("translation");
   return (
     <>
       <h3 className="mb-2 text-sm font-medium capitalize">
-        navigate to a page
+        {t("navContent.navigate")}
       </h3>
       <div className="flex justify-around">
         <Link
           to="/"
           className="text-sm text-neutral-400 my-3 hover:text-neutral-50 duration-200 relative after:absolute after:top-0.5 after:ml-5 after:bg-neutral-400 after:w-0.5 after:h-full after:rounded-md"
         >
-          Home
+          {t("navContent.links.home")}
         </Link>
         <Link
           to="/"
           className="text-sm text-neutral-400 my-3 hover:text-neutral-50 duration-200 relative after:absolute after:top-0.5 after:ml-5 after:bg-neutral-400 after:w-0.5 after:h-full after:rounded-md"
         >
-          Rooms
+          {t("navContent.links.rooms")}
         </Link>
         <Link
           to="/"
           className="text-sm text-neutral-400 my-3 hover:text-neutral-50 duration-200 relative after:absolute after:top-0.5 after:ml-5 after:bg-neutral-400 after:w-0.5 after:h-full after:rounded-md"
         >
-          Restoration
+          {t("navContent.links.resto")}
         </Link>
         <Link
           to="/"
           className="text-sm text-neutral-400 my-3 hover:text-neutral-50 duration-200 relative after:absolute after:top-0.5 after:ml-5 after:bg-neutral-400 after:w-0.5 after:h-full after:rounded-md"
         >
-          Gallery
+          {t("navContent.links.gal")}
         </Link>
       </div>
     </>
   );
 };
 
-const Pricing = () => {
-  return (
-    <div className="grid grid-cols-3 gap-4 divide-x divide-neutral-700">
-      <a
-        href="#"
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
-      >
-        <FiHome className="mb-2 text-xl text-indigo-300" />
-        <span className="text-xs">Startup</span>
-      </a>
-      <a
-        href="#"
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
-      >
-        <FiBarChart2 className="mb-2 text-xl text-indigo-300" />
-        <span className="text-xs">Scaleup</span>
-      </a>
-      <a
-        href="#"
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
-      >
-        <FiPieChart className="mb-2 text-xl text-indigo-300" />
-        <span className="text-xs">Enterprise</span>
-      </a>
-    </div>
-  );
-};
+// const Pricing = () => {
+//   return (
+//     <div className="grid grid-cols-3 gap-4 divide-x divide-neutral-700">
+//       <a
+//         href="#"
+//         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
+//       >
+//         <FiHome className="mb-2 text-xl text-indigo-300" />
+//         <span className="text-xs">Startup</span>
+//       </a>
+//       <a
+//         href="#"
+//         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
+//       >
+//         <FiBarChart2 className="mb-2 text-xl text-indigo-300" />
+//         <span className="text-xs">Scaleup</span>
+//       </a>
+//       <a
+//         href="#"
+//         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
+//       >
+//         <FiPieChart className="mb-2 text-xl text-indigo-300" />
+//         <span className="text-xs">Enterprise</span>
+//       </a>
+//     </div>
+//   );
+// };
 
 const Blog = () => {
   return (

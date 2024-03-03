@@ -3,6 +3,8 @@ import { Outlet } from "react-router-dom";
 import { ShiftingDropDown } from "./Navbar";
 import Footer from "./Footer";
 import { useState } from "react";
+// import AnimatedButton from "../UI/AnimatedButton";
+// import WaterDropGrid from "../UI/WaterDropGrid";
 
 const DefaultLayout = () => {
   const [hidden, setHidden] = useState(false);
@@ -34,7 +36,10 @@ const DefaultLayout = () => {
             <ShiftingDropDown />
           </nav>
         </motion.div>
-        <div className="h-screen bg-primary"></div>
+        <div className="h-screen bg-primary">
+          {/* <AnimatedButton text="something" />
+          <WaterDropGrid /> */}
+        </div>
         <Outlet />
         <footer className="h-screen">
           <Footer />

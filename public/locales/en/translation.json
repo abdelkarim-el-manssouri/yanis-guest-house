@@ -1,7 +1,19 @@
 {
-  "greeting": "hello world",
-  "description": {
-    "line1": "welcome to this world",
-    "line2": "take a seat and enjoy the trip"
+  "navContent": {
+    "language": "select your prefered langauge",
+    "navigate": "navigate to a page",
+    "book": "book now",
+    "links": {
+      "home": "home",
+      "rooms": "rooms",
+      "resto": "restoration",
+      "gal": "gallery"
+    }
+  },
+  "footer": {
+    "location": "DR SOUDANI 540 targa road , marrakesh , morocco",
+    "contact": "0808651872 - 0632219063 - contact@yanisguesthouse.com",
+    "join": "join us",
+    "rights": "all rights are reserved for yanis guest house"
   }
 }

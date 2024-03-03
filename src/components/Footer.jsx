@@ -1,26 +1,24 @@
 import { Link } from "react-router-dom";
-// import { AnimatedText } from "./AnimatedText";
 import { FiFacebook, FiInstagram, FiMail, FiPhone } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
+// import { AnimatedText } from "../UI/AnimatedText";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const links = [
-    { code: "li", link: "home" },
+    { code: "ho", link: "home" },
     { code: "ro", link: "rooms" },
     { code: "re", link: "restoration" },
     { code: "gal", link: "galery" },
   ];
+  const { t } = useTranslation("translation");
   return (
     <>
       <div className="bg-beige h-screen grid grid-rows-5 md:grid-rows-6">
         <section className="h-fit bg-yellow-700 text-white p-4 md:p-6 flex justify-center items-center flex-wrap tracking-widest">
-          <p className="w-full text-center">
-            DR SOUDANI 540 route de targa , marrakech , maroc
-          </p>
-          <p className="w-full text-center">
-            0808651872 - 0632219063 - contact@yanisguesthouse.com
-          </p>
+          <p className="w-full text-center">{t("footer.location")}</p>
+          <p className="w-full text-center">{t("footer.contact")}</p>
         </section>
         <section className="grid h-full items-center">
           <ul className="flex flex-wrap justify-evenly md:justify-center md:gap-x-20">
@@ -50,7 +48,7 @@ const Footer = () => {
         </section> */}
         <section className="flex justify-center flex-wrap h-fit">
           <p className="flex justify-center text-xl w-full mt-4 md:mt-0">
-            join us
+            {t("footer.join")}
           </p>
           <div className="flex justify-center gap-6 my-5 md:my-6">
             <span className="flex justify-center items-center w-8 h-8 md:w-10 md:h-10  rounded-full hover:shadow-xl hover:shadow-gray-500 transition delay-[50] ease-in">
@@ -80,7 +78,7 @@ const Footer = () => {
         </section>
         <section className="h-full grid items-center">
           <div className="flex justify-center mx-8 pt-4 text-center relative before:absolute before:top-0 before:h-[0.5px] before:w-full before:bg-primary before:rounded-full">
-            &copy; all rights are reserved for yanis guest house - {currentYear}
+            &copy; {t("footer.rights")} - {currentYear}
           </div>
         </section>
       </div>
