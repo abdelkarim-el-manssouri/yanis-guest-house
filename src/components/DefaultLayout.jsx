@@ -34,19 +34,8 @@ const DefaultLayout = () => {
             <ShiftingDropDown />
           </nav>
         </motion.div>
+        <div className="h-screen bg-primary"></div>
         <Outlet />
-        <footer className="h-screen">
-          <Footer />
-        </footer>
-        <footer className="h-screen">
-          <Footer />
-        </footer>
-        <footer className="h-screen">
-          <Footer />
-        </footer>
-        <footer className="h-screen">
-          <Footer />
-        </footer>
         <footer className="h-screen">
           <Footer />
         </footer>
