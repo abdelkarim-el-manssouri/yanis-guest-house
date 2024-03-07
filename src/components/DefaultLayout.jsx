@@ -6,14 +6,15 @@ import { Children, useState } from "react";
 import Header from "./Header";
 // import AnimatedButton from "../UI/AnimatedButton";
 // import WaterDropGrid from "../UI/WaterDropGrid";
+// import AnimatedText from "../UI/AnimatedText";
 
-const DefaultLayout = () => {
+const DefaultLayout = ({ children }) => {
   const [hidden, setHidden] = useState(false);
   const { scrollY } = useScroll();
   const vheight = window.innerHeight;
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
-    if (latest > previous && latest > vheight + 100) {
+    if (latest > previous && latest > vheight + 70) {
       setHidden(true);
     } else {
       setHidden(false);
@@ -21,9 +22,9 @@ const DefaultLayout = () => {
   });
   return (
     <>
-      <div className="mx-auto">
+      <div className="mx-auto bg-beige">
         {/* To call color from tailwind.config, use -{nameOfKey} ex: text-primary */}
-        <header className="w-full h-screen bg-secondary">
+        <header className="w-full h-screen bg-primary">
           <Header />
         </header>
         <motion.div
@@ -33,16 +34,13 @@ const DefaultLayout = () => {
           }}
           animate={hidden ? "hidden" : "visible"}
           transition={{ duration: 0.35, ease: "easeInOut" }}
-          className="bg-neutral-950 sticky top-0"
+          className="bg-neutral-950 sticky top-0 z-[9999]"
         >
           <nav>
             <ShiftingDropDown />
           </nav>
         </motion.div>
-        <div className="h-screen bg-primary">
-          {/* <AnimatedButton text="something" /> */}
-          {/* <WaterDropGrid /> */}{" "}
-        </div>
+        <div className="">{children}</div>
         <Outlet />
         <footer className="h-screen">
           <Footer />
