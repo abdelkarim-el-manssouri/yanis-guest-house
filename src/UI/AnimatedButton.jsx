@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 const AnimatedButton = (props) => {
   const text = props.text;
   return (
-    <div className="flex min-h-[200px] items-center justify-center bg-slate-800 px-4">
+    <div>
       <SpotlightButton text={text} />
     </div>
   );
@@ -43,14 +43,15 @@ const SpotlightButton = ({ text }) => {
     <motion.button
       whileTap={{ scale: 0.985 }}
       ref={btnRef}
-      className="relative w-full max-w-xs overflow-hidden rounded-lg bg-slate-950 px-4 py-3 text-lg font-medium text-white"
+      className="relative w-fit max-w-xs overflow-hidden rounded-full bg-transparent px-4 py-1 text-sm font-light text-white"
+      // className="flex items-center gap-1 rounded-full w-fit h-8 px-3 py-1.5 text-sm capitalize transition-colors hover:bg-neutral-800 hover:text-neutral-100 text-neutral-400"
     >
       <span className="pointer-events-none relative z-10 mix-blend-difference">
         {text}
       </span>
       <span
         ref={spanRef}
-        className="pointer-events-none absolute left-[50%] top-[50%] h-32 w-32 -translate-x-[50%] -translate-y-[50%] rounded-full bg-slate-100"
+        className="pointer-events-none absolute left-[50%] top-[50%] h-10 w-10 -translate-x-[50%] -translate-y-[50%] rounded-full bg-slate-100"
       />
     </motion.button>
   );

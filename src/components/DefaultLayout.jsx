@@ -2,7 +2,7 @@ import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { Outlet } from "react-router-dom";
 import { ShiftingDropDown } from "./Navbar";
 import Footer from "./Footer";
-import { useState } from "react";
+import { Children, useState } from "react";
 import Header from "./Header";
 // import AnimatedButton from "../UI/AnimatedButton";
 // import WaterDropGrid from "../UI/WaterDropGrid";
@@ -13,7 +13,7 @@ const DefaultLayout = () => {
   const vheight = window.innerHeight;
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
-    if (latest > previous && latest > vheight + 150) {
+    if (latest > previous && latest > vheight + 100) {
       setHidden(true);
     } else {
       setHidden(false);
@@ -21,7 +21,7 @@ const DefaultLayout = () => {
   });
   return (
     <>
-      <div className="">
+      <div className="mx-auto">
         {/* To call color from tailwind.config, use -{nameOfKey} ex: text-primary */}
         <header className="w-full h-screen bg-secondary">
           <Header />
@@ -40,8 +40,8 @@ const DefaultLayout = () => {
           </nav>
         </motion.div>
         <div className="h-screen bg-primary">
-          {/* <AnimatedButton text="something" />
-          <WaterDropGrid /> */}
+          {/* <AnimatedButton text="something" /> */}
+          {/* <WaterDropGrid /> */}{" "}
         </div>
         <Outlet />
         <footer className="h-screen">
