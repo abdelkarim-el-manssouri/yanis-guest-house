@@ -230,7 +230,7 @@ const Pages = () => {
           {t("navContent.links.home")}
         </Link>
         <Link
-          to="/"
+          to="/rooms"
           className="text-sm text-neutral-400 my-3 hover:text-neutral-50 duration-200 relative after:absolute after:top-0.5 after:ml-5 after:bg-neutral-400 after:w-0.5 after:h-full after:rounded-md"
         >
           {t("navContent.links.rooms")}

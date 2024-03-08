@@ -2,13 +2,13 @@ import anime from "animejs";
 
 const WaterDropGrid = () => {
   return (
-    <div className="relative grid place-content-center bg-slate-900 px-8 py-12">
+    <div className="relative">
       <DotGrid />
     </div>
   );
 };
 
-const GRID_WIDTH = 25;
+const GRID_WIDTH = 15;
 const GRID_HEIGHT = 20;
 
 const DotGrid = () => {
@@ -41,12 +41,12 @@ const DotGrid = () => {
     for (let j = 0; j < GRID_HEIGHT; j++) {
       dots.push(
         <div
-          className="group cursor-crosshair rounded-full p-2 transition-colors hover:bg-slate-600"
+          className="group cursor-crosshair rounded-full p-2 transition-colors hover:bg-aubergine/20"
           data-index={index}
           key={`${i}-${j}`}
         >
           <div
-            className="dot-point h-2 w-2 rounded-full bg-gradient-to-b from-slate-700 to-slate-400 opacity-50 group-hover:from-indigo-600 group-hover:to-white"
+            className="dot-point h-2 w-2 rounded-full bg-gradient-to-b from-aubergine to-beige opacity-50 group-hover:from-aubergine group-hover:to-white"
             data-index={index}
           />
         </div>

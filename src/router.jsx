@@ -4,6 +4,7 @@ import NotFound from "./pages/default/NotFound";
 // import GuestLayout from "./components/GuestLayout";
 import DefaultLayout from "./components/DefaultLayout";
 import Rooms from "./pages/default/Rooms";
+import Activities from "./pages/default/Activities";
 // import Dashboard from "./pages/dashboard/Dashboard";
 
 const router = createBrowserRouter([
@@ -20,8 +21,12 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/rooms",
+        path: "/accommodations",
         element: <Rooms />,
+      },
+      {
+        path: "/activities",
+        element: <Activities />,
       },
     ],
   },

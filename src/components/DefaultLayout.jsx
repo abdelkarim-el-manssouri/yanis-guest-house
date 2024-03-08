@@ -2,13 +2,13 @@ import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { Outlet } from "react-router-dom";
 import { ShiftingDropDown } from "./Navbar";
 import Footer from "./Footer";
-import { Children, useState } from "react";
+import { useState } from "react";
 import Header from "./Header";
 // import AnimatedButton from "../UI/AnimatedButton";
 // import WaterDropGrid from "../UI/WaterDropGrid";
 // import AnimatedText from "../UI/AnimatedText";
 
-const DefaultLayout = ({ children }) => {
+const DefaultLayout = () => {
   const [hidden, setHidden] = useState(false);
   const { scrollY } = useScroll();
   const vheight = window.innerHeight;
@@ -40,7 +40,7 @@ const DefaultLayout = ({ children }) => {
             <ShiftingDropDown />
           </nav>
         </motion.div>
-        <div className="">{children}</div>
+        <div className=""></div>
         <Outlet />
         <footer className="h-screen">
           <Footer />

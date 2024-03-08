@@ -1,7 +1,8 @@
 import { useRef } from "react";
 import { AnimatedText } from "../../UI/AnimatedText";
 import { motion, useScroll, useTransform } from "framer-motion";
-// import HorizontalScroll from "../../components/HorizontalScroll";
+import HorizontalScroll from "../../components/HorizontalScroll";
+import WaterDropGrid from "../../UI/WaterDropGrid";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -34,7 +35,7 @@ const Home = () => {
         ref={ref}
         className="relative h-screen w-full flex justify-center bg-cover bg-no-repeat bg-center bg-[url('/src/assets/cozy-grey-wall.jpeg')]"
       >
-        <div className="absolute top-32 md:top-20 leading-8 w-[25ch] md:w-[50ch] lg:w-[80ch] uppercase">
+        <div className="absolute top-32 md:top-20 leading-8 w-[25ch] md:w-[50ch] lg:w-[80ch] uppercase [text-shadow:_1px_1px_0_rgb(0_0_0_/_40%)]">
           <AnimatedText text={textContent} />
         </div>
       </motion.section>
@@ -52,7 +53,9 @@ const Home = () => {
         </motion.p>
       </motion.section>
 
-      <section>{/* <HorizontalScroll /> */}</section>
+      <section>
+        <HorizontalScroll />
+      </section>
     </>
   );
 };
