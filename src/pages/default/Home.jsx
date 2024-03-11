@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { AnimatedText } from "../../UI/AnimatedText";
 import { motion, useScroll, useTransform } from "framer-motion";
 import HorizontalScroll from "../../components/HorizontalScroll";
-import WaterDropGrid from "../../UI/WaterDropGrid";
+// import WaterDropGrid from "../../UI/WaterDropGrid";
 import AnimatedButton from "../../UI/AnimatedButton";
 import { Link } from "react-router-dom";
 
@@ -59,14 +59,32 @@ const Home = () => {
         <HorizontalScroll />
       </section>
 
-      <section className="h-3/4 grid grid-cols-3 my-16 w-11/12 mx-auto">
+      <motion.section
+        variants={fadeInAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        transition={{ type: "spring", stiffness: 100 }}
+        className="h-3/4 grid grid-cols-3 my-16 w-11/12 mx-auto"
+      >
         <div className="h-full w-full flex justify-center items-end relative">
           {/* <WaterDropGrid /> */}
           <div className="z-10 absolute top-full md:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/4 md:-translate-y-1/2 w-[90%] md:p-5 mx-auto">
-            <h3 className="text-center mx-auto py-5 md:p-1.5 lg:p-3 my-6 md:my-3 lg:my-5 text-sm md:text-xl lg:text-3xl font-semibold w-[45ch] md:w-[45ch] bg-beige relative after:absolute after:w-0.5 after:h-full after:bg-beige after:-right-1.5 after:top-0 before:absolute before:w-1 before:h-full before:bg-beige before:-right-3 before:top-0">
+            <motion.h3
+              variants={fadeInAnimationVariants}
+              initial="initial"
+              whileInView="animate"
+              transition={{ type: "tween", duration: 1 }}
+              className="text-center mx-auto py-5 md:p-1.5 lg:p-3 my-6 md:my-3 lg:my-5 text-sm md:text-xl lg:text-3xl font-semibold w-[45ch] md:w-[45ch] bg-beige relative after:absolute after:w-0.5 after:h-full after:bg-beige after:-right-1.5 after:top-0 before:absolute before:w-1 before:h-full before:bg-beige before:-right-3 before:top-0"
+            >
               To return to yanis guest house time and time again
-            </h3>
-            <p className="p-2 -mt-3 md:mt-0 lg:p-6 mx-auto w-[50ch] md:w-[60ch] lg:w-[75ch] text-xs md:text-sm lg:text-base bg-beige relative after:absolute after:w-0.5 after:h-full after:bg-beige after:-right-1.5 after:top-0 before:absolute before:w-1 before:h-full before:bg-beige before:-right-3 before:top-0">
+            </motion.h3>
+            <motion.p
+              variants={fadeInAnimationVariants}
+              initial="initial"
+              whileInView="animate"
+              transition={{ type: "tween", duration: 2 }}
+              className="p-3 -mt-3 md:mt-0 lg:p-6 mx-auto w-[50ch] md:w-[60ch] lg:w-[75ch] text-xs md:text-sm lg:text-base bg-beige relative after:absolute after:w-0.5 after:h-full after:bg-beige after:-right-1.5 after:top-0 before:absolute before:w-1 before:h-full before:bg-beige before:-right-3 before:top-0"
+            >
               Our excellence is the result of tireless endeavour, the unfailing
               commitment of our employees, constant self-questioning, and
               innovations that are daring yet respectful of the past. This is
@@ -74,13 +92,19 @@ const Home = () => {
               the times while always remaining in tune with the here and now.
               Our greatest reward is the loyalty of our customers, who love
               coming back here because they are made to feel so at home.
-            </p>
+            </motion.p>
           </div>
-          <div className="absolute lg:relative -bottom-60 md:-bottom-6 lg:bottom-0">
+          <motion.div
+            variants={fadeInAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            transition={{ type: "tween", duration: 2.1 }}
+            className="absolute lg:relative -bottom-60 md:-bottom-6 lg:bottom-0"
+          >
             <AnimatedButton text="book now">
               <Link to="/book" />
             </AnimatedButton>
-          </div>
+          </motion.div>
         </div>
         <div className="col-span-3 md:col-span-2">
           <img
@@ -90,7 +114,7 @@ const Home = () => {
             loading="lazy"
           />
         </div>
-      </section>
+      </motion.section>
     </>
   );
 };
