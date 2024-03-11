@@ -26,7 +26,8 @@ export const ShiftingDropDown = () => {
         </div>
         <div className="flex justify-end items-center pr-4 mt-4 md:mt-0">
           <Link
-          // className="flex items-center gap-1 rounded-full w-fit h-8 px-3 py-1.5 text-sm capitalize transition-colors hover:bg-neutral-800 hover:text-neutral-100 text-neutral-400"
+            to="/accommodations"
+            // className="flex items-center gap-1 rounded-full w-fit h-8 px-3 py-1.5 text-sm capitalize transition-colors hover:bg-neutral-800 hover:text-neutral-100 text-neutral-400"
           >
             {/* {t("navContent.book")} */}
             <AnimatedButton text={t("navContent.book")} />
