@@ -17,6 +17,17 @@ const fadeInAnimationVariants = {
   },
 };
 
+const fadeInXAxisAnimationVariants = {
+  initial: {
+    opacity: 0,
+    x: -100,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+  },
+};
+
 const Home = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -70,7 +81,7 @@ const Home = () => {
           {/* <WaterDropGrid /> */}
           <div className="z-10 absolute top-full md:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/4 md:-translate-y-1/2 w-[90%] md:p-5 mx-auto">
             <motion.h3
-              variants={fadeInAnimationVariants}
+              variants={fadeInXAxisAnimationVariants}
               initial="initial"
               whileInView="animate"
               transition={{ type: "tween", duration: 1 }}
@@ -79,10 +90,10 @@ const Home = () => {
               To return to yanis guest house time and time again
             </motion.h3>
             <motion.p
-              variants={fadeInAnimationVariants}
+              variants={fadeInXAxisAnimationVariants}
               initial="initial"
               whileInView="animate"
-              transition={{ type: "tween", duration: 2 }}
+              transition={{ type: "tween", duration: 1.5 }}
               className="p-3 -mt-3 md:mt-0 lg:p-6 mx-auto w-[50ch] md:w-[60ch] lg:w-[75ch] text-xs md:text-sm lg:text-base bg-beige relative after:absolute after:w-0.5 after:h-full after:bg-beige after:-right-1.5 after:top-0 before:absolute before:w-1 before:h-full before:bg-beige before:-right-3 before:top-0"
             >
               Our excellence is the result of tireless endeavour, the unfailing
@@ -98,7 +109,7 @@ const Home = () => {
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
-            transition={{ type: "tween", duration: 2.1 }}
+            transition={{ type: "tween", duration: 1.8 }}
             className="absolute lg:relative -bottom-60 md:-bottom-6 lg:bottom-0"
           >
             <AnimatedButton text="book now">
