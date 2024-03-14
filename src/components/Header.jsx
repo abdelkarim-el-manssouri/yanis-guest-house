@@ -1,7 +1,31 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 
+const fadeFromTop = {
+  initial: {
+    y: -900,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
+const fadeFromBottom = {
+  initial: {
+    opacity: 0,
+    y: 900,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+  },
+};
+
 const Header = () => {
+  const h1Ref = useRef(null);
+  const h2Ref = useRef(null);
   // const parallax_el = document.querySelector(".parallax");
   // let xValue = 0,
   //   yValue = 0;
@@ -186,12 +210,23 @@ const Header = () => {
         className="parallax absolute z-[7] left-0 top-24 md:top-24 lg:top-28 text-center text-white uppercase w-full pointer-events-none"
       >
         <motion.h1
-          style={{}}
+          ref={h1Ref}
+          variants={fadeFromTop}
+          initial="initial"
+          animate="animate"
+          transition={{ type: "spring", stiffness: 15 }}
           className="font-thin text-5xl md:text-6xl lg:text-8xl leading-10 [text-shadow:_1px_2px_0_rgb(0_0_0_/_40%)] pointer-events-auto selection:bg-bordeaux selection:text-beige"
         >
           yanis
         </motion.h1>
-        <motion.h2 className="font-bold text-5xl md:text-6xl lg:text-8xl leading-tight [text-shadow:_1px_2px_0_rgb(0_0_0_/_40%)] pointer-events-auto selection:bg-bordeaux selection:text-beige">
+        <motion.h2
+          ref={h2Ref}
+          variants={fadeFromBottom}
+          initial="initial"
+          animate="animate"
+          transition={{ type: "spring", stiffness: 15 }}
+          className="font-bold text-5xl md:text-6xl lg:text-8xl leading-tight [text-shadow:_1px_2px_0_rgb(0_0_0_/_40%)] pointer-events-auto selection:bg-bordeaux selection:text-beige"
+        >
           guest house
         </motion.h2>
       </motion.div>
