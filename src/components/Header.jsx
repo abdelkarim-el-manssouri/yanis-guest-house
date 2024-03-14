@@ -126,7 +126,7 @@ const Header = () => {
         className="parallax bg-img absolute h-[110%] w-full md:-top-14 lg:-top-20 left-0 z-[1] bg-cover pointer-events-none"
         src="src/assets/header-images/backround1.png"
         alt="bg"
-        loading="lazy"
+        // loading="lazy"
       />
       <motion.img
         style={{ y: s9aya }}
@@ -141,7 +141,7 @@ const Header = () => {
         className="parallax absolute w-[120px] md:w-[150px] lg:w-[17.58%] top-72 md:top-60 lg:top-80 left-0 z-[2] pointer-events-none"
         src="src/assets/header-images/s9aya2.png"
         alt="fontain"
-        loading="lazy"
+        // loading="lazy"
       />
       <motion.img
         style={{ y: palm }}
@@ -156,7 +156,7 @@ const Header = () => {
         className="parallax absolute w-[150px] md:w-[180px] lg:w-[200px] h-[350px] md:h-[400px] lg:h-[550px] top-36 md:top-20 lg:top-20 -left-10 md:left-0 z-[8] pointer-events-none"
         src="src/assets/header-images/dark-palm-ltr.png"
         alt="palm"
-        loading="lazy"
+        // loading="lazy"
       />
       <motion.img
         style={{ y: wall }}
@@ -171,7 +171,7 @@ const Header = () => {
         className="parallax absolute w-[190px] lg:w-[300px] top-80 md:top-72 lg:top-96 z-[3] right-0 pointer-events-none"
         src="src/assets/header-images/islamic_wall3.png"
         alt="wall"
-        loading="lazy"
+        // loading="lazy"
       />
       <motion.div
         style={{ y: textY }}
@@ -185,12 +185,15 @@ const Header = () => {
         // }}
         className="parallax absolute z-[7] left-0 top-24 md:top-24 lg:top-28 text-center text-white uppercase w-full pointer-events-none"
       >
-        <h1 className="font-thin text-5xl md:text-6xl lg:text-8xl leading-10 [text-shadow:_1px_2px_0_rgb(0_0_0_/_40%)] pointer-events-auto selection:bg-bordeaux selection:text-beige">
+        <motion.h1
+          style={{}}
+          className="font-thin text-5xl md:text-6xl lg:text-8xl leading-10 [text-shadow:_1px_2px_0_rgb(0_0_0_/_40%)] pointer-events-auto selection:bg-bordeaux selection:text-beige"
+        >
           yanis
-        </h1>
-        <h2 className="font-bold text-5xl md:text-6xl lg:text-8xl leading-tight [text-shadow:_1px_2px_0_rgb(0_0_0_/_40%)] pointer-events-auto selection:bg-bordeaux selection:text-beige">
+        </motion.h1>
+        <motion.h2 className="font-bold text-5xl md:text-6xl lg:text-8xl leading-tight [text-shadow:_1px_2px_0_rgb(0_0_0_/_40%)] pointer-events-auto selection:bg-bordeaux selection:text-beige">
           guest house
-        </h2>
+        </motion.h2>
       </motion.div>
       <motion.img
         style={{ y: fontain }}
@@ -205,7 +208,7 @@ const Header = () => {
         className="parallax absolute w-[130px] md:w-[150px] lg:w-[180px] top-40 md:top-24 lg:top-32 right-20 md:right-32 lg:right-64 z-[5] pointer-events-none"
         src="src/assets/header-images/fontain4.png"
         alt="fontain"
-        loading="lazy"
+        // loading="lazy"
       />
       <motion.img
         style={{ y: palm }}
@@ -220,7 +223,7 @@ const Header = () => {
         className="parallax absolute w-[150px] md:w-[180px] lg:w-[200px] h-[350px] md:h-[400px] lg:h-[550px] top-36 md:top-20 -right-10 md:right-0 z-[8] pointer-events-none"
         src="src/assets/header-images/dark-palm5.png"
         alt="palm"
-        loading="lazy"
+        // loading="lazy"
       />
       <motion.img
         style={{ y: silhouette }}
@@ -235,7 +238,7 @@ const Header = () => {
         className="parallax absolute w-[250px] md:w-[250px] lg:w-[350px] top-32 md:top-10 lg:top-5 -right-16 md:right-0 z-[6] pointer-events-none"
         src="src/assets/header-images/silhouette-of-palm-rtl6.png"
         alt="silhouette-of-palm"
-        loading="lazy"
+        // loading="lazy"
       />
       <motion.img
         style={{ y: silhouette }}
@@ -250,7 +253,7 @@ const Header = () => {
         className="parallax absolute w-[250px] lg:w-[350px] top-32 md:top-5 lg:top-5 -left-16 md:left-0 z-[7] pointer-events-none"
         src="src/assets/header-images/silhouette-of-palm-ltr7.png"
         alt="silhouette-of-palm"
-        loading="lazy"
+        // loading="lazy"
       />
       <motion.img
         style={{ y: kotoubia }}
@@ -265,7 +268,7 @@ const Header = () => {
         className="parallax absolute w-[230px] md:w-[280px] lg:w-[350px] top-36 md:top-14 lg:top-16 left-10 md:left-24 lg:left-40 z-[3] lg:z-[6] pointer-events-none"
         src="src/assets/header-images/kotoubia8.png"
         alt="kotoubia"
-        loading="lazy"
+        // loading="lazy"
       />
       <motion.img
         style={{ y: menara }}
@@ -280,7 +283,7 @@ const Header = () => {
         className="parallax absolute top-[70%] md:top-60 lg:top-[35%] left-0 z-[8] pointer-events-none"
         src="src/assets/header-images/menara9.png"
         alt="menara"
-        loading="lazy"
+        // loading="lazy"
       />
     </main>
   );

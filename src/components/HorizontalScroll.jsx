@@ -53,7 +53,7 @@ const Card = ({ card }) => {
           temporibus eius sit, aspernatur voluptas doloremque! Eum quos
           consectetur expedita praesentium soluta.
         </p>
-        <div className="mx-10 bg-background-button w-fit rounded-md text-aubergine">
+        <div className="mx-10 bg-background-button w-fit rounded-full text-aubergine">
           <Link to={card.link}>
             <AnimatedButton text={card.buttonContent} />
           </Link>
