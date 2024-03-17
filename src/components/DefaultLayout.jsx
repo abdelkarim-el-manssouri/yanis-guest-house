@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import { ShiftingDropDown } from "./Navbar";
 import Footer from "./Footer";
 import { useState } from "react";
-import Header from "./Header";
+// import Header from "./Header";
 // import AnimatedButton from "../UI/AnimatedButton";
 // import WaterDropGrid from "../UI/WaterDropGrid";
 // import AnimatedText from "../UI/AnimatedText";
@@ -25,7 +25,7 @@ const DefaultLayout = () => {
       <div className="mx-auto bg-beige">
         {/* To call color from tailwind.config, use -{nameOfKey} ex: text-primary */}
         <header className="w-full h-screen bg-primary">
-          <Header />
+          {/* <Header /> */}
         </header>
         <motion.div
           variants={{

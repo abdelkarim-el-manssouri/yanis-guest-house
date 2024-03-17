@@ -12,7 +12,7 @@ export default {
         bordeaux: "#800020",
         aubergine: "#25041f",
         cozyBlue: "#143255",
-        cozyGreen: "#033000",
+        cozyGreen: "#073135",
       },
 
       font: {

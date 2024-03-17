@@ -20,9 +20,9 @@ const HorizontalScrollCarousel = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-65%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[200vh] bg-neutral-900">
+    <section ref={targetRef} className="relative h-[200vh] bg-cozyGreen">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex">
+        <motion.div style={{ x }} className="flex gap-x-3 lg:gap-x-0">
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;
           })}
@@ -36,26 +36,44 @@ const Card = ({ card }) => {
   return (
     <div
       key={card.id}
-      className="group relative h-[430px] lg:h-[500px] w-[400px] md:w-[600px] lg:w-[1000px] overflow-hidden bg-gradient-to-br from-beige to-beige/0"
+      // className="group relative h-[430px] lg:h-[500px] w-[400px] md:w-[600px] lg:w-[1000px] overflow-hidden bg-gradient-to-br from-aubergine to-aubergine/0"
+      className="group grid grid-rows-2 lg:grid-rows-none lg:grid-cols-2 h-[430px] lg:h-[500px] w-[350px] md:w-[600px] lg:w-[1000px] overflow-hidden  bg-gradient-to-l from-beige to-beige/50"
     >
       <div
-        style={{
-          backgroundImage: `url(${card.url})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-        className="absolute inline w-3/4 md:w-3/4 inset-0 z-0 transition-transform duration-1000 group-hover:scale-110"
-      ></div>
-      <div className="absolute md:w-1/2 left-16 h-full md:left-[35%] z-0 grid place-content-center gap-10 ">
-        <p className="mx-5 p-4 lg:p-5 text-[0.9em] text-aubergine md:mx-10 w-[35ch] md:w-[40ch] lg:w-[60ch] bg-gradient-to-br from-beige via-background-button/10 to-beige/20 relative after:absolute after:w-0.5 after:h-full after:bg-neutral-200 after:-left-1.5 after:top-0 before:absolute before:w-1 before:h-full before:bg-neutral-200 before:-left-3 before:top-0">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia
-          neque earum facilis consectetur nemo modi esse mollitia quae
-          temporibus eius sit, aspernatur voluptas doloremque! Eum quos
-          consectetur expedita praesentium soluta.
-        </p>
-        <div className="mx-10 bg-background-button w-fit rounded-full text-aubergine">
+      // style={{
+      //   backgroundImage: `url(${card.url})`,
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      // }}
+      // className="inset-0 transition-transform duration-1000 group-hover:scale-95"
+      >
+        <img
+          src={card.url}
+          alt="image"
+          className="bg-cover inset-0 transition-transform duration-1000 group-hover:scale-105 h-full w-full"
+          loading="lazy"
+        />
+      </div>
+      <div className="h-full grid place-content-center gap-3 m-2 p-3 md:m-6 lg:gap-6 lg:mx-6 overflow-y-scroll lg:overflow-y-hidden">
+        <h3 className="font-semibold mt-16 md:mt-0 text-nowrap">
+          something something something something
+        </h3>
+        <div className="text-sm">
+          <p className="mb-3">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia
+            neque earum facilis consectetur nemo modi esse mollitia quae
+            temporibus eius sit, aspernatur voluptas doloremque! Eum quos
+            consectetur expedita praesentium soluta.
+          </p>
+          <p className="">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia
+            neque earum facilis consectetur nemo modi esse
+          </p>
+        </div>
+        <div className="my-4 md:mb-6 flex justify-center lg:justify-start">
           <Link to={card.link}>
             <AnimatedButton text={card.buttonContent} />
+            {/* <button>{card.buttonContent}</button> */}
           </Link>
         </div>
       </div>
