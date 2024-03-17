@@ -5,6 +5,7 @@ import NotFound from "./pages/default/NotFound";
 import DefaultLayout from "./components/DefaultLayout";
 import Rooms from "./pages/default/Rooms";
 import Activities from "./pages/default/Activities";
+import Photos from "./pages/photos";
 // import Dashboard from "./pages/dashboard/Dashboard";
 
 const router = createBrowserRouter([
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/home",
         element: <Home />,
+      },
+      {
+        path: "/photos",
+        element: <Photos />,
       },
       {
         path: "/accommodations",
