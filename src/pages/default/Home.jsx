@@ -5,6 +5,7 @@ import HorizontalScroll from "../../components/HorizontalScroll";
 // import WaterDropGrid from "../../UI/WaterDropGrid";
 import AnimatedButton from "../../UI/AnimatedButton";
 import { Link } from "react-router-dom";
+import { SwipeCarousel } from "../../components/Carousel";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -228,7 +229,7 @@ const Home = () => {
         // ref={ref}
         className="h-screen flex items-center overflow-hidden"
       >
-        <div className="h-4/5 w-full bg-cover opacity-80 bg-[url('/src/assets/cozy-green-sofa.jpeg')]">
+        <div className="aspect-video lg:aspect-carousel w-full bg-cover opacity-80 bg-[url('/src/assets/cozy-green-sofa.jpeg')]">
           <motion.h2
             // ref={ref2}
             variants={xAxisTextScroll}
@@ -241,6 +242,10 @@ const Home = () => {
           </motion.h2>
         </div>
       </motion.section>
+
+      <section className="">
+        <SwipeCarousel />
+      </section>
     </>
   );
 };

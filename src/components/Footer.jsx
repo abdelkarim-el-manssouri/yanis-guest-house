@@ -27,7 +27,7 @@ const Footer = () => {
                 <Link
                   key={link.code}
                   to={link.link}
-                  className="relative after:block after:w-full after:h-0.5 after:bg-black after:scale-x-0 after:transition after:delay-75 after:ease-in after:origin-left after:rounded-full hover:after:scale-x-100"
+                  className="relative after:block after:w-full after:h-0.5 after:bg-black after:scale-x-0 after:transition after:delay-75 after:ease-in after:rounded-full hover:after:scale-x-100"
                 >
                   {link.link}
                 </Link>

@@ -1,8 +1,9 @@
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { Outlet } from "react-router-dom";
-import { ShiftingDropDown } from "./Navbar";
+// import { ShiftingDropDown } from "./Navbar";
 import Footer from "./Footer";
 import { useState } from "react";
+import Navbar_v1 from "./Navbar_v1.1";
 // import Header from "./Header";
 // import AnimatedButton from "../UI/AnimatedButton";
 // import WaterDropGrid from "../UI/WaterDropGrid";
@@ -24,7 +25,7 @@ const DefaultLayout = () => {
     <>
       <div className="mx-auto bg-beige">
         {/* To call color from tailwind.config, use -{nameOfKey} ex: text-primary */}
-        <header className="w-full h-screen bg-primary">
+        <header className="w-full h-[100dvh] bg-primary">
           {/* <Header /> */}
         </header>
         <motion.div
@@ -37,7 +38,8 @@ const DefaultLayout = () => {
           className="bg-neutral-950 sticky top-0 z-[9999]"
         >
           <nav>
-            <ShiftingDropDown />
+            {/* <ShiftingDropDown /> */}
+            <Navbar_v1 />
           </nav>
         </motion.div>
         <div className=""></div>
