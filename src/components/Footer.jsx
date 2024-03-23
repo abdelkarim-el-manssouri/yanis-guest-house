@@ -10,7 +10,7 @@ const Footer = () => {
     { code: "ho", link: "home" },
     { code: "ro", link: "rooms" },
     { code: "re", link: "restoration" },
-    { code: "gal", link: "galery" },
+    { code: "gal", link: "gallery" },
   ];
   const { t } = useTranslation("translation");
   return (
@@ -43,9 +43,6 @@ const Footer = () => {
             loading="lazy"
           />
         </section>
-        {/* <section className="uppercase my-4">
-          <AnimatedText text="your marrakesh house" />
-        </section> */}
         <section className="flex justify-center flex-wrap h-fit">
           <p className="flex justify-center text-xl w-full mt-4 md:mt-0">
             {t("footer.join")}

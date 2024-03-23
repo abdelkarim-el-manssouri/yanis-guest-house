@@ -23,7 +23,7 @@ const DefaultLayout = () => {
   });
   return (
     <>
-      <div className="mx-auto bg-beige">
+      <main className="mx-auto bg-beige">
         {/* To call color from tailwind.config, use -{nameOfKey} ex: text-primary */}
         <header className="w-full h-[100dvh] bg-primary">
           {/* <Header /> */}
@@ -47,7 +47,7 @@ const DefaultLayout = () => {
         <footer className="h-screen">
           <Footer />
         </footer>
-      </div>
+      </main>
     </>
   );
 };

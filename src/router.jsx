@@ -6,6 +6,7 @@ import DefaultLayout from "./components/DefaultLayout";
 import Rooms from "./pages/default/Rooms";
 import Activities from "./pages/default/Activities";
 import Photos from "./pages/photos";
+import Restoration from "./pages/default/Restoration";
 // import Dashboard from "./pages/dashboard/Dashboard";
 
 const router = createBrowserRouter([
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "/activities",
         element: <Activities />,
+      },
+      {
+        path: "/restoration",
+        element: <Restoration />,
       },
     ],
   },

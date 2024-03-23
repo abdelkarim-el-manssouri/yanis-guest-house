@@ -15,20 +15,20 @@ export default {
         cozyGreen: "#073135",
         golden: "#cfb36c",
       },
-
       font: {
         mainSize: "",
         mainWeight: "600",
       },
-
       transitionTimingFunction: {
         "in-expo": "cubic-bezier(0.95, 0.05, 0.795, 0.035)",
         "out-expo": "cubic-bezier(0.19, 1, 0.22, 1)",
         "move-mouse": "cubic-bezier(.23,.36,.29,1.03)",
       },
-
       aspectRatio: {
         carousel: "2.5 / 1",
+      },
+      gridTemplateColumns: {
+        layout: "90px minmax(0, 1fr)",
       },
     },
   },

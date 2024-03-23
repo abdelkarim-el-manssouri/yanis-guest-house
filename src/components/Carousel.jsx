@@ -5,59 +5,7 @@ import { IoBedOutline } from "react-icons/io5";
 import { GiBathtub } from "react-icons/gi";
 import { TbRulerMeasure } from "react-icons/tb";
 import { HiOutlineUsers } from "react-icons/hi2";
-
-const imgs = [
-  {
-    id: 1,
-    url: "/src/assets/accommodations-photos/3.jpg",
-    price: 60,
-    title: "chambre double",
-    surface: 20,
-    persones: "2 - 3",
-    bed: "2 beds",
-    bathroom: "1 bathroom",
-  },
-  {
-    id: 2,
-    url: "/src/assets/accommodations-photos/4.jpg",
-    price: 80,
-    title: "suite parental",
-    surface: 25,
-    persones: "2 - 3",
-    bed: "1 double bed",
-    bathroom: "1 bathroom",
-  },
-  {
-    id: 3,
-    url: "/src/assets/accommodations-photos/5.jpg",
-    price: 120,
-    title: "suite royale",
-    surface: 30,
-    persones: "2 - 4",
-    bed: "1 double bed",
-    bathroom: "1 bathroom",
-  },
-  {
-    id: 4,
-    url: "/src/assets/accommodations-photos/1.jpg",
-    price: 180,
-    title: "family suite of 6 members",
-    surface: 60,
-    persones: "4 - 7",
-    bed: "2 double beds",
-    bathroom: "1 bathroom",
-  },
-  {
-    id: 5,
-    url: "/src/assets/accommodations-photos/2.jpg",
-    price: 190,
-    title: "family suite of 7 members",
-    surface: 60,
-    persones: "4 - 8",
-    bed: "2 double beds",
-    bathroom: "1 bathroom",
-  },
-];
+import { imgs } from "../data/data";
 
 const ONE_SECOND = 1000;
 const AUTO_DELAY = ONE_SECOND * 10;

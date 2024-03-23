@@ -203,17 +203,6 @@ const Home = () => {
               </p>
             </motion.div>
           </div>
-          {/* <motion.div
-            variants={fadeInAnimationVariants}
-            initial="initial"
-            whileInView="animate"
-            transition={{ type: "tween", duration: 1.6 }}
-            className="absolute lg:relative -bottom-60 md:-bottom-6 lg:bottom-0"
-          >
-            <AnimatedButton text="book now">
-              <Link to="/book" />
-            </AnimatedButton>
-          </motion.div> */}
         </div>
       </motion.section>
 
@@ -227,7 +216,7 @@ const Home = () => {
           opacity: opacity2Progress,
         }}
         // ref={ref}
-        className="h-screen flex items-center overflow-hidden"
+        className="my-16 md:my-0 md:h-screen flex items-center overflow-hidden"
       >
         <div className="aspect-video lg:aspect-carousel w-full bg-cover opacity-80 bg-[url('/src/assets/cozy-green-sofa.jpeg')]">
           <motion.h2
@@ -236,7 +225,7 @@ const Home = () => {
             initial="initial"
             whileInView="animate"
             // style={{ x }}
-            className="flex items-end w-full h-full whitespace-nowrap text-white text-[11em] font-bold transition-all duration-[5s] ease-move-mouse"
+            className="flex items-end w-full h-full whitespace-nowrap text-white text-[6em] md:text-[9em] lg:text-[11em] font-bold transition-all duration-[5s] ease-move-mouse"
           >
             something special
           </motion.h2>
