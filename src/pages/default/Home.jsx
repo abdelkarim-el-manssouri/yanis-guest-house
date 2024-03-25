@@ -6,6 +6,7 @@ import HorizontalScroll from "../../components/HorizontalScroll";
 import AnimatedButton from "../../UI/AnimatedButton";
 import { Link } from "react-router-dom";
 import { SwipeCarousel } from "../../components/Carousel";
+import SmallParagraph from "../../UI/SmallParagraph";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -64,6 +65,8 @@ const Home = () => {
   const opacity2Progress = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   const textContent = `yanis guest house your best marrakesh spot`;
+  const text1 =
+    "Get away for a dream vacation and dive into an oasis of luxurious serenity in the heart of the Medina of Marrakech.";
   return (
     <>
       <motion.section
@@ -79,18 +82,7 @@ const Home = () => {
         </div>
       </motion.section>
 
-      <motion.section
-        variants={fadeInAnimationVariants}
-        initial="initial"
-        whileInView="animate"
-        transition={{ type: "spring", stiffness: 100 }}
-        className="my-20"
-      >
-        <motion.p className="text-center w-[25ch] md:w-[40ch] mx-auto font-semibold text-2xl text-mainText">
-          Get away for a dream vacation and dive into an oasis of luxurious
-          serenity in the heart of the Medina of Marrakech.
-        </motion.p>
-      </motion.section>
+      <SmallParagraph text={text1} />
 
       <section>
         <HorizontalScroll />

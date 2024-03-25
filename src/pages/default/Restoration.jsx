@@ -1,44 +1,16 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 import { sensationsData } from "../../data/data";
-
-const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-  },
-};
-
-const fadeInAnimationVariants2 = {
-  initial: {
-    opacity: 0,
-    y: -300,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-  },
-};
+import SmallParagraph from "../../UI/SmallParagraph";
 
 const Restoration = () => {
+  const text1 =
+    "the restaurant of yanis guest house is not only a fine dining destination, it is a feast for each of the five senses.";
+  const text2 =
+    "There is something for everyone, Along with unforgettable moments of exchange.";
   return (
     <>
-      <motion.section
-        variants={fadeInAnimationVariants}
-        initial="initial"
-        whileInView="animate"
-        transition={{ type: "spring", stiffness: 100 }}
-        className="my-20"
-      >
-        <motion.p className="text-center w-[25ch] md:w-[40ch] mx-auto font-semibold text-2xl text-mainText uppercase leading-snug tracking-wide">
-          the restaurant of yanis guest house is not only a fine dining
-          destination, it is a feast for each of the five senses.
-        </motion.p>
-      </motion.section>
+      <SmallParagraph text={text1} />
 
       <motion.section>
         {sensationsData.map((sen) => {
@@ -50,18 +22,7 @@ const Restoration = () => {
         })}
       </motion.section>
 
-      <motion.section
-        variants={fadeInAnimationVariants2}
-        initial="initial"
-        whileInView="animate"
-        transition={{ type: "spring", stiffness: 100, bounce: 50 }}
-        className="my-20"
-      >
-        <p className="text-center w-[25ch] md:w-[40ch] mx-auto font-semibold text-2xl text-mainText uppercase leading-snug tracking-wide">
-          There is something for everyone, Along with unforgettable moments of
-          exchange.
-        </p>
-      </motion.section>
+      <SmallParagraph text={text2} />
     </>
   );
 };
