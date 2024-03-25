@@ -13,6 +13,17 @@ const fadeInAnimationVariants = {
   },
 };
 
+const fadeInAnimationVariants2 = {
+  initial: {
+    opacity: 0,
+    y: -300,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+  },
+};
+
 const Restoration = () => {
   return (
     <>
@@ -25,7 +36,7 @@ const Restoration = () => {
       >
         <motion.p className="text-center w-[25ch] md:w-[40ch] mx-auto font-semibold text-2xl text-mainText uppercase leading-snug tracking-wide">
           the restaurant of yanis guest house is not only a fine dining
-          destination, it is a feast for each of five the senses.
+          destination, it is a feast for each of the five senses.
         </motion.p>
       </motion.section>
 
@@ -37,6 +48,19 @@ const Restoration = () => {
             </React.Fragment>
           );
         })}
+      </motion.section>
+
+      <motion.section
+        variants={fadeInAnimationVariants2}
+        initial="initial"
+        whileInView="animate"
+        transition={{ type: "spring", stiffness: 100, bounce: 50 }}
+        className="my-20"
+      >
+        <p className="text-center w-[25ch] md:w-[40ch] mx-auto font-semibold text-2xl text-mainText uppercase leading-snug tracking-wide">
+          There is something for everyone, Along with unforgettable moments of
+          exchange.
+        </p>
       </motion.section>
     </>
   );
@@ -51,15 +75,15 @@ const Sensation = ({ title, content, imageUrl }) => {
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
   return (
-    <>
-      <motion.div
-        style={{
-          scale: scaleProgress,
-          opacity: opacityProgress,
-        }}
-        ref={ref}
-        className="group grid grid-rows-2 md:grid-rows-none bg-secondary/15 transition duration-500 hover:bg-secondary/25 w-[90%] md:w-4/5 mx-auto border-black/5 overflow-hidden md:relative h-96 md:h-80 mb-10 last:mb-0"
-      >
+    <motion.div
+      style={{
+        scale: scaleProgress,
+        opacity: opacityProgress,
+      }}
+      ref={ref}
+      className="group mb-10 last:mb-0"
+    >
+      <section className="grid grid-rows-2 md:grid-rows-none bg-secondary/15 transition duration-500 hover:bg-secondary/25 w-[90%] md:w-4/5 mx-auto border-black/5 overflow-hidden md:relative h-96 md:h-80 rounded-md">
         <div className="grid md:grid-cols-layout lg:py-4 md:p-2 lg:px-5 sm:max-w-[50%] sm:mt-auto h-full md:group-even:ml-[19.3rem] lg:group-even:ml-[29.3rem]">
           <h3 className="grid place-content-center -mb-10 md:mb-0 text-2xl font-semibold capitalize">
             {title}
@@ -87,8 +111,8 @@ const Sensation = ({ title, content, imageUrl }) => {
           group-even:group-hover:rotate-2
           "
         />
-      </motion.div>
-    </>
+      </section>
+    </motion.div>
   );
 };
 
