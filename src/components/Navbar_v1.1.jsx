@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import AnimatedButton from "../UI/AnimatedButton";
 import { useTranslation } from "react-i18next";
+import Button from "../UI/Button";
 // import Menu from "./Menu";
 
 const Navbar_v1 = () => {
@@ -8,7 +9,7 @@ const Navbar_v1 = () => {
 
   return (
     <>
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 bg-cozyGreen p-3 text-neutral-200">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 bg-secondary/50 backdrop-blur-sm p-3 text-neutral-200">
         <Link
           to="/home"
           className="grid col-span-2 md:col-span-1 place-content-center md:place-content-start md:w-fit"
@@ -19,7 +20,7 @@ const Navbar_v1 = () => {
             className="w-28 h-14"
           />
         </Link>
-        {/* <div className="flex justify-between mt-5 col-span-4"> */}
+
         <div className="grid pl-4 mt-4 md:mt-0 md:pl-0 md:place-content-around md:col-span-2 lg:col-span-3">
           <div className="flex md:justify-center items-center h-fit gap-2">
             <Link to="/">something</Link>
@@ -27,6 +28,7 @@ const Navbar_v1 = () => {
             <Link to="/accommodations">something</Link>
           </div>
         </div>
+
         <div className="flex justify-end items-center pr-4 mt-4 md:mt-0">
           <Link
             to="/accommodations"
@@ -35,9 +37,9 @@ const Navbar_v1 = () => {
             {/* {t("navContent.book")} */}
             {/* <Menu /> */}
             <AnimatedButton text={t("navContent.book")} />
+            <Button content="book" />
           </Link>
         </div>
-        {/* </div> */}
       </div>
     </>
   );

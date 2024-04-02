@@ -2,16 +2,12 @@ import { Link } from "react-router-dom";
 import { FiFacebook, FiInstagram, FiMail, FiPhone } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import { footerLinks } from "../data/data";
 // import { AnimatedText } from "../UI/AnimatedText";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const links = [
-    { code: "ho", link: "home" },
-    { code: "ro", link: "rooms" },
-    { code: "re", link: "restoration" },
-    { code: "gal", link: "gallery" },
-  ];
+
   const { t } = useTranslation("translation");
   return (
     <>
@@ -22,10 +18,11 @@ const Footer = () => {
         </section>
         <section className="grid h-full items-center">
           <ul className="flex flex-wrap justify-evenly md:justify-center md:gap-x-20">
-            {links.map((link) => {
+            {footerLinks.map((link) => {
               return (
                 <Link
                   key={link.code}
+                  // to={`/${link.link}`}
                   to={link.link}
                   className="relative after:block after:w-full after:h-0.5 after:bg-black after:scale-x-0 after:transition after:delay-75 after:ease-in after:rounded-full hover:after:scale-x-100"
                 >

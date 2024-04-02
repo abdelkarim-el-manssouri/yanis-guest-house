@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 import { sensationsData } from "../../data/data";
 import SmallParagraph from "../../UI/SmallParagraph";
+import BookNow from "../../components/BookNow";
 
 const Restoration = () => {
   const text1 =
@@ -23,6 +24,10 @@ const Restoration = () => {
       </motion.section>
 
       <SmallParagraph text={text2} />
+
+      <section>
+        <BookNow />
+      </section>
     </>
   );
 };

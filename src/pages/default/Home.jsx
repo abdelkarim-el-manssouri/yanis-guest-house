@@ -102,6 +102,9 @@ const Home = () => {
               initial="initial"
               whileInView="animate"
               transition={{ type: "tween", duration: 1 }}
+              viewport={{
+                once: true,
+              }}
               className="md:text-center w-full mx-auto p-1.5 lg:p-3 my-3 lg:my-5 text-sm md:text-xl lg:text-3xl font-semibold whitespace-nowrap md:w-[45ch] bg-beige md:relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-right-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-right-3 md:before:top-0"
             >
               To return to yanis guest house time and time again
@@ -110,7 +113,10 @@ const Home = () => {
               variants={fadeInLeftXAxisAnimationVariants}
               initial="initial"
               whileInView="animate"
-              transition={{ type: "tween", duration: 1.5 }}
+              transition={{ type: "tween", duration: 1.2 }}
+              viewport={{
+                once: true,
+              }}
               className="p-1.5 md:p-3 md:mt-0 lg:p-6 mx-auto w-full md:w-[60ch] lg:w-[75ch] text-xs lg:text-sm tracking-wide bg-beige relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-right-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-right-3 md:before:top-0"
             >
               <p className="mb-2 md:mb-3 lg:mb-4">
@@ -131,7 +137,10 @@ const Home = () => {
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
-            transition={{ type: "tween", duration: 1.6 }}
+            transition={{ type: "tween", duration: 1.2 }}
+            viewport={{
+              once: true,
+            }}
             className="flex md:flex-none justify-center mt-5 md:absolute lg:relative md:left-20 lg:left-0 md:-bottom-6 lg:bottom-0"
           >
             <AnimatedButton text="book now">
@@ -171,6 +180,9 @@ const Home = () => {
               initial="initial"
               whileInView="animate"
               transition={{ type: "tween", duration: 1 }}
+              viewport={{
+                once: true,
+              }}
               className="md:text-center w-full mx-auto p-1.5 lg:p-3 my-3 lg:my-5 md:ml-10 lg:ml-0 text-sm md:text-xl lg:text-3xl font-semibold whitespace-nowrap md:w-[45ch] bg-beige md:relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-left-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-left-3 md:before:top-0"
             >
               What makes yanis guest house unique in their eyes?
@@ -180,6 +192,9 @@ const Home = () => {
               initial="initial"
               whileInView="animate"
               transition={{ type: "tween", duration: 1.5 }}
+              viewport={{
+                once: true,
+              }}
               className="p-1.5 md:p-3 md:mt-0 md:ml-28 lg:p-6 mx-auto w-full md:w-[60ch] lg:w-[75ch] text-xs lg:text-sm tracking-wide bg-beige relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-left-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-left-3 md:before:top-0"
             >
               <p className="mb-2 md:mb-3 lg:mb-4">

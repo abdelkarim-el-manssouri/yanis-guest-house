@@ -106,3 +106,10 @@ export const imgs = [
     bathroom: "1 bathroom",
   },
 ];
+
+export const footerLinks = [
+  { code: "ho", link: "home" },
+  { code: "ro", link: "accommodations" },
+  { code: "re", link: "restoration" },
+  { code: "gal", link: "gallery" },
+];

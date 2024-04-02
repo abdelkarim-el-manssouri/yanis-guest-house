@@ -3,11 +3,11 @@ import { Outlet } from "react-router-dom";
 // import { ShiftingDropDown } from "./Navbar";
 import Footer from "./Footer";
 import { useState } from "react";
-import Navbar_v1 from "./Navbar_v1.1";
 // import Header from "./Header";
 // import AnimatedButton from "../UI/AnimatedButton";
 // import WaterDropGrid from "../UI/WaterDropGrid";
 // import AnimatedText from "../UI/AnimatedText";
+import Navbar_v2 from "./Navbar_v2";
 
 const DefaultLayout = () => {
   const [hidden, setHidden] = useState(false);
@@ -35,14 +35,17 @@ const DefaultLayout = () => {
           }}
           animate={hidden ? "hidden" : "visible"}
           transition={{ duration: 0.35, ease: "easeInOut" }}
-          className="bg-neutral-950 sticky top-0 z-[9999]"
+          className="sticky top-0 z-[9999]"
         >
           <nav>
             {/* <ShiftingDropDown /> */}
-            <Navbar_v1 />
+            {/* <Navbar_v1 /> */}
+            <Navbar_v2 />
           </nav>
         </motion.div>
-        <div className=""></div>
+        {/* <div className="">
+          <HoverImageLinks />
+        </div> */}
         <Outlet />
         <footer className="h-screen">
           <Footer />

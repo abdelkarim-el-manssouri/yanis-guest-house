@@ -97,7 +97,7 @@ const Images = ({ imgIndex }) => {
               transition={SPRING_OPTIONS}
               className="relative aspect-carousel w-screen shrink-0 rounded-xl bg-neutral-800 object-cover hover:scale-125"
             >
-              <div className="w-full h-full transition duration-[.6s] z-10 ease-in-out opacity-0 hover:opacity-100 hover:bg-cozyGreen/80 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white">
+              <div className="w-full h-full transition duration-[.6s] z-10 ease-in-out opacity-0 hover:opacity-100 hover:bg-cozyGreen/50 backdrop-blur-sm absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white">
                 <div className="grid h-full w-full relative">
                   <div className="absolute left-2 md:left-4 top-2 md:top-4 uppercase text-xs md:text-sm px-1.5 md:px-3 lg:px-5 py-1 lg:py-2 w-fit h-fit font-semibold text-golden bg-gradient-to-tl from-black to-black/20 border border-solid border-golden">
                     from {imgSrc.price} $
