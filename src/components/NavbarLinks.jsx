@@ -5,29 +5,29 @@ import { Link } from "react-router-dom";
 
 export const HoverImageLinks = () => {
   return (
-    <section className="bg-neutral-950 p-4 md:p-8">
+    <section className="bg-neutral-950 p-4 w-screen h-screen">
       <div className="mx-auto max-w-5xl">
         <Links
           heading="Home"
-          subheading="Learn what we do here"
-          imgSrc="/imgs/random/11.jpg"
+          subheading="Home sweet home"
+          imgSrc="https://yanisguesthouse.com/images/logo.png"
           to="/"
         />
         <Links
           heading="Accommodations"
-          subheading="We work with great people"
-          imgSrc="/imgs/random/6.jpg"
+          subheading="we are responsible for your comfort"
+          imgSrc="/src/assets/accommodations-photos/room1.jpg"
           to="/accommodations"
         />
         <Links
           heading="Restoration"
-          subheading="Our work speaks for itself"
+          subheading="Taste with all your sences"
           imgSrc="/imgs/random/4.jpg"
           to="/restoration"
         />
         <Links
           heading="Gallery"
-          subheading="We want cool people"
+          subheading="Incase you want to see more"
           imgSrc="/imgs/random/5.jpg"
           to="/gallery"
         />
@@ -42,7 +42,7 @@ export const HoverImageLinks = () => {
   );
 };
 
-const Links = ({ heading, imgSrc, subheading, href, to }) => {
+const Links = ({ heading, imgSrc, subheading, to }) => {
   const ref = useRef(null);
 
   const x = useMotionValue(0);
@@ -79,7 +79,7 @@ const Links = ({ heading, imgSrc, subheading, href, to }) => {
       whileHover="whileHover"
     >
       <Link
-        className="group relative flex items-center justify-between border-b-2 border-neutral-700 py-4 transition-colors duration-500 hover:border-neutral-50 md:py-8"
+        className="group relative flex items-center justify-between py-4 w-full border-b-2 border-neutral-700 transition-colors duration-500 hover:border-neutral-50"
         to={to}
       >
         <div>
@@ -93,7 +93,7 @@ const Links = ({ heading, imgSrc, subheading, href, to }) => {
               staggerChildren: 0.075,
               delayChildren: 0.25,
             }}
-            className="relative z-10 block text-4xl font-bold text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50 md:text-6xl"
+            className="relative z-10 block text-start text-4xl font-bold text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50 md:text-6xl"
           >
             {heading.split("").map((l, i) => (
               <motion.span
@@ -109,7 +109,7 @@ const Links = ({ heading, imgSrc, subheading, href, to }) => {
               </motion.span>
             ))}
           </motion.span>
-          <span className="relative z-10 mt-2 block text-base text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50">
+          <span className="relative z-10 mt-2 block text-start ml-2 text-base text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50">
             {subheading}
           </span>
         </div>

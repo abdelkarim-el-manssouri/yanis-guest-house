@@ -8,8 +8,11 @@ import { useState } from "react";
 // import WaterDropGrid from "../UI/WaterDropGrid";
 // import AnimatedText from "../UI/AnimatedText";
 import Navbar_v2 from "./Navbar_v2";
+import { NavbarButton } from "../UI/NavbarButton";
+// import { HoverImageLinks } from "./NavbarLinks";
 
 const DefaultLayout = () => {
+  // const [open, setOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
   const { scrollY } = useScroll();
   const vheight = window.innerHeight;
@@ -24,7 +27,6 @@ const DefaultLayout = () => {
   return (
     <>
       <main className="mx-auto bg-beige">
-        {/* To call color from tailwind.config, use -{nameOfKey} ex: text-primary */}
         <header className="w-full h-[100dvh] bg-primary">
           {/* <Header /> */}
         </header>
@@ -35,18 +37,23 @@ const DefaultLayout = () => {
           }}
           animate={hidden ? "hidden" : "visible"}
           transition={{ duration: 0.35, ease: "easeInOut" }}
-          className="sticky top-0 z-[9999]"
+          className="sticky top-0 z-[500]"
         >
           <nav>
-            {/* <ShiftingDropDown /> */}
-            {/* <Navbar_v1 /> */}
             <Navbar_v2 />
           </nav>
         </motion.div>
-        {/* <div className="">
-          <HoverImageLinks />
-        </div> */}
         <Outlet />
+        <div className="bg-neutral-950">
+          {/* <button onClick={() => setOpen((prev) => !prev)}> */}
+          <NavbarButton />
+          {/* {open && (
+              <div className="">
+                <HoverImageLinks />
+              </div>
+            )} */}
+          {/* </button> */}
+        </div>
         <footer className="h-screen">
           <Footer />
         </footer>

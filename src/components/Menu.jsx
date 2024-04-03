@@ -224,7 +224,7 @@ const Option = ({ text, setOpen, Flag }) => {
     <motion.li
       variants={itemVariants}
       onClick={() => setOpen(false)}
-      className="flex items-center gap-2 w-full p-2 text-xs font-medium whitespace-nowrap rounded-md hover:bg-secondary/35 text-primary hover:text-white transition-colors cursor-pointer"
+      className="flex items-center gap-3 w-full p-2 text-xs font-medium whitespace-nowrap rounded-md hover:bg-secondary/35 text-white transition-colors cursor-pointer"
     >
       <motion.span variants={actionIconVariants}>{Flag}</motion.span>
       <span>{text}</span>
