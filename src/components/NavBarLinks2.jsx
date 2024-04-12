@@ -83,7 +83,7 @@ const Links = ({ title, setOpen, href }) => {
     <motion.div
       onClick={() => setOpen(false)}
       variants={menuLinksVariants}
-      className="text-white/70 hover:text-white transition-colors duration-300 uppercase text-xl md:text-3xl lg:text-4xl mb-2 md:mb-4 lg:mb-7"
+      className="relative text-white/70 hover:text-white transition duration-300 uppercase text-xl md:text-3xl lg:text-4xl mb-2 md:mb-4 lg:mb-7 hover:after:absolute after:bg-white after:left-0 after:-bottom-2 after:h-px after:w-full"
     >
       <Link to={href}>{title}</Link>
     </motion.div>
@@ -99,12 +99,12 @@ const Pages = [
 
 const menuVariants = {
   initial: {
-    // scaleY: 0,
     y: "-100%",
+    opacity: 0,
   },
   animate: {
-    // scaleY: 1,
     y: 0,
+    opacity: 1,
     transition: {
       duration: 0.5,
       ease: [0.12, 0, 0.39, 0],
@@ -112,11 +112,10 @@ const menuVariants = {
   },
   exit: {
     transition: {
-      delay: 0.5,
+      delay: 1,
       duration: 0.5,
       ease: [0.22, 1, 0.36, 1],
     },
-    // scaleY: 0,
     y: "-100%",
   },
 };
@@ -124,6 +123,7 @@ const menuVariants = {
 const menuLinksVariants = {
   initial: {
     y: "30vh",
+    opacity: 0,
     transition: {
       duration: 0.5,
       ease: [0.37, 0, 0.63, 1],
@@ -131,8 +131,9 @@ const menuLinksVariants = {
   },
   open: {
     y: 0,
+    opacity: 1,
     transition: {
-      duration: 0.7,
+      duration: 0.2,
       ease: [0, 0.55, 0.45, 1],
     },
   },
