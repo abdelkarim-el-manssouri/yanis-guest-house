@@ -71,11 +71,11 @@ const Sensation = ({ title, content, imageUrl }) => {
           group-hover:scale-105
           group-hover:-translate-x-3
           group-hover:translate-y-3
-          group-hover:-rotate-2
           group-even:group-hover:translate-x-3
           group-even:group-hover:translate-y-3
-          group-even:group-hover:rotate-2
           "
+          // group-hover:-rotate-2
+          // group-even:group-hover:rotate-2
         />
       </section>
     </motion.div>

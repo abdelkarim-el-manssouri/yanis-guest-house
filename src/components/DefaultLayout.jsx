@@ -9,6 +9,8 @@ import { useState } from "react";
 // import AnimatedText from "../UI/AnimatedText";
 import Navbar_v2 from "./Navbar_v2";
 import { NavbarButton } from "../UI/NavbarButton";
+import NavBarLinks2 from "./NavBarLinks2";
+// import { NavbarButton } from "../UI/NavbarButton";
 // import { HoverImageLinks } from "./NavbarLinks";
 
 const DefaultLayout = () => {
@@ -27,9 +29,15 @@ const DefaultLayout = () => {
   return (
     <>
       <main className="mx-auto bg-beige">
-        <header className="w-full h-[100dvh] bg-primary">
-          {/* <Header /> */}
+        <div className="fixed top-0 left-0 z-[600] p-5">
+          {/* <NavbarButton /> */}
+          <NavBarLinks2 />
+        </div>
+
+        <header className="w-full h-[100dvh] bg-bordeaux/20">
+          {/*  <Header />*/}
         </header>
+
         <motion.div
           variants={{
             visible: { y: 0 },
@@ -40,20 +48,13 @@ const DefaultLayout = () => {
           className="sticky top-0 z-[500]"
         >
           <nav>
+            {/* <NavbarButton /> */}
             <Navbar_v2 />
           </nav>
         </motion.div>
+
         <Outlet />
-        <div className="bg-neutral-950">
-          {/* <button onClick={() => setOpen((prev) => !prev)}> */}
-          <NavbarButton />
-          {/* {open && (
-              <div className="">
-                <HoverImageLinks />
-              </div>
-            )} */}
-          {/* </button> */}
-        </div>
+        <div className="bg-neutral-950">{/* <NavbarButton /> */}</div>
         <footer className="h-screen">
           <Footer />
         </footer>

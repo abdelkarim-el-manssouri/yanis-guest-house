@@ -1,6 +1,7 @@
 import { FiChevronDown } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { IoLanguage } from "react-icons/io5";
 
 const spainFlag = (
   <svg
@@ -196,9 +197,9 @@ const StaggeredDropDown = () => {
       <motion.div animate={open ? "open" : "closed"} className="relative">
         <button
           onClick={() => setOpen((pv) => !pv)}
-          className="flex items-center gap-2 px-3 py-2 rounded-md bg-black relative overflow-hidden text-indigo-50 transition duration-300 hover:scale-105 active:scale-95 capitalize before:absolute before:-left-10 before:w-8 before:h-[120%] before:bg-white/35 before:-skew-x-12 before:blur-sm before:hover:translate-x-48 before:transition-all before:duration-700"
+          className="flex items-center gap-1.5 p-2 rounded-md h-8 bg-black relative overflow-hidden text-indigo-50 transition duration-300 hover:scale-105 active:scale-95 capitalize before:absolute before:-left-10 before:w-8 before:h-[120%] before:bg-white/35 before:-skew-x-12 before:blur-sm before:hover:translate-x-48 before:transition-all before:duration-700"
         >
-          <span className="font-medium text-xs capitalize">language</span>
+          <IoLanguage />
           <motion.span variants={iconVariants}>
             <FiChevronDown />
           </motion.span>
@@ -208,7 +209,7 @@ const StaggeredDropDown = () => {
           initial={wrapperVariants.closed}
           variants={wrapperVariants}
           style={{ originY: "top", translateX: "-50%" }}
-          className="flex flex-col gap-2 p-2 rounded-lg bg-secondary/30 backdrop-blur-md shadow-xl absolute top-[120%] left-[50%] w-32 overflow-hidden"
+          className="flex flex-col gap-2 p-2 rounded-lg bg-secondary/30 shadow-xl absolute top-[120%] left-[50%] w-32 overflow-hidden"
         >
           <Option setOpen={setOpen} Flag={usaFlag} text="English" />
           <Option setOpen={setOpen} Flag={spainFlag} text="Spanish" />

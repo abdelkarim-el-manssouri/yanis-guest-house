@@ -105,7 +105,7 @@ const Home = () => {
               viewport={{
                 once: true,
               }}
-              className="md:text-center w-full mx-auto p-1.5 lg:p-3 my-3 lg:my-5 text-sm md:text-xl lg:text-3xl font-semibold whitespace-nowrap md:w-[45ch] bg-beige md:relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-right-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-right-3 md:before:top-0"
+              className="md:text-center w-full mx-auto p-1.5 lg:p-3 my-3 lg:my-5 text-sm md:text-xl lg:text-3xl font-semibold whitespace-nowrap md:w-[45ch] bg-beige backdrop-blur-sm md:relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-right-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-right-3 md:before:top-0"
             >
               To return to yanis guest house time and time again
             </motion.h3>
@@ -117,7 +117,7 @@ const Home = () => {
               viewport={{
                 once: true,
               }}
-              className="p-1.5 md:p-3 md:mt-0 lg:p-6 mx-auto w-full md:w-[60ch] lg:w-[75ch] text-xs lg:text-sm tracking-wide bg-beige relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-right-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-right-3 md:before:top-0"
+              className="p-1.5 md:p-3 md:mt-0 lg:p-6 mx-auto w-full md:w-[60ch] lg:w-[75ch] text-xs lg:text-sm tracking-wide bg-beige backdrop-blur-sm relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-right-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-right-3 md:before:top-0"
             >
               <p className="mb-2 md:mb-3 lg:mb-4">
                 Our excellence is the result of tireless endeavour, the
@@ -183,7 +183,7 @@ const Home = () => {
               viewport={{
                 once: true,
               }}
-              className="md:text-center w-full mx-auto p-1.5 lg:p-3 my-3 lg:my-5 md:ml-10 lg:ml-0 text-sm md:text-xl lg:text-3xl font-semibold whitespace-nowrap md:w-[45ch] bg-beige md:relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-left-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-left-3 md:before:top-0"
+              className="md:text-center w-full mx-auto p-1.5 lg:p-3 my-3 lg:my-5 md:ml-10 lg:ml-0 text-sm md:text-xl lg:text-3xl font-semibold whitespace-nowrap md:w-[45ch] bg-beige backdrop-blur-sm md:relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-left-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-left-3 md:before:top-0"
             >
               What makes yanis guest house unique in their eyes?
             </motion.h3>
@@ -195,7 +195,7 @@ const Home = () => {
               viewport={{
                 once: true,
               }}
-              className="p-1.5 md:p-3 md:mt-0 md:ml-28 lg:p-6 mx-auto w-full md:w-[60ch] lg:w-[75ch] text-xs lg:text-sm tracking-wide bg-beige relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-left-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-left-3 md:before:top-0"
+              className="p-1.5 md:p-3 md:mt-0 md:ml-28 lg:p-6 mx-auto w-full md:w-[60ch] lg:w-[75ch] text-xs lg:text-sm tracking-wide bg-beige backdrop-blur-sm relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-left-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-left-3 md:before:top-0"
             >
               <p className="mb-2 md:mb-3 lg:mb-4">
                 A sense of hospitality that translates into a thousand and one
@@ -212,6 +212,8 @@ const Home = () => {
           </div>
         </div>
       </motion.section>
+
+      <SwipeCarousel />
 
       <motion.section
         // variants={fadeInAnimationVariants}
@@ -238,10 +240,6 @@ const Home = () => {
           </motion.h2>
         </div>
       </motion.section>
-
-      <section className="">
-        <SwipeCarousel />
-      </section>
     </>
   );
 };
