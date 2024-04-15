@@ -7,6 +7,7 @@ import AnimatedButton from "../../UI/AnimatedButton";
 import { Link } from "react-router-dom";
 import { SwipeCarousel } from "../../components/Carousel";
 import SmallParagraph from "../../UI/SmallParagraph";
+import Button from "../../UI/Button";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -143,9 +144,9 @@ const Home = () => {
             }}
             className="flex md:flex-none justify-center mt-5 md:absolute lg:relative md:left-20 lg:left-0 md:-bottom-6 lg:bottom-0"
           >
-            <AnimatedButton text="book now">
-              <Link to="/book" />
-            </AnimatedButton>
+            <Link to="/book">
+              <Button content="book" />
+            </Link>
           </motion.div>
         </div>
         <div className="md:col-span-2">

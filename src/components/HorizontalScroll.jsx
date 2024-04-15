@@ -1,7 +1,7 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
-import AnimatedButton from "../UI/AnimatedButton";
 import { Link } from "react-router-dom";
+import Button from "../UI/Button";
 
 const HorizontalScroll = () => {
   return (
@@ -72,8 +72,7 @@ const Card = ({ card }) => {
         </div>
         <div className="my-4 md:mb-6 flex justify-center lg:justify-start">
           <Link to={card.link}>
-            <AnimatedButton text={card.buttonContent} />
-            {/* <button>{card.buttonContent}</button> */}
+            <Button content={card.buttonContent} />
           </Link>
         </div>
       </div>

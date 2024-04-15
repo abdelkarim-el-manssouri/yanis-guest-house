@@ -19,10 +19,12 @@ const Navbar_v2 = () => {
       </div>
 
       <div className="flex justify-end items-center gap-2 mr-2">
+        <span className="invisible md:visible">
+          <Link to="/accommodations">
+            <Button content="book" />
+          </Link>
+        </span>
         <StaggeredDropDown />
-        <Link to="/accommodations">
-          <Button content="book" />
-        </Link>
       </div>
     </div>
   );

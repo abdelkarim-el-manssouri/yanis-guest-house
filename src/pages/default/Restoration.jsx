@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import { sensationsData } from "../../data/data";
 import SmallParagraph from "../../UI/SmallParagraph";
 import BookNow from "../../components/BookNow";
+import HorizontalScrollResto from "../../components/HorizontalScrollResto";
 
 const Restoration = () => {
   const text1 =
@@ -25,12 +26,18 @@ const Restoration = () => {
 
       <SmallParagraph text={text2} />
 
-      <section>
+      {/* <section>
         <BookNow />
+      </section> */}
+
+      <section>
+        <HorizontalScrollResto />
       </section>
     </>
   );
 };
+
+export default Restoration;
 
 const Sensation = ({ title, content, imageUrl }) => {
   const ref = useRef(null);
@@ -73,13 +80,11 @@ const Sensation = ({ title, content, imageUrl }) => {
           group-hover:translate-y-3
           group-even:group-hover:translate-x-3
           group-even:group-hover:translate-y-3
+          group-hover:-rotate-2
+          group-even:group-hover:rotate-2
           "
-          // group-hover:-rotate-2
-          // group-even:group-hover:rotate-2
         />
       </section>
     </motion.div>
   );
 };
-
-export default Restoration;

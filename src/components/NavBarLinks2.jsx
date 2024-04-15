@@ -1,29 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import { Stars } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 
 const NavBarLinks2 = () => {
   const [open, setOpen] = useState(false);
   const toggleOpen = () => {
     setOpen((pv) => !pv);
   };
-
-  // const [showNav, setShowNav] = useState(false);
-
-  // useEffect(() => {
-  //   // Listen for route changes and close the navbar
-  //   const handleRouteChange = () => {
-  //     setShowNav(false);
-  //   };
-
-  //   // Attach the event listener
-  //   window.addEventListener("routeChange", handleRouteChange);
-
-  //   // Clean up the event listener when the component unmounts
-  //   return () => {
-  //     window.removeEventListener("routeChange", handleRouteChange);
-  //   };
-  // }, []);
 
   return (
     <>
@@ -43,7 +28,10 @@ const NavBarLinks2 = () => {
               initial="initial"
               animate="animate"
               exit="exit"
-              className="absolute inset-0 origin-top bg-black h-screen w-screen"
+              className="absolute inset-0 origin-top bg-black h-screen w-full"
+              // className={`absolute inset-0 origin-top bg-black h-screen ${
+              //   open ? "w-fit" : "w-full"
+              // }`}
             >
               <motion.button
                 variants={exitButtonVariant}
@@ -94,7 +82,8 @@ const Pages = [
   { id: 1, title: "home", link: "home" },
   { id: 2, title: "accommodations", link: "accommodations" },
   { id: 3, title: "restoration", link: "restoration" },
-  { id: 4, title: "gallery", link: "gallery" },
+  { id: 4, title: "activities", link: "activities" },
+  { id: 5, title: "gallery", link: "gallery" },
 ];
 
 const menuVariants = {
@@ -112,7 +101,7 @@ const menuVariants = {
   },
   exit: {
     transition: {
-      delay: 1,
+      delay: 0.8,
       duration: 0.5,
       ease: [0.22, 1, 0.36, 1],
     },
@@ -169,3 +158,11 @@ const exitButtonVariant = {
     },
   },
 };
+
+{
+  /* <div className="absolute inset-0 z-0">
+  <Canvas>
+    <Stars radius={50} count={2500} factor={4} fade speed={2} />
+  </Canvas>
+</div>; */
+}

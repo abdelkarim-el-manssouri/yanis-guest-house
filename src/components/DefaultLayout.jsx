@@ -29,29 +29,22 @@ const DefaultLayout = () => {
   return (
     <>
       <main className="mx-auto bg-beige">
-        <div className="fixed top-0 left-0 z-[600] p-5">
-          {/* <NavbarButton /> */}
-          <NavBarLinks2 />
-        </div>
-
-        <header className="w-full h-[100dvh] bg-bordeaux/20">
-          {/*  <Header />*/}
-        </header>
-
-        <motion.div
+        <header className="w-full h-[100dvh]">{/*  <Header />*/}</header>
+        <motion.nav
           variants={{
             visible: { y: 0 },
             hidden: { y: "-100%" },
           }}
           animate={hidden ? "hidden" : "visible"}
           transition={{ duration: 0.35, ease: "easeInOut" }}
-          className="sticky top-0 z-[500]"
+          className="grid grid-cols-navbar sticky top-0 left-0 z-[600]"
         >
-          <nav>
-            {/* <NavbarButton /> */}
-            <Navbar_v2 />
-          </nav>
-        </motion.div>
+          <div className="top-0 left-0 z-[600] p-5 w-full">
+            <NavBarLinks2 />
+          </div>
+
+          <Navbar_v2 />
+        </motion.nav>
 
         <Outlet />
         <div className="bg-neutral-950">{/* <NavbarButton /> */}</div>
