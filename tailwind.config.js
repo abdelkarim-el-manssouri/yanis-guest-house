@@ -15,7 +15,13 @@ export default {
         cozyBlue: "#143255",
         cozyGreen: "#073135",
         golden: "#cfb36c",
-        khzi: "#8E956C",
+        military: "#8E956C",
+
+        background: "#f3f0e9",
+        primary1: "#e7dfcf",
+        textColor: "#4c525f",
+        maron: "#ab9c81",
+        green: "#517c63",
       },
       font: {
         mainSize: "",

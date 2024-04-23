@@ -21,7 +21,7 @@ const SmallParagraph = ({ text }) => {
         transition={{ type: "spring", stiffness: 100 }}
         className="my-20"
       >
-        <p className="text-center w-[25ch] md:w-[40ch] mx-auto font-semibold text-2xl text-mainText uppercase leading-snug tracking-wide">
+        <p className="text-center w-[30ch] md:w-[40ch] mx-auto font-semibold text-xl lg:text-2xl text-textColor uppercase leading-snug tracking-wide">
           {text}
         </p>
       </motion.section>

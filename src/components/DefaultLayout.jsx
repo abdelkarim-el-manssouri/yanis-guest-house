@@ -28,8 +28,8 @@ const DefaultLayout = () => {
   });
   return (
     <>
-      <main className="mx-auto bg-beige">
-        <header className="w-full h-[100dvh]">{/*  <Header />*/}</header>
+      <main className="mx-auto bg-background">
+        <header className="w-full h-[100dvh]">{/* <Header /> */}</header>
         <motion.nav
           variants={{
             visible: { y: 0 },

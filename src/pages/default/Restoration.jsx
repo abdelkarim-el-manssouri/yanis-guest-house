@@ -33,6 +33,10 @@ const Restoration = () => {
       <section>
         <HorizontalScrollResto />
       </section>
+
+      <section>
+        <SeeMenu />
+      </section>
     </>
   );
 };
@@ -86,5 +90,15 @@ const Sensation = ({ title, content, imageUrl }) => {
         />
       </section>
     </motion.div>
+  );
+};
+
+const SeeMenu = () => {
+  return (
+    <>
+      <div className="grid place-content-center my-10">
+        <p className="text-white font-bold text-xl w-fit bg-black">see menu</p>
+      </div>
+    </>
   );
 };

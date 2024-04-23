@@ -2,6 +2,9 @@
 import { useEffect, useState } from "react";
 import "./../css/photos.css";
 import { PhotosImages } from "../data/data";
+import { motion } from "framer-motion";
+
+const imgTransition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
 // import requireContext from 'require-context';
 // const images = require('./../assets/header-images', true);
@@ -36,9 +39,11 @@ const Photos = () => {
                 Math.floor(Math.random() * 3 + 1) == 2 ? "tall" : ""
               } group overflow-hidden shadow-sm`}
             >
-              <img
+              <motion.img
                 src={el}
-                className="duration-200 group-hover:rotate-3 group-hover:scale-[1.3]"
+                // className="hover:shadow-xl"
+                whileHover={{ scale: 1.1 }}
+                transition={imgTransition}
               />
             </div>
           );

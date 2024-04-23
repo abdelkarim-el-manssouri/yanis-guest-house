@@ -1,14 +1,21 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { Stars } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
+import room1 from "/src/assets/accommodations-photos/room1.jpg";
+import room2 from "/src/assets/accommodations-photos/room2.jpg";
+import room3 from "/src/assets/accommodations-photos/room3.jpg";
+import room4 from "/src/assets/accommodations-photos/room4.jpg";
 
 const NavBarLinks2 = () => {
   const [open, setOpen] = useState(false);
   const toggleOpen = () => {
     setOpen((pv) => !pv);
   };
+  const [revealImg, setRevealImg] = useState({
+    show: false,
+    // image: "/src/assets/cozy-green-sofa.jpeg",
+    key: "0",
+  });
 
   return (
     <>
@@ -29,9 +36,6 @@ const NavBarLinks2 = () => {
               animate="animate"
               exit="exit"
               className="absolute inset-0 origin-top bg-black h-screen w-full"
-              // className={`absolute inset-0 origin-top bg-black h-screen ${
-              //   open ? "w-fit" : "w-full"
-              // }`}
             >
               <motion.button
                 variants={exitButtonVariant}
@@ -50,11 +54,43 @@ const NavBarLinks2 = () => {
               >
                 {Pages.map((i) => {
                   return (
-                    <div key={i.id} className="overflow-hidden">
-                      <Links setOpen={setOpen} title={i.title} href={i.link} />;
-                    </div>
+                    <motion.div
+                      onHoverStart={() =>
+                        setRevealImg({
+                          show: true,
+                          image: i.image,
+                          key: i.id,
+                        })
+                      }
+                      onHoverEnd={() =>
+                        setRevealImg({
+                          show: false,
+                          image: i.image,
+                          key: i.id,
+                        })
+                      }
+                      key={i.id}
+                      className="overflow-hidden"
+                    >
+                      <Links setOpen={setOpen} title={i.title} href={i.link} />
+                    </motion.div>
                   );
                 })}
+                <motion.div className="image absolute inset-0 -z-10 overflow-hidden">
+                  <AnimatePresence initial={false} mode="wait">
+                    <motion.img
+                      initial={{ opacity: 0 }}
+                      animate={{
+                        opacity: 0.3,
+                      }}
+                      exit={{ opacity: 0 }}
+                      src={revealImg.image}
+                      alt={`image of ${revealImg.key}`}
+                      className="bg-cover bg-center"
+                      key={revealImg.key}
+                    />
+                  </AnimatePresence>
+                </motion.div>
               </motion.div>
             </motion.div>
           </>
@@ -71,7 +107,7 @@ const Links = ({ title, setOpen, href }) => {
     <motion.div
       onClick={() => setOpen(false)}
       variants={menuLinksVariants}
-      className="relative text-white/70 hover:text-white transition duration-300 uppercase text-xl md:text-3xl lg:text-4xl mb-2 md:mb-4 lg:mb-7 hover:after:absolute after:bg-white after:left-0 after:-bottom-2 after:h-px after:w-full"
+      className="relative text-white/70 hover:text-white transition duration-300 uppercase text-xl md:text-3xl lg:text-4xl mb-8 md:mb-10 lg:mb-12 hover:after:absolute hover:after:-bottom-2 after:duration-300 after:bg-white after:left-0 after:-bottom-4 after:h-0.5 after:w-full"
     >
       <Link to={href}>{title}</Link>
     </motion.div>
@@ -79,11 +115,11 @@ const Links = ({ title, setOpen, href }) => {
 };
 
 const Pages = [
-  { id: 1, title: "home", link: "home" },
-  { id: 2, title: "accommodations", link: "accommodations" },
-  { id: 3, title: "restoration", link: "restoration" },
-  { id: 4, title: "activities", link: "activities" },
-  { id: 5, title: "gallery", link: "gallery" },
+  { id: 1, title: "home", link: "home", image: room1 },
+  { id: 2, title: "accommodations", link: "accommodations", image: room2 },
+  { id: 3, title: "restoration", link: "restoration", image: room3 },
+  // { id: 4, title: "activities", link: "activities", image: room1 },
+  { id: 5, title: "gallery", link: "gallery", image: room4 },
 ];
 
 const menuVariants = {
