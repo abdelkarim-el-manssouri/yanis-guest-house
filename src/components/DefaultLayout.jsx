@@ -10,6 +10,7 @@ import { useState } from "react";
 import Navbar_v2 from "./Navbar_v2";
 import { NavbarButton } from "../UI/NavbarButton";
 import NavBarLinks2 from "./NavBarLinks2";
+import Header2 from "./Header2";
 // import { NavbarButton } from "../UI/NavbarButton";
 // import { HoverImageLinks } from "./NavbarLinks";
 
@@ -28,8 +29,10 @@ const DefaultLayout = () => {
   });
   return (
     <>
-      <main className="mx-auto bg-background">
-        <header className="w-full h-[100dvh]">{/* <Header /> */}</header>
+      <main className="mx-auto bg-background md:max-w-7xl">
+        <div className="w-full h-[100dvh] overflow-hidden bg-black">
+          <Header2 />
+        </div>
         <motion.nav
           variants={{
             visible: { y: 0 },
@@ -39,13 +42,12 @@ const DefaultLayout = () => {
           transition={{ duration: 0.35, ease: "easeInOut" }}
           className="grid grid-cols-navbar sticky top-0 left-0 z-[600]"
         >
-          <div className="top-0 left-0 z-[600] p-5 w-full">
+          <div className="top-0 left-0 z-[600] p-5 w-full ">
             <NavBarLinks2 />
           </div>
 
           <Navbar_v2 />
         </motion.nav>
-
         <Outlet />
         <div className="bg-neutral-950">{/* <NavbarButton /> */}</div>
         <footer className="h-screen">

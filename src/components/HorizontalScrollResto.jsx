@@ -35,7 +35,7 @@ const Card = ({ card }) => {
     <div
       key={card.id}
       // className="group relative h-[430px] lg:h-[500px] w-[400px] md:w-[600px] lg:w-[1000px] overflow-hidden bg-gradient-to-br from-aubergine to-aubergine/0"
-      className="group grid grid-rows-2 lg:grid-rows-none lg:grid-cols-2 h-[430px] lg:h-[500px] w-[350px] md:w-[600px] lg:w-[1000px] overflow-hidden bg-neutral-100"
+      className="group grid grid-rows-2 lg:grid-rows-none lg:grid-cols-2 h-[560px] w-[350px] md:w-[600px] lg:w-[1000px] overflow-hidden bg-neutral-100"
     >
       <img
         src={card.url}
@@ -43,7 +43,7 @@ const Card = ({ card }) => {
         className="bg-cover bg-center inset-0 transition-transform duration-700 group-hover:scale-105 h-full w-full"
         loading="lazy"
       />
-      <div className="h-full grid place-content-center gap-3 m-2 p-3 md:m-6 lg:m-0 lg:gap-6 lg:mx-6 overflow-y-scroll lg:overflow-y-hidden">
+      <div className="h-full grid place-content-center gap-3 m-2 p-3 md:m-6 lg:m-0 lg:gap-6 lg:mx-6 overflow-y-auto lg:overflow-y-hidden">
         <h3 className="font-semibold mt-16 md:mt-0 lg:text-2xl text-xl lg:text-center capitalize">
           {card.title}
         </h3>

@@ -113,3 +113,23 @@ export const footerLinks = [
   { code: "re", link: "restoration" },
   { code: "gal", link: "gallery" },
 ];
+
+export const headerSlideImages = [
+  {
+    id: 1,
+    picture: room1,
+    content:
+      "1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis rerum quae cumque.",
+  },
+  {
+    id: 2,
+    picture: room2,
+    content:
+      "2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis rerum quae cumque.",
+  },
+  {
+    id: 3,
+    picture: room3,
+    content: "yanis guest house",
+  },
+];

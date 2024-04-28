@@ -37,7 +37,7 @@ const Card = ({ card }) => {
     <div
       key={card.id}
       // className="group relative h-[430px] lg:h-[500px] w-[400px] md:w-[600px] lg:w-[1000px] overflow-hidden bg-gradient-to-br from-aubergine to-aubergine/0"
-      className="group grid grid-rows-2 lg:grid-rows-none lg:grid-cols-2 h-[430px] lg:h-[500px] w-[350px] md:w-[600px] lg:w-[1000px] overflow-hidden  bg-gradient-to-l from-beige to-beige/50"
+      className="group grid grid-rows-2 lg:grid-rows-none lg:grid-cols-2 h-[430px] lg:h-[500px] w-[350px] md:w-[600px] lg:w-[1000px] overflow-hidden bg-gradient-to-l from-beige to-beige/50"
     >
       <div
       // style={{
@@ -54,7 +54,7 @@ const Card = ({ card }) => {
           loading="lazy"
         />
       </div>
-      <div className="h-full grid place-content-center gap-3 m-2 p-3 md:m-6 lg:gap-6 lg:mx-6 overflow-y-scroll lg:overflow-y-hidden">
+      <div className="h-full grid place-content-center gap-3 m-2 p-3 md:m-6 lg:gap-6 lg:mx-6 overflow-y-auto lg:overflow-y-hidden">
         <h3 className="font-semibold mt-16 md:mt-0 text-nowrap">
           something something something something
         </h3>

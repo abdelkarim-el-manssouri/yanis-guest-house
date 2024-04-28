@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import room1 from "/src/assets/accommodations-photos/room1.jpg";
@@ -16,6 +16,11 @@ const NavBarLinks2 = () => {
     // image: "/src/assets/cozy-green-sofa.jpeg",
     key: "0",
   });
+
+  useEffect(() => {
+    const html = document.querySelector("html");
+    if (html) html.classList.toggle("overflow-hidden", open);
+  }, [open]);
 
   return (
     <>
@@ -81,11 +86,11 @@ const NavBarLinks2 = () => {
                     <motion.img
                       initial={{ opacity: 0 }}
                       animate={{
-                        opacity: 0.3,
+                        opacity: 0.25,
                       }}
                       exit={{ opacity: 0 }}
                       src={revealImg.image}
-                      alt={`image of ${revealImg.key}`}
+                      // alt={`image of ${revealImg.key}`}
                       className="bg-cover bg-center"
                       key={revealImg.key}
                     />

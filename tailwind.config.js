@@ -39,6 +39,11 @@ export default {
         layout: "90px minmax(0, 1fr)",
         navbar: "0px minmax(0, 1fr)",
       },
+      fontFamily: {
+        lora: ["lora"],
+        Arapey: ["Arapey, serif"],
+        Montserrat: ["Montserrat, sans-serif", 0.5],
+      },
     },
   },
   plugins: [],
