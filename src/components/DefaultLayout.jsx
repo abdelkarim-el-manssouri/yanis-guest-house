@@ -29,7 +29,7 @@ const DefaultLayout = () => {
   return (
     <>
       <main className="mx-auto bg-background md:max-w-7xl">
-        <div className="w-full h-dvh overflow-hidden bg-black z-20 backdrop-blur-md">
+        <div className="w-full h-dvh overflow-hidden bg-black relative z-20 backdrop-blur-md">
           <Header2 />
         </div>
         <motion.nav

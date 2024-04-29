@@ -23,6 +23,7 @@
     "react-i18next": "^14.0.5",
     "react-icons": "^5.0.1",
     "react-router-dom": "^6.22.2",
+    "react-use": "^17.5.0",
     "vite-plugin-require": "^1.1.14"
   },
   "devDependencies": {

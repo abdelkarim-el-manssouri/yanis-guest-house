@@ -12,7 +12,7 @@
 
 @layer components {
   .reveal-text {
-    --faded-color: transparent;
+    --faded-color: #00464326;
     --highlighted-color: #111;
     background-image: linear-gradient(
         to right,
