@@ -102,7 +102,7 @@ const HeaderImageReveal = () => {
 };
 
 const textAnimations = {
-  hidden: { opacity: 0, x: -10 },
+  hidden: { opacity: 0, x: 5 },
   visible: {
     opacity: 1,
     x: 0,

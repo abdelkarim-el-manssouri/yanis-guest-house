@@ -8,7 +8,6 @@ import { useState } from "react";
 // import WaterDropGrid from "../UI/WaterDropGrid";
 // import AnimatedText from "../UI/AnimatedText";
 import Navbar_v2 from "./Navbar_v2";
-import { NavbarButton } from "../UI/NavbarButton";
 import NavBarLinks2 from "./NavBarLinks2";
 import Header2 from "./Header2";
 // import { NavbarButton } from "../UI/NavbarButton";
@@ -30,7 +29,7 @@ const DefaultLayout = () => {
   return (
     <>
       <main className="mx-auto bg-background md:max-w-7xl">
-        <div className="w-full h-[100dvh] overflow-hidden bg-black">
+        <div className="w-full h-dvh overflow-hidden bg-black z-20 backdrop-blur-md">
           <Header2 />
         </div>
         <motion.nav
