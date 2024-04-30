@@ -6,10 +6,11 @@ import {
 } from "framer-motion";
 import "../../css/rooms.css";
 import { imgs } from "../../data/data";
-import { useMemo, useRef, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 import { useWindowSize } from "react-use";
 import Button from "../../UI/Button";
 import { Link } from "react-router-dom";
+import { FaChevronLeft } from "react-icons/fa";
 
 const Rooms = () => {
   return (
@@ -50,7 +51,8 @@ const ImageRoom = () => {
 
   const maximumScale = useMemo(() => {
     const windowYRatio = height / width;
-    const xScale = 1.66667;
+    // const xScale = 1.66667;
+    const xScale = 2;
     const yScale = xScale * (16 / 9) * windowYRatio;
     return Math.max(xScale, yScale);
   }, [width, height]);
@@ -73,131 +75,158 @@ const ImageRoom = () => {
   });
 
   return (
-    <motion.section
-      animate={carouselVariant}
-      ref={carouselWrapperRef}
-      className="h-[250vh] mt-[-100vh] bg-cozyGreen"
-    >
-      <div className="sticky top-0 h-screen flex justify-center items-center gap-5 overflow-clip">
-        <div className="shrink-0 aspect-[9/16] shadow-2xl md:aspect-video w-[65vw] md:w-[60vw] rounded-2xl overflow-clip relative">
-          <img
-            className="w-full h-full object-cover"
-            src={imgs[0].url}
-            alt={imgs[0].title}
-          />
-          <motion.div
-            variants={{
-              active: { opacity: 1 },
-              inactive: { opacity: 0 },
-            }}
-            className="absolute left-0 bottom-0 px-4 md:px-6 lg:px-8 py-8 md:py-8 lg:py-12 flex flex-col md:flex-row gap-4 md:gap-0 md:justify-between items-center text-white lg:text-lg w-full bg-gradient-to-t from-black/90 to-black/0"
-          >
-            <p className="font-extrabold font-Arapey tracking-wide capitalize relative after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white">
-              {imgs[0].title}
-            </p>
-            <Link to="/" className="font-extrabold font-Arapey">
-              <Button content="show more" />
-            </Link>
-          </motion.div>
+    <>
+      <motion.section
+        animate={carouselVariant}
+        ref={carouselWrapperRef}
+        className="h-[250vh] mt-[-100vh] bg-cozyGreen relative"
+      >
+        <div className="sticky top-0 h-screen overflow-hidden">
+          <div className="h-[calc(100vh+2.5rem)] pb-10 flex items-center gap-5 overflow-x-auto snap-x snap-mandatory px-5">
+            <motion.div
+              style={{ scale }}
+              className="shrink-0 aspect-[9/16] shadow-2xl md:aspect-video w-[65vw] md:w-[60vw] rounded-2xl overflow-clip relative snap-center snap-always"
+            >
+              <img
+                className="w-full h-full object-cover"
+                src={imgs[2].url}
+                alt={imgs[2].title}
+              />
+              <motion.div
+                variants={{
+                  active: { opacity: 1 },
+                  inactive: { opacity: 0 },
+                }}
+                className="absolute left-0 bottom-0 px-4 md:px-6 lg:px-8 py-8 md:py-8 lg:py-12 flex flex-col md:flex-row gap-4 md:gap-0 md:justify-between items-center text-white lg:text-lg w-full bg-gradient-to-t from-black/90 to-black/0"
+              >
+                <p className="font-extrabold font-Arapey tracking-wide capitalize relative after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white">
+                  {imgs[2].title}
+                </p>
+                <Link to="/" className="font-extrabold font-Arapey">
+                  <Button content="show more" />
+                </Link>
+              </motion.div>
+            </motion.div>
+
+            <motion.div
+              style={{ opacity: postersOpacity, scale: postersScale }}
+              className="shrink-0 aspect-[9/16] shadow-2xl md:aspect-video w-[65vw] md:w-[60vw] rounded-2xl overflow-clip relative snap-center snap-always"
+            >
+              <img
+                className="w-full h-full object-cover"
+                src={imgs[0].url}
+                alt={imgs[0].title}
+              />
+              <motion.div
+                variants={{
+                  active: { opacity: 1 },
+                  inactive: { opacity: 0 },
+                }}
+                className="absolute left-0 bottom-0 px-4 md:px-6 lg:px-8 py-8 md:py-8 lg:py-12 flex flex-col md:flex-row gap-4 md:gap-0 md:justify-between items-center text-white lg:text-lg w-full bg-gradient-to-t from-black/90 to-black/0"
+              >
+                <p className="font-extrabold font-Arapey tracking-wide capitalize relative after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white">
+                  {imgs[0].title}
+                </p>
+                <Link to="/" className="font-extrabold font-Arapey">
+                  <Button content="show more" />
+                </Link>
+              </motion.div>
+            </motion.div>
+
+            <motion.div
+              style={{ opacity: postersOpacity, scale: postersScale }}
+              className="shrink-0 aspect-[9/16] shadow-2xl md:aspect-video w-[65vw] md:w-[60vw] rounded-2xl overflow-clip relative snap-center snap-always"
+            >
+              <img
+                className="w-full h-full object-cover"
+                src={imgs[1].url}
+                alt={imgs[1].title}
+              />
+              <motion.div
+                variants={{
+                  active: { opacity: 1 },
+                  inactive: { opacity: 0 },
+                }}
+                className="absolute left-0 bottom-0 px-4 md:px-6 lg:px-8 py-8 md:py-8 lg:py-12 flex flex-col md:flex-row gap-4 md:gap-0 md:justify-between items-center text-white lg:text-lg w-full bg-gradient-to-t from-black/90 to-black/0"
+              >
+                <p className="font-extrabold font-Arapey tracking-wide capitalize relative after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white">
+                  {imgs[1].title}
+                </p>
+                <Link to="/" className="font-extrabold font-Arapey">
+                  <Button content="show more" />
+                </Link>
+              </motion.div>
+            </motion.div>
+
+            <motion.div
+              style={{ opacity: postersOpacity, scale: postersScale }}
+              className="shrink-0 aspect-[9/16] shadow-2xl md:aspect-video w-[65vw] md:w-[60vw] rounded-2xl overflow-clip relative snap-center snap-always"
+            >
+              <img
+                className="w-full h-full object-cover"
+                src={imgs[3].url}
+                alt={imgs[3].title}
+              />
+              <motion.div
+                variants={{
+                  active: { opacity: 1 },
+                  inactive: { opacity: 0 },
+                }}
+                className="absolute left-0 bottom-0 px-4 md:px-6 lg:px-8 py-8 md:py-8 lg:py-12 flex flex-col md:flex-row gap-4 md:gap-0 md:justify-between items-center text-white lg:text-lg w-full bg-gradient-to-t from-black/90 to-black/0"
+              >
+                <p className="font-extrabold font-Arapey tracking-wide capitalize relative after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white">
+                  {imgs[3].title}
+                </p>
+                <Link to="/" className="font-extrabold font-Arapey">
+                  <Button content="show more" />
+                </Link>
+              </motion.div>
+            </motion.div>
+
+            <motion.div
+              style={{ opacity: postersOpacity, scale: postersScale }}
+              className="shrink-0 aspect-[9/16] shadow-2xl md:aspect-video w-[65vw] md:w-[60vw] rounded-2xl overflow-clip relative snap-center snap-always"
+            >
+              <img
+                className="w-full h-full object-cover"
+                src={imgs[4].url}
+                alt={imgs[4].title}
+              />
+              <motion.div
+                variants={{
+                  active: { opacity: 1 },
+                  inactive: { opacity: 0 },
+                }}
+                className="absolute left-0 bottom-0 px-4 md:px-6 lg:px-8 py-8 md:py-8 lg:py-12 flex flex-col md:flex-row gap-4 md:gap-0 md:justify-between items-center text-white lg:text-lg font-extrabold w-full bg-gradient-to-t from-black/90 to-black/0"
+              >
+                <p className="font-extrabold font-Arapey tracking-wide capitalize relative after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white">
+                  {imgs[4].title}
+                </p>
+                <Link to="/" className="font-extrabold font-Arapey">
+                  <Button content="show more" />
+                </Link>
+              </motion.div>
+            </motion.div>
+          </div>
         </div>
 
-        <motion.div
-          style={{ opacity: postersOpacity, scale: postersScale }}
-          className="shrink-0 aspect-[9/16] shadow-2xl md:aspect-video w-[65vw] md:w-[60vw] rounded-2xl overflow-clip relative"
-        >
-          <img
-            className="w-full h-full object-cover"
-            src={imgs[1].url}
-            alt={imgs[1].title}
-          />
-          <motion.div
-            variants={{
-              active: { opacity: 1 },
-              inactive: { opacity: 0 },
-            }}
-            className="absolute left-0 bottom-0 px-4 md:px-6 lg:px-8 py-8 md:py-8 lg:py-12 flex flex-col md:flex-row gap-4 md:gap-0 md:justify-between items-center text-white lg:text-lg w-full bg-gradient-to-t from-black/90 to-black/0"
-          >
-            <p className="font-extrabold font-Arapey tracking-wide capitalize relative after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white">
-              {imgs[1].title}
-            </p>
-            <Link to="/" className="font-extrabold font-Arapey">
-              <Button content="show more" />
-            </Link>
-          </motion.div>
-        </motion.div>
-
-        <motion.div
-          style={{ scale }}
-          className="shrink-0 aspect-[9/16] shadow-2xl md:aspect-video w-[65vw] md:w-[60vw] rounded-2xl overflow-clip relative"
-        >
-          <img
-            className="w-full h-full object-cover"
-            src={imgs[2].url}
-            alt={imgs[2].title}
-          />
-          <motion.div
-            variants={{
-              active: { opacity: 1 },
-              inactive: { opacity: 0 },
-            }}
-            className="absolute left-0 bottom-0 px-4 md:px-6 lg:px-8 py-8 md:py-8 lg:py-12 flex flex-col md:flex-row gap-4 md:gap-0 md:justify-between items-center text-white lg:text-lg w-full bg-gradient-to-t from-black/90 to-black/0"
-          >
-            <p className="font-extrabold font-Arapey tracking-wide capitalize relative after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white">
-              {imgs[2].title}
-            </p>
-            <Link to="/" className="font-extrabold font-Arapey">
-              <Button content="show more" />
-            </Link>
-          </motion.div>
-        </motion.div>
-
-        <motion.div
-          style={{ opacity: postersOpacity, scale: postersScale }}
-          className="shrink-0 aspect-[9/16] shadow-2xl md:aspect-video w-[65vw] md:w-[60vw] rounded-2xl overflow-clip relative"
-        >
-          <img
-            className="w-full h-full object-cover"
-            src={imgs[3].url}
-            alt={imgs[3].title}
-          />
-          <motion.div
-            variants={{
-              active: { opacity: 1 },
-              inactive: { opacity: 0 },
-            }}
-            className="absolute left-0 bottom-0 px-4 md:px-6 lg:px-8 py-8 md:py-8 lg:py-12 flex flex-col md:flex-row gap-4 md:gap-0 md:justify-between items-center text-white lg:text-lg w-full bg-gradient-to-t from-black/90 to-black/0"
-          >
-            <p className="font-extrabold font-Arapey tracking-wide capitalize relative after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white">
-              {imgs[3].title}
-            </p>
-            <Link to="/" className="font-extrabold font-Arapey">
-              <Button content="show more" />
-            </Link>
-          </motion.div>
-        </motion.div>
-
-        <div className="shrink-0 aspect-[9/16] shadow-2xl md:aspect-video w-[65vw] md:w-[60vw] rounded-2xl overflow-clip relative">
-          <img
-            className="w-full h-full object-cover"
-            src={imgs[4].url}
-            alt={imgs[4].title}
-          />
-          <motion.div
-            variants={{
-              active: { opacity: 1 },
-              inactive: { opacity: 0 },
-            }}
-            className="absolute left-0 bottom-0 px-4 md:px-6 lg:px-8 py-8 md:py-8 lg:py-12 flex flex-col md:flex-row gap-4 md:gap-0 md:justify-between items-center text-white lg:text-lg font-extrabold w-full bg-gradient-to-t from-black/90 to-black/0"
-          >
-            <p className="font-extrabold font-Arapey tracking-wide capitalize relative after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white">
-              {imgs[4].title}
-            </p>
-            <Link to="/" className="font-extrabold font-Arapey">
-              <Button content="show more" />
-            </Link>
-          </motion.div>
+        <div className="hidden md:block">
+          <div className="absolute left-1/2 bottom-11 -translate-x-1/2 md:flex w-full justify-evenly">
+            <div className="text-white rounded-xl shadow-xl flex items-center gap-2 justify-center p-2">
+              <span className="mt-1">
+                <FaChevronLeft />
+              </span>
+              <span>scroll for more</span>
+            </div>
+            <div className=" text-white rounded-xl shadow-xl flex gap-3 items-center justify-between p-2">
+              <span>scroll for more</span>
+              <span className="rotate-180 mt-1">
+                <FaChevronLeft />
+              </span>
+            </div>
+          </div>
         </div>
-      </div>
-    </motion.section>
+      </motion.section>
+    </>
   );
 };
