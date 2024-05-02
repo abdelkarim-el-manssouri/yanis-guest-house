@@ -238,10 +238,19 @@ const RoomModal = ({ selected, setSelected }) => {
               <div>swimming pool</div>
             </div>
           </div>
-        </div>
+          <div className="h-0.5 w-3/4 mx-auto bg-bordeaux rounded-full my-10 md:my-16" />
 
-        <div className="my-10">
-          <RoomImages />
+          <div className="my-10">
+            <ul>
+              <li>
+                <img
+                  key={selected.images.id}
+                  src={selected.images.image}
+                  alt={`${selected.title} image`}
+                />
+              </li>
+            </ul>
+          </div>
         </div>
       </motion.div>
     </motion.div>
@@ -251,10 +260,16 @@ const RoomModal = ({ selected, setSelected }) => {
 
 export default RoomModal;
 
-const RoomImages = () => {
-  return (
-    <>
-      <ul></ul>
-    </>
-  );
-};
+// import { imgs } from "../data/data";
+
+// const RoomImages = () => {
+//   return (
+//     <>
+//       <ul>
+//         {imgs.map((roomImg) => {
+//           return <li key={roomImg.id}>{roomImg.url}</li>;
+//         })}
+//       </ul>
+//     </>
+//   );
+// };

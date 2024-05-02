@@ -85,6 +85,16 @@ export const imgs = [
     bed: "1 double bed",
     bathroom: "1 bathroom",
     view: "garden view",
+    images: [
+      // room5,
+      // room1,
+      // room5,
+      // room5,
+      { id: 1, image: room5 },
+      { id: 2, image: room5 },
+      { id: 3, image: room5 },
+      { id: 4, image: room5 },
+    ],
   },
   {
     id: 4,
@@ -107,10 +117,11 @@ export const imgs = [
     bathroom: "1 bathroom",
   },
 ];
+
 export const rooms = [
   {
     id: 1,
-    url: room3,
+    url: [room3, room3, room3, room3, room3],
     price: 60,
     title: "chambre double",
     surface: 20,
@@ -121,7 +132,7 @@ export const rooms = [
   },
   {
     id: 2,
-    url: room4,
+    url: [room4, room4, room4, room4, room4],
     price: 80,
     title: "suite parental",
     surface: 25,
@@ -132,7 +143,7 @@ export const rooms = [
   },
   {
     id: 4,
-    url: room1,
+    url: [room1, room1, room1, room1, room1],
     price: 180,
     title: "family suite of 6 members",
     surface: 60,
@@ -143,7 +154,7 @@ export const rooms = [
   },
   {
     id: 5,
-    url: room2,
+    url: [room2, room2, room2, room2, room2],
     price: 190,
     title: "family suite of 7 members",
     surface: 60,

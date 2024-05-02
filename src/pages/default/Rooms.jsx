@@ -124,7 +124,7 @@ const ImageRoom = () => {
               >
                 <img
                   className="w-full h-full object-cover"
-                  src={image.url}
+                  src={image.url[0]}
                   alt={image.title}
                 />
                 <motion.div
