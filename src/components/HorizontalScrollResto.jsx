@@ -48,13 +48,13 @@ const Card = ({ card }) => {
           {card.title}
         </h3>
         <div className="text-sm">
-          <p className="mb-2 first-letter:font-bold first-letter:text-lg indent-4">
+          <p className="mb-2 first-letter:font-bold first-letter:text-lg indent-4 text-justify">
             {card.content1}
           </p>
-          <p className="mb-2 first-letter:font-bold first-letter:text-lg indent-4">
+          <p className="mb-2 first-letter:font-bold first-letter:text-lg indent-4 text-justify">
             {card.content2}
           </p>
-          <p className="mb-2 first-letter:font-bold first-letter:text-lg indent-4">
+          <p className="mb-2 first-letter:font-bold first-letter:text-lg indent-4 text-justify">
             {card.content3}
           </p>
         </div>

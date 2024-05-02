@@ -16,6 +16,7 @@ export default {
         cozyGreen: "#073135",
         golden: "#cfb36c",
         military: "#8E956C",
+        lightGreen: "rgb(0 70 67 / 0.15)",
 
         background: "#f3f0e9",
         primary1: "#e7dfcf",

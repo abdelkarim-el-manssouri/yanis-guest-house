@@ -36,8 +36,7 @@ const Card = ({ card }) => {
   return (
     <div
       key={card.id}
-      // className="group relative h-[430px] lg:h-[500px] w-[400px] md:w-[600px] lg:w-[1000px] overflow-hidden bg-gradient-to-br from-aubergine to-aubergine/0"
-      className="group grid grid-rows-2 lg:grid-rows-none lg:grid-cols-2 h-[430px] lg:h-[500px] w-[350px] md:w-[600px] lg:w-[1000px] overflow-hidden bg-gradient-to-l from-beige to-beige/50"
+      className="group grid grid-rows-2 lg:grid-rows-none lg:grid-cols-2 h-[560px] w-[350px] md:w-[600px] lg:w-[1000px] overflow-hidden bg-neutral-100"
     >
       <div
       // style={{
@@ -54,23 +53,23 @@ const Card = ({ card }) => {
           loading="lazy"
         />
       </div>
-      <div className="h-full grid place-content-center gap-3 m-2 p-3 md:m-6 lg:gap-6 lg:mx-6 overflow-y-auto lg:overflow-y-hidden">
-        <h3 className="font-semibold mt-16 md:mt-0 text-nowrap">
+      <div className="h-full grid place-content-center gap-3 m-2 p-3 md:m-6 lg:m-0 lg:gap-6 lg:mx-6 overflow-y-auto lg:overflow-y-hidden">
+        <h3 className="font-semibold mt-16 md:mt-0 lg:text-2xl text-xl lg:text-center capitalize">
           something something something something
         </h3>
         <div className="text-sm">
-          <p className="mb-3">
+          <p className="mb-2 first-letter:font-bold first-letter:text-lg indent-4 text-justify">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia
             neque earum facilis consectetur nemo modi esse mollitia quae
             temporibus eius sit, aspernatur voluptas doloremque! Eum quos
             consectetur expedita praesentium soluta.
           </p>
-          <p className="">
+          <p className="mb-2 first-letter:font-bold first-letter:text-lg indent-4 text-justify">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia
             neque earum facilis consectetur nemo modi esse
           </p>
         </div>
-        <div className="my-4 md:mb-6 flex justify-center lg:justify-start">
+        <div className="my-4 md:mb-6 flex justify-center ">
           <Link to={card.link}>
             <Button content={card.buttonContent} />
           </Link>
@@ -96,13 +95,13 @@ const cards = [
   },
   {
     url: "/src/assets/cozy-green-sofa.jpeg",
-    link: "/home",
+    link: "/restoration",
     id: 2,
     buttonContent: "restaurants",
   },
   {
     url: "/src/assets/cozy-green-sofa.jpeg",
-    link: "/activities",
+    link: "/",
     id: 3,
     buttonContent: "activities",
   },

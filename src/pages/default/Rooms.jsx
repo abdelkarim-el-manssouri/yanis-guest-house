@@ -5,12 +5,13 @@ import {
   useTransform,
 } from "framer-motion";
 import "../../css/rooms.css";
-import { imgs } from "../../data/data";
-import { useCallback, useMemo, useRef, useState } from "react";
+import { rooms, imgs } from "../../data/data";
+import { useMemo, useRef, useState } from "react";
 import { useWindowSize } from "react-use";
 import Button from "../../UI/Button";
 import { Link } from "react-router-dom";
-import { FaChevronLeft } from "react-icons/fa";
+import { FiChevronsLeft } from "react-icons/fi";
+import RoomModal from "../../components/RoomModal";
 
 const Rooms = () => {
   return (
@@ -41,6 +42,7 @@ const RevealText = () => {
 };
 
 const ImageRoom = () => {
+  const [selected, setSelected] = useState(false);
   const { width, height } = useWindowSize();
   const carouselWrapperRef = useRef(null);
   const [carouselVariant, setCarouselVariant] = useState("inactive");
@@ -102,38 +104,52 @@ const ImageRoom = () => {
                 <p className="font-extrabold font-Arapey tracking-wide capitalize relative after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white">
                   {imgs[2].title}
                 </p>
-                <Link to="/" className="font-extrabold font-Arapey">
+                <Link
+                  onClick={() => {
+                    setSelected(true);
+                    setSelected(imgs[2]);
+                  }}
+                  className="font-extrabold font-Arapey"
+                >
                   <Button content="show more" />
                 </Link>
               </motion.div>
             </motion.div>
 
-            <motion.div
-              style={{ opacity: postersOpacity, scale: postersScale }}
-              className="shrink-0 aspect-[9/16] shadow-2xl md:aspect-video w-[65vw] md:w-[60vw] rounded-2xl overflow-clip relative snap-center snap-always"
-            >
-              <img
-                className="w-full h-full object-cover"
-                src={imgs[0].url}
-                alt={imgs[0].title}
-              />
+            {rooms.map((image) => (
               <motion.div
-                variants={{
-                  active: { opacity: 1 },
-                  inactive: { opacity: 0 },
-                }}
-                className="absolute left-0 bottom-0 px-4 md:px-6 lg:px-8 py-8 md:py-8 lg:py-12 flex flex-col md:flex-row gap-4 md:gap-0 md:justify-between items-center text-white lg:text-lg w-full bg-gradient-to-t from-black/90 to-black/0"
+                key={image.id}
+                style={{ opacity: postersOpacity, scale: postersScale }}
+                className="shrink-0 aspect-[9/16] shadow-2xl md:aspect-video w-[65vw] md:w-[60vw] rounded-2xl overflow-clip relative snap-center snap-always"
               >
-                <p className="font-extrabold font-Arapey tracking-wide capitalize relative after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white">
-                  {imgs[0].title}
-                </p>
-                <Link to="/" className="font-extrabold font-Arapey">
-                  <Button content="show more" />
-                </Link>
+                <img
+                  className="w-full h-full object-cover"
+                  src={image.url}
+                  alt={image.title}
+                />
+                <motion.div
+                  variants={{
+                    active: { opacity: 1 },
+                    inactive: { opacity: 0 },
+                  }}
+                  className="absolute left-0 bottom-0 px-4 md:px-6 lg:px-8 py-8 md:py-8 lg:py-12 flex flex-col md:flex-row gap-4 md:gap-0 md:justify-between items-center text-white lg:text-lg w-full bg-gradient-to-t from-black/90 to-black/0"
+                >
+                  <p className="font-extrabold font-Arapey tracking-wide capitalize relative after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white">
+                    {image.title}
+                  </p>
+                  <Link
+                    onClick={() => {
+                      setSelected(true), setSelected(image);
+                    }}
+                    className="font-extrabold font-Arapey"
+                  >
+                    <Button content="show more" />
+                  </Link>
+                </motion.div>
               </motion.div>
-            </motion.div>
+            ))}
 
-            <motion.div
+            {/* <motion.div
               style={{ opacity: postersOpacity, scale: postersScale }}
               className="shrink-0 aspect-[9/16] shadow-2xl md:aspect-video w-[65vw] md:w-[60vw] rounded-2xl overflow-clip relative snap-center snap-always"
             >
@@ -206,26 +222,28 @@ const ImageRoom = () => {
                   <Button content="show more" />
                 </Link>
               </motion.div>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
 
         <div className="hidden md:block">
           <div className="absolute left-1/2 bottom-11 -translate-x-1/2 md:flex w-full justify-evenly">
             <div className="text-white rounded-xl shadow-xl flex items-center gap-2 justify-center p-2">
-              <span className="mt-1">
-                <FaChevronLeft />
+              <span className="mt-1 flex">
+                <FiChevronsLeft />
               </span>
               <span>scroll for more</span>
             </div>
             <div className=" text-white rounded-xl shadow-xl flex gap-3 items-center justify-between p-2">
               <span>scroll for more</span>
-              <span className="rotate-180 mt-1">
-                <FaChevronLeft />
+              <span className="rotate-180 mt-1 flex">
+                <FiChevronsLeft />
               </span>
             </div>
           </div>
         </div>
+
+        <RoomModal selected={selected} setSelected={setSelected} />
       </motion.section>
     </>
   );

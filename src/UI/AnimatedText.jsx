@@ -16,36 +16,36 @@ const BubbleText = ({ text }) => {
     spans.forEach((span) => {
       span.addEventListener("mouseenter", function () {
         this.style.fontWeight = "900";
-        this.style.color = "#800020";
+        this.style.color = "rgb(238, 242, 255)";
 
         const leftNeighbor = this.previousElementSibling;
         const rightNeighbor = this.nextElementSibling;
 
         if (leftNeighbor) {
           leftNeighbor.style.fontWeight = "500";
-          leftNeighbor.style.color = "#800020";
+          leftNeighbor.style.color = "rgb(238, 242, 255)";
         }
         if (rightNeighbor) {
           rightNeighbor.style.fontWeight = "500";
-          rightNeighbor.style.color = "#800020";
+          rightNeighbor.style.color = "rgb(238, 242, 255)";
         }
       });
 
       span.addEventListener("mouseleave", function () {
         this.style.fontWeight = "100";
-        this.style.color = "#f9f4ef";
+        this.style.color = "rgb(249 244 239 / 0.8)";
 
         const leftNeighbor = this.previousElementSibling;
         const rightNeighbor = this.nextElementSibling;
 
         if (leftNeighbor) {
           leftNeighbor.style.fontWeight = "100";
-          leftNeighbor.style.color = "#f9f4ef";
+          leftNeighbor.style.color = "rgb(249 244 239 / 0.8)";
         }
 
         if (rightNeighbor) {
           rightNeighbor.style.fontWeight = "100";
-          rightNeighbor.style.color = "#f9f4ef";
+          rightNeighbor.style.color = "rgb(249 244 239 / 0.8)";
         }
       });
     });
