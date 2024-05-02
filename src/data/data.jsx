@@ -1,8 +1,8 @@
-import room1 from "/src/assets/accommodations-photos/room1.jpg";
-import room2 from "/src/assets/accommodations-photos/room2.jpg";
-import room3 from "/src/assets/accommodations-photos/room3.jpg";
-import room4 from "/src/assets/accommodations-photos/room4.jpg";
-import room5 from "/src/assets/accommodations-photos/room5.jpg";
+import room1 from "./../assets/accommodations-photos/room1.jpg";
+import room2 from "./../assets/accommodations-photos/room2.jpg";
+import room3 from "./../assets/accommodations-photos/room3.jpg";
+import room4 from "./../assets/accommodations-photos/room4.jpg";
+import room5 from "./../assets/accommodations-photos/room5.jpg";
 
 export const PhotosImages = [
   {

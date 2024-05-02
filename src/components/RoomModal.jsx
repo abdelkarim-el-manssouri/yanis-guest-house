@@ -106,7 +106,13 @@ const bgModalVariants = {
   },
 };
 
-const RoomModal = ({ selected, setSelected }) => {
+const RoomModal = ({ selected, images, roomID, setSelected }) => {
+  let singleImage = {};
+  if (roomID != 0) {
+    singleImage = images?.filter((image) => image?.id == roomID)[0]
+
+  }
+  console.log('roomID ', singleImage);
   if (!selected) return;
   return (
     // <AnimatePresence>
@@ -136,7 +142,7 @@ const RoomModal = ({ selected, setSelected }) => {
 
         <div className="w-4/5 mx-auto">
           <h3 className="relative text-center font-lora italic capitalize text-xl md:text-3xl lg:text-4xl font-bold text-bordeaux before:absolute before:left-0 before:-bottom-2 md:before:-bottom-5 before:w-full before:h-0.5 before:bg-bordeaux before:rounded-full">
-            {selected.title}
+            {singleImage?.title}
           </h3>
 
           <p className="mt-6 md:mt-11 lg:mt-14 text-justify">
@@ -150,22 +156,22 @@ const RoomModal = ({ selected, setSelected }) => {
           <div className="mt-12 md:mt-10 grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-3 text-sm lg:text-base capitalize">
             <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
               <IoBedOutline className="size-6 lg:size-8" />
-              <div>{selected.bed}</div>
+              <div>{singleImage?.bed}</div>
             </div>
             <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
               <HiOutlineUsers className="size-6 lg:size-8" />
-              <div>{selected.persones}</div>
+              <div>{singleImage?.persones}</div>
             </div>
             <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
               <TbRulerMeasure className="size-6 lg:size-8" />
               <div>
-                {selected.surface} m<sup>2</sup>
+                {singleImage?.surface} m<sup>2</sup>
               </div>
             </div>
 
             <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
               <GiWindow className="size-6 lg:size-8" />
-              <div>{selected.view}</div>
+              <div>{singleImage?.view}</div>
             </div>
           </div>
 
@@ -243,11 +249,15 @@ const RoomModal = ({ selected, setSelected }) => {
           <div className="my-10">
             <ul>
               <li>
-                <img
-                  key={selected.images.id}
-                  src={selected.images.image}
-                  alt={`${selected.title} image`}
-                />
+                {singleImage?.url?.map((image, i) => (
+                  // console.log(image)
+                  <img
+                    key={i}
+                    src={image}
+                    alt={`${singleImage?.title} image`}
+                  />
+
+                ))}
               </li>
             </ul>
           </div>

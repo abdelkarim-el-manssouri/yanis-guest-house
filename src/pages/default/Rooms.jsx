@@ -43,6 +43,7 @@ const RevealText = () => {
 
 const ImageRoom = () => {
   const [selected, setSelected] = useState(false);
+  const [roomID, setRoomID] = useState(0);
   const { width, height } = useWindowSize();
   const carouselWrapperRef = useRef(null);
   const [carouselVariant, setCarouselVariant] = useState("inactive");
@@ -140,6 +141,8 @@ const ImageRoom = () => {
                   <Link
                     onClick={() => {
                       setSelected(true), setSelected(image);
+                      setRoomID(image.id);
+                      console.log(image.id);
                     }}
                     className="font-extrabold font-Arapey"
                   >
@@ -243,7 +246,7 @@ const ImageRoom = () => {
           </div>
         </div>
 
-        <RoomModal selected={selected} setSelected={setSelected} />
+        <RoomModal selected={selected} images={rooms} roomID={roomID} setSelected={setSelected} />
       </motion.section>
     </>
   );
