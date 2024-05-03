@@ -19,3 +19,20 @@
     );
   }
 }
+
+@layer base {
+  :root {
+    --carousel-container-size: 1200px;
+  }
+}
+
+@layer utilities {
+  .slide-center {
+    transform: translateX(
+      calc(
+        max(var(--carousel-container-size), 100vw) / 2 -
+          calc(var(--carousel-container-size) / 2)
+      )
+    );
+  }
+}

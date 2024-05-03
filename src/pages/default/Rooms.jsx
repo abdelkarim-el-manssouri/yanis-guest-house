@@ -94,6 +94,7 @@ const ImageRoom = () => {
                 className="w-full h-full object-cover"
                 src={imgs[2].url}
                 alt={imgs[2].title}
+                loading="lazy"
               />
               <motion.div
                 variants={{
@@ -125,8 +126,9 @@ const ImageRoom = () => {
               >
                 <img
                   className="w-full h-full object-cover"
-                  src={image.url[0]}
+                  src={image.url}
                   alt={image.title}
+                  loading="lazy"
                 />
                 <motion.div
                   variants={{
@@ -246,7 +248,7 @@ const ImageRoom = () => {
           </div>
         </div>
 
-        <RoomModal selected={selected} images={rooms} roomID={roomID} setSelected={setSelected} />
+        <RoomModal selected={selected} setSelected={setSelected} />
       </motion.section>
     </>
   );

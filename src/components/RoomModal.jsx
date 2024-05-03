@@ -1,5 +1,9 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { IoBedOutline, IoRestaurantOutline } from "react-icons/io5";
+import {
+  IoBedOutline,
+  IoChevronBack,
+  IoRestaurantOutline,
+} from "react-icons/io5";
 import { GiBathtub, GiRotaryPhone, GiWindow } from "react-icons/gi";
 import {
   TbAirConditioning,
@@ -14,6 +18,8 @@ import { FaWifi } from "react-icons/fa";
 import { PiTelevisionSimple } from "react-icons/pi";
 import { LiaDumbbellSolid, LiaSwimmingPoolSolid } from "react-icons/lia";
 import { MdOutlineRoomService } from "react-icons/md";
+import { useCallback, useMemo, useRef, useState } from "react";
+import Button from "../UI/Button";
 
 const hairDryerSvg = (
   <svg
@@ -106,13 +112,30 @@ const bgModalVariants = {
   },
 };
 
-const RoomModal = ({ selected, images, roomID, setSelected }) => {
-  let singleImage = {};
-  if (roomID != 0) {
-    singleImage = images?.filter((image) => image?.id == roomID)[0]
+const slideWidth = 522;
+const sliderGap = 20;
+const scrollToSlide = (slider, slideIndex) => {
+  if (!slider) return;
+  slider.scrollTo({
+    left: slideIndex * (slideWidth + sliderGap),
+    behavior: "smooth",
+  });
+};
 
-  }
-  console.log('roomID ', singleImage);
+const RoomModal = ({ selected, setSelected }) => {
+  const sliderRef = useRef(null);
+  const [sliderPosition, setSliderPosition] = useState(0);
+  const currentSlide = useMemo(() => {
+    return Math.floor(sliderPosition / (slideWidth + sliderGap));
+  }, [sliderPosition]);
+
+  const goToNextSlide = useCallback(() => {
+    scrollToSlide(sliderRef.current, currentSlide + 1);
+  }, [currentSlide]);
+  const goToPreviousSlide = useCallback(() => {
+    scrollToSlide(sliderRef.current, currentSlide - 1);
+  }, [currentSlide]);
+
   if (!selected) return;
   return (
     // <AnimatePresence>
@@ -142,7 +165,7 @@ const RoomModal = ({ selected, images, roomID, setSelected }) => {
 
         <div className="w-4/5 mx-auto">
           <h3 className="relative text-center font-lora italic capitalize text-xl md:text-3xl lg:text-4xl font-bold text-bordeaux before:absolute before:left-0 before:-bottom-2 md:before:-bottom-5 before:w-full before:h-0.5 before:bg-bordeaux before:rounded-full">
-            {singleImage?.title}
+            {selected?.title}
           </h3>
 
           <p className="mt-6 md:mt-11 lg:mt-14 text-justify">
@@ -154,24 +177,24 @@ const RoomModal = ({ selected, images, roomID, setSelected }) => {
           </p>
 
           <div className="mt-12 md:mt-10 grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-3 text-sm lg:text-base capitalize">
-            <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
+            <div className="flex flex-col items-center justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
               <IoBedOutline className="size-6 lg:size-8" />
-              <div>{singleImage?.bed}</div>
+              <div>{selected?.bed}</div>
             </div>
-            <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
+            <div className="flex flex-col items-center justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
               <HiOutlineUsers className="size-6 lg:size-8" />
-              <div>{singleImage?.persones}</div>
+              <div>{selected?.persones}</div>
             </div>
-            <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
+            <div className="flex flex-col items-center justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
               <TbRulerMeasure className="size-6 lg:size-8" />
               <div>
-                {singleImage?.surface} m<sup>2</sup>
+                {selected?.surface} m<sup>2</sup>
               </div>
             </div>
 
-            <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
+            <div className="flex flex-col items-center justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
               <GiWindow className="size-6 lg:size-8" />
-              <div>{singleImage?.view}</div>
+              <div>{selected?.view}</div>
             </div>
           </div>
 
@@ -245,21 +268,58 @@ const RoomModal = ({ selected, images, roomID, setSelected }) => {
             </div>
           </div>
           <div className="h-0.5 w-3/4 mx-auto bg-bordeaux rounded-full my-10 md:my-16" />
-
-          <div className="my-10">
-            <ul>
-              <li>
-                {singleImage?.url?.map((image, i) => (
-                  // console.log(image)
+        </div>
+        <div className="">
+          <ul>
+            <li className="h-[400px] overflow-hidden">
+              <div
+                ref={sliderRef}
+                onScroll={(ev) => {
+                  setSliderPosition(ev.currentTarget.scrollLeft);
+                }}
+                className="snap-x snap-mandatory lg:w-full h-[440px] pb-10 flex shrink-0 gap-x-5 overflow-x-auto"
+              >
+                {selected?.roomImages?.map((image) => (
                   <img
-                    key={i}
+                    key={selected?.id}
                     src={image}
-                    alt={`${singleImage?.title} image`}
+                    alt={`${selected?.title} image`}
+                    className="snap-center snap-always rounded-xl object-cover bg-center aspect-[9/16] md:aspect-video md:w-[60vw] shadow-lg"
+                    loading="lazy"
                   />
-
                 ))}
-              </li>
-            </ul>
+              </div>
+            </li>
+          </ul>
+
+          <div className="hidden lg:block">
+            <div className="flex justify-center items-center gap-10 mt-6">
+              <button
+                onClick={() => goToPreviousSlide()}
+                className="size-5 group rounded-xl shadow-xl p-4 grid place-content-center active:shadow-none hover:scale-110 transition-all"
+              >
+                <span className="group-active:scale-90">
+                  <IoChevronBack />
+                </span>
+              </button>
+              <button
+                onClick={() => goToNextSlide()}
+                className="size-5 group rounded-xl shadow-xl p-4 grid place-content-center active:shadow-none hover:scale-110 transition-all"
+              >
+                <span className="rotate-180 group-active:scale-90">
+                  <IoChevronBack />
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div className="w-[90%] mx-auto flex flex-col md:flex-row md:justify-between items-center mt-14 mb-6 p-3 md:p-5 rounded-lg shadow-lg border border-dashed border-secondary/10">
+            <p className="capitalize text-lg font-Arapey font-bold text-center md:text-left mb-4 md:mb-0">
+              <span>begin with {selected?.price} $ </span>
+              <br />
+              <span className="text-sm -mt-10">per night</span>
+            </p>
+            <Button content="book" />
           </div>
         </div>
       </motion.div>
@@ -269,17 +329,3 @@ const RoomModal = ({ selected, images, roomID, setSelected }) => {
 };
 
 export default RoomModal;
-
-// import { imgs } from "../data/data";
-
-// const RoomImages = () => {
-//   return (
-//     <>
-//       <ul>
-//         {imgs.map((roomImg) => {
-//           return <li key={roomImg.id}>{roomImg.url}</li>;
-//         })}
-//       </ul>
-//     </>
-//   );
-// };
