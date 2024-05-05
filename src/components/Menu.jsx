@@ -2,6 +2,7 @@ import { FiChevronDown } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { IoLanguage } from "react-icons/io5";
+import { useTranslation } from "react-i18next";
 
 const spainFlag = (
   <svg
@@ -254,10 +255,24 @@ const ukFlag = (
 
 const StaggeredDropDown = () => {
   const [open, setOpen] = useState(false);
+  const languages = [
+    { code: "en", lang: "English", flag: ukFlag },
+    { code: "fr", lang: "French", flag: franceFlag },
+    { code: "sp", lang: "Spanish", flag: spainFlag },
+  ];
+  const { i18n } = useTranslation();
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+  // const [t] = useTranslation(["translation", "footer"]);
 
   return (
     <div className="flex items-center">
-      <motion.div animate={open ? "open" : "closed"} className="relative">
+      <motion.div
+        // key={lng.code}
+        animate={open ? "open" : "closed"}
+        className="relative"
+      >
         <button
           onClick={() => setOpen((pv) => !pv)}
           className="flex items-center gap-1.5 p-2 rounded-md h-8 bg-black relative overflow-hidden text-indigo-50 transition duration-300 hover:scale-105 active:scale-95 capitalize before:absolute before:-left-10 before:w-8 before:h-[120%] before:bg-white/35 before:-skew-x-12 before:blur-sm before:hover:translate-x-48 before:transition-all before:duration-700"
@@ -274,20 +289,27 @@ const StaggeredDropDown = () => {
           style={{ originY: "top", translateX: "-50%" }}
           className="flex flex-col gap-2 p-2 rounded-lg bg-secondary/30 shadow-xl absolute top-[120%] left-[10%] w-32 overflow-hidden"
         >
-          <Option setOpen={setOpen} Flag={ukFlag} text="English" />
-          <Option setOpen={setOpen} Flag={spainFlag} text="Spanish" />
-          <Option setOpen={setOpen} Flag={franceFlag} text="French" />
+          {languages.map((lng) => (
+            <Option
+              setOpen={setOpen}
+              changeLanguage={changeLanguage}
+              Flag={lng.flag}
+              text={lng.lang}
+              key={lng.code}
+              language={lng}
+            />
+          ))}
         </motion.ul>
       </motion.div>
     </div>
   );
 };
 
-const Option = ({ text, setOpen, Flag }) => {
+const Option = ({ text, setOpen, Flag, language, changeLanguage }) => {
   return (
     <motion.li
       variants={itemVariants}
-      onClick={() => setOpen(false)}
+      onClick={() => changeLanguage(language.code) & setOpen(false)}
       className="flex items-center gap-3 w-full p-2 text-xs font-medium whitespace-nowrap rounded-md hover:bg-secondary/35 text-white transition-colors cursor-pointer"
     >
       <motion.span variants={actionIconVariants}>{Flag}</motion.span>

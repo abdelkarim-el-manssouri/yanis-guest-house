@@ -40,7 +40,7 @@ const Card = ({ card }) => {
       <img
         src={card.url}
         alt="image"
-        className="bg-cover bg-center inset-0 transition-transform duration-700 group-hover:scale-105 h-full w-full"
+        className="object-cover bg-center inset-0 transition-transform duration-700 group-hover:scale-105 h-full w-full"
         loading="lazy"
       />
       <div className="h-full grid place-content-center gap-3 m-2 p-3 md:m-6 lg:m-0 lg:gap-6 lg:mx-6 overflow-y-auto lg:overflow-y-hidden">

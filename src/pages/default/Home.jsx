@@ -133,7 +133,7 @@ const Home = () => {
               </p>
             </motion.div>
           </div>
-          <motion.div
+          {/* <motion.div
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
@@ -143,8 +143,10 @@ const Home = () => {
             }}
             className="flex md:flex-none justify-center mt-5 md:absolute lg:relative md:left-20 lg:left-0 md:-bottom-6 lg:bottom-0"
           >
-            <Link to="/book">{/* <Button content="book" /> */}</Link>
-          </motion.div>
+            <Link to="/accommodations">
+              <Button content="book" />
+            </Link>
+          </motion.div> */}
         </div>
         <div className="md:col-span-2">
           <img

@@ -49,7 +49,7 @@ const Card = ({ card }) => {
         <img
           src={card.url}
           alt="image"
-          className="bg-cover inset-0 transition-transform duration-1000 group-hover:scale-105 h-full w-full"
+          className="object-cover inset-0 transition-transform duration-1000 group-hover:scale-105 h-full w-full"
           loading="lazy"
         />
       </div>

@@ -129,6 +129,16 @@ const RoomModal = ({ selected, setSelected }) => {
     return Math.floor(sliderPosition / (slideWidth + sliderGap));
   }, [sliderPosition]);
 
+  const scrolledToEndOfSlider = useMemo(() => {
+    if (!sliderRef.current) return false;
+    return (
+      sliderRef.current.scrollWidth -
+        sliderRef.current.scrollLeft -
+        sliderRef.current.clientWidth ===
+      0
+    );
+  }, [sliderPosition]);
+
   const goToNextSlide = useCallback(() => {
     scrollToSlide(sliderRef.current, currentSlide + 1);
   }, [currentSlide]);
@@ -152,7 +162,7 @@ const RoomModal = ({ selected, setSelected }) => {
         variants={modalVariants}
         initial="initial"
         animate="animate"
-        // exit="exit"
+        exit="exit"
         onClick={(e) => e.stopPropagation()}
         className="w-full max-w-xs md:max-w-2xl lg:max-w-[950px] mx-auto my-8 py-3 md:py-4 lg:py-6 px-4 md:px-6 lg:px-8 cursor-default bg-lightGreen hover:bg-secondary/20 transition-colors duration-500 rounded-xl shadow-2xl"
       >
@@ -279,9 +289,9 @@ const RoomModal = ({ selected, setSelected }) => {
                 }}
                 className="snap-x snap-mandatory lg:w-full h-[440px] pb-10 flex shrink-0 gap-x-5 overflow-x-auto"
               >
-                {selected?.roomImages?.map((image) => (
+                {selected?.roomImages?.map((image, i) => (
                   <img
-                    key={selected?.id}
+                    key={i}
                     src={image}
                     alt={`${selected?.title} image`}
                     className="snap-center snap-always rounded-xl object-cover bg-center aspect-[9/16] md:aspect-video md:w-[60vw] shadow-lg"
@@ -295,16 +305,21 @@ const RoomModal = ({ selected, setSelected }) => {
           <div className="hidden lg:block">
             <div className="flex justify-center items-center gap-10 mt-6">
               <button
+                disabled={currentSlide === 0}
                 onClick={() => goToPreviousSlide()}
-                className="size-5 group rounded-xl shadow-xl p-4 grid place-content-center active:shadow-none hover:scale-110 transition-all"
+                className="disabled:shadow-none disabled:text-gray-500 size-5 group rounded-xl shadow-xl p-4 grid place-content-center active:shadow-none hover:scale-110 transition-all"
               >
                 <span className="group-active:scale-90">
                   <IoChevronBack />
                 </span>
               </button>
               <button
+                disabled={
+                  scrolledToEndOfSlider ||
+                  currentSlide === selected?.roomImages?.length
+                }
                 onClick={() => goToNextSlide()}
-                className="size-5 group rounded-xl shadow-xl p-4 grid place-content-center active:shadow-none hover:scale-110 transition-all"
+                className="disabled:shadow-none disabled:text-gray-500 size-5 group rounded-xl shadow-xl p-4 grid place-content-center active:shadow-none hover:scale-110 transition-all"
               >
                 <span className="rotate-180 group-active:scale-90">
                   <IoChevronBack />

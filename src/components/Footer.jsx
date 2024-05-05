@@ -10,9 +10,9 @@ const Footer = () => {
 
   const { t } = useTranslation("translation");
   return (
-    <>
-      <div className="bg-beige h-screen grid grid-rows-5 md:grid-rows-6">
-        <section className="h-fit bg-yellow-700 text-white p-4 md:p-6 flex justify-center items-center flex-wrap tracking-widest">
+    <footer>
+      <div className="bg-gradient-to-br from-golden via-beige to-secondary/40 h-screen grid grid-rows-5 md:grid-rows-6">
+        <section className="h-fit bg-cozyGreen text-white p-4 md:p-6 flex justify-center items-center flex-wrap tracking-widest">
           <p className="w-full text-center">{t("footer.location")}</p>
           <p className="w-full text-center">{t("footer.contact")}</p>
         </section>
@@ -76,7 +76,7 @@ const Footer = () => {
           </div>
         </section>
       </div>
-    </>
+    </footer>
   );
 };
 

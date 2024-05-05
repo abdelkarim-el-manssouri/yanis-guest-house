@@ -49,9 +49,9 @@ const DefaultLayout = () => {
         </motion.nav>
         <Outlet />
         <div className="bg-neutral-950">{/* <NavbarButton /> */}</div>
-        <footer className="h-screen">
+        <div className="h-screen">
           <Footer />
-        </footer>
+        </div>
       </main>
     </>
   );
