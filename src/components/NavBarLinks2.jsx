@@ -28,9 +28,9 @@ const NavBarLinks2 = () => {
         onClick={toggleOpen}
         className="relative size-10 rounded-full bg-white/0 transition-colors hover:bg-white/20"
       >
-        <span className="absolute h-0.5 w-5 bg-gray-500 left-1/4 top-[35%] " />
-        <span className="absolute h-0.5 w-5 bg-gray-500 top-1/2 left-1/4" />
-        <span className="absolute h-0.5 w-2.5 bg-gray-500 top-[65%] left-1/4" />
+        <span className="absolute h-0.5 w-5 bg-background left-1/4 top-[35%] " />
+        <span className="absolute h-0.5 w-5 bg-background top-1/2 left-1/4" />
+        <span className="absolute h-0.5 w-2.5 bg-background top-[65%] left-1/4" />
       </button>
       <AnimatePresence>
         {open && (

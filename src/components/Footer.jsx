@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="bg-gradient-to-br from-golden via-beige to-secondary/40 h-screen grid grid-rows-5 md:grid-rows-6">
-        <section className="h-fit bg-cozyGreen text-white p-4 md:p-6 flex justify-center items-center flex-wrap tracking-widest">
+        <section className="h-fit bg-gradient-to-b from-black to-cozyGreen text-white p-4 md:p-6 flex justify-center items-center flex-wrap tracking-widest">
           <p className="w-full text-center">{t("footer.location")}</p>
           <p className="w-full text-center">{t("footer.contact")}</p>
         </section>
@@ -44,28 +44,31 @@ const Footer = () => {
           <p className="flex justify-center text-xl w-full mt-4 md:mt-0">
             {t("footer.join")}
           </p>
-          <div className="flex justify-center gap-6 my-5 md:my-6">
-            <span className="flex justify-center items-center w-8 h-8 md:w-10 md:h-10  rounded-full hover:shadow-xl hover:shadow-gray-500 transition delay-[50] ease-in">
-              <a href="https://www.instagram.com/yanisguesthouse/?igshid=YmMyMTA2M2Y%3D">
-                <FiInstagram className="w-4 h-4 md:w-6 md:h-6" />
+          <div className="flex justify-center gap-7 md:gap-10 my-5 md:my-6">
+            <span className="size-7 md:size-9 group rounded-xl shadow-xl p-2 md:p-4 grid place-content-center active:shadow-none hover:scale-110 transition-all">
+              <a
+                target="_blank"
+                href="https://www.instagram.com/yanisguesthouse/?igshid=YmMyMTA2M2Y%3D"
+              >
+                <FiInstagram className="w-4 h-4 md:w-6 md:h-6 group-active:scale-90" />
               </a>
             </span>
-            <span className="flex justify-center items-center w-8 h-8 md:w-10 md:h-10 rounded-full hover:shadow-xl hover:shadow-gray-500 transition delay-[50] ease-in">
-              <FiFacebook className="w-4 h-4 md:w-6 md:h-6" />
+            <span className="size-7 md:size-9 group rounded-xl shadow-xl p-2 md:p-4 grid place-content-center active:shadow-none hover:scale-110 transition-all">
+              <FiFacebook className="w-4 h-4 md:w-6 md:h-6 group-active:scale-90" />
             </span>
-            <span className="flex justify-center items-center w-8 h-8 md:w-10 md:h-10 rounded-full hover:shadow-xl hover:shadow-gray-500 transition delay-[50] ease-in">
-              <a href="tel:0808651872">
-                <FiPhone className="w-4 h-4 md:w-6 md:h-6" />
+            <span className="size-7 md:size-9 group rounded-xl shadow-xl p-2 md:p-4 grid place-content-center active:shadow-none hover:scale-110 transition-all">
+              <a target="_blank" href="tel:0808651872">
+                <FiPhone className="w-4 h-4 md:w-6 md:h-6 group-active:scale-90" />
               </a>
             </span>
-            <span className="flex justify-center items-center w-8 h-8 md:w-10 md:h-10 rounded-full hover:shadow-xl hover:shadow-gray-500 transition delay-[50] ease-in">
-              <a href="https://wa.me/+212632219063">
-                <FaWhatsapp className="w-4 h-4 md:w-6 md:h-6" />
+            <span className="size-7 md:size-9 group rounded-xl shadow-xl p-2 md:p-4 grid place-content-center active:shadow-none hover:scale-110 transition-all">
+              <a target="_blank" href="https://wa.me/+212632219063">
+                <FaWhatsapp className="w-4 h-4 md:w-6 md:h-6 group-active:scale-90" />
               </a>
             </span>
-            <span className="flex justify-center items-center w-8 h-8 md:w-10 md:h-10 rounded-full hover:shadow-xl hover:shadow-gray-500 transition delay-[50] ease-in">
-              <a href="mailto:contact@yanisguesthouse.com">
-                <FiMail className="w-4 h-4 md:w-6 md:h-6" />
+            <span className="size-7 md:size-9 group rounded-xl shadow-xl p-2 md:p-4 grid place-content-center active:shadow-none hover:scale-110 transition-all">
+              <a target="_blank" href="mailto:contact@yanisguesthouse.com">
+                <FiMail className="w-4 h-4 md:w-6 md:h-6 group-active:scale-90" />
               </a>
             </span>
           </div>

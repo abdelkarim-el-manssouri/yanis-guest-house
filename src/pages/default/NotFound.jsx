@@ -43,7 +43,7 @@ const AuroraHero = () => {
       className="relative grid min-h-screen place-content-center overflow-hidden bg-gray-950 px-4 py-24 text-gray-200"
     >
       <div className="relative z-10 flex flex-col items-center">
-        <h1 className="max-w-3xl bg-gradient-to-br capitalize from-background to-cozyGreen bg-clip-text text-center text-[8em] lg:-mt-20 font-medium leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-[14em] md:leading-tight">
+        <h1 className="max-w-3xl capitalize bg-gradient-to-br from-background to-cozyGreen bg-clip-text text-transparent text-center text-[8em] lg:-mt-20 font-medium leading-tight sm:text-5xl sm:leading-tight md:text-[14em] md:leading-tight">
           <span className="font-Arapey">404</span>
           <br />
           <p className="text-4xl md:text-5xl md:-mt-4 mb-20 font-Montserrat">

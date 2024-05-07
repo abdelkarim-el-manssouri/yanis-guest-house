@@ -275,7 +275,7 @@ const StaggeredDropDown = () => {
       >
         <button
           onClick={() => setOpen((pv) => !pv)}
-          className="flex items-center gap-1.5 p-2 rounded-md h-8 bg-black relative overflow-hidden text-indigo-50 transition duration-300 hover:scale-105 active:scale-95 capitalize before:absolute before:-left-10 before:w-8 before:h-[120%] before:bg-white/35 before:-skew-x-12 before:blur-sm before:hover:translate-x-48 before:transition-all before:duration-700"
+          className="flex items-center gap-1.5 p-2 rounded-md h-8 bg-gradient-to-b from-background/30 via-black/40 to-transparent relative overflow-hidden text-background font-bold transition duration-300 hover:scale-105 active:scale-95 capitalize before:absolute before:-left-10 before:w-8 before:h-[120%] before:bg-white/35 before:-skew-x-12 before:blur-sm before:hover:translate-x-48 before:transition-all before:duration-700"
         >
           <IoLanguage />
           <motion.span variants={iconVariants}>

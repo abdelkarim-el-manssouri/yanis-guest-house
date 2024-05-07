@@ -148,11 +148,11 @@ const Home = () => {
             </Link>
           </motion.div> */}
         </div>
-        <div className="md:col-span-2">
+        <div className="md:col-span-2 shadow-2xl">
           <img
             src="/src/assets/cozy-green-sofa_edited.jpg"
             alt="image"
-            className="h-full"
+            className="h-full object-cover object-center"
             loading="lazy"
           />
         </div>
@@ -165,11 +165,11 @@ const Home = () => {
         transition={{ type: "spring", stiffness: 100 }}
         className="h-3/4 grid gap-y-4 md:gap-y-0 md:grid-cols-3 mt-4 md:my-16 md:w-11/12 mx-auto overflow-hidden"
       >
-        <div className="md:col-span-2 mt-4 md:mt-0">
+        <div className="md:col-span-2 mt-4 md:mt-0 shadow-2xl">
           <img
             src="/src/assets/cozy-green-sofa_edited.jpg"
             alt="image"
-            className="h-full"
+            className="h-full object-cover object-center"
             loading="lazy"
           />
         </div>
@@ -195,7 +195,7 @@ const Home = () => {
               viewport={{
                 once: true,
               }}
-              className="p-1.5 md:p-3 md:mt-0 md:ml-28 lg:p-6 mx-auto w-full md:w-[60ch] lg:w-[75ch] text-xs lg:text-sm tracking-wide bg-background text-mainText backdrop-blur-sm relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-left-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-left-3 md:before:top-0"
+              className="p-1.5 md:p-3 md:mt-0 md:ml-28 lg:p-6 mx-auto w-full md:w-[60ch] lg:w-[75ch] text-xs lg:text-sm bg-background text-mainText backdrop-blur-sm relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-left-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-left-3 md:before:top-0"
             >
               <p className="mb-2 md:mb-3 lg:mb-4">
                 A sense of hospitality that translates into a thousand and one

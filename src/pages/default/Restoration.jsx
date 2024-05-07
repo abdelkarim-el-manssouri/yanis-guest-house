@@ -30,7 +30,7 @@ const Restoration = () => {
         <BookNow />
       </section> */}
 
-      <section>
+      <section className="relative z-10">
         <HorizontalScrollResto />
       </section>
 
@@ -62,10 +62,10 @@ const Sensation = ({ title, content, imageUrl }) => {
     >
       <section className="grid grid-rows-2 md:grid-rows-none bg-secondary/15 transition duration-500 hover:bg-secondary/25 w-[90%] shadow-2xl md:w-4/5 mx-auto border-black/5 overflow-hidden md:relative h-96 md:h-80 rounded-md">
         <div className="grid md:grid-cols-layout lg:py-4 md:p-2 lg:px-5 sm:max-w-[50%] sm:mt-auto h-full md:group-even:ml-[19.3rem] lg:group-even:ml-[29.3rem]">
-          <h3 className="grid place-content-center -mb-10 md:mb-0 text-2xl font-semibold capitalize">
+          <h3 className="grid place-content-center -mb-10 md:mb-0 text-2xl font-bold capitalize font-Marcellus italic">
             {title}
           </h3>
-          <p className="grid place-content-center px-2 lg:px-4 text-center text-sm lg:text-base leading-relaxed tracking-wide">
+          <p className="grid place-content-center px-2 lg:px-4 text-center font-Dancing text-sm lg:text-base leading-relaxed">
             {content}
           </p>
         </div>
@@ -74,7 +74,7 @@ const Sensation = ({ title, content, imageUrl }) => {
           src={imageUrl}
           alt="image"
           loading="lazy"
-          className="md:absolute top-8 md:-right-64 lg:-right-14 md:w-[35rem] lg:w-[30rem] md:rounded-t-lg shadow-2xl 
+          className="md:absolute top-8 md:-right-64 lg:-right-14 md:w-[35rem] lg:w-[30rem] md:rounded-t-lg shadow-2xl object-cover object-center
           transition duration-500
           group-even:right-[initial] 
           md:group-even:-left-64
@@ -96,8 +96,15 @@ const Sensation = ({ title, content, imageUrl }) => {
 const SeeMenu = () => {
   return (
     <>
-      <div className="grid place-content-center my-10">
-        <p className="text-white font-bold text-xl w-fit bg-black">see menu</p>
+      <div className="grid place-content-center text-center min-h-[150vh] mt-[-100vh]">
+        <div className="sticky top-[50%] mb-[calc(50%-25%)] md:mb-[calc(50%-38%)]">
+          <h4 className="mb-5 text-lg uppercase font-Marcellus italic font-semibold">
+            discover our menu
+          </h4>
+          <button className="py-3 px-10 bg-secondary/15 transition duration-300 hover:bg-secondary/25 text-mainText hover:text-background shadow-md hover:shadow-xl active:shadow-none hover:scale-105 active:scale-95 font-semibold capitalize rounded-sm">
+            see menu
+          </button>
+        </div>
       </div>
     </>
   );

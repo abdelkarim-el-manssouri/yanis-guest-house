@@ -174,7 +174,7 @@ const RoomModal = ({ selected, setSelected }) => {
         </div>
 
         <div className="w-4/5 mx-auto">
-          <h3 className="relative text-center font-lora italic capitalize text-xl md:text-3xl lg:text-4xl font-bold text-bordeaux before:absolute before:left-0 before:-bottom-2 md:before:-bottom-5 before:w-full before:h-0.5 before:bg-bordeaux before:rounded-full">
+          <h3 className="relative text-center font-Marcellus italic capitalize text-xl md:text-3xl lg:text-4xl font-bold text-bordeaux before:absolute before:left-0 before:-bottom-2 md:before:-bottom-5 before:w-full before:h-0.5 before:bg-bordeaux before:rounded-full">
             {selected?.title}
           </h3>
 
@@ -316,7 +316,7 @@ const RoomModal = ({ selected, setSelected }) => {
               <button
                 disabled={
                   scrolledToEndOfSlider ||
-                  currentSlide === selected?.roomImages?.length
+                  currentSlide === selected?.roomImages?.length - 1
                 }
                 onClick={() => goToNextSlide()}
                 className="disabled:shadow-none disabled:text-gray-500 size-5 group rounded-xl shadow-xl p-4 grid place-content-center active:shadow-none hover:scale-110 transition-all"

@@ -39,7 +39,7 @@ const DefaultLayout = () => {
           }}
           animate={hidden ? "hidden" : "visible"}
           transition={{ duration: 0.35, ease: "easeInOut" }}
-          className="grid grid-cols-navbar sticky top-0 left-0 z-[600]"
+          className="grid grid-cols-navbar sticky top-0 left-0 z-[600] bg-gradient-to-b from-black/80 via-black/50 to-transparent"
         >
           <div className="top-0 left-0 z-[600] p-5 w-full ">
             <NavBarLinks2 />

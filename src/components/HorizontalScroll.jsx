@@ -54,10 +54,10 @@ const Card = ({ card }) => {
         />
       </div>
       <div className="h-full grid place-content-center gap-3 m-2 p-3 md:m-6 lg:m-0 lg:gap-6 lg:mx-6 overflow-y-auto lg:overflow-y-hidden">
-        <h3 className="font-semibold mt-16 md:mt-0 lg:text-2xl text-xl lg:text-center capitalize">
-          something something something something
+        <h3 className="font-Marcellus italic font-semibold mt-16 md:mt-0 lg:text-2xl text-xl lg:text-center capitalize">
+          something something something
         </h3>
-        <div className="text-sm">
+        <div className="font-Dancing">
           <p className="mb-2 first-letter:font-bold first-letter:text-lg indent-4 text-justify">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia
             neque earum facilis consectetur nemo modi esse mollitia quae

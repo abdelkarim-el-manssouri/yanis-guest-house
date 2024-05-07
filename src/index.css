@@ -2,11 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap"); */
+
+/* @import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap"); */
+
+/* @import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap"); */
+
+/* @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"); */
 
 @layer components {
   .reveal-text {
@@ -23,6 +41,18 @@
 @layer base {
   :root {
     --carousel-container-size: 1200px;
+  }
+  html {
+    @apply: bg-backround;
+  }
+
+  /* @font-face {
+    font-family: "Dancing";
+    src: url("/fonts/DancingScript-VariableFont_wght.ttf") format("ttf");
+  } */
+  @font-face {
+    font-family: "Groillim";
+    src: url("/fonts/Groillim.otf") format("otf");
   }
 }
 

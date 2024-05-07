@@ -1,4 +1,5 @@
 import {
+  animate,
   motion,
   useMotionValueEvent,
   useScroll,
@@ -29,7 +30,7 @@ const RevealText = () => {
     <section className="mt-[-100vh] h-[400vh] [view-timeline-name:--reveal-wrapper] bg-background relative z-10">
       <div className="min-h-screen sticky top-0 flex justify-center items-center w-3/4 mx-auto md:text-justify">
         <div>
-          <p className="text-3xl supports-[animation-timeline]:reveal-text text-black [text-shadow:_0.5px_0.5px_0_#00464326]">
+          <p className="text-3xl supports-[animation-timeline]:reveal-text font-Groillim font-bold leading-[3rem] text-black [text-shadow:_0.5px_0.5px_0_#00464326]">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam,
             delectus repudiandae. At sed labore aperiam quasi aut qui beatae
             ullam recusandae expedita dignissimos, iure numquam voluptatem esse
@@ -43,7 +44,6 @@ const RevealText = () => {
 
 const ImageRoom = () => {
   const [selected, setSelected] = useState(false);
-  const [roomID, setRoomID] = useState(0);
   const { width, height } = useWindowSize();
   const carouselWrapperRef = useRef(null);
   const [carouselVariant, setCarouselVariant] = useState("inactive");
@@ -82,7 +82,7 @@ const ImageRoom = () => {
       <motion.section
         animate={carouselVariant}
         ref={carouselWrapperRef}
-        className="h-[250vh] mt-[-100vh] bg-cozyGreen relative"
+        className="h-[450vh] md:h-[400vh] lg:h-[300vh] mt-[-100vh] bg-cozyGreen relative"
       >
         <div className="sticky top-0 h-screen overflow-hidden">
           <div className="h-[calc(100vh+2.5rem)] pb-10 flex items-center gap-5 overflow-x-auto snap-x snap-mandatory px-5">
@@ -143,8 +143,6 @@ const ImageRoom = () => {
                   <Link
                     onClick={() => {
                       setSelected(true), setSelected(image);
-                      setRoomID(image.id);
-                      console.log(image.id);
                     }}
                     className="font-extrabold font-Arapey"
                   >
@@ -250,6 +248,101 @@ const ImageRoom = () => {
 
         <RoomModal selected={selected} setSelected={setSelected} />
       </motion.section>
+
+      <section>
+        <RoomsOutro />
+      </section>
     </>
+  );
+};
+
+const titleRevealVariant = {
+  initial: {
+    y: 20,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "tween",
+      stifness: 30,
+      duration: 1,
+      delay: 0.3,
+    },
+  },
+};
+
+const paragraphRevealVariant = {
+  initial: {
+    y: 20,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "tween",
+      stifness: 30,
+      duration: 1,
+      delay: 0.7,
+    },
+  },
+};
+
+const imageRevealVariant = {
+  initial: {
+    y: 20,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "tween",
+      stifness: 30,
+      duration: 1,
+      delay: 1.3,
+    },
+  },
+};
+
+const RoomsOutro = () => {
+  return (
+    <div className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 p-5 lg:p-14 gap-y-4 md:gap-y-0 lg:gap-x-10">
+      <div className="order-2 p-4 md:p-8 lg:p-10 grid place-content-center">
+        <motion.h3
+          variants={titleRevealVariant}
+          initial="initial"
+          whileInView="animate"
+          className="mb-4 lg:mb-8 text-center font-Marcellus italic text-xl lg:text-2xl font-extrabold capitalize"
+        >
+          enjoy our various list of rooms and suits
+        </motion.h3>
+        <motion.p
+          variants={paragraphRevealVariant}
+          initial="initial"
+          whileInView="animate"
+          className="text-center md:text-justify font-Dancing text-sm lg:text-base"
+        >
+          Located on the various floors of the hotel, each of our rooms reserves
+          a special something to enhance your stay and make it truly
+          unforgettable. Offering views over the Gardens, the Hivernage area or
+          the Koutoubia Mosque, some with a balcony where you can enjoy a book
+          or simply sit back and relax, and exuding comfort and charm, the rooms
+          at La Mamounia are a lavish invitation to let time stand still in the
+          most delightful of ways.{" "}
+        </motion.p>
+      </div>
+      <motion.div
+        variants={imageRevealVariant}
+        initial="initial"
+        whileInView="animate"
+        style={{
+          backgroundImage: "url('/src/assets/accommodations-photos/room1.jpg')",
+        }}
+        className="md:order-2 bg-cover bg-center shadow-xl overflow-hidden rounded-md relative before:absolute before:left-0 before:top-0 before:h-full before:w-[30%] before:bg-gradient-to-r before:from-black/70 before:to-transparent after:absolute after:right-0 after:top-0 after:h-full after:w-[30%] after:bg-gradient-to-l after:from-black/70 after:to-transparent"
+      />
+    </div>
   );
 };
