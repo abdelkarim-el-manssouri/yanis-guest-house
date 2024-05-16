@@ -111,6 +111,18 @@ export const imgs = [
 
 export const rooms = [
   {
+    id: 3,
+    url: room5,
+    price: 120,
+    title: "suite royale",
+    surface: 30,
+    persones: "2 - 4",
+    bed: "1 double bed",
+    bathroom: "1 bathroom",
+    view: "garden view",
+    roomImages: [room5, room5, room5, room5],
+  },
+  {
     id: 1,
     url: room3,
     price: 60,

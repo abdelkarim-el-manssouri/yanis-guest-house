@@ -7,6 +7,7 @@ import Rooms from "./pages/default/Rooms";
 import Activities from "./pages/default/Activities";
 import Photos from "./pages/photos";
 import Restoration from "./pages/default/Restoration";
+import RoomsCopy from "./pages/default/RoomsCopy";
 // import Dashboard from "./pages/dashboard/Dashboard";
 
 const router = createBrowserRouter([
@@ -28,8 +29,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/accommodations",
-        element: <Rooms />,
+        element: <RoomsCopy />,
       },
+      // {
+      //   path: "/accommodations",
+      //   element: <Rooms />,
+      // },
       {
         path: "/activities",
         element: <Activities />,

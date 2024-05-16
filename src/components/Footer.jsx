@@ -11,7 +11,7 @@ const Footer = () => {
   const { t } = useTranslation("translation");
   return (
     <footer>
-      <div className="bg-gradient-to-br from-golden via-beige to-secondary/40 h-screen grid grid-rows-5 md:grid-rows-6">
+      <div className="bg-gradient-to-b from-secondary/40 via-beige to-golden h-screen grid grid-rows-5 md:grid-rows-6">
         <section className="h-fit bg-gradient-to-b from-black to-cozyGreen text-white p-4 md:p-6 flex justify-center items-center flex-wrap tracking-widest">
           <p className="w-full text-center">{t("footer.location")}</p>
           <p className="w-full text-center">{t("footer.contact")}</p>

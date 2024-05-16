@@ -1,4 +1,4 @@
-import { motion, useTransform, useScroll } from "framer-motion";
+import { motion, useTransform, useScroll, stagger } from "framer-motion";
 import { useRef } from "react";
 
 const HorizontalScrollResto = () => {
@@ -44,20 +44,40 @@ const Card = ({ card }) => {
         loading="lazy"
       />
       <div className="h-full grid place-content-center gap-3 m-2 p-3 md:m-6 lg:m-0 lg:gap-6 lg:mx-6 overflow-y-auto lg:overflow-y-hidden">
-        <h3 className="font-Marcellus italic font-semibold mt-16 md:mt-0 lg:text-2xl text-xl lg:text-center capitalize">
+        <motion.h3
+          variants={titleReveal}
+          initial="initial"
+          whileInView="animate"
+          className="font-Marcellus italic font-semibold mt-16 md:mt-0 lg:text-2xl text-xl lg:text-center capitalize"
+        >
           {card.title}
-        </h3>
-        <div className="text-sm font-Dancing tracking-wide">
-          <p className="mb-2 first-letter:font-bold first-letter:text-lg indent-4 text-justify">
+        </motion.h3>
+        <motion.div className="text-sm font-Dancing tracking-wide">
+          <motion.p
+            variants={content1Reveal}
+            initial="initial"
+            whileInView="animate"
+            className="mb-2 first-letter:font-bold first-letter:text-lg indent-4 text-justify"
+          >
             {card.content1}
-          </p>
-          <p className="mb-2 first-letter:font-bold first-letter:text-lg indent-4 text-justify">
+          </motion.p>
+          <motion.p
+            variants={content2Reveal}
+            initial="initial"
+            whileInView="animate"
+            className="mb-2 first-letter:font-bold first-letter:text-lg indent-4 text-justify"
+          >
             {card.content2}
-          </p>
-          <p className="mb-2 first-letter:font-bold first-letter:text-lg indent-4 text-justify">
+          </motion.p>
+          <motion.p
+            variants={content3Reveal}
+            initial="initial"
+            whileInView="animate"
+            className="mb-2 first-letter:font-bold first-letter:text-lg indent-4 text-justify"
+          >
             {card.content3}
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
         {/* <div className="my-4 md:mb-6 flex justify-center lg:justify-start">
           <Link to={card.link}>
             <Button content={card.buttonContent} />
@@ -123,3 +143,68 @@ const cards = [
   //   id: 7,
   // },
 ];
+
+const titleReveal = {
+  initial: {
+    y: 20,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "tween",
+      stifness: 10,
+      duration: 1,
+      delay: 0.5,
+    },
+  },
+};
+const content1Reveal = {
+  initial: {
+    y: 20,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "tween",
+      stifness: 10,
+      duration: 1,
+      delay: 0.8,
+    },
+  },
+};
+const content2Reveal = {
+  initial: {
+    y: 20,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "tween",
+      stifness: 10,
+      duration: 1,
+      delay: 1.1,
+    },
+  },
+};
+const content3Reveal = {
+  initial: {
+    y: 20,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "tween",
+      stifness: 10,
+      duration: 1,
+      delay: 1.4,
+    },
+  },
+};

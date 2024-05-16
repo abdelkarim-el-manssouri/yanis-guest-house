@@ -27,6 +27,6 @@
     display: inline;
     animation: fill-text linear both;
     animation-timeline: --reveal-wrapper;
-    animation-range: entry 170% cover 80%;
+    animation-range: entry 250% cover 80%;
   }
 }

@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { AnimatedText } from "../../UI/AnimatedText";
 import { motion, useScroll, useTransform } from "framer-motion";
 import HorizontalScroll from "../../components/HorizontalScroll";
@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { SwipeCarousel } from "../../components/Carousel";
 import SmallParagraph from "../../UI/SmallParagraph";
 import Button from "../../UI/Button";
+import Header2 from "../../components/Header2";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -51,6 +52,22 @@ const xAxisTextScroll = {
 };
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+
+    // const lenis = new Lenis();
+    // function raf(time) {
+    //   lenis.raf(time);
+    //   requestAnimationFrame(raf);
+    // }
+
+    // requestAnimationFrame(raf);
+  }, []);
+
   const ref = useRef(null);
   // const ref2 = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -69,15 +86,18 @@ const Home = () => {
     "Get away for a dream vacation and dive into an oasis of luxurious serenity in the heart of the Medina of Marrakech.";
   return (
     <>
+      <div className="w-full h-dvh overflow-hidden bg-black z-20 backdrop-blur-md -mt-20">
+        <Header2 />
+      </div>
       <motion.section
         style={{
           scale: scaleProgress,
           opacity: opacityProgress,
         }}
         ref={ref}
-        className="relative h-screen w-full flex justify-center bg-cover bg-no-repeat bg-center bg-[url('/src/assets/cozy-grey-wall.jpeg')]"
+        className="flex justify-center h-screen w-full bg-cover bg-no-repeat bg-center bg-[url('/src/assets/cozy-grey-wall.jpeg')] "
       >
-        <div className="absolute top-32 md:top-20 leading-8 w-[25ch] md:w-[50ch] lg:w-[80ch] uppercase [text-shadow:_1px_1px_0_rgb(0_0_0_/_40%)]">
+        <div className="grid place-content-center -mt-44 leading-8 w-[25ch] md:w-[50ch] lg:w-[80ch] uppercase [text-shadow:_1px_1px_0_rgb(0_0_0_/_40%)]">
           <AnimatedText text={textContent} />
         </div>
       </motion.section>

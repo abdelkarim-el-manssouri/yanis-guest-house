@@ -50,7 +50,7 @@ const hairDryerSvg = (
 			c-0.776,3.232-0.129,13.382,10.667,13.382h73.438c5.107,0,9.503-3.491,10.667-8.469l39.951-174.481
 			c15.838-6.206,30.19-15.903,41.697-28.832C385.81,157.525,395.378,127.529,391.887,96.305z M64.84,147.699l-42.99,17.39V52.022
 			l42.99,17.39V147.699z M263.952,370.794h-51.006l36.461-159.095c15.903,5.236,33.228,6.723,49.972,4.331L263.952,370.794z
-			 M348.703,166.252c-34.457,39.564-92.057,26.052-104.21,19.911c-31.677-15.838-68.461-26.958-109.446-33.164l-48.42-7.37V71.416
+			M348.703,166.252c-34.457,39.564-92.057,26.052-104.21,19.911c-31.677-15.838-68.461-26.958-109.446-33.164l-48.42-7.37V71.416
 			l40.792-6.206c44.994-6.788,83.588-18.166,118.174-34.844c14.287-6.852,30.125-9.762,46.287-8.275
 			c40.986,3.814,73.891,35.943,78.352,76.477C372.945,123.65,365.123,147.376,348.703,166.252z"
         />
@@ -80,15 +80,15 @@ const modalVariants = {
       delay: 0.3,
       ease: [0.6, 0.01, 0.05, 0.9],
     },
-    exit: {
-      y: "100%",
-      opacity: 0,
-      transition: {
-        duration: 1,
-        delay: 0.3,
-        ease: [0.6, 0.01, 0.05, 0.9],
-      },
-    },
+    // exit: {
+    //   y: "100%",
+    //   opacity: 0,
+    //   transition: {
+    //     duration: 1,
+    //     delay: 0.3,
+    //     ease: [0.6, 0.01, 0.05, 0.9],
+    //   },
+    // },
   },
 };
 
@@ -162,9 +162,9 @@ const RoomModal = ({ selected, setSelected }) => {
         variants={modalVariants}
         initial="initial"
         animate="animate"
-        exit="exit"
+        // exit="exit"
         onClick={(e) => e.stopPropagation()}
-        className="w-full max-w-xs md:max-w-2xl lg:max-w-[950px] mx-auto my-8 py-3 md:py-4 lg:py-6 px-4 md:px-6 lg:px-8 cursor-default bg-lightGreen hover:bg-secondary/20 transition-colors duration-500 rounded-xl shadow-2xl"
+        className="w-full max-w-xs md:max-w-2xl lg:max-w-[950px] mx-auto mt-8 mb-20 py-3 md:py-4 lg:py-6 px-4 md:px-6 lg:px-8 cursor-default bg-lightGreen hover:bg-secondary/20 transition-colors duration-500 rounded-xl shadow-2xl"
       >
         <div className="flex justify-end mr-1">
           <button onClick={() => setSelected(!selected)} className="p-4">

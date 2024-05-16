@@ -2,7 +2,7 @@ import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { Outlet } from "react-router-dom";
 // import { ShiftingDropDown } from "./Navbar";
 import Footer from "./Footer";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import Header from "./Header";
 // import AnimatedButton from "../UI/AnimatedButton";
 // import WaterDropGrid from "../UI/WaterDropGrid";
@@ -10,6 +10,8 @@ import { useState } from "react";
 import Navbar_v2 from "./Navbar_v2";
 import NavBarLinks2 from "./NavBarLinks2";
 import Header2 from "./Header2";
+// import { ReactLenis, useLenis } from 'lenis/react'
+// import Lenis from "lenis";
 // import { NavbarButton } from "../UI/NavbarButton";
 // import { HoverImageLinks } from "./NavbarLinks";
 
@@ -17,21 +19,33 @@ const DefaultLayout = () => {
   // const [open, setOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
   const { scrollY } = useScroll();
-  const vheight = window.innerHeight;
+  // const vheight = window.innerHeight;
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
-    if (latest > previous && latest > vheight + 70) {
+    if (latest > previous && latest > 90) {
       setHidden(true);
     } else {
       setHidden(false);
     }
   });
+
+  // useEffect(() => {
+  //   const lenis = new Lenis();
+  //   function raf(time) {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   }
+
+  //   requestAnimationFrame(raf);
+  // }, []);
+
+  // const lenis = useLenis(({ scroll }) => {
+  //   // called every scroll
+  // })
   return (
     <>
+      {/* <ReactLenis root> */}
       <main className="mx-auto bg-background md:max-w-7xl">
-        <div className="w-full h-dvh overflow-hidden bg-black relative z-20 backdrop-blur-md">
-          <Header2 />
-        </div>
         <motion.nav
           variants={{
             visible: { y: 0 },
@@ -53,6 +67,7 @@ const DefaultLayout = () => {
           <Footer />
         </div>
       </main>
+      {/* </ReactLenis> */}
     </>
   );
 };

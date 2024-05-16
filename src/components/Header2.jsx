@@ -17,21 +17,21 @@ const HeaderImageReveal = () => {
       } else {
         setCurrentImg(currentImg + 1);
       }
-    }, 10000);
+    }, 6000);
     return () => clearTimeout(timer);
   }, [currentImg]);
 
   let runInterval = useRef();
   const [scope, animate] = useAnimate();
   const runAnimation = async () => {
-    await animate(scope.current, { opacity: 0 }, { duration: 5 });
-    await animate(scope.current, { opacity: 0.5 }, { duration: 5 });
+    await animate(scope.current, { opacity: 0 }, { duration: 2 });
+    await animate(scope.current, { opacity: 0.5 }, { duration: 3 });
   };
 
   const startAnimation = () => {
     runInterval.current = setInterval(() => {
       runAnimation();
-    }, 5000);
+    }, 6000);
   };
 
   const controls = useAnimation();

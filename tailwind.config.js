@@ -43,7 +43,7 @@ export default {
       fontFamily: {
         lora: ["lora"],
         Arapey: ["Arapey, serif"],
-        Montsrrat: ["Montserrat, sans-serif", 0.5],
+        Montserrat: ["Montserrat, sans-serif", 0.5],
         BodoniModa: ["Bodoni Moda, serif"],
         PoiretOne: ["Poiret One, sans-serif"],
         Elsie: ["Elsie, serif"],
@@ -54,6 +54,7 @@ export default {
         Italiana: ["Italiana, sans-serif"],
         Dancing: ["Dancing Script, cursive"],
         Groillim: ["Groillim"],
+        Poiret: ["Poiret One, sans-serif"],
       },
     },
   },

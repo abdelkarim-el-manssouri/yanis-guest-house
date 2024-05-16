@@ -25,6 +25,12 @@ const Photos = () => {
     );
 
     setUrlArray([...new Set(url_array)]);
+
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
   }, [null]);
 
   return (

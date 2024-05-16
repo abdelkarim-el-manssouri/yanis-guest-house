@@ -1,17 +1,26 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { sensationsData } from "../../data/data";
 import SmallParagraph from "../../UI/SmallParagraph";
 import BookNow from "../../components/BookNow";
 import HorizontalScrollResto from "../../components/HorizontalScrollResto";
 
 const Restoration = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
   const text1 =
     "the restaurant of yanis guest house is not only a fine dining destination, it is a feast for each of the five senses.";
   const text2 =
     "There is something for everyone, Along with unforgettable moments of exchange.";
   return (
     <>
+      <RestoHeader />
+
       <SmallParagraph text={text1} />
 
       <motion.section>
@@ -43,6 +52,70 @@ const Restoration = () => {
 
 export default Restoration;
 
+const RestoHeader = () => {
+  const firstTextRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: firstTextRef,
+    offset: ["center center", "start start"],
+  });
+  const y = useTransform(scrollYProgress, [0.1, 0.5], [0, -100]);
+  const opacity = useTransform(scrollYProgress, [0.2, 0.5], [1, 0]);
+  return (
+    <>
+      <div
+        style={{
+          backgroundImage: "url('/src/assets/accommodations-photos/room1.jpg')",
+        }}
+        className="h-screen z-50 bg-cover bg-center -mt-20"
+      >
+        <div className="flex flex-col justify-center items-center h-full gap-y-16">
+          <motion.img
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              type: "tween",
+              stifness: 50,
+              duration: 1,
+              delay: 1.3,
+            }}
+            ref={firstTextRef}
+            style={{ y, opacity }}
+            src="https://yanisguesthouse.com/images/logo.png"
+            alt="logo"
+            className="w-44 h-20 md:w-52 lg:w-60 md:h-24 lg:h-32"
+          />
+          {/* <motion.p
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              type: "tween",
+              stifness: 50,
+              duration: 1,
+              delay: 1.3,
+            }}
+            className="text-white font-bold text-3xl md:text-4xl lg:text-5xl font-Groillim tracking-wider capitalize underline underline-offset-8 [text-shadow:_1px_1px_0_#00464326]"
+          >
+            yanis guest house
+          </motion.p> */}
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              type: "tween",
+              stifness: 20,
+              duration: 1,
+              delay: 1.3,
+            }}
+            className="text-white font-bold text-3xl md:text-4xl lg:text-5xl font-Montsrrat tracking-wider capitalize underline underline-offset-8 [text-shadow:_1px_1px_0_#00464326]"
+          >
+            the restaurant
+          </motion.p>
+        </div>
+      </div>
+    </>
+  );
+};
+
 const Sensation = ({ title, content, imageUrl }) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -65,7 +138,7 @@ const Sensation = ({ title, content, imageUrl }) => {
           <h3 className="grid place-content-center -mb-10 md:mb-0 text-2xl font-bold capitalize font-Marcellus italic">
             {title}
           </h3>
-          <p className="grid place-content-center px-2 lg:px-4 text-center font-Dancing text-sm lg:text-base leading-relaxed">
+          <p className="grid place-content-center px-2 lg:px-4 text-center font-Poiret font-normal tracking-wide text-sm lg:text-base leading-relaxed">
             {content}
           </p>
         </div>

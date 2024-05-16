@@ -1,5 +1,4 @@
 import {
-  animate,
   motion,
   useMotionValueEvent,
   useScroll,
@@ -7,16 +6,24 @@ import {
 } from "framer-motion";
 import "../../css/rooms.css";
 import { rooms, imgs } from "../../data/data";
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useWindowSize } from "react-use";
 import Button from "../../UI/Button";
 import { Link } from "react-router-dom";
-import { FiChevronsLeft } from "react-icons/fi";
+// import { FiChevronsLeft } from "react-icons/fi";
 import RoomModal from "../../components/RoomModal";
 
 const Rooms = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
   return (
     <>
+      <RoomsHeader />
       <RevealText />
       <ImageRoom />
     </>
@@ -25,12 +32,54 @@ const Rooms = () => {
 
 export default Rooms;
 
+const RoomsHeader = () => {
+  return (
+    <>
+      <div
+        style={{
+          backgroundImage: "url('/src/assets/accommodations-photos/room1.jpg')",
+        }}
+        className="h-screen bg-black absolute z-50 bg-cover bg-center inset-0"
+      >
+        <div className="flex flex-col justify-center items-center h-full gap-y-16">
+          <motion.img
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              type: "tween",
+              stifness: 50,
+              duration: 1,
+              delay: 1.3,
+            }}
+            src="https://yanisguesthouse.com/images/logo.png"
+            alt="logo"
+            className="w-44 h-20 md:w-52 lg:w-60 md:h-24 lg:h-32"
+          />
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              type: "tween",
+              stifness: 20,
+              duration: 1,
+              delay: 1.3,
+            }}
+            className="text-white font-bold text-3xl md:text-4xl lg:text-5xl font-Groillim tracking-wider capitalize underline underline-offset-8 [text-shadow:_1px_1px_0_#00464326]"
+          >
+            the accommodations
+          </motion.p>
+        </div>
+      </div>
+    </>
+  );
+};
+
 const RevealText = () => {
   return (
     <section className="mt-[-100vh] h-[400vh] [view-timeline-name:--reveal-wrapper] bg-background relative z-10">
       <div className="min-h-screen sticky top-0 flex justify-center items-center w-3/4 mx-auto md:text-justify">
         <div>
-          <p className="text-3xl supports-[animation-timeline]:reveal-text font-Groillim font-bold leading-[3rem] text-black [text-shadow:_0.5px_0.5px_0_#00464326]">
+          <p className="text-xl md:text-3xl supports-[animation-timeline]:reveal-text font-Groillim font-bold leading-[2.5rem] md:leading-[3rem] text-black [text-shadow:_0.5px_0.5px_0_#00464326]">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam,
             delectus repudiandae. At sed labore aperiam quasi aut qui beatae
             ullam recusandae expedita dignissimos, iure numquam voluptatem esse
@@ -54,8 +103,8 @@ const ImageRoom = () => {
 
   const maximumScale = useMemo(() => {
     const windowYRatio = height / width;
-    // const xScale = 1.66667;
-    const xScale = 2;
+    const xScale = 1.66667;
+    // const xScale = 2;
     const yScale = xScale * (16 / 9) * windowYRatio;
     return Math.max(xScale, yScale);
   }, [width, height]);
@@ -66,11 +115,11 @@ const ImageRoom = () => {
     [maximumScale * 1.1, maximumScale, 1]
   );
 
-  const postersOpacity = useTransform(scrollYProgress, [0.64, 0.66], [0, 1]);
-  const postersScale = useTransform(scrollYProgress, [0.6, 0.66], [0.5, 1]);
+  const postersOpacity = useTransform(scrollYProgress, [0.64, 0.66], [0.3, 1]);
+  const postersScale = useTransform(scrollYProgress, [0.6, 0.66], [0.8, 1]);
 
   useMotionValueEvent(scrollYProgress, "change", (progress) => {
-    if (progress >= 0.67) {
+    if (progress >= 0.6) {
       setCarouselVariant("active");
     } else {
       setCarouselVariant("inactive");
@@ -82,7 +131,7 @@ const ImageRoom = () => {
       <motion.section
         animate={carouselVariant}
         ref={carouselWrapperRef}
-        className="h-[450vh] md:h-[400vh] lg:h-[300vh] mt-[-100vh] bg-cozyGreen relative"
+        className="h-[550vh] md:h-[450vh] mt-[-100vh] bg-cozyGreen relative"
       >
         <div className="sticky top-0 h-screen overflow-hidden">
           <div className="h-[calc(100vh+2.5rem)] pb-10 flex items-center gap-5 overflow-x-auto snap-x snap-mandatory px-5">
@@ -229,7 +278,7 @@ const ImageRoom = () => {
           </div>
         </div>
 
-        <div className="hidden md:block">
+        {/* <div className="hidden md:block">
           <div className="absolute left-1/2 bottom-11 -translate-x-1/2 md:flex w-full justify-evenly">
             <div className="text-white rounded-xl shadow-xl flex items-center gap-2 justify-center p-2">
               <span className="mt-1 flex">
@@ -244,7 +293,7 @@ const ImageRoom = () => {
               </span>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <RoomModal selected={selected} setSelected={setSelected} />
       </motion.section>
@@ -310,7 +359,7 @@ const imageRevealVariant = {
 const RoomsOutro = () => {
   return (
     <div className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 p-5 lg:p-14 gap-y-4 md:gap-y-0 lg:gap-x-10">
-      <div className="order-2 p-4 md:p-8 lg:p-10 grid place-content-center">
+      <div className=" p-4 md:p-8 lg:p-10 grid place-content-center">
         <motion.h3
           variants={titleRevealVariant}
           initial="initial"

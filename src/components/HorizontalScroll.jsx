@@ -54,26 +54,46 @@ const Card = ({ card }) => {
         />
       </div>
       <div className="h-full grid place-content-center gap-3 m-2 p-3 md:m-6 lg:m-0 lg:gap-6 lg:mx-6 overflow-y-auto lg:overflow-y-hidden">
-        <h3 className="font-Marcellus italic font-semibold mt-16 md:mt-0 lg:text-2xl text-xl lg:text-center capitalize">
+        <motion.h3
+          variants={titleReveal}
+          initial="initial"
+          whileInView="animate"
+          className="font-Marcellus italic font-semibold mt-16 md:mt-0 lg:text-2xl text-xl lg:text-center capitalize"
+        >
           something something something
-        </h3>
+        </motion.h3>
         <div className="font-Dancing">
-          <p className="mb-2 first-letter:font-bold first-letter:text-lg indent-4 text-justify">
+          <motion.p
+            variants={content1Reveal}
+            initial="initial"
+            whileInView="animate"
+            className="mb-2 first-letter:font-bold first-letter:text-lg indent-4 text-justify"
+          >
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia
             neque earum facilis consectetur nemo modi esse mollitia quae
             temporibus eius sit, aspernatur voluptas doloremque! Eum quos
             consectetur expedita praesentium soluta.
-          </p>
-          <p className="mb-2 first-letter:font-bold first-letter:text-lg indent-4 text-justify">
+          </motion.p>
+          <motion.p
+            variants={content2Reveal}
+            initial="initial"
+            whileInView="animate"
+            className="mb-2 first-letter:font-bold first-letter:text-lg indent-4 text-justify"
+          >
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia
             neque earum facilis consectetur nemo modi esse
-          </p>
+          </motion.p>
         </div>
-        <div className="my-4 md:mb-6 flex justify-center ">
+        <motion.div
+          variants={content3Reveal}
+          initial="initial"
+          whileInView="animate"
+          className="my-4 md:mb-6 flex justify-center "
+        >
           <Link to={card.link}>
             <Button content={card.buttonContent} />
           </Link>
-        </div>
+        </motion.div>
       </div>
       {/* <div className="absolute inset-0 z-10 grid place-content-center">
         <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-white backdrop-blur-lg">
@@ -126,3 +146,68 @@ const cards = [
   //   id: 7,
   // },
 ];
+
+const titleReveal = {
+  initial: {
+    y: 20,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "tween",
+      stifness: 10,
+      duration: 1,
+      delay: 0.5,
+    },
+  },
+};
+const content1Reveal = {
+  initial: {
+    y: 20,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "tween",
+      stifness: 10,
+      duration: 1,
+      delay: 0.8,
+    },
+  },
+};
+const content2Reveal = {
+  initial: {
+    y: 20,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "tween",
+      stifness: 10,
+      duration: 1,
+      delay: 1.1,
+    },
+  },
+};
+const content3Reveal = {
+  initial: {
+    y: 20,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "tween",
+      stifness: 10,
+      duration: 1,
+      delay: 1.4,
+    },
+  },
+};
