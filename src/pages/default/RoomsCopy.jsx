@@ -44,9 +44,10 @@ const RoomsHeader = () => {
       style={{
         backgroundImage: "url('/src/assets/accommodations-photos/room1.jpg')",
       }}
-      className="h-screen bg-black absolute z-50 bg-cover bg-center inset-0"
+      className="h-screen bg-black relative -mt-20 bg-cover bg-center z-50"
     >
-      <div className="flex flex-col justify-center items-center h-full gap-y-16">
+      <div className="absolute inset-0 bg-black/30" />
+      <div className="flex flex-col justify-center z-[60] items-center h-full gap-y-16">
         <motion.img
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -60,7 +61,7 @@ const RoomsHeader = () => {
           style={{ y, opacity }}
           src="https://yanisguesthouse.com/images/logo.png"
           alt="logo"
-          className="w-44 h-20 md:w-52 lg:w-60 md:h-24 lg:h-32"
+          className="w-44 h-20 md:w-52 lg:w-60 md:h-24 lg:h-32 z-10"
         />
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -71,7 +72,7 @@ const RoomsHeader = () => {
             duration: 1,
             delay: 1.3,
           }}
-          className="text-white font-bold text-3xl md:text-4xl lg:text-5xl font-Groillim tracking-wider capitalize underline underline-offset-8 [text-shadow:_1px_1px_0_#00464326]"
+          className="z-10 text-white font-bold text-3xl md:text-4xl lg:text-5xl font-Groillim tracking-wider capitalize underline underline-offset-8 decoration-2 [text-shadow:_1px_1px_0_#00464326]"
         >
           the accommodations
         </motion.p>
@@ -110,7 +111,7 @@ const ImageRoom = ({ scrollYProgress }) => {
     <>
       <motion.section
         style={{ scale, opacity }}
-        className="h-[220vh] mt-[-100vh] bg-cozyGreen relative"
+        className="h-[200vh] mt-[-100vh] bg-cozyGreen relative"
       >
         <div className="sticky top-0 h-screen overflow-hidden">
           <div className="h-[calc(100vh+2.5rem)] pb-10 flex items-center gap-5 overflow-x-auto snap-x snap-mandatory px-5">

@@ -58,14 +58,6 @@ const Home = () => {
       left: 0,
       behavior: "smooth",
     });
-
-    // const lenis = new Lenis();
-    // function raf(time) {
-    //   lenis.raf(time);
-    //   requestAnimationFrame(raf);
-    // }
-
-    // requestAnimationFrame(raf);
   }, []);
 
   const ref = useRef(null);
@@ -95,7 +87,7 @@ const Home = () => {
           opacity: opacityProgress,
         }}
         ref={ref}
-        className="flex justify-center h-screen w-full bg-cover bg-no-repeat bg-center bg-[url('/src/assets/cozy-grey-wall.jpeg')] "
+        className="flex justify-center h-screen w-full bg-cover bg-no-repeat bg-center bg-[url('/src/assets/cozy-grey-wall.jpeg')]"
       >
         <div className="grid place-content-center -mt-44 leading-8 w-[25ch] md:w-[50ch] lg:w-[80ch] uppercase [text-shadow:_1px_1px_0_rgb(0_0_0_/_40%)]">
           <AnimatedText text={textContent} />

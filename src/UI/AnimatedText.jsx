@@ -22,30 +22,30 @@ const BubbleText = ({ text }) => {
         const rightNeighbor = this.nextElementSibling;
 
         if (leftNeighbor) {
-          leftNeighbor.style.fontWeight = "500";
+          leftNeighbor.style.fontWeight = "600";
           leftNeighbor.style.color = "rgb(238, 242, 255)";
         }
         if (rightNeighbor) {
-          rightNeighbor.style.fontWeight = "500";
+          rightNeighbor.style.fontWeight = "600";
           rightNeighbor.style.color = "rgb(238, 242, 255)";
         }
       });
 
       span.addEventListener("mouseleave", function () {
-        this.style.fontWeight = "100";
-        this.style.color = "rgb(249 244 239 / 0.8)";
+        this.style.fontWeight = "400";
+        this.style.color = "#cfb36c";
 
         const leftNeighbor = this.previousElementSibling;
         const rightNeighbor = this.nextElementSibling;
 
         if (leftNeighbor) {
-          leftNeighbor.style.fontWeight = "100";
-          leftNeighbor.style.color = "rgb(249 244 239 / 0.8)";
+          leftNeighbor.style.fontWeight = "400";
+          leftNeighbor.style.color = "#cfb36c";
         }
 
         if (rightNeighbor) {
-          rightNeighbor.style.fontWeight = "100";
-          rightNeighbor.style.color = "rgb(249 244 239 / 0.8)";
+          rightNeighbor.style.fontWeight = "400";
+          rightNeighbor.style.color = "#cfb36c";
         }
       });
     });

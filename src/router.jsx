@@ -8,6 +8,7 @@ import Activities from "./pages/default/Activities";
 import Photos from "./pages/photos";
 import Restoration from "./pages/default/Restoration";
 import RoomsCopy from "./pages/default/RoomsCopy";
+import Book from "./pages/default/Book";
 // import Dashboard from "./pages/dashboard/Dashboard";
 
 const router = createBrowserRouter([
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: "/restoration",
         element: <Restoration />,
+      },
+      {
+        path: "/book",
+        element: <Book />,
       },
     ],
   },

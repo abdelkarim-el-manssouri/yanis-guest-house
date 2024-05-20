@@ -1,0 +1,17 @@
+{
+  "heroTitle": "réserver & contacter",
+  "firstText": "bienvenue, profitez de votre séjour inoubliable avec nous",
+  "name": "nom complet",
+  "email": "email",
+  "phoneNumber": "numéro de téléphone",
+  "checkin": "Date d’arrivée",
+  "checkOut": "régler la note",
+  "adults": "nombre d'adultes",
+  "kids": "nombre d'enfants",
+  "room": "chambre",
+  "selectRoom": "sélectionnez votre chambre préférée",
+  "message": "qu'y a-t-il dans ta tête",
+  "typeHere": "tapez ici ...",
+  "send": "envoyer",
+  "location": "notre emplacement"
+}

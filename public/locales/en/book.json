@@ -1,0 +1,17 @@
+{
+  "heroTitle": "book & contact",
+  "firstText": "welcome, enjoy your unforgettable stay with us",
+  "name": "full name",
+  "email": "email",
+  "phoneNumber": "phone number",
+  "checkin": "check in",
+  "checkOut": "check out",
+  "adults": "adults number",
+  "kids": "kids number",
+  "room": "room",
+  "selectRoom": "select your favorite room",
+  "message": "whats in your mind",
+  "typeHere": "type here ...",
+  "send": "send",
+  "location": "our location"
+}
