@@ -2,11 +2,8 @@ import { useEffect, useRef } from "react";
 import { AnimatedText } from "../../UI/AnimatedText";
 import { motion, useScroll, useTransform } from "framer-motion";
 import HorizontalScroll from "../../components/HorizontalScroll";
-// import WaterDropGrid from "../../UI/WaterDropGrid";
-import { Link } from "react-router-dom";
 import { SwipeCarousel } from "../../components/Carousel";
 import SmallParagraph from "../../UI/SmallParagraph";
-import Button from "../../UI/Button";
 import Header2 from "../../components/Header2";
 
 const fadeInAnimationVariants = {
@@ -61,14 +58,12 @@ const Home = () => {
   }, []);
 
   const ref = useRef(null);
-  // const ref2 = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["0 1", "1 1"],
   });
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
-  // const x = useTransform(scrollYProgress, [0, 1], [0, -500]);
 
   const scale2Progress = useTransform(scrollYProgress, [0, 1], [0, 1]);
   const opacity2Progress = useTransform(scrollYProgress, [0, 1], [0, 1]);
@@ -145,20 +140,6 @@ const Home = () => {
               </p>
             </motion.div>
           </div>
-          {/* <motion.div
-            variants={fadeInAnimationVariants}
-            initial="initial"
-            whileInView="animate"
-            transition={{ type: "tween", duration: 1.2 }}
-            viewport={{
-              once: true,
-            }}
-            className="flex md:flex-none justify-center mt-5 md:absolute lg:relative md:left-20 lg:left-0 md:-bottom-6 lg:bottom-0"
-          >
-            <Link to="/accommodations">
-              <Button content="book" />
-            </Link>
-          </motion.div> */}
         </div>
         <div className="md:col-span-2 shadow-2xl">
           <img
@@ -228,24 +209,17 @@ const Home = () => {
       <SwipeCarousel />
 
       <motion.section
-        // variants={fadeInAnimationVariants}
-        // initial="initial"
-        // whileInView="animate"
-        // transition={{ type: "spring" }}
         style={{
           scale: scale2Progress,
           opacity: opacity2Progress,
         }}
-        // ref={ref}
         className="my-16 md:my-0 md:h-screen flex items-center overflow-hidden"
       >
         <div className="aspect-video lg:aspect-carousel w-full bg-cover opacity-80 bg-[url('/src/assets/cozy-green-sofa.jpeg')]">
           <motion.h2
-            // ref={ref2}
             variants={xAxisTextScroll}
             initial="initial"
             whileInView="animate"
-            // style={{ x }}
             className="flex items-end w-full h-full whitespace-nowrap text-white text-[6em] md:text-[9em] lg:text-[11em] font-bold transition-all duration-[5s] ease-move-mouse"
           >
             something special

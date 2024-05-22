@@ -90,8 +90,8 @@ const NavBarLinks2 = () => {
                       }}
                       exit={{ opacity: 0 }}
                       src={revealImg.image}
-                      // alt={`image of ${revealImg.key}`}
-                      className="bg-cover bg-center"
+                      alt={`image of ${revealImg.key}`}
+                      className="object-cover object-center"
                       key={revealImg.key}
                     />
                   </AnimatePresence>
@@ -123,7 +123,12 @@ const Pages = [
   { id: 1, title: "home", link: "home", image: room1 },
   { id: 2, title: "accommodations", link: "accommodations", image: room2 },
   { id: 3, title: "restoration", link: "restoration", image: room3 },
-  // { id: 4, title: "activities", link: "activities", image: room1 },
+  {
+    id: 4,
+    title: "activities & wellbeing",
+    link: "activities&wellbeing",
+    image: room1,
+  },
   { id: 5, title: "gallery", link: "gallery", image: room4 },
 ];
 

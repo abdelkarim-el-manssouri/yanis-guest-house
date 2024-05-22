@@ -1,16 +1,9 @@
-import {
-  motion,
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import "../../css/rooms.css";
-import { rooms, imgs } from "../../data/data";
-import { useEffect, useMemo, useRef, useState } from "react";
-import { useWindowSize } from "react-use";
+import { rooms } from "../../data/data";
+import { useEffect, useRef, useState } from "react";
 import Button from "../../UI/Button";
 import { Link } from "react-router-dom";
-// import { FiChevronsLeft } from "react-icons/fi";
 import RoomModal from "../../components/RoomModal";
 
 const Rooms = () => {
@@ -21,11 +14,17 @@ const Rooms = () => {
       behavior: "smooth",
     });
   }, []);
+
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start start", "end end"],
+  });
   return (
     <>
       <RoomsHeader />
-      <RevealText />
-      <ImageRoom />
+      <RevealText scrollYProgress={scrollYProgress} />
+      <ImageRoom scrollYProgress={scrollYProgress} />
     </>
   );
 };
@@ -33,50 +32,63 @@ const Rooms = () => {
 export default Rooms;
 
 const RoomsHeader = () => {
+  const firstTextRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: firstTextRef,
+    offset: ["center center", "start start"],
+  });
+  const y = useTransform(scrollYProgress, [0.1, 0.5], [0, -100]);
+  const opacity = useTransform(scrollYProgress, [0.2, 0.5], [1, 0]);
   return (
-    <>
-      <div
-        style={{
-          backgroundImage: "url('/src/assets/accommodations-photos/room1.jpg')",
-        }}
-        className="h-screen bg-black absolute z-50 bg-cover bg-center inset-0"
-      >
-        <div className="flex flex-col justify-center items-center h-full gap-y-16">
-          <motion.img
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              type: "tween",
-              stifness: 50,
-              duration: 1,
-              delay: 1.3,
-            }}
-            src="https://yanisguesthouse.com/images/logo.png"
-            alt="logo"
-            className="w-44 h-20 md:w-52 lg:w-60 md:h-24 lg:h-32"
-          />
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              type: "tween",
-              stifness: 20,
-              duration: 1,
-              delay: 1.3,
-            }}
-            className="text-white font-bold text-3xl md:text-4xl lg:text-5xl font-Groillim tracking-wider capitalize underline underline-offset-8 [text-shadow:_1px_1px_0_#00464326]"
-          >
-            the accommodations
-          </motion.p>
-        </div>
+    <div
+      style={{
+        backgroundImage: "url('/src/assets/accommodations-photos/room1.jpg')",
+      }}
+      className="h-screen bg-black relative -mt-20 bg-cover bg-center z-50"
+    >
+      <div className="absolute inset-0 bg-black/30" />
+      <div className="flex flex-col justify-center z-[60] items-center h-full gap-y-16">
+        <motion.img
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            type: "tween",
+            stifness: 50,
+            duration: 1,
+            delay: 1.3,
+          }}
+          ref={firstTextRef}
+          style={{ y, opacity }}
+          src="https://yanisguesthouse.com/images/logo.png"
+          alt="logo"
+          className="w-44 h-20 md:w-52 lg:w-60 md:h-24 lg:h-32 z-10"
+        />
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            type: "tween",
+            stifness: 20,
+            duration: 1,
+            delay: 1.3,
+          }}
+          className="z-10 text-white font-bold text-3xl md:text-4xl lg:text-5xl font-Groillim tracking-wider capitalize underline underline-offset-8 decoration-2 [text-shadow:_1px_1px_0_#00464326]"
+        >
+          the accommodations
+        </motion.p>
       </div>
-    </>
+    </div>
   );
 };
 
-const RevealText = () => {
+const RevealText = ({ scrollYProgress }) => {
+  const scale = useTransform(scrollYProgress, [0.2, 1], [1, 0.8]);
+  const opacity = useTransform(scrollYProgress, [0.5, 0.55], [1, 0]);
   return (
-    <section className="mt-[-100vh] h-[400vh] [view-timeline-name:--reveal-wrapper] bg-background relative z-10">
+    <motion.section
+      style={{ scale, opacity }}
+      className="mt-[-100vh] h-[400vh] [view-timeline-name:--reveal-wrapper] bg-background relative z-10"
+    >
       <div className="min-h-screen sticky top-0 flex justify-center items-center w-3/4 mx-auto md:text-justify">
         <div>
           <p className="text-xl md:text-3xl supports-[animation-timeline]:reveal-text font-Groillim font-bold leading-[2.5rem] md:leading-[3rem] text-black [text-shadow:_0.5px_0.5px_0_#00464326]">
@@ -87,90 +99,25 @@ const RevealText = () => {
           </p>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
-const ImageRoom = () => {
+const ImageRoom = ({ scrollYProgress }) => {
   const [selected, setSelected] = useState(false);
-  const { width, height } = useWindowSize();
-  const carouselWrapperRef = useRef(null);
-  const [carouselVariant, setCarouselVariant] = useState("inactive");
-  const { scrollYProgress } = useScroll({
-    target: { carouselWrapperRef },
-    offset: ["start start", "end start"],
-  });
-
-  const maximumScale = useMemo(() => {
-    const windowYRatio = height / width;
-    const xScale = 1.66667;
-    // const xScale = 2;
-    const yScale = xScale * (16 / 9) * windowYRatio;
-    return Math.max(xScale, yScale);
-  }, [width, height]);
-
-  const scale = useTransform(
-    scrollYProgress,
-    [0.3, 0.5, 0.66],
-    [maximumScale * 1.1, maximumScale, 1]
-  );
-
-  const postersOpacity = useTransform(scrollYProgress, [0.64, 0.66], [0.3, 1]);
-  const postersScale = useTransform(scrollYProgress, [0.6, 0.66], [0.8, 1]);
-
-  useMotionValueEvent(scrollYProgress, "change", (progress) => {
-    if (progress >= 0.6) {
-      setCarouselVariant("active");
-    } else {
-      setCarouselVariant("inactive");
-    }
-  });
-
+  const opacity = useTransform(scrollYProgress, [0.5, 0.6], [0, 1]);
+  const scale = useTransform(scrollYProgress, [-0.4, 0.6], [0, 1]);
   return (
     <>
       <motion.section
-        animate={carouselVariant}
-        ref={carouselWrapperRef}
-        className="h-[550vh] md:h-[450vh] mt-[-100vh] bg-cozyGreen relative"
+        style={{ scale, opacity }}
+        className="h-[200vh] mt-[-100vh] bg-cozyGreen relative"
       >
         <div className="sticky top-0 h-screen overflow-hidden">
           <div className="h-[calc(100vh+2.5rem)] pb-10 flex items-center gap-5 overflow-x-auto snap-x snap-mandatory px-5">
-            <motion.div
-              style={{ scale }}
-              className="shrink-0 aspect-[9/16] shadow-2xl md:aspect-video w-[65vw] md:w-[60vw] rounded-2xl overflow-clip relative snap-center snap-always"
-            >
-              <img
-                className="w-full h-full object-cover"
-                src={imgs[2].url}
-                alt={imgs[2].title}
-                loading="lazy"
-              />
-              <motion.div
-                variants={{
-                  active: { opacity: 1 },
-                  inactive: { opacity: 0 },
-                }}
-                className="absolute left-0 bottom-0 px-4 md:px-6 lg:px-8 py-8 md:py-8 lg:py-12 flex flex-col md:flex-row gap-4 md:gap-0 md:justify-between items-center text-white lg:text-lg w-full bg-gradient-to-t from-black/90 to-black/0"
-              >
-                <p className="font-extrabold font-Arapey tracking-wide capitalize relative after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white">
-                  {imgs[2].title}
-                </p>
-                <Link
-                  onClick={() => {
-                    setSelected(true);
-                    setSelected(imgs[2]);
-                  }}
-                  className="font-extrabold font-Arapey"
-                >
-                  <Button content="show more" />
-                </Link>
-              </motion.div>
-            </motion.div>
-
             {rooms.map((image) => (
-              <motion.div
+              <div
                 key={image.id}
-                style={{ opacity: postersOpacity, scale: postersScale }}
                 className="shrink-0 aspect-[9/16] shadow-2xl md:aspect-video w-[65vw] md:w-[60vw] rounded-2xl overflow-clip relative snap-center snap-always"
               >
                 <img
@@ -179,122 +126,24 @@ const ImageRoom = () => {
                   alt={image.title}
                   loading="lazy"
                 />
-                <motion.div
-                  variants={{
-                    active: { opacity: 1 },
-                    inactive: { opacity: 0 },
-                  }}
-                  className="absolute left-0 bottom-0 px-4 md:px-6 lg:px-8 py-8 md:py-8 lg:py-12 flex flex-col md:flex-row gap-4 md:gap-0 md:justify-between items-center text-white lg:text-lg w-full bg-gradient-to-t from-black/90 to-black/0"
-                >
+                <motion.div className="absolute left-0 bottom-0 px-4 md:px-6 lg:px-8 py-8 md:py-8 lg:py-12 flex flex-col md:flex-row gap-4 md:gap-0 md:justify-between items-center text-white lg:text-lg w-full bg-gradient-to-t from-black/90 to-black/0">
                   <p className="font-extrabold font-Arapey tracking-wide capitalize relative after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white">
                     {image.title}
                   </p>
                   <Link
                     onClick={() => {
-                      setSelected(true), setSelected(image);
+                      setSelected(true);
+                      setSelected(image);
                     }}
                     className="font-extrabold font-Arapey"
                   >
                     <Button content="show more" />
                   </Link>
                 </motion.div>
-              </motion.div>
+              </div>
             ))}
-
-            {/* <motion.div
-              style={{ opacity: postersOpacity, scale: postersScale }}
-              className="shrink-0 aspect-[9/16] shadow-2xl md:aspect-video w-[65vw] md:w-[60vw] rounded-2xl overflow-clip relative snap-center snap-always"
-            >
-              <img
-                className="w-full h-full object-cover"
-                src={imgs[1].url}
-                alt={imgs[1].title}
-              />
-              <motion.div
-                variants={{
-                  active: { opacity: 1 },
-                  inactive: { opacity: 0 },
-                }}
-                className="absolute left-0 bottom-0 px-4 md:px-6 lg:px-8 py-8 md:py-8 lg:py-12 flex flex-col md:flex-row gap-4 md:gap-0 md:justify-between items-center text-white lg:text-lg w-full bg-gradient-to-t from-black/90 to-black/0"
-              >
-                <p className="font-extrabold font-Arapey tracking-wide capitalize relative after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white">
-                  {imgs[1].title}
-                </p>
-                <Link to="/" className="font-extrabold font-Arapey">
-                  <Button content="show more" />
-                </Link>
-              </motion.div>
-            </motion.div>
-
-            <motion.div
-              style={{ opacity: postersOpacity, scale: postersScale }}
-              className="shrink-0 aspect-[9/16] shadow-2xl md:aspect-video w-[65vw] md:w-[60vw] rounded-2xl overflow-clip relative snap-center snap-always"
-            >
-              <img
-                className="w-full h-full object-cover"
-                src={imgs[3].url}
-                alt={imgs[3].title}
-              />
-              <motion.div
-                variants={{
-                  active: { opacity: 1 },
-                  inactive: { opacity: 0 },
-                }}
-                className="absolute left-0 bottom-0 px-4 md:px-6 lg:px-8 py-8 md:py-8 lg:py-12 flex flex-col md:flex-row gap-4 md:gap-0 md:justify-between items-center text-white lg:text-lg w-full bg-gradient-to-t from-black/90 to-black/0"
-              >
-                <p className="font-extrabold font-Arapey tracking-wide capitalize relative after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white">
-                  {imgs[3].title}
-                </p>
-                <Link to="/" className="font-extrabold font-Arapey">
-                  <Button content="show more" />
-                </Link>
-              </motion.div>
-            </motion.div>
-
-            <motion.div
-              style={{ opacity: postersOpacity, scale: postersScale }}
-              className="shrink-0 aspect-[9/16] shadow-2xl md:aspect-video w-[65vw] md:w-[60vw] rounded-2xl overflow-clip relative snap-center snap-always"
-            >
-              <img
-                className="w-full h-full object-cover"
-                src={imgs[4].url}
-                alt={imgs[4].title}
-              />
-              <motion.div
-                variants={{
-                  active: { opacity: 1 },
-                  inactive: { opacity: 0 },
-                }}
-                className="absolute left-0 bottom-0 px-4 md:px-6 lg:px-8 py-8 md:py-8 lg:py-12 flex flex-col md:flex-row gap-4 md:gap-0 md:justify-between items-center text-white lg:text-lg font-extrabold w-full bg-gradient-to-t from-black/90 to-black/0"
-              >
-                <p className="font-extrabold font-Arapey tracking-wide capitalize relative after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white">
-                  {imgs[4].title}
-                </p>
-                <Link to="/" className="font-extrabold font-Arapey">
-                  <Button content="show more" />
-                </Link>
-              </motion.div>
-            </motion.div> */}
           </div>
         </div>
-
-        {/* <div className="hidden md:block">
-          <div className="absolute left-1/2 bottom-11 -translate-x-1/2 md:flex w-full justify-evenly">
-            <div className="text-white rounded-xl shadow-xl flex items-center gap-2 justify-center p-2">
-              <span className="mt-1 flex">
-                <FiChevronsLeft />
-              </span>
-              <span>scroll for more</span>
-            </div>
-            <div className=" text-white rounded-xl shadow-xl flex gap-3 items-center justify-between p-2">
-              <span>scroll for more</span>
-              <span className="rotate-180 mt-1 flex">
-                <FiChevronsLeft />
-              </span>
-            </div>
-          </div>
-        </div> */}
-
         <RoomModal selected={selected} setSelected={setSelected} />
       </motion.section>
 

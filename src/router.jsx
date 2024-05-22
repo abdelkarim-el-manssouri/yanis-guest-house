@@ -1,15 +1,12 @@
 import { Navigate, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/default/Home";
 import NotFound from "./pages/default/NotFound";
-// import GuestLayout from "./components/GuestLayout";
 import DefaultLayout from "./components/DefaultLayout";
 import Rooms from "./pages/default/Rooms";
 import Activities from "./pages/default/Activities";
 import Photos from "./pages/photos";
 import Restoration from "./pages/default/Restoration";
-import RoomsCopy from "./pages/default/RoomsCopy";
 import Book from "./pages/default/Book";
-// import Dashboard from "./pages/dashboard/Dashboard";
 
 const router = createBrowserRouter([
   {
@@ -30,14 +27,10 @@ const router = createBrowserRouter([
       },
       {
         path: "/accommodations",
-        element: <RoomsCopy />,
+        element: <Rooms />,
       },
-      // {
-      //   path: "/accommodations",
-      //   element: <Rooms />,
-      // },
       {
-        path: "/activities",
+        path: "/activities&wellbeing",
         element: <Activities />,
       },
       {
@@ -50,16 +43,6 @@ const router = createBrowserRouter([
       },
     ],
   },
-  // {
-  //   path: "/",
-  //   element: <GuestLayout />,
-  //   children: [
-  //     {
-  //       path: "/dashboard",
-  //       element: <Dashboard />,
-  //     },
-  //   ],
-  // },
   {
     path: "*",
     element: <NotFound />,

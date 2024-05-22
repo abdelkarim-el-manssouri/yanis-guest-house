@@ -55,6 +55,8 @@ export default {
         Dancing: ["Dancing Script, cursive"],
         Groillim: ["Groillim"],
         Poiret: ["Poiret One, sans-serif"],
+
+        Raleway: ["Raleway, sans-serif"],
       },
     },
   },

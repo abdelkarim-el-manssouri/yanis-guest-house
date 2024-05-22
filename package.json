@@ -13,7 +13,6 @@
     "@emailjs/browser": "^4.3.3",
     "@react-three/drei": "^9.105.3",
     "@react-three/fiber": "^8.16.1",
-    "animejs": "^3.2.2",
     "framer-motion": "^11.0.8",
     "i18next": "^23.10.0",
     "i18next-browser-languagedetector": "^7.2.0",
