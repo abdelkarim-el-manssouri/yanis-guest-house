@@ -39,6 +39,7 @@ export default {
       gridTemplateColumns: {
         layout: "90px minmax(0, 1fr)",
         navbar: "0px minmax(0, 1fr)",
+        card: "auto 1fr",
       },
       fontFamily: {
         lora: ["lora"],

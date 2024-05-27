@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import SmallParagraph from "../../UI/SmallParagraph";
 import { IoTimerOutline } from "react-icons/io5";
+import { PiWarningOctagonBold } from "react-icons/pi";
 
 const Activities = () => {
   // useEffect(() => {
@@ -15,7 +16,10 @@ const Activities = () => {
     <>
       <ActivitiesHeader />
       <SmallParagraph text="lorem" />
+      <Heading heading="our massage collection" />
       <WellBeing />
+      <Heading heading="discover also" />
+      <SelfCare />
     </>
   );
 };
@@ -72,9 +76,22 @@ const ActivitiesHeader = () => {
   );
 };
 
+const Heading = ({ heading }) => {
+  return (
+    <motion.h3
+      variants={headingVariants}
+      initial="initial"
+      whileInView="animate"
+      className="text-center md:w-[50ch] mx-auto text-xl md:text-2xl font-bold capitalize text-transparent bg-clip-text bg-gradient-to-br from-golden to-black my-10"
+    >
+      {heading}
+    </motion.h3>
+  );
+};
+
 const WellBeing = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-[90%] mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-[90%] mx-auto mb-20">
       {WellBeingData.map((i) => (
         <motion.div
           variants={cardVariants}
@@ -109,6 +126,125 @@ const WellBeing = () => {
         </motion.div>
       ))}
     </div>
+  );
+};
+
+const SelfCare = () => {
+  return (
+    <>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-[90%] mx-auto mb-20">
+        <motion.div
+          variants={cardVariants}
+          initial="initial"
+          whileInView="animate"
+          className="relative border border-cozyGreen/10 border-dashed rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 bg-gradient-to-bl from-lightGreen to-background text-cozyGreen after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
+        >
+          <div className="relative w-1/2 h-px rounded-xl bg-golden" />
+          <div className="mx-2 md:mx-4">
+            <h4 className="mt-4 font-black capitalize text-xl font-Marcellus">
+              manicure & pedicure
+            </h4>
+            <p className="mt-2 text-sm text-pretty">
+              in this welcoming and intimate setting. Pamper yourself with these
+              flawlessly executed services.
+            </p>
+            <div className="flex justify-center my-8 mx-2 md:mx-4">
+              <p className="">
+                <span className="font-semibold text-xl">$40</span>
+                &nbsp;
+                <span className="text-xs">each</span>
+              </p>
+              <p className="flex justify-center items-center gap-2 font-semibold text-lg">
+                {/* <IoTimerOutline />
+                {i.time} */}
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+                book
+              </button>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          variants={cardVariants}
+          initial="initial"
+          whileInView="animate"
+          className="relative border border-cozyGreen/10 border-dashed rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 bg-gradient-to-bl from-lightGreen to-background text-cozyGreen after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
+        >
+          <div className="relative w-1/2 h-px rounded-xl bg-golden" />
+          <div className="mx-2 md:mx-4">
+            <h4 className="mt-4 font-black capitalize text-xl font-Marcellus">
+              facial treatments
+            </h4>
+            <div className="mt-2 text-sm text-pretty grid lg:grid-cols-card gap-x-12 gap-y-1 lg:gap-y-0">
+              <div className="flex items-center gap-2">
+                <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
+                <p className="first-letter:uppercase">pulls comedones</p>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
+                <p className="first-letter:uppercase">dead skin scrub</p>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
+                <p className="first-letter:uppercase">lightening mask</p>
+              </div>
+
+              <div className="flex gap-2 lg:mt-2">
+                <div className="size-3 mt-1 rounded-full bg-gradient-to-bl from-golden to-background" />
+                <p className="first-letter:uppercase">
+                  anti-aging modeling with argan oil
+                </p>
+              </div>
+            </div>
+            <div className="flex justify-center my-6 mx-2 md:mx-4">
+              <p className="font-semibold text-xl">$50</p>
+              <p className="flex justify-center items-center gap-2 font-semibold text-lg">
+                {/* <IoTimerOutline />
+                {i.time} */}
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+                book
+              </button>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      <motion.div
+        variants={headingVariants}
+        initial="initial"
+        whileInView="animate"
+        className="relative grid place-content-center p-8 w-[90%] md:w-3/4 lg:w-1/2 mx-auto rounded-xl shadow-lg shadow-red-200 hover:shadow-red-300 hover:shadow-xl transition duration-300 bg-gradient-to-br from-cozyGreen to-black text-background font-semibold mb-20"
+      >
+        <div className="absolute top-2 left-2">
+          <PiWarningOctagonBold size="20" />
+        </div>
+        <div className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 items-center">
+          <p className="first-letter:uppercase">making an appointment:</p>
+          <div>
+            <div className="flex items-center gap-2">
+              <div className="size-2.5 rounded-full bg-gradient-to-bl from-golden to-cozyGreen" />
+              <p className="first-letter:uppercase">
+                the afternoon for the next day.
+              </p>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="size-2.5 rounded-full bg-gradient-to-bl from-golden to-cozyGreen" />
+              <p className="first-letter:uppercase">
+                in the morning for the afternoon.
+              </p>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </>
   );
 };
 
@@ -152,6 +288,22 @@ const WellBeingData = [
 ];
 
 const cardVariants = {
+  initial: {
+    y: 100,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "tween",
+      duration: 1,
+      delay: 0.3,
+    },
+  },
+};
+
+const headingVariants = {
   initial: {
     y: 100,
     opacity: 0,
