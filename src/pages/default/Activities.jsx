@@ -20,6 +20,9 @@ const Activities = () => {
       <WellBeing />
       <Heading heading="discover also" />
       <SelfCare />
+      <SmallParagraph text="enjoy our various collection of excursions" />
+      <Heading heading="Agafay" />
+      <ExternalActivities />
     </>
   );
 };
@@ -144,7 +147,7 @@ const SelfCare = () => {
             <h4 className="mt-4 font-black capitalize text-xl font-Marcellus">
               manicure & pedicure
             </h4>
-            <p className="mt-2 text-sm text-pretty">
+            <p className="mt-2 text-sm text-pretty first-letter:uppercase">
               in this welcoming and intimate setting. Pamper yourself with these
               flawlessly executed services.
             </p>
@@ -245,6 +248,194 @@ const SelfCare = () => {
         </div>
       </motion.div>
     </>
+  );
+};
+
+const ExternalActivities = () => {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-[90%] lg:w-[95%] mx-auto text-background mb-10">
+      <motion.div
+        variants={cardVariants}
+        initial="initial"
+        whileInView="animate"
+        className="relative border border-cozyGreen/10 border-dashed bg-gradient-to-bl from-lightGreen to-background text-cozyGreen rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
+      >
+        <div className="relative w-1/2 h-px rounded-xl bg-golden mb-3" />
+        <div className="mx-2 md:mx-4 md:my-2">
+          <h4 className="my-4 font-black capitalize text-xl font-Marcellus">
+            pack 1
+          </h4>
+          <ul className="flex flex-wrap gap-y-1">
+            <div className="flex items-center gap-1.5 basis-full lg:basis-1/2">
+              <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
+              <li className="text-sm first-letter:uppercase">1hr de quad</li>
+            </div>
+
+            <div className="flex items-center gap-1.5 basis-full lg:basis-1/2">
+              <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
+              <li className="text-sm first-letter:uppercase">
+                1hr de dromadaire
+              </li>
+            </div>
+
+            <div className="flex items-center gap-1.5 basis-full lg:basis-1/2">
+              <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
+              <li className="text-sm first-letter:uppercase">pause the</li>
+            </div>
+
+            <div className="flex items-center gap-1.5 basis-full lg:basis-1/2">
+              <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
+              <li className="text-sm first-letter:uppercase">pause photo</li>
+            </div>
+
+            <div className="flex items-center gap-1.5 basis-full">
+              <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
+              <li className="text-sm first-letter:uppercase ">
+                transport allez retour
+              </li>
+            </div>
+          </ul>
+        </div>
+        <div className="flex justify-center my-8 mx-2 md:mx-4">
+          <p className="font-semibold text-xl">$55</p>
+          <p className="flex justify-center items-center gap-2 font-semibold text-lg"></p>
+        </div>
+        <div className="flex justify-center">
+          <button className="py-1.5 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+            book
+          </button>
+        </div>
+      </motion.div>
+
+      <motion.div
+        variants={cardVariants}
+        initial="initial"
+        whileInView="animate"
+        className="relative border border-cozyGreen/10 border-dashed bg-gradient-to-bl from-lightGreen to-background text-cozyGreen rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
+      >
+        <div className="relative w-1/2 h-px rounded-xl bg-golden mb-3" />
+        <div className="mx-2 md:mx-4 md:my-2">
+          <h4 className="my-4 font-black capitalize text-xl font-Marcellus">
+            pack 2
+          </h4>
+          <ul className="flex flex-wrap gap-y-1">
+            <div className="flex items-center gap-1.5 basis-full lg:basis-1/2">
+              <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
+              <li className="text-sm first-letter:uppercase">2hr de quad</li>
+            </div>
+
+            <div className="flex items-center gap-1.5 basis-full lg:basis-1/2">
+              <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
+              <li className="text-sm first-letter:uppercase">pause the</li>
+            </div>
+
+            <div className="flex items-center gap-1.5 basis-full lg:basis-1/2">
+              <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
+              <li className="text-sm first-letter:uppercase">pause photo</li>
+            </div>
+
+            <div className="flex items-center gap-1.5 basis-full lg:basis-1/2">
+              <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
+              <li className="text-sm first-letter:uppercase ">
+                transport allez retour
+              </li>
+            </div>
+
+            <div className="invisible flex items-center gap-1.5 basis-full lg:basis-1/2">
+              <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
+              <li className="text-sm first-letter:uppercase ">
+                transport allez retour
+              </li>
+            </div>
+          </ul>
+        </div>
+        <div className="flex justify-center my-8 mx-2 md:mx-4">
+          <p className="">
+            <span className="font-semibold text-xl">$55</span>
+          </p>
+          <p className="flex justify-center items-center gap-2 font-semibold text-lg"></p>
+        </div>
+        <div className="flex justify-center">
+          <button className="py-1.5 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+            book
+          </button>
+        </div>
+      </motion.div>
+
+      <motion.div
+        variants={cardVariants}
+        initial="initial"
+        whileInView="animate"
+        className="relative border md:col-span-2 border-cozyGreen/10 border-dashed bg-gradient-to-bl from-lightGreen to-background text-cozyGreen rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
+      >
+        <div className="relative w-1/2 h-px rounded-xl bg-golden mb-3" />
+        <div className="mx-2 md:mx-4 md:my-2">
+          <h4 className="my-4 font-black capitalize text-xl font-Marcellus">
+            pack 3
+          </h4>
+          <ul className="flex flex-wrap gap-y-2">
+            <div className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
+              <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
+              <li className="text-sm first-letter:uppercase">
+                experience culinaire
+              </li>
+            </div>
+
+            <div className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
+              <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
+              <li className="text-sm first-letter:uppercase">
+                dinner sous les etoiles d'agafay
+              </li>
+            </div>
+
+            <div className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
+              <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
+              <li className="text-sm first-letter:uppercase">
+                spectacle et animation
+              </li>
+            </div>
+
+            <div className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
+              <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
+              <li className="text-sm first-letter:uppercase">1hr quad</li>
+            </div>
+
+            <div className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
+              <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
+              <li className="text-sm first-letter:uppercase ">
+                1hr dromadaire
+              </li>
+            </div>
+
+            <div className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
+              <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
+              <li className="text-sm first-letter:uppercase ">pause the</li>
+            </div>
+
+            <div className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
+              <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
+              <li className="text-sm first-letter:uppercase ">pause photo</li>
+            </div>
+
+            <div className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
+              <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
+              <li className="text-sm first-letter:uppercase ">
+                transport allez retour
+              </li>
+            </div>
+          </ul>
+        </div>
+        <div className="flex justify-center my-8 mx-2 md:mx-4">
+          <p className="font-semibold text-xl">$80</p>
+          <p className="flex justify-center items-center gap-2 font-semibold text-lg"></p>
+        </div>
+        <div className="flex justify-center">
+          <button className="py-1.5 w-5/6 md:w-1/2 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+            book
+          </button>
+        </div>
+      </motion.div>
+    </div>
   );
 };
 
