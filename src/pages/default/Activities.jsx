@@ -479,11 +479,13 @@ const MoreOfMarrakesh = () => {
               <span className="text-xs">per person</span>
             </p>
           </div>
-          <div className="flex justify-center">
-            <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-              book
-            </button>
-          </div>
+          <Link to="/moreOfMarrakeshForm">
+            <div className="flex justify-center">
+              <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+                book
+              </button>
+            </div>
+          </Link>
         </div>
       </motion.div>
 
@@ -508,11 +510,13 @@ const MoreOfMarrakesh = () => {
               <span className="text-xs">per person</span>
             </p>
           </div>
-          <div className="flex justify-center">
-            <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-              book
-            </button>
-          </div>
+          <Link to="/moreOfMarrakeshForm">
+            <div className="flex justify-center">
+              <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+                book
+              </button>
+            </div>
+          </Link>
         </div>
       </motion.div>
 
@@ -537,11 +541,13 @@ const MoreOfMarrakesh = () => {
               <span className="text-xs">per person</span>
             </p>
           </div>
-          <div className="flex justify-center">
-            <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-              book
-            </button>
-          </div>
+          <Link to="/moreOfMarrakeshForm">
+            <div className="flex justify-center">
+              <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+                book
+              </button>
+            </div>
+          </Link>
         </div>
       </motion.div>
 
@@ -567,11 +573,13 @@ const MoreOfMarrakesh = () => {
               <span className="text-xs">per person</span>
             </p>
           </div>
-          <div className="flex justify-center">
-            <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-              book
-            </button>
-          </div>
+          <Link to="/moreOfMarrakeshForm">
+            <div className="flex justify-center">
+              <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+                book
+              </button>
+            </div>
+          </Link>
         </div>
       </motion.div>
 
@@ -611,11 +619,13 @@ const MoreOfMarrakesh = () => {
               <span className="text-xs">per person</span>
             </p>
           </div>
-          <div className="flex justify-center">
-            <button className="py-2 lg:w-1/2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-              book
-            </button>
-          </div>
+          <Link to="/moreOfMarrakeshForm">
+            <div className="flex justify-center">
+              <button className="py-2 lg:w-1/2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+                book
+              </button>
+            </div>
+          </Link>
         </div>
       </motion.div>
     </div>
