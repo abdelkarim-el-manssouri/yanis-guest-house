@@ -304,11 +304,13 @@ const ExternalActivities = () => {
           </p>
           <p className="flex justify-center items-center gap-2 font-semibold text-lg"></p>
         </div>
-        <div className="flex justify-center">
-          <button className="py-1.5 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-            book
-          </button>
-        </div>
+        <Link to="/agafayForm">
+          <div className="flex justify-center">
+            <button className="py-1.5 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+              book
+            </button>
+          </div>
+        </Link>
       </motion.div>
 
       <motion.div
@@ -361,11 +363,13 @@ const ExternalActivities = () => {
           </p>
           <p className="flex justify-center items-center gap-2 font-semibold text-lg"></p>
         </div>
-        <div className="flex justify-center">
-          <button className="py-1.5 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-            book
-          </button>
-        </div>
+        <Link to="/agafayForm">
+          <div className="flex justify-center">
+            <button className="py-1.5 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+              book
+            </button>
+          </div>
+        </Link>
       </motion.div>
 
       <motion.div
@@ -439,11 +443,13 @@ const ExternalActivities = () => {
           </p>
           <p className="flex justify-center items-center gap-2 font-semibold text-lg"></p>
         </div>
-        <div className="flex justify-center">
-          <button className="py-1.5 w-5/6 md:w-1/2 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-            book
-          </button>
-        </div>
+        <Link to="/agafayForm">
+          <div className="flex justify-center">
+            <button className="py-1.5 w-5/6 md:w-1/2 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+              book
+            </button>
+          </div>
+        </Link>
       </motion.div>
     </div>
   );
