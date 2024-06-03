@@ -172,7 +172,7 @@ const EmailForm = ({ t }) => {
 
           <div className="mt-3 md:mt-6">
             <label>
-              <span className="capitalize font-bold ml-1">{t("kids")}r:</span>
+              <span className="capitalize font-bold ml-1">{t("kids")}:</span>
               <input
                 required
                 min="0"

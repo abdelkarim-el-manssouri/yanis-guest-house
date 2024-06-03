@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import SmallParagraph from "../../UI/SmallParagraph";
 import { IoTimerOutline } from "react-icons/io5";
 import { PiWarningOctagonBold } from "react-icons/pi";
-
+import { Link } from "react-router-dom";
 const Activities = () => {
   // useEffect(() => {
   //   window.scrollTo({
@@ -23,6 +23,8 @@ const Activities = () => {
       <SmallParagraph text="enjoy our various collection of excursions" />
       <Heading heading="Agafay" />
       <ExternalActivities />
+      <Heading heading="Enjoy more of Marrakesh" />
+      <MoreOfMarrakesh />
     </>
   );
 };
@@ -120,11 +122,13 @@ const WellBeing = () => {
                 {i.time}
               </p>
             </div>
-            <div className="flex justify-center">
-              <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-                book
-              </button>
-            </div>
+            <Link to="/selfCareForm">
+              <div className="flex justify-center">
+                <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+                  book
+                </button>
+              </div>
+            </Link>
           </div>
         </motion.div>
       ))}
@@ -157,16 +161,14 @@ const SelfCare = () => {
                 &nbsp;
                 <span className="text-xs">each</span>
               </p>
-              <p className="flex justify-center items-center gap-2 font-semibold text-lg">
-                {/* <IoTimerOutline />
-                {i.time} */}
-              </p>
             </div>
-            <div className="flex justify-center">
-              <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-                book
-              </button>
-            </div>
+            <Link to="/selfCareForm">
+              <div className="flex justify-center">
+                <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+                  book
+                </button>
+              </div>
+            </Link>
           </div>
         </motion.div>
 
@@ -206,16 +208,14 @@ const SelfCare = () => {
             </div>
             <div className="flex justify-center my-6 mx-2 md:mx-4">
               <p className="font-semibold text-xl">$50</p>
-              <p className="flex justify-center items-center gap-2 font-semibold text-lg">
-                {/* <IoTimerOutline />
-                {i.time} */}
-              </p>
             </div>
-            <div className="flex justify-center">
-              <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-                book
-              </button>
-            </div>
+            <Link to="/selfCareForm">
+              <div className="flex justify-center">
+                <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+                  book
+                </button>
+              </div>
+            </Link>
           </div>
         </motion.div>
       </div>
@@ -253,7 +253,7 @@ const SelfCare = () => {
 
 const ExternalActivities = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-[90%] lg:w-[95%] mx-auto text-background mb-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-[90%] mx-auto text-background mb-10">
       <motion.div
         variants={cardVariants}
         initial="initial"
@@ -297,7 +297,11 @@ const ExternalActivities = () => {
           </ul>
         </div>
         <div className="flex justify-center my-8 mx-2 md:mx-4">
-          <p className="font-semibold text-xl">$55</p>
+          <p>
+            <span className="font-semibold text-xl">$55</span>
+            &nbsp;
+            <span className="text-xs">per person</span>
+          </p>
           <p className="flex justify-center items-center gap-2 font-semibold text-lg"></p>
         </div>
         <div className="flex justify-center">
@@ -350,8 +354,10 @@ const ExternalActivities = () => {
           </ul>
         </div>
         <div className="flex justify-center my-8 mx-2 md:mx-4">
-          <p className="">
+          <p>
             <span className="font-semibold text-xl">$55</span>
+            &nbsp;
+            <span className="text-xs">per person</span>
           </p>
           <p className="flex justify-center items-center gap-2 font-semibold text-lg"></p>
         </div>
@@ -366,7 +372,7 @@ const ExternalActivities = () => {
         variants={cardVariants}
         initial="initial"
         whileInView="animate"
-        className="relative border md:col-span-2 border-cozyGreen/10 border-dashed bg-gradient-to-bl from-lightGreen to-background text-cozyGreen rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
+        className="relative mb-6 border md:col-span-2 border-cozyGreen/10 border-dashed bg-gradient-to-bl from-lightGreen to-background text-cozyGreen rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
       >
         <div className="relative w-1/2 h-px rounded-xl bg-golden mb-3" />
         <div className="mx-2 md:mx-4 md:my-2">
@@ -426,13 +432,184 @@ const ExternalActivities = () => {
           </ul>
         </div>
         <div className="flex justify-center my-8 mx-2 md:mx-4">
-          <p className="font-semibold text-xl">$80</p>
+          <p>
+            <span className="font-semibold text-xl">$80</span>
+            &nbsp;
+            <span className="text-xs">per person</span>
+          </p>
           <p className="flex justify-center items-center gap-2 font-semibold text-lg"></p>
         </div>
         <div className="flex justify-center">
           <button className="py-1.5 w-5/6 md:w-1/2 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
             book
           </button>
+        </div>
+      </motion.div>
+    </div>
+  );
+};
+
+const MoreOfMarrakesh = () => {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-[90%] mx-auto mb-20">
+      <motion.div
+        variants={cardVariants}
+        initial="initial"
+        whileInView="animate"
+        className="relative border border-cozyGreen/10 border-dashed rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 bg-gradient-to-bl from-lightGreen to-background text-cozyGreen after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
+      >
+        <div className="relative w-1/2 h-px rounded-xl bg-golden" />
+        <div className="mx-2 md:mx-4">
+          <h4 className="mt-4 font-black capitalize text-xl font-Marcellus">
+            air baloon flight experience
+          </h4>
+          <p className="mt-2 text-sm text-pretty first-letter:uppercase">
+            Hot Air Balloon flight with Berber breakfast
+          </p>
+          <div className="flex justify-center my-8 mx-2 md:mx-4">
+            <p>
+              <span className="font-semibold text-xl">$190</span>
+              &nbsp;
+              <span className="text-xs">per person</span>
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+              book
+            </button>
+          </div>
+        </div>
+      </motion.div>
+
+      <motion.div
+        variants={cardVariants}
+        initial="initial"
+        whileInView="animate"
+        className="relative border border-cozyGreen/10 border-dashed rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 bg-gradient-to-bl from-lightGreen to-background text-cozyGreen after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
+      >
+        <div className="relative w-1/2 h-px rounded-xl bg-golden" />
+        <div className="mx-2 md:mx-4">
+          <h4 className="mt-4 font-black capitalize text-xl font-Marcellus">
+            Ourika Valley
+          </h4>
+          <p className="mt-2 text-sm text-pretty first-letter:uppercase">
+            Ourika Valley private round trip transfer + guide
+          </p>
+          <div className="flex justify-center my-8 mx-2 md:mx-4">
+            <p>
+              <span className="font-semibold text-xl">$100</span>
+              &nbsp;
+              <span className="text-xs">per person</span>
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+              book
+            </button>
+          </div>
+        </div>
+      </motion.div>
+
+      <motion.div
+        variants={cardVariants}
+        initial="initial"
+        whileInView="animate"
+        className="relative border border-cozyGreen/10 border-dashed rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 bg-gradient-to-bl from-lightGreen to-background text-cozyGreen after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
+      >
+        <div className="relative w-1/2 h-px rounded-xl bg-golden" />
+        <div className="mx-2 md:mx-4">
+          <h4 className="mt-4 font-black capitalize text-xl font-Marcellus">
+            Horseback Ride
+          </h4>
+          <p className="mt-2 text-sm text-pretty first-letter:uppercase">
+            Horseback ride in the palm grove 2 hours of horseback riding
+          </p>
+          <div className="flex justify-center my-8 mx-2 md:mx-4">
+            <p>
+              <span className="font-semibold text-xl">$85</span>
+              &nbsp;
+              <span className="text-xs">per person</span>
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+              book
+            </button>
+          </div>
+        </div>
+      </motion.div>
+
+      <motion.div
+        variants={cardVariants}
+        initial="initial"
+        whileInView="animate"
+        className="relative border border-cozyGreen/10 border-dashed rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 bg-gradient-to-bl from-lightGreen to-background text-cozyGreen after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
+      >
+        <div className="relative w-1/2 h-px rounded-xl bg-golden" />
+        <div className="mx-2 md:mx-4">
+          <h4 className="mt-4 font-black capitalize text-xl font-Marcellus">
+            Chez Ali Fantasia folk show
+          </h4>
+          <p className="mt-2 text-sm text-pretty first-letter:uppercase">
+            Chez Ali Fantasia folk show with Moroccan dinner Transfers back and
+            forth
+          </p>
+          <div className="flex justify-center my-8 mx-2 md:mx-4">
+            <p>
+              <span className="font-semibold text-xl">$60</span>
+              &nbsp;
+              <span className="text-xs">per person</span>
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+              book
+            </button>
+          </div>
+        </div>
+      </motion.div>
+
+      <motion.div
+        variants={cardVariants}
+        initial="initial"
+        whileInView="animate"
+        className="relative border md:col-span-2 border-cozyGreen/10 border-dashed rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 bg-gradient-to-bl from-lightGreen to-background text-cozyGreen after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
+      >
+        <div className="relative w-1/2 h-px rounded-xl bg-golden" />
+        <div className="mx-2 md:mx-4">
+          <h4 className="mt-4 font-black capitalize text-xl font-Marcellus">
+            The 3 valleys Circuit of the Atlas Mountains, Imlil, Ouzoud, Lalla
+            Takerkoust Dam
+          </h4>
+          <p className="my-4 text-sm text-pretty first-letter:uppercase">
+            On this day trip, you will travel to the Moroccan High Atlas
+            Mountains and discover the rural way of life. Surrounded by
+            breathtaking nature in all directions, you will visit Berber
+            villages
+          </p>
+          <div className="my-4 text-sm text-pretty flex justify-evenly gap-x-12 gap-y-1 lg:gap-y-0">
+            <div className="flex items-center gap-2">
+              <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
+              <p className="first-letter:uppercase">Private driver</p>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
+              <p className="first-letter:uppercase">guide to and from</p>
+            </div>
+          </div>
+          <div className="flex justify-center my-8 mx-2 md:mx-4">
+            <p>
+              <span className="font-semibold text-xl">$160</span>
+              &nbsp;
+              <span className="text-xs">per person</span>
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <button className="py-2 lg:w-1/2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+              book
+            </button>
+          </div>
         </div>
       </motion.div>
     </div>

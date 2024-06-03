@@ -7,6 +7,7 @@ import Activities from "./pages/default/Activities";
 import Photos from "./pages/photos";
 import Restoration from "./pages/default/Restoration";
 import Book from "./pages/default/Book";
+import MassageForm from "./components/MassageForm";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/book",
         element: <Book />,
+      },
+      {
+        path: "/selfCareForm",
+        element: <MassageForm />,
       },
     ],
   },
