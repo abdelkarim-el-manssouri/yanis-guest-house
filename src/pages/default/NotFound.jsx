@@ -46,7 +46,7 @@ const AuroraHero = () => {
         <h1 className="max-w-3xl capitalize bg-gradient-to-br from-background to-cozyGreen bg-clip-text text-transparent text-center text-[8em] lg:-mt-20 font-medium leading-tight sm:text-5xl sm:leading-tight md:text-[14em] md:leading-tight">
           <span className="font-Arapey">404</span>
           <br />
-          <p className="text-4xl md:text-5xl md:-mt-4 mb-20 font-Montserrat">
+          <p className="text-4xl md:text-5xl md:-mt-4 mb-20 !font-Montserrat">
             page not found
           </p>
         </h1>

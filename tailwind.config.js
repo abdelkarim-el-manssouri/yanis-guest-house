@@ -44,7 +44,7 @@ export default {
       fontFamily: {
         lora: ["lora"],
         Arapey: ["Arapey, serif"],
-        Montserrat: ["Montserrat, sans-serif", 0.5],
+        Montserrat: ["Montserrat, sans-serif"],
         BodoniModa: ["Bodoni Moda, serif"],
         PoiretOne: ["Poiret One, sans-serif"],
         Elsie: ["Elsie, serif"],
