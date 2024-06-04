@@ -3,7 +3,6 @@ import emailjs from "@emailjs/browser";
 import { FaTelegramPlane } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { FaChevronDown } from "react-icons/fa6";
 
 const EmailForm = ({ t }) => {
   const [name, setName] = useState("");

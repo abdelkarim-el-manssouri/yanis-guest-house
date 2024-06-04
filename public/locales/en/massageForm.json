@@ -1,0 +1,21 @@
+{
+  "makingAppointment": "making an appointment",
+  "afternoon": "the afternoon for the next day",
+  "morning": "in the morning for the afternoon",
+  "name": "full name",
+  "email": "email",
+  "phoneNumber": "phone number",
+  "people": "people number",
+  "date": "choose a date",
+  "time": "choose time",
+  "selectPlan": "select your favorite pack",
+  "relaxing": "Relaxing Massage",
+  "toning": "Toning Massage",
+  "draining": "Draining Massage",
+  "couple": "Couple Massage",
+  "manicure": "Manicure & Pedicure",
+  "facial": "Facial Treatments",
+  "mind": "what's in your mind",
+  "typeHere": "type here",
+  "send": "send"
+}

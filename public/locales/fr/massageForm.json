@@ -1,0 +1,21 @@
+{
+  "makingAppointment": "prise de RDV",
+  "afternoon": "la veille pour le lendemain",
+  "morning": "le matin pour l’après-midi",
+  "name": "nom complet",
+  "email": "email",
+  "phoneNumber": "numéro de téléphone",
+  "people": "nombre de personnes",
+  "date": "choisissez une date",
+  "time": "choisissez l'heure",
+  "selectPlan": "sélectionnez votre pack préféré",
+  "relaxing": "Massage Relaxant",
+  "toning": "Massage Tonifiant",
+  "draining": "Massage Drainant",
+  "couple": "Massage Couple",
+  "manicure": "Manucure & Pédicure",
+  "facial": "Soins du Visage",
+  "mind": "qu'y a-t-il dans ta tête",
+  "typeHere": "tapez ici",
+  "send": "envoyer"
+}

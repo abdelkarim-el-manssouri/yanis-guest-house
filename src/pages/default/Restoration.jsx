@@ -5,7 +5,6 @@ import SmallParagraph from "../../UI/SmallParagraph";
 import BookNow from "../../components/BookNow";
 import HorizontalScrollResto from "../../components/HorizontalScrollResto";
 
-
 const Restoration = () => {
   useEffect(() => {
     window.scrollTo({
@@ -165,7 +164,9 @@ const SeeMenu = () => {
           </h4>
           <button className="py-3 px-10 bg-secondary/15 transition duration-300 hover:bg-secondary/25 text-mainText hover:text-background shadow-md hover:shadow-xl active:shadow-none hover:scale-105 active:scale-95 font-semibold capitalize rounded-sm">
             {/* if you want to download it, use attr download={true} */}
-            <a href="/pdf/sample.pdf"  download={true}>see menu</a>
+            <a href="/pdf/sample.pdf" target="_blank">
+              see menu
+            </a>
             {/* if you want to open it other tab, use attr target="_blank" */}
             {/* <a href="/pdf/sample.pdf" target="_blank">see menu</a> */}
           </button>

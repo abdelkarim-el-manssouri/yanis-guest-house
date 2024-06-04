@@ -1,0 +1,21 @@
+{
+  "makingAppointment": "hacer una cita",
+  "afternoon": "la tarde del día siguiente",
+  "morning": "por la mañana por la tarde",
+  "name": "nombre completo",
+  "email": "correo electrónico",
+  "phoneNumber": "número de teléfono",
+  "people": "número de personas",
+  "date": "elige una fecha",
+  "time": "elige hora",
+  "selectPlan": "selecciona tu pack favorito",
+  "relaxing": "Masaje Relajante",
+  "toning": "Masaje Tonificante",
+  "draining": "Masaje Drenante",
+  "couple": "Masaje en Pareja",
+  "manicure": "Manicura & Pedicura",
+  "facial": "Tratamientos Faciales",
+  "mind": "lo que está en tu mente",
+  "typeHere": "escriba aquí",
+  "send": "enviar"
+}

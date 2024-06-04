@@ -20,6 +20,7 @@ import { LiaDumbbellSolid, LiaSwimmingPoolSolid } from "react-icons/lia";
 import { MdOutlineRoomService } from "react-icons/md";
 import { useCallback, useMemo, useRef, useState } from "react";
 import Button from "../UI/Button";
+import { Link } from "react-router-dom";
 
 const hairDryerSvg = (
   <svg
@@ -334,7 +335,9 @@ const RoomModal = ({ selected, setSelected }) => {
               <br />
               <span className="text-sm -mt-10">per night</span>
             </p>
-            <Button content="book" />
+            <Link to="/book">
+              <Button content="book" />
+            </Link>
           </div>
         </div>
       </motion.div>
