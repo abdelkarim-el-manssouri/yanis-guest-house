@@ -24,32 +24,32 @@ export const PhotosImages = [
 export const sensationsData = [
   {
     id: 1,
-    title: "see",
-    content: `The unobstructed view of the caldera from the restaurant’s vantage point is a visual treat, the exquisite plating is sheer poetry as are the vivid hues of Santorini’s famed sunsets.`,
+    title: "sen1title",
+    content: "sens1content",
     imageUrl: room1,
   },
   {
     id: 2,
-    title: "hear",
-    content: `The happy chatter of your fellow guests, the tinkling of wine glasses to toast life and the sizzling on your plate is a celebration of Santorini’s own playlist of joyous sounds.`,
+    title: "sen2title",
+    content: "sens2content",
     imageUrl: room2,
   },
   {
     id: 3,
-    title: "smell",
-    content: `The heady summer scents of jasmine, the whiffs of wild rosemary from Imerovigli’s slopes, the aromas wafting from a simple, refined Mediterranean dish, all designed to elevate your sensory experience.`,
+    title: "sen3title",
+    content: "sens3content",
     imageUrl: room3,
   },
   {
     id: 4,
-    title: "feel",
-    content: `Feel the unique textures played out on your plate as in the beauty around you. The crispness of a local white wine, accentuating the succulence of sun-kissed tomatoes, the briny freshness of sea urchins, a creamy fava and perfectly seared fish.`,
+    title: "sen4title",
+    content: "sens4content",
     imageUrl: room4,
   },
   {
     id: 5,
-    title: "taste",
-    content: `The sun, sea and volcanic soil of Santorini collide to create dramatic wines and produce so distinctive, your palate will be tickled by the sophisticated simplicity of our Five Senses Restaurant.`,
+    title: "sen5title",
+    content: "sens5content",
     imageUrl: room5,
   },
 ];

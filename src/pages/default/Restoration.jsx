@@ -1,50 +1,48 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useEffect, useRef } from "react";
-import { sensationsData } from "../../data/data";
 import SmallParagraph from "../../UI/SmallParagraph";
 import BookNow from "../../components/BookNow";
 import HorizontalScrollResto from "../../components/HorizontalScrollResto";
+import { useTranslation } from "react-i18next";
+import { sensationsData } from "../../data/data";
 
 const Restoration = () => {
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-  }, []);
-  const text1 =
-    "the restaurant of yanis guest house is not only a fine dining destination, it is a feast for each of the five senses.";
-  const text2 =
-    "There is something for everyone, Along with unforgettable moments of exchange.";
+  // useEffect(() => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     left: 0,
+  //     behavior: "smooth",
+  //   });
+  // }, []);
+  const { t } = useTranslation("restoration");
   return (
     <>
-      <RestoHeader />
+      <RestoHeader t={t} />
 
-      <SmallParagraph text={text1} />
+      <SmallParagraph text={t("parag1")} />
 
       <motion.section>
         {sensationsData.map((sen) => {
           return (
             <React.Fragment key={sen.id}>
-              <Sensation {...sen} />
+              <Sensation {...sen} t={t} />
             </React.Fragment>
           );
         })}
       </motion.section>
 
-      <SmallParagraph text={text2} />
+      <SmallParagraph text={t("parag2")} />
 
       {/* <section>
         <BookNow />
       </section> */}
 
       <section className="relative z-10">
-        <HorizontalScrollResto />
+        <HorizontalScrollResto t={t} />
       </section>
 
       <section>
-        <SeeMenu />
+        <SeeMenu t={t} />
       </section>
     </>
   );
@@ -52,7 +50,7 @@ const Restoration = () => {
 
 export default Restoration;
 
-const RestoHeader = () => {
+const RestoHeader = ({ t }) => {
   const firstTextRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: firstTextRef,
@@ -96,7 +94,7 @@ const RestoHeader = () => {
             }}
             className="z-10 text-white font-bold text-3xl md:text-4xl lg:text-5xl font-Montsrrat tracking-wider capitalize underline underline-offset-8 decoration-[3px] [text-shadow:_1px_1px_0_#00464326]"
           >
-            the restaurant
+            {t("title")}
           </motion.p>
         </div>
       </div>
@@ -104,7 +102,7 @@ const RestoHeader = () => {
   );
 };
 
-const Sensation = ({ title, content, imageUrl }) => {
+const Sensation = ({ title, content, imageUrl, t }) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -124,10 +122,10 @@ const Sensation = ({ title, content, imageUrl }) => {
       <section className="grid grid-rows-2 md:grid-rows-none bg-secondary/15 transition duration-500 hover:bg-secondary/25 w-[90%] shadow-2xl shadow-cozyGreen/30 md:w-4/5 mx-auto border-black/5 overflow-hidden md:relative h-96 md:h-80 rounded-md">
         <div className="grid md:grid-cols-layout lg:py-4 md:p-2 lg:px-5 sm:max-w-[50%] sm:mt-auto h-full md:group-even:ml-[19.3rem] lg:group-even:ml-[29.3rem]">
           <h3 className="grid place-content-center -mb-10 md:mb-0 text-2xl font-bold capitalize font-Marcellus italic">
-            {title}
+            {`${t(title)}`}
           </h3>
-          <p className="grid place-content-center px-2 lg:px-4 text-center font-Dancing font-normal text-sm lg:text-base leading-relaxed">
-            {content}
+          <p className="grid place-content-center px-2 lg:px-4 text-center !font-PoiretOne font-semibold tracking-wide text-sm lg:text-base leading-relaxed">
+            {`${t(content)}`}
           </p>
         </div>
 
@@ -154,21 +152,18 @@ const Sensation = ({ title, content, imageUrl }) => {
   );
 };
 
-const SeeMenu = () => {
+const SeeMenu = ({ t }) => {
   return (
     <>
       <div className="grid place-content-center text-center min-h-[150vh] mt-[-100vh]">
         <div className="sticky top-[50%] mb-[calc(50%-25%)] md:mb-[calc(50%-38%)]">
           <h4 className="mb-5 text-lg uppercase font-Marcellus italic font-semibold">
-            discover our menu
+            {t("discover")}
           </h4>
-          <button className="py-3 px-10 bg-secondary/15 transition duration-300 hover:bg-secondary/25 text-mainText hover:text-background shadow-md hover:shadow-xl active:shadow-none hover:scale-105 active:scale-95 font-semibold capitalize rounded-sm">
-            {/* if you want to download it, use attr download={true} */}
+          <button className="py-3 px-10 !font-PoiretOne font-bold bg-secondary/15 transition duration-300 hover:bg-secondary/25 text-mainText hover:text-background shadow-md hover:shadow-xl active:shadow-none hover:scale-105 active:scale-95 capitalize rounded-sm">
             <a href="/pdf/sample.pdf" target="_blank">
-              see menu
+              {t("seeMenu")}
             </a>
-            {/* if you want to open it other tab, use attr target="_blank" */}
-            {/* <a href="/pdf/sample.pdf" target="_blank">see menu</a> */}
           </button>
         </div>
       </div>
