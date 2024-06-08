@@ -1,0 +1,58 @@
+{
+  "title": "the accommodations",
+
+  "revealText": "Yanis Guest House, nestled in the vibrant city of Marrakesh, offers a delightful blend of luxury and comfort. Our elegant rooms and suites combine timeless design with simple beauty, ensuring a memorable stay. As you step into our oasis, you’ll discover an outdoor swimming pool and a lush garden. Whether for business or leisure, Yanis Guest House promises an unforgettable stay.",
+  "imgTitle1": "suite royale",
+  "imgTitle2": "chambre double",
+  "imgTitle3": "suite parental",
+  "imgTitle4": "family suite of 6 members",
+  "imgTitle5": "family suite of 7 members",
+  "show": "show more",
+
+  "description1": "2 suites and modern living room on the ground floor of the city with a total area of 60 M². Elegant and modern suite with a traditional touch and nicely decorated. They are very welcoming, create a feeling of comfort, perfect for those special moments and for a relaxing stay.",
+  "description2": "2 suites and modern living room on the ground floor of the city with a total area of 60 M². With double bed or 2 single beds. Elegant and classic decor with rich drapes.",
+  "description3": "2 suites and modern living room on the ground floor of the city with a total area of 60 M². Modern and elegant suite, with contemporary details and refined decor. Very welcoming, they offer a feeling of timeless comfort created for special moments and a peaceful stay.",
+  "description4": "2 suites and modern living room on the ground floor of the city with a total area of 60 M².",
+  "description5": "2 suites and modern living room on the ground floor of the city with a total area of 60 M².",
+
+  "bed1": "1 double bed",
+  "bed2": "2 beds",
+  "bed3": "1 double bed",
+  "bed4": "2 double beds",
+  "bed5": "2 double beds",
+
+  "bathroom1": "1 bathroom",
+  "bathroom2": "1 bathroom",
+  "bathroom3": "1 bathroom",
+  "bathroom4": "1 bathroom",
+  "bathroom5": "1 bathroom",
+
+  "view1": "garden view",
+  "view2": "Garden and swimming pool view",
+  "view3": "Garden and swimming pool view",
+  "view4": "Garden and swimming pool view",
+  "view5": "Garden and swimming pool view",
+
+  "roomAminities": "Room amenities",
+  "shower": "shower",
+  "safe": "safe",
+  "wifi": "wifi",
+  "airConditioner": "air conditioner",
+  "phone": "phone",
+  "tv": "tv",
+  "heater": "heater",
+  "hairDryer": "hair dryer",
+
+  "hotelAmenities": "hotel amenities",
+  "gym": "gym",
+  "parking": "parking",
+  "spa": "spa",
+  "restaurant": "restaurant",
+  "roomService": "room service",
+  "swimmingPool": "swimming pool",
+  "beginWith": "begin with",
+  "night": "per night",
+
+  "outroTitle": "enjoy our various list of rooms and suits",
+  "outroParag": "Located on the various floors of the hotel, each of our rooms reserves a special something to enhance your stay and make it truly unforgettable. Offering views over the Gardens, the Hivernage area or the Koutoubia Mosque, some with a balcony where you can enjoy a book or simply sit back and relax, and exuding comfort and charm, the rooms at La Mamounia are a lavish invitation to let time stand still in the most delightful of ways."
+}

@@ -123,7 +123,7 @@ const scrollToSlide = (slider, slideIndex) => {
   });
 };
 
-const RoomModal = ({ selected, setSelected }) => {
+const RoomModal = ({ selected, setSelected, t }) => {
   const sliderRef = useRef(null);
   const [sliderPosition, setSliderPosition] = useState(0);
   const currentSlide = useMemo(() => {
@@ -176,21 +176,17 @@ const RoomModal = ({ selected, setSelected }) => {
 
         <div className="w-4/5 mx-auto">
           <h3 className="relative text-center font-Marcellus italic capitalize text-xl md:text-3xl lg:text-4xl font-bold text-bordeaux before:absolute before:left-0 before:-bottom-2 md:before:-bottom-5 before:w-full before:h-0.5 before:bg-bordeaux before:rounded-full">
-            {selected?.title}
+            {`${t(selected?.title)}`}
           </h3>
 
           <p className="mt-6 md:mt-11 lg:mt-14 text-justify">
-            2 suites and modern living room on the ground floor of the city with
-            a total area of 60 M². Elegant and modern suite with a traditional
-            touch and nicely decorated. They are very welcoming, create a
-            feeling of comfort, perfect for those special moments and for a
-            relaxing stay.
+            {`${t(selected?.description)}`}
           </p>
 
           <div className="mt-12 md:mt-10 grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-3 text-sm lg:text-base capitalize">
             <div className="flex flex-col items-center justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
               <IoBedOutline className="size-6 lg:size-8" />
-              <div>{selected?.bed}</div>
+              <div>{`${t(selected?.bed)}`}</div>
             </div>
             <div className="flex flex-col items-center justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
               <HiOutlineUsers className="size-6 lg:size-8" />
@@ -205,77 +201,77 @@ const RoomModal = ({ selected, setSelected }) => {
 
             <div className="flex flex-col items-center justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
               <GiWindow className="size-6 lg:size-8" />
-              <div>{selected?.view}</div>
+              <div>{`${t(selected?.view)}`}</div>
             </div>
           </div>
 
           <h4 className="my-10 capitalize text-xl md:text-2xl lg:text-3xl font-semibold w-fit underline underline-offset-[6px]">
-            Room amenities
+            {t("roomAminities")}
           </h4>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-x-3 md:gap-y-6 lg:gap-y-3 text-sm lg:text-base mt-8 md:mt-10 capitalize">
             <div className="flex flex-col items-center lg:p-5 gap-y-1 shadow-lg md:shadow-md md:gap-y-2 p-1 rounded-lg">
               <GiBathtub className="size-6 lg:size-8" />
-              <div>shower</div>
+              <div>{t("shower")}</div>
             </div>
             <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
               <RiSafe2Fill className="size-6 lg:size-8" />
-              <div>safe</div>
+              <div>{t("safe")}</div>
             </div>
             <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
               <FaWifi className="size-6 lg:size-8" />
-              <div>wifi</div>
+              <div>{t("wifi")}</div>
             </div>
             <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
               <TbAirConditioning className="size-6 lg:size-8" />
-              <div>air conditioner</div>
+              <div>{t("airConditioner")}</div>
             </div>
             <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
               <GiRotaryPhone className="size-6 lg:size-8" />
-              <div>phone</div>
+              <div>{t("phone")}</div>
             </div>
             <div className="flex flex-col items-center uppercase lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
               <PiTelevisionSimple className="size-6 lg:size-8" />
-              <div>tv</div>
+              <div>{t("tv")}</div>
             </div>
             <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
               <TbWashDryDip className="size-6 lg:size-8" />
-              <div>heater</div>
+              <div>{t("heater")}</div>
             </div>
             <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
               <span className="size-6 lg:size-8">{hairDryerSvg}</span>
-              <div>hair dryer</div>
+              <div>{t("hairDryer")}</div>
             </div>
           </div>
 
           <h4 className="my-10 capitalize text-xl md:text-2xl lg:text-3xl font-semibold w-fit underline underline-offset-[6px]">
-            hotel amenities
+            {t("hotelAmenities")}
           </h4>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-x-3 md:gap-y-6 lg:gap-y-3 text-sm lg:text-base mt-8 md:mt-10 capitalize">
             <div className="flex flex-col items-center uppercase lg:p-5 gap-y-1 shadow-lg md:shadow-md md:gap-y-2 p-1 rounded-lg">
               <LiaDumbbellSolid className="size-6 lg:size-8" />
-              <div>gym</div>
+              <div>{t("gym")}</div>
             </div>
             <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
               <TbParking className="size-6 lg:size-8" />
-              <div>parking</div>
+              <div>{t("parking")}</div>
             </div>
             <div className="flex flex-col items-center uppercase lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
               <TbMassage className="size-6 lg:size-8" />
-              <div>spa</div>
+              <div>{t("spa")}</div>
             </div>
             <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
               <IoRestaurantOutline className="size-6 lg:size-8" />
-              <div>restaurant</div>
+              <div>{t("restaurant")}</div>
             </div>
             <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
               <MdOutlineRoomService className="size-6 lg:size-8" />
-              <div>room service</div>
+              <div>{t("roomService")}</div>
             </div>
             <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
               <LiaSwimmingPoolSolid className="size-6 lg:size-8" />
-              <div>swimming pool</div>
+              <div>{t("swimmingPool")}</div>
             </div>
           </div>
           <div className="h-0.5 w-3/4 mx-auto bg-bordeaux rounded-full my-10 md:my-16" />
@@ -331,9 +327,11 @@ const RoomModal = ({ selected, setSelected }) => {
 
           <div className="w-[90%] mx-auto flex flex-col md:flex-row md:justify-between items-center mt-14 mb-6 p-3 md:p-5 rounded-lg shadow-lg border border-dashed border-secondary/10">
             <p className="capitalize text-lg font-Arapey font-bold text-center md:text-left mb-4 md:mb-0">
-              <span>begin with {selected?.price} $ </span>
+              <span>
+                {t("beginWith")} {selected?.price} ${" "}
+              </span>
               <br />
-              <span className="text-sm -mt-10">per night</span>
+              <span className="text-sm -mt-10">{t("night")}</span>
             </p>
             <Link to="/book">
               <Button content="book" />
