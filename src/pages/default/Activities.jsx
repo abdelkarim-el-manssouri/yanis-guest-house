@@ -5,13 +5,13 @@ import { IoTimerOutline } from "react-icons/io5";
 import { PiWarningOctagonBold } from "react-icons/pi";
 import { Link } from "react-router-dom";
 const Activities = () => {
-  // useEffect(() => {
-  //   window.scrollTo({
-  //     top: 0,
-  //     left: 0,
-  //     behavior: "smooth",
-  //   });
-  // }, []);
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
   return (
     <>
       <ActivitiesHeader />

@@ -5,6 +5,7 @@ import HorizontalScroll from "../../components/HorizontalScroll";
 import { SwipeCarousel } from "../../components/Carousel";
 import SmallParagraph from "../../UI/SmallParagraph";
 import Header2 from "../../components/Header2";
+import { useTranslation } from "react-i18next";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -41,10 +42,10 @@ const fadeInRightXAxisAnimationVariants = {
 
 const xAxisTextScroll = {
   initial: {
-    x: 600,
+    x: 150,
   },
   animate: {
-    x: -300,
+    x: -1000,
   },
 };
 
@@ -68,13 +69,11 @@ const Home = () => {
   const scale2Progress = useTransform(scrollYProgress, [0, 1], [0, 1]);
   const opacity2Progress = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
-  const textContent = `yanis guest house your best marrakesh spot`;
-  const text1 =
-    "Get away for a dream vacation and dive into an oasis of luxurious serenity in the heart of the Medina of Marrakech.";
+  const { t } = useTranslation("home");
   return (
     <>
       <div className="w-full h-dvh overflow-hidden bg-black z-20 backdrop-blur-md -mt-20">
-        <Header2 />
+        <Header2 t={t} />
       </div>
       <motion.section
         style={{
@@ -84,15 +83,15 @@ const Home = () => {
         ref={ref}
         className="flex justify-center h-screen w-full bg-cover bg-no-repeat bg-center bg-[url('/src/assets/cozy-grey-wall.jpeg')]"
       >
-        <div className="grid place-content-center -mt-44 leading-8 w-[25ch] md:w-[50ch] lg:w-[80ch] uppercase [text-shadow:_1px_1px_0_rgb(0_0_0_/_40%)]">
-          <AnimatedText text={textContent} />
+        <div className="grid place-content-center -mt-44 leading-8 !font-Italiana w-[25ch] md:w-[50ch] lg:w-[80ch] uppercase [text-shadow:_1px_1px_0_rgb(0_0_0_/_40%)]">
+          <AnimatedText text={t("textContent")} />
         </div>
       </motion.section>
 
-      <SmallParagraph text={text1} />
+      <SmallParagraph text={t("text1")} />
 
       <section>
-        <HorizontalScroll />
+        <HorizontalScroll t={t} />
       </section>
 
       <motion.section
@@ -100,7 +99,7 @@ const Home = () => {
         initial="initial"
         whileInView="animate"
         transition={{ type: "spring", stiffness: 100 }}
-        className="h-3/4 grid gap-y-4 md:gap-y-0 md:grid-cols-3 mt-4 md:my-16 md:w-11/12 mx-auto"
+        className="h-3/4 grid gap-y-4 md:gap-y-0 md:grid-cols-3 mt-10 md:my-16 md:w-11/12 mx-auto"
       >
         <div className="h-full w-full md:flex order-2 md:order-none lg:justify-center lg:items-end md:relative">
           <div className="md:z-10 md:absolute flex-row md:flex-none justify-center items-center md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 w-[90%] md:p-5 mx-auto">
@@ -112,9 +111,9 @@ const Home = () => {
               viewport={{
                 once: true,
               }}
-              className="md:text-center w-full mx-auto p-1.5 lg:p-3 my-3 lg:my-5 text-sm text-mainText md:text-xl lg:text-3xl font-semibold whitespace-nowrap md:w-[45ch] bg-background backdrop-blur-sm md:relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-right-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-right-3 md:before:top-0"
+              className="!font-Italiana font-bold uppercase mx-auto p-1.5 lg:p-3 my-3 lg:my-5 text-sm text-mainText md:text-lg lg:text-2xl md:whitespace-nowrap text-center md:text-left w-[30ch] md:w-[45ch] bg-background backdrop-blur-sm md:relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-right-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-right-3 md:before:top-0"
             >
-              To return to yanis guest house time and time again
+              {t("toReturnTitle")}
             </motion.h3>
             <motion.div
               variants={fadeInLeftXAxisAnimationVariants}
@@ -124,24 +123,14 @@ const Home = () => {
               viewport={{
                 once: true,
               }}
-              className="p-1.5 md:p-3 md:mt-0 lg:p-6 mx-auto w-full md:w-[60ch] lg:w-[75ch] text-xs lg:text-sm text-mainText tracking-wide bg-background backdrop-blur-sm relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-right-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-right-3 md:before:top-0"
+              className="p-1.5 md:p-3 md:mt-0 lg:p-6 mx-auto w-full !font-PoiretOne font-bold text-sm lg:text-base md:w-[40ch] lg:w-[45ch] text-mainText text-justify bg-background backdrop-blur-sm relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-right-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-right-3 md:before:top-0"
             >
-              <p className="mb-2 md:mb-3 lg:mb-4">
-                Our excellence is the result of tireless endeavour, the
-                unfailing commitment of our employees, constant
-                self-questioning, and innovations that are daring yet respectful
-                of the past. This is how yanis guest house remains a place of
-                legend that moves with the times while always remaining in tune
-                with the here and now.
-              </p>
-              <p>
-                Our greatest reward is the loyalty of our customers, who love
-                coming back here because they are made to feel so at home.
-              </p>
+              <p className="mb-2 md:mb-3 lg:mb-4">{t("toReturnContent1")}</p>
+              <p>{t("toReturnContent2")}</p>
             </motion.div>
           </div>
         </div>
-        <div className="md:col-span-2 shadow-2xl">
+        <div className="md:col-span-2 md:shadow-2xl">
           <img
             src="/src/assets/cozy-green-sofa_edited.jpg"
             alt="image"
@@ -156,9 +145,9 @@ const Home = () => {
         initial="initial"
         whileInView="animate"
         transition={{ type: "spring", stiffness: 100 }}
-        className="h-3/4 grid gap-y-4 md:gap-y-0 md:grid-cols-3 mt-4 md:my-16 md:w-11/12 mx-auto overflow-hidden"
+        className="h-3/4 grid gap-y-4 md:gap-y-0 md:grid-cols-3 mt-4 mb-8 md:my-16 md:w-11/12 mx-auto overflow-hidden"
       >
-        <div className="md:col-span-2 mt-4 md:mt-0 shadow-2xl">
+        <div className="md:col-span-2 mt-4 md:mt-0 md:shadow-xl">
           <img
             src="/src/assets/cozy-green-sofa_edited.jpg"
             alt="image"
@@ -176,9 +165,9 @@ const Home = () => {
               viewport={{
                 once: true,
               }}
-              className="md:text-center w-full mx-auto p-1.5 lg:p-3 my-3 lg:my-5 md:ml-10 lg:ml-0 text-sm md:text-xl lg:text-3xl font-semibold whitespace-nowrap md:w-[45ch] bg-background text-mainText backdrop-blur-sm md:relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-left-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-left-3 md:before:top-0"
+              className="uppercase !font-Italiana mx-auto p-1.5 lg:p-3 my-3 lg:my-5 md:ml-10 lg:ml-0 text-sm md:text-lg lg:text-2xl font-semibold md:whitespace-nowrap text-center md:text-left w-[30ch] md:w-[45ch] bg-background text-mainText backdrop-blur-sm md:relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-left-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-left-3 md:before:top-0"
             >
-              What makes yanis guest house unique in their eyes?
+              {t("uniqueTitle")}
             </motion.h3>
             <motion.div
               variants={fadeInRightXAxisAnimationVariants}
@@ -188,25 +177,16 @@ const Home = () => {
               viewport={{
                 once: true,
               }}
-              className="p-1.5 md:p-3 md:mt-0 md:ml-28 lg:p-6 mx-auto w-full md:w-[60ch] lg:w-[75ch] text-xs lg:text-sm bg-background text-mainText backdrop-blur-sm relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-left-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-left-3 md:before:top-0"
+              className="p-1.5 md:p-3 !font-PoiretOne font-bold md:mt-0 md:ml-28 lg:p-6 mx-auto w-full text-sm lg:text-base md:w-[40ch] lg::w-[45ch] text-justify bg-background text-mainText backdrop-blur-sm relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-left-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-left-3 md:before:top-0"
             >
-              <p className="mb-2 md:mb-3 lg:mb-4">
-                A sense of hospitality that translates into a thousand and one
-                details. From your first visit, we remember your preferences:
-                your ideal room temperature, your favourite coffee, the drinks
-                and dishes you like...
-              </p>
-              <p>
-                So, we know not only what will please you during your next stay,
-                but also what will surprise you and make you want to come back
-                for an experience that is always fresh and new.
-              </p>
+              <p className="mb-2 md:mb-3 lg:mb-4">{t("uniqueContent1")}</p>
+              <p>{t("uniqueContent2")}</p>
             </motion.div>
           </div>
         </div>
       </motion.section>
 
-      <SwipeCarousel />
+      <SwipeCarousel t={t} />
 
       <motion.section
         style={{
@@ -220,9 +200,9 @@ const Home = () => {
             variants={xAxisTextScroll}
             initial="initial"
             whileInView="animate"
-            className="flex items-end w-full h-full whitespace-nowrap text-white text-[6em] md:text-[9em] lg:text-[11em] font-bold transition-all duration-[5s] ease-move-mouse"
+            className="flex items-end w-full h-full whitespace-nowrap text-white capitalize text-[3.5em] md:text-[7em] lg:text-[10em] font-bold !font-Marcellus transition-all duration-[5s] ease-move-mouse"
           >
-            something special
+            {t("enjoy")}
           </motion.h2>
         </div>
       </motion.section>

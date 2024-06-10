@@ -3,15 +3,15 @@ import { useRef } from "react";
 import { Link } from "react-router-dom";
 import Button from "../UI/Button";
 
-const HorizontalScroll = () => {
+const HorizontalScroll = ({ t }) => {
   return (
     <>
-      <HorizontalScrollCarousel />
+      <HorizontalScrollCarousel t={t} />
     </>
   );
 };
 
-const HorizontalScrollCarousel = () => {
+const HorizontalScrollCarousel = ({ t }) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -24,7 +24,7 @@ const HorizontalScrollCarousel = () => {
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-x-3 lg:gap-x-0">
           {cards.map((card) => {
-            return <Card card={card} key={card.id} />;
+            return <Card card={card} key={card.id} t={t} />;
           })}
         </motion.div>
       </div>
@@ -32,47 +32,35 @@ const HorizontalScrollCarousel = () => {
   );
 };
 
-const Card = ({ card }) => {
+const Card = ({ card, t }) => {
   return (
     <div
       key={card.id}
-      className="group grid grid-rows-2 lg:grid-rows-none lg:grid-cols-2 h-[560px] w-[350px] md:w-[600px] lg:w-[1000px] overflow-hidden bg-neutral-100"
+      className="group grid grid-flow-dense md:grid-rows-none md:grid-cols-2 h-[560px] w-[350px] md:w-[700px] lg:w-[1000px] overflow-hidden bg-neutral-100"
     >
-      <div
-      // style={{
-      //   backgroundImage: `url(${card.url})`,
-      //   backgroundSize: "cover",
-      //   backgroundPosition: "center",
-      // }}
-      // className="inset-0 transition-transform duration-1000 group-hover:scale-95"
-      >
-        <img
-          src={card.url}
-          alt="image"
-          className="object-cover inset-0 transition-transform duration-1000 group-hover:scale-105 h-full w-full"
-          loading="lazy"
-        />
-      </div>
+      <img
+        src={card.url}
+        alt="image"
+        className="object-cover inset-0 transition-transform duration-1000 group-hover:scale-105 w-full md:h-full bg-transparent"
+        loading="lazy"
+      />
       <div className="h-full grid place-content-center gap-3 m-2 p-3 md:m-6 lg:m-0 lg:gap-6 lg:mx-6 overflow-y-auto lg:overflow-y-hidden">
         <motion.h3
           variants={titleReveal}
           initial="initial"
           whileInView="animate"
-          className="font-Marcellus italic font-semibold mt-16 md:mt-0 lg:text-2xl text-xl lg:text-center capitalize"
+          className="!font-Italiana font-semibold mt-16 md:mt-0 md:text-xl text-center uppercase"
         >
-          something something something
+          {t(card.title)}
         </motion.h3>
-        <div className="font-Dancing">
+        <div className="!font-PoiretOne font-semibold tracking-wide text-sm md:text-base">
           <motion.p
             variants={content1Reveal}
             initial="initial"
             whileInView="animate"
             className="mb-2 first-letter:font-bold first-letter:text-lg indent-4 text-justify"
           >
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia
-            neque earum facilis consectetur nemo modi esse mollitia quae
-            temporibus eius sit, aspernatur voluptas doloremque! Eum quos
-            consectetur expedita praesentium soluta.
+            {t(card.content1)}
           </motion.p>
           <motion.p
             variants={content2Reveal}
@@ -80,26 +68,20 @@ const Card = ({ card }) => {
             whileInView="animate"
             className="mb-2 first-letter:font-bold first-letter:text-lg indent-4 text-justify"
           >
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia
-            neque earum facilis consectetur nemo modi esse
+            {t(card.content2)}
           </motion.p>
         </div>
         <motion.div
           variants={content3Reveal}
           initial="initial"
           whileInView="animate"
-          className="my-4 md:mb-6 flex justify-center "
+          className="my-4 mb-6 md:mb-6 flex justify-center "
         >
           <Link to={card.link}>
             <Button content={card.buttonContent} />
           </Link>
         </motion.div>
       </div>
-      {/* <div className="absolute inset-0 z-10 grid place-content-center">
-        <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-white backdrop-blur-lg">
-          {card.title}
-        </p>
-      </div> */}
     </div>
   );
 };
@@ -108,43 +90,33 @@ export default HorizontalScroll;
 
 const cards = [
   {
+    id: 1,
     url: "/src/assets/cozy-green-sofa.jpeg",
     link: "/accommodations",
-    id: 1,
     buttonContent: "accommodations",
+    title: "horiScrollTitle1",
+    content1: "horiScrollContent1",
+    content2: "horiScrollContent1_1",
+    content3: "horiScrollContent1_2",
   },
   {
+    id: 2,
     url: "/src/assets/cozy-green-sofa.jpeg",
     link: "/restoration",
-    id: 2,
     buttonContent: "restaurants",
+    title: "horiScrollTitle2",
+    content1: "horiScrollContent2",
+    content2: "horiScrollContent2_1",
   },
   {
-    url: "/src/assets/cozy-green-sofa.jpeg",
-    link: "/",
     id: 3,
-    buttonContent: "activities",
+    url: "/src/assets/cozy-green-sofa.jpeg",
+    link: "/activities&wellbeing",
+    buttonContent: "activities & wellbeing",
+    title: "horiScrollTitle3",
+    content1: "horiScrollContent3",
+    content2: "horiScrollContent3_1",
   },
-  // {
-  //   url: "/src/assets/cozy-green-sofa.jpeg",
-  //   title: "Title 4",
-  //   id: 4,
-  // },
-  // {
-  //   url: "/src/assets/cozy-green-sofa.jpeg",
-  //   title: "Title 5",
-  //   id: 5,
-  // },
-  // {
-  //   url: "/src/assets/cozy-green-sofa.jpeg",
-  //   title: "Title 6",
-  //   id: 6,
-  // },
-  // {
-  //   url: "/imgs/abstract/7.jpg",
-  //   title: "Title 7",
-  //   id: 7,
-  // },
 ];
 
 const titleReveal = {

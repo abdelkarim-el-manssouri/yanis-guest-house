@@ -21,12 +21,12 @@
       ),
       linear-gradient(to right, var(--faded-color), var(--faded-color));
     background-clip: text;
-    background-position-x: -100em, 0;
+    background-position-x: -250em, 250em;
     background-repeat: no-repeat;
     color: transparent;
     display: inline;
     animation: fill-text linear both;
     animation-timeline: --reveal-wrapper;
-    animation-range: entry 250% cover 80%;
+    animation-range: entry 100% cover 70%;
   }
 }

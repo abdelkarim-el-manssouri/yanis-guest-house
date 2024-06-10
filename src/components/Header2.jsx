@@ -2,13 +2,13 @@ import { useEffect, useRef, useState } from "react";
 import { headerSlideImages } from "../data/data";
 import { motion, useAnimate, useAnimation, useInView } from "framer-motion";
 
-const Header2 = () => {
-  return <HeaderImageReveal />;
+const Header2 = ({ t }) => {
+  return <HeaderImageReveal t={t} />;
 };
 
 export default Header2;
 
-const HeaderImageReveal = () => {
+const HeaderImageReveal = ({ t }) => {
   const [currentImg, setCurrentImg] = useState(0);
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -58,8 +58,6 @@ const HeaderImageReveal = () => {
     return () => runInterval.current && clearInterval(runInterval.current);
   }, [isInView]);
 
-  const text1 = `Lorem ipsum dolor sit amet consectetur adipisicing elit.`;
-
   return (
     <>
       <motion.div
@@ -70,7 +68,7 @@ const HeaderImageReveal = () => {
         className="h-full bg-center bg-cover overflow-clip opacity-50 relative"
       />
       <div className="absolute inset-0 h-full w-full grid place-content-center">
-        <motion.p className="text-white [text-shadow:_1px_2px_0_rgb(0_0_0_/_40%)] text-xl md:text-4xl lg:text-5xl w-[25ch] text-center font-bold">
+        <motion.p className="text-white [text-shadow:_1px_2px_0_rgb(0_0_0_/_40%)] text-xl md:text-4xl lg:text-5xl w-[25ch] lg:w-[30ch] lg:leading-none lg:tracking-wide text-center font-bold !font-Italiana capitalize">
           <motion.span
             ref={textRef}
             initial="hidden"
@@ -80,20 +78,22 @@ const HeaderImageReveal = () => {
               hidden: {},
             }}
           >
-            {text1.split(" ").map((word, ind) => (
-              <span key={ind} className="inline-block">
-                {word.split("").map((char, index) => (
-                  <motion.span
-                    className="inline-block"
-                    variants={textAnimations}
-                    key={index}
-                  >
-                    {char}
-                  </motion.span>
-                ))}
-                <span>&nbsp;</span>
-              </span>
-            ))}
+            {t("revealText")
+              .split(" ")
+              .map((word, ind) => (
+                <span key={ind} className="inline-block">
+                  {word.split("").map((char, index) => (
+                    <motion.span
+                      className="inline-block"
+                      variants={textAnimations}
+                      key={index}
+                    >
+                      {char}
+                    </motion.span>
+                  ))}
+                  <span>&nbsp;</span>
+                </span>
+              ))}
           </motion.span>
         </motion.p>
       </div>

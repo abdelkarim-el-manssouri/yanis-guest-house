@@ -19,9 +19,9 @@ const SmallParagraph = ({ text }) => {
         initial="initial"
         whileInView="animate"
         transition={{ type: "spring", stiffness: 100 }}
-        className="my-20"
+        className="my-12 md:my-20"
       >
-        <p className="text-center w-[30ch] md:w-[40ch] mx-auto font-semibold text-xl lg:text-2xl bg-gradient-to-br from-black via-secondary/80 to-black bg-clip-text text-transparent uppercase leading-snug tracking-wide font-Italiana">
+        <p className="text-center w-[25ch] md:w-[40ch] mx-auto font-semibold text-lg lg:text-2xl bg-gradient-to-br from-black via-secondary/80 to-black bg-clip-text text-transparent uppercase leading-snug tracking-wide !font-Italiana">
           {text}
         </p>
       </motion.section>

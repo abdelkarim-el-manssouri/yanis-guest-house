@@ -175,41 +175,41 @@ const RoomModal = ({ selected, setSelected, t }) => {
         </div>
 
         <div className="w-4/5 mx-auto">
-          <h3 className="relative text-center font-Marcellus italic capitalize text-xl md:text-3xl lg:text-4xl font-bold text-bordeaux before:absolute before:left-0 before:-bottom-2 md:before:-bottom-5 before:w-full before:h-0.5 before:bg-bordeaux before:rounded-full">
+          <h3 className="relative text-center !font-Marcellus italic capitalize text-2xl md:text-3xl lg:text-4xl font-bold text-bordeaux before:absolute before:left-0 before:-bottom-2 md:before:-bottom-5 before:w-full before:h-0.5 before:bg-bordeaux before:rounded-full">
             {`${t(selected?.title)}`}
           </h3>
 
-          <p className="mt-6 md:mt-11 lg:mt-14 text-justify">
+          <p className="mt-6 md:mt-11 lg:mt-14 text-justify !font-PoiretOne font-bold">
             {`${t(selected?.description)}`}
           </p>
 
-          <div className="mt-12 md:mt-10 grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-3 text-sm lg:text-base capitalize">
-            <div className="flex flex-col items-center justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
+          <div className="mt-12 md:mt-10 grid grid-cols-2 md:grid-cols-4 gap-3 text-sm lg:text-base capitalize !font-PoiretOne font-bold">
+            <div className="flex flex-col items-center justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-3 shadow-lg md:shadow-md rounded-lg">
               <IoBedOutline className="size-6 lg:size-8" />
               <div>{`${t(selected?.bed)}`}</div>
             </div>
-            <div className="flex flex-col items-center justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
+            <div className="flex flex-col items-center justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-3 shadow-lg md:shadow-md rounded-lg">
               <HiOutlineUsers className="size-6 lg:size-8" />
               <div>{selected?.persones}</div>
             </div>
-            <div className="flex flex-col items-center justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
+            <div className="flex flex-col items-center justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-3 shadow-lg md:shadow-md rounded-lg">
               <TbRulerMeasure className="size-6 lg:size-8" />
               <div>
                 {selected?.surface} m<sup>2</sup>
               </div>
             </div>
 
-            <div className="flex flex-col items-center justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
+            <div className="flex flex-col items-center justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-3 shadow-lg md:shadow-md rounded-lg">
               <GiWindow className="size-6 lg:size-8" />
               <div>{`${t(selected?.view)}`}</div>
             </div>
           </div>
 
-          <h4 className="my-10 capitalize text-xl md:text-2xl lg:text-3xl font-semibold w-fit underline underline-offset-[6px]">
+          <h4 className="my-10 capitalize text-2xl md:text-2xl lg:text-3xl font-semibold w-full md:w-fit underline underline-offset-[6px] text-center md:text-left !font-Marcellus">
             {t("roomAminities")}
           </h4>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-x-3 md:gap-y-6 lg:gap-y-3 text-sm lg:text-base mt-8 md:mt-10 capitalize">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-x-3 md:gap-y-6 lg:gap-y-3 text-sm lg:text-base mt-8 md:mt-10 capitalize !font-PoiretOne font-bold">
             <div className="flex flex-col items-center lg:p-5 gap-y-1 shadow-lg md:shadow-md md:gap-y-2 p-1 rounded-lg">
               <GiBathtub className="size-6 lg:size-8" />
               <div>{t("shower")}</div>
@@ -244,11 +244,11 @@ const RoomModal = ({ selected, setSelected, t }) => {
             </div>
           </div>
 
-          <h4 className="my-10 capitalize text-xl md:text-2xl lg:text-3xl font-semibold w-fit underline underline-offset-[6px]">
+          <h4 className="my-10 capitalize text-2xl md:text-2xl lg:text-3xl font-semibold w-full md:w-fit underline underline-offset-[6px] text-center md:text-left !font-Marcellus">
             {t("hotelAmenities")}
           </h4>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-x-3 md:gap-y-6 lg:gap-y-3 text-sm lg:text-base mt-8 md:mt-10 capitalize">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-x-3 md:gap-y-6 lg:gap-y-3 text-sm lg:text-base mt-8 md:mt-10 capitalize !font-PoiretOne font-bold">
             <div className="flex flex-col items-center uppercase lg:p-5 gap-y-1 shadow-lg md:shadow-md md:gap-y-2 p-1 rounded-lg">
               <LiaDumbbellSolid className="size-6 lg:size-8" />
               <div>{t("gym")}</div>
@@ -326,7 +326,7 @@ const RoomModal = ({ selected, setSelected, t }) => {
           </div>
 
           <div className="w-[90%] mx-auto flex flex-col md:flex-row md:justify-between items-center mt-14 mb-6 p-3 md:p-5 rounded-lg shadow-lg border border-dashed border-secondary/10">
-            <p className="capitalize text-lg font-Arapey font-bold text-center md:text-left mb-4 md:mb-0">
+            <p className="capitalize text-lg !font-Arapey font-bold text-center md:text-left mb-4 md:mb-0">
               <span>
                 {t("beginWith")} {selected?.price} ${" "}
               </span>

@@ -91,9 +91,9 @@ const RevealText = ({ scrollYProgress, t }) => {
       style={{ scale, opacity }}
       className="mt-[-100vh] h-[400vh] [view-timeline-name:--reveal-wrapper] bg-background relative z-10"
     >
-      <div className="min-h-screen sticky top-0 flex justify-center items-center w-3/4 mx-auto md:text-justify">
+      <div className="min-h-screen sticky top-0 flex justify-center items-center w-3/4 mx-auto text-justify lg:text-center">
         <div>
-          <p className="text-xl md:text-3xl supports-[animation-timeline]:reveal-text font-Groillim font-bold leading-[2.5rem] md:leading-[3rem] text-black [text-shadow:_0.5px_0.5px_0_#00464326]">
+          <p className="text-xl md:text-3xl supports-[animation-timeline]:reveal-text !font-PoiretOne font-bold md:leading-[2.3rem] lg:leading-[3rem] text-black [text-shadow:_0.5px_0.5px_0_#00464326]">
             {t("revealText")}
           </p>
         </div>
@@ -110,7 +110,7 @@ const ImageRoom = ({ scrollYProgress, t }) => {
     <>
       <motion.section
         style={{ scale, opacity }}
-        className="h-[200vh] mt-[-100vh] bg-cozyGreen relative"
+        className="h-[160vh] mt-[-100vh] bg-cozyGreen relative"
       >
         <div className="sticky top-0 h-screen overflow-hidden">
           <div className="h-[calc(100vh+2.5rem)] pb-10 flex items-center gap-5 overflow-x-auto snap-x snap-mandatory px-5">
@@ -212,7 +212,7 @@ const RoomsOutro = ({ t }) => {
           variants={titleRevealVariant}
           initial="initial"
           whileInView="animate"
-          className="mb-4 lg:mb-8 text-center font-Marcellus italic text-xl lg:text-2xl font-extrabold capitalize"
+          className="mb-4 lg:mb-8 text-center !font-Marcellus italic text-xl lg:text-2xl font-extrabold capitalize"
         >
           {t("outroTitle")}
         </motion.h3>
@@ -220,7 +220,7 @@ const RoomsOutro = ({ t }) => {
           variants={paragraphRevealVariant}
           initial="initial"
           whileInView="animate"
-          className="text-center md:text-justify font-Dancing text-sm lg:text-base"
+          className="text-center md:text-justify !font-PoiretOne text-sm lg:text-base font-bold first-letter:uppercase first-letter:text-xl"
         >
           {t("outroParag")}
         </motion.p>
