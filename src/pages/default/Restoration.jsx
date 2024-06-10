@@ -7,13 +7,13 @@ import { useTranslation } from "react-i18next";
 import { sensationsData } from "../../data/data";
 
 const Restoration = () => {
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     left: 0,
+  //     behavior: "smooth",
+  //   });
+  // }, []);
   const { t } = useTranslation("restoration");
   return (
     <>
@@ -92,7 +92,7 @@ const RestoHeader = ({ t }) => {
               duration: 1,
               delay: 1.3,
             }}
-            className="z-10 text-white font-bold text-3xl md:text-4xl lg:text-5xl font-Montsrrat tracking-wider capitalize underline underline-offset-8 decoration-[3px] [text-shadow:_1px_1px_0_#00464326]"
+            className="z-10 text-white font-bold !font-Italiana uppercase text-3xl md:text-4xl lg:text-5xl tracking-wide underline underline-offset-8 decoration-[3px] [text-shadow:_1px_1px_0_#00464326]"
           >
             {t("title")}
           </motion.p>
@@ -121,7 +121,7 @@ const Sensation = ({ title, content, imageUrl, t }) => {
     >
       <section className="grid grid-rows-2 md:grid-rows-none bg-secondary/15 transition duration-500 hover:bg-secondary/25 w-[90%] shadow-2xl shadow-cozyGreen/30 md:w-4/5 mx-auto border-black/5 overflow-hidden md:relative h-96 md:h-80 rounded-md">
         <div className="grid md:grid-cols-layout lg:py-4 md:p-2 lg:px-5 sm:max-w-[50%] sm:mt-auto h-full md:group-even:ml-[19.3rem] lg:group-even:ml-[29.3rem]">
-          <h3 className="grid place-content-center -mb-10 md:mb-0 text-2xl font-bold capitalize font-Marcellus italic">
+          <h3 className="grid place-content-center -mb-10 md:mb-0 text-2xl font-bold capitalize !font-Italiana">
             {`${t(title)}`}
           </h3>
           <p className="grid place-content-center px-2 lg:px-4 text-center !font-PoiretOne font-semibold tracking-wide text-sm lg:text-base leading-relaxed">

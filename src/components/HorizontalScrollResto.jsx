@@ -1,5 +1,4 @@
-import { motion, useTransform, useScroll, stagger } from "framer-motion";
-import { t } from "i18next";
+import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 
 const HorizontalScrollResto = ({ t }) => {
@@ -35,30 +34,29 @@ const Card = ({ card, t }) => {
   return (
     <div
       key={card.id}
-      // className="group relative h-[430px] lg:h-[500px] w-[400px] md:w-[600px] lg:w-[1000px] overflow-hidden bg-gradient-to-br from-aubergine to-aubergine/0"
-      className="group grid grid-rows-2 lg:grid-rows-none lg:grid-cols-2 h-[560px] w-[350px] md:w-[600px] lg:w-[1000px] overflow-hidden bg-neutral-100"
+      className="group grid grid-flow-dense md:grid-rows-none md:grid-cols-2 h-[560px] w-[350px] md:w-[700px] lg:w-[1000px] overflow-hidden bg-neutral-100"
     >
       <img
         src={card.url}
         alt="image"
-        className="object-cover bg-center inset-0 transition-transform duration-700 group-hover:scale-105 h-full w-full"
+        className="object-cover inset-0 transition-transform duration-1000 group-hover:scale-105 w-full md:h-full bg-transparent"
         loading="lazy"
       />
-      <div className="h-full grid place-content-center gap-3 m-2 p-3 md:m-6 lg:m-0 lg:gap-6 lg:mx-6 overflow-y-auto lg:overflow-y-hidden">
+      <div className="h-full grid place-content-center gap-3 m-2 p-3 md:m-6 lg:m-0 lg:gap-6 lg:mx-6 overflow-y-scroll lg:overflow-y-hidden">
         <motion.h3
           variants={titleReveal}
           initial="initial"
           whileInView="animate"
-          className="font-Marcellus italic font-semibold mt-16 md:mt-0 lg:text-2xl text-xl lg:text-center capitalize"
+          className="!font-Italiana font-semibold mt-32 lg:mt-0 md:text-xl text-center uppercase"
         >
           {t(card.title)}
         </motion.h3>
-        <motion.div className="text-sm !font-PoiretOne font-semibold tracking-wide">
+        <div className="!font-PoiretOne font-semibold tracking-wide text-xs md:text-sm">
           <motion.p
             variants={content1Reveal}
             initial="initial"
             whileInView="animate"
-            className="mb-2 first-letter:font-black first-letter:text-xl indent-4 text-justify"
+            className="mb-2 first-letter:font-bold first-letter:text-lg indent-4 text-justify"
           >
             {t(card.content1)}
           </motion.p>
@@ -74,16 +72,11 @@ const Card = ({ card, t }) => {
             variants={content3Reveal}
             initial="initial"
             whileInView="animate"
-            className="mb-2 first-letter:font-bold first-letter:text-lg indent-4 text-justify"
+            className="mb-10 lg:mb-2 first-letter:font-bold first-letter:text-lg indent-4 text-justify"
           >
             {t(card.content3)}
           </motion.p>
-        </motion.div>
-        {/* <div className="my-4 md:mb-6 flex justify-center lg:justify-start">
-          <Link to={card.link}>
-            <Button content={card.buttonContent} />
-          </Link>
-        </div> */}
+        </div>
       </div>
     </div>
   );
@@ -118,26 +111,6 @@ const cards = [
     buttonContent: "activities",
     title: "horiScrollTitle3",
   },
-  // {
-  //   url: "/src/assets/cozy-green-sofa.jpeg",
-  //   title: "Title 4",
-  //   id: 4,
-  // },
-  // {
-  //   url: "/src/assets/cozy-green-sofa.jpeg",
-  //   title: "Title 5",
-  //   id: 5,
-  // },
-  // {
-  //   url: "/src/assets/cozy-green-sofa.jpeg",
-  //   title: "Title 6",
-  //   id: 6,
-  // },
-  // {
-  //   url: "/imgs/abstract/7.jpg",
-  //   title: "Title 7",
-  //   id: 7,
-  // },
 ];
 
 const titleReveal = {
