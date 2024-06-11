@@ -1,0 +1,67 @@
+{
+  "headerTitle": "actividades & bienestar",
+  "parag1": "Nutre Tu Alma y Tu Mente: Explora el Bienestar",
+  "parag2": "disfruta de nuestra variada colección de excursiones",
+  "heading1": "nuestra colección de masajes",  
+  "heading2": "descubre también",  
+  "heading3": "Agafay",  
+  "heading4": "Disfruta más de Marrakech",
+  
+  "genre1": "masaje relajante",
+  "genre2": "Masaje Tonificante",
+  "genre3": "masaje drenante",
+  "genre4": "masaje en pareja",
+  "definition1": "La terapia de masaje se enfoca en la relajación general, el alivio de la tensión muscular y la mejora de la circulación sanguínea.",
+  "definition2": "Una forma suave de masaje, utilizada con el objetivo de mejorar el flujo sanguíneo del cuerpo, el equilibrio de los fluidos corporales y la función inmunológica.",
+  "definition3": "Una forma suave de masaje, que se usa para aliviar la hinchazón dolorosa en los brazos y las piernas causada por el linfedema.",
+  "definition4": "Una experiencia deliciosa en la que una pareja recibe un masaje simultáneamente en la misma habitación pero en mesas de masaje separadas.",
+  "perPerson": "por persona",
+  "forCouple": "para pareja",
+  "book": "reservar",
+
+  "manicure": "manicura & pedicura",
+  "manDescription": "en este ambiente acogedor e íntimo. Mímese con estos servicios impecablemente ejecutados.",
+  "each": "cada uno",
+
+  "facial": "tratamientos faciales",
+  "pulls": "tira de comedones",
+  "scrub": "exfoliante de piel muerta",
+  "mask": "mascarilla aclaradora",
+  "antiAging": "modelado antienvejecimiento con aceite de argán",
+
+  "rdv": "hacer una cita:",
+  "afternoon": "la tarde para el día siguiente.",
+  "morning": "por la mañana por la tarde.",
+
+  "pack1": "paquete 1",
+  "quad": "quad de 1 hora",
+  "dromadaire": "paseo en camello de 1 hora",
+  "the": "pausa para el té",
+  "photo": "pausa para fotos",
+  "transport": "transporte desde y hacia",
+
+  "pack2": "paquete 2",
+  "quad2": "2 horas de quad",
+
+  "pack3": "paquete 3",
+  "culinaire": "experiencia culinaria",
+  "dinner": "cena bajo las estrellas de agafay",
+  "spectacle": "espectáculo y animación",
+
+  "balloonTitle": "experiencia de vuelo en globo aerostático",
+  "balloonDiscrip": "Vuelo en globo Aerostático con desayuno bereber",
+
+  "ourikaTitle": "Valle de Ourika",
+  "balloonDisc": "Traslado privado de ida y vuelta al valle de Ourika + guía",
+
+  "HorsebackTitle": "Paseo a Caballo",
+  "HorsebackDisc": "Cabalgata en el palmeral 2 horas de cabalgata",
+
+  "AliTitle": "Espectáculo folclórico Chez Ali Fantasia",
+  "aliDisc": "Espectáculo folclórico Chez Ali Fantasia con traslados de ida y vuelta con cena marroquí",
+
+  "CircuitTitle": "El Circuito de los 3 valles de las montañas del Atlas, Imlil, Ouzoud, presa de Lalla Takerkoust",
+  "CircuitDisc": "En esta excursión de un día, viajará a las montañas marroquíes del Alto Atlas y descubrirá el estilo de vida rural. Rodeado de una naturaleza impresionante en todas las direcciones, visitará pueblos bereberes",
+  "pDriver": "Conductor privado",
+  "guide": "guía hacia y desde"
+}

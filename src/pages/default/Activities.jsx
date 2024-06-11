@@ -4,34 +4,37 @@ import SmallParagraph from "../../UI/SmallParagraph";
 import { IoTimerOutline } from "react-icons/io5";
 import { PiWarningOctagonBold } from "react-icons/pi";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { WellBeingData } from "../../data/data";
 const Activities = () => {
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     left: 0,
+  //     behavior: "smooth",
+  //   });
+  // }, []);
+  const { t } = useTranslation("activities");
   return (
     <>
-      <ActivitiesHeader />
-      <SmallParagraph text="lorem" />
-      <Heading heading="our massage collection" />
-      <WellBeing />
-      <Heading heading="discover also" />
-      <SelfCare />
-      <SmallParagraph text="enjoy our various collection of excursions" />
-      <Heading heading="Agafay" />
-      <ExternalActivities />
-      <Heading heading="Enjoy more of Marrakesh" />
-      <MoreOfMarrakesh />
+      <ActivitiesHeader t={t} />
+      <SmallParagraph text={t("parag1")} />
+      <Heading heading={t("heading1")} />
+      <WellBeing t={t} />
+      <Heading heading={t("heading2")} />
+      <SelfCare t={t} />
+      <SmallParagraph text={t("parag2")} />
+      <Heading heading={t("heading3")} />
+      <ExternalActivities t={t} />
+      <Heading heading={t("heading4")} />
+      <MoreOfMarrakesh t={t} />
     </>
   );
 };
 
 export default Activities;
 
-const ActivitiesHeader = () => {
+const ActivitiesHeader = ({ t }) => {
   const firstTextRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: firstTextRef,
@@ -72,9 +75,9 @@ const ActivitiesHeader = () => {
             duration: 1,
             delay: 1.3,
           }}
-          className="z-10 text-white font-bold text-3xl md:text-4xl lg:text-5xl font-Groillim tracking-wider capitalize underline underline-offset-8 decoration-2 [text-shadow:_1px_1px_0_#00464326]"
+          className="z-10 text-white font-bold !font-Italiana uppercase text-3xl md:text-4xl lg:text-5xl tracking-wide underline underline-offset-8 decoration-[3px] [text-shadow:_1px_1px_0_#00464326]"
         >
-          activities & wellbeing
+          {t("headerTitle")}
         </motion.p>
       </div>
     </div>
@@ -87,14 +90,14 @@ const Heading = ({ heading }) => {
       variants={headingVariants}
       initial="initial"
       whileInView="animate"
-      className="text-center md:w-[50ch] mx-auto text-xl md:text-2xl font-bold capitalize text-transparent bg-clip-text bg-gradient-to-br from-golden to-black my-10"
+      className="text-center md:w-[50ch] mx-auto text-xl md:text-2xl !font-Italiana font-bold capitalize text-transparent bg-clip-text bg-gradient-to-br from-golden to-black my-10"
     >
       {heading}
     </motion.h3>
   );
 };
 
-const WellBeing = () => {
+const WellBeing = ({ t }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-[90%] mx-auto mb-20">
       {WellBeingData.map((i) => (
@@ -107,15 +110,17 @@ const WellBeing = () => {
         >
           <div className="relative w-1/2 h-px rounded-xl bg-golden" />
           <div className="mx-2 md:mx-4">
-            <h4 className="mt-4 font-black capitalize text-xl font-Marcellus">
-              {i.genre}
+            <h4 className="mt-4 font-black capitalize text-xl !font-Italiana">
+              {t(i.genre)}
             </h4>
-            <p className="mt-2 text-sm text-pretty">{i.definition}</p>
-            <div className="flex justify-between my-8 mx-2 md:mx-4">
-              <p className="">
-                <span className="font-semibold text-lg">${i.price}</span>
+            <p className="mt-2 text-pretty !font-PoiretOne font-bold">
+              {t(i.definition)}
+            </p>
+            <div className="flex justify-between my-8 mx-2 md:mx-4 !font-PoiretOne font-bold">
+              <p>
+                <span className="text-lg">${i.price}</span>
                 &nbsp;
-                <span className="text-xs">{i.person}</span>
+                <span className="text-sm">/ {t(i.person)}</span>
               </p>
               <p className="flex justify-center items-center gap-2 font-semibold text-lg">
                 <IoTimerOutline />
@@ -124,8 +129,8 @@ const WellBeing = () => {
             </div>
             <Link to="/selfCareForm">
               <div className="flex justify-center">
-                <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-                  book
+                <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg !font-PoiretOne font-bold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+                  {t("book")}
                 </button>
               </div>
             </Link>
@@ -136,7 +141,7 @@ const WellBeing = () => {
   );
 };
 
-const SelfCare = () => {
+const SelfCare = ({ t }) => {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-[90%] mx-auto mb-20">
@@ -148,24 +153,23 @@ const SelfCare = () => {
         >
           <div className="relative w-1/2 h-px rounded-xl bg-golden" />
           <div className="mx-2 md:mx-4">
-            <h4 className="mt-4 font-black capitalize text-xl font-Marcellus">
-              manicure & pedicure
+            <h4 className="mt-4 font-bold capitalize text-xl !font-Italiana">
+              {t("manicure")}
             </h4>
-            <p className="mt-2 text-sm text-pretty first-letter:uppercase">
-              in this welcoming and intimate setting. Pamper yourself with these
-              flawlessly executed services.
+            <p className="mt-2 !font-PoiretOne font-bold text-pretty first-letter:uppercase">
+              {t("manDescription")}
             </p>
-            <div className="flex justify-center my-8 mx-2 md:mx-4">
+            <div className="flex justify-center my-8 mx-2 md:mx-4 !font-PoiretOne font-bold">
               <p className="">
-                <span className="font-semibold text-xl">$40</span>
+                <span className="text-xl">$40</span>
                 &nbsp;
-                <span className="text-xs">each</span>
+                <span className="text-sm">/ {t("each")}</span>
               </p>
             </div>
             <Link to="/selfCareForm">
               <div className="flex justify-center">
-                <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-                  book
+                <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg !font-PoiretOne font-bold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+                  {t("book")}
                 </button>
               </div>
             </Link>
@@ -180,39 +184,37 @@ const SelfCare = () => {
         >
           <div className="relative w-1/2 h-px rounded-xl bg-golden" />
           <div className="mx-2 md:mx-4">
-            <h4 className="mt-4 font-black capitalize text-xl font-Marcellus">
-              facial treatments
+            <h4 className="mt-4 font-bold capitalize text-xl !font-Italiana">
+              {t("facial")}
             </h4>
-            <div className="mt-2 text-sm text-pretty grid lg:grid-cols-card gap-x-12 gap-y-1 lg:gap-y-0">
+            <div className="mt-2 !font-PoiretOne font-bold text-pretty grid lg:grid-cols-card gap-x-12 gap-y-1 lg:gap-y-0">
               <div className="flex items-center gap-2">
                 <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-                <p className="first-letter:uppercase">pulls comedones</p>
+                <p className="first-letter:uppercase">{t("pulls")}</p>
               </div>
 
               <div className="flex items-center gap-2">
                 <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-                <p className="first-letter:uppercase">dead skin scrub</p>
+                <p className="first-letter:uppercase">{t("scrub")}</p>
               </div>
 
               <div className="flex items-center gap-2">
                 <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-                <p className="first-letter:uppercase">lightening mask</p>
+                <p className="first-letter:uppercase">{t("mask")}</p>
               </div>
 
               <div className="flex gap-2 lg:mt-2">
                 <div className="size-3 mt-1 rounded-full bg-gradient-to-bl from-golden to-background" />
-                <p className="first-letter:uppercase">
-                  anti-aging modeling with argan oil
-                </p>
+                <p className="first-letter:uppercase">{t("antiAging")}</p>
               </div>
             </div>
             <div className="flex justify-center my-6 mx-2 md:mx-4">
-              <p className="font-semibold text-xl">$50</p>
+              <p className="font-bold !font-PoiretOne text-xl">$50</p>
             </div>
             <Link to="/selfCareForm">
               <div className="flex justify-center">
-                <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-                  book
+                <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-bold !font-PoiretOne capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+                  {t("book")}
                 </button>
               </div>
             </Link>
@@ -224,25 +226,22 @@ const SelfCare = () => {
         variants={headingVariants}
         initial="initial"
         whileInView="animate"
-        className="relative grid place-content-center p-8 w-[90%] md:w-3/4 lg:w-1/2 mx-auto rounded-xl shadow-lg shadow-red-200 hover:shadow-red-300 hover:shadow-xl transition duration-300 bg-gradient-to-br from-cozyGreen to-black text-background font-semibold mb-20"
       >
-        <div className="absolute top-2 left-2">
-          <PiWarningOctagonBold size="20" />
-        </div>
-        <div className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 items-center">
-          <p className="first-letter:uppercase">making an appointment:</p>
-          <div>
-            <div className="flex items-center gap-2">
-              <div className="size-2.5 rounded-full bg-gradient-to-bl from-golden to-cozyGreen" />
-              <p className="first-letter:uppercase">
-                the afternoon for the next day.
-              </p>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="size-2.5 rounded-full bg-gradient-to-bl from-golden to-cozyGreen" />
-              <p className="first-letter:uppercase">
-                in the morning for the afternoon.
-              </p>
+        <div className="relative grid place-content-center !font-PoiretOne font-bold tracking-wide p-8 w-[90%] md:w-3/4 lg:w-1/2 mx-auto rounded-xl shadow-lg shadow-red-200 hover:shadow-red-300 hover:shadow-xl transition duration-300 bg-gradient-to-br from-cozyGreen to-black text-background mb-20">
+          <div className="absolute top-2 left-2">
+            <PiWarningOctagonBold size="20" />
+          </div>
+          <div className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 items-center">
+            <p className="first-letter:uppercase">{t("rdv")}</p>
+            <div>
+              <div className="flex items-center gap-2">
+                <div className="size-2.5 rounded-full bg-gradient-to-bl from-golden to-cozyGreen" />
+                <p className="first-letter:uppercase">{t("afternoon")}</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="size-2.5 rounded-full bg-gradient-to-bl from-golden to-cozyGreen" />
+                <p className="first-letter:uppercase">{t("morning")}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -251,7 +250,7 @@ const SelfCare = () => {
   );
 };
 
-const ExternalActivities = () => {
+const ExternalActivities = ({ t }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-[90%] mx-auto text-background mb-10">
       <motion.div
@@ -262,52 +261,47 @@ const ExternalActivities = () => {
       >
         <div className="relative w-1/2 h-px rounded-xl bg-golden mb-3" />
         <div className="mx-2 md:mx-4 md:my-2">
-          <h4 className="my-4 font-black capitalize text-xl font-Marcellus">
-            pack 1
+          <h4 className="my-4 font-bold capitalize text-xl !font-Italiana">
+            {t("pack1")}
           </h4>
-          <ul className="flex flex-wrap gap-y-1">
+          <ul className="flex flex-wrap gap-y-1 !font-PoiretOne font-bold">
             <div className="flex items-center gap-1.5 basis-full lg:basis-1/2">
               <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-              <li className="text-sm first-letter:uppercase">1hr de quad</li>
+              <li className="first-letter:uppercase">{t("quad")}</li>
             </div>
 
             <div className="flex items-center gap-1.5 basis-full lg:basis-1/2">
               <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-              <li className="text-sm first-letter:uppercase">
-                1hr de dromadaire
-              </li>
+              <li className="first-letter:uppercase">{t("dromadaire")}</li>
             </div>
 
             <div className="flex items-center gap-1.5 basis-full lg:basis-1/2">
               <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-              <li className="text-sm first-letter:uppercase">pause the</li>
+              <li className="first-letter:uppercase">{t("the")}</li>
             </div>
 
             <div className="flex items-center gap-1.5 basis-full lg:basis-1/2">
               <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-              <li className="text-sm first-letter:uppercase">pause photo</li>
+              <li className="first-letter:uppercase">{t("photo")}</li>
             </div>
 
             <div className="flex items-center gap-1.5 basis-full">
               <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-              <li className="text-sm first-letter:uppercase ">
-                transport allez retour
-              </li>
+              <li className="first-letter:uppercase ">{t("transport")}</li>
             </div>
           </ul>
         </div>
-        <div className="flex justify-center my-8 mx-2 md:mx-4">
+        <div className="flex justify-center my-8 mx-2 md:mx-4 !font-PoiretOne font-bold">
           <p>
-            <span className="font-semibold text-xl">$55</span>
+            <span className="text-xl">$55</span>
             &nbsp;
-            <span className="text-xs">per person</span>
+            <span className="text-sm">/ {t("perPerson")}</span>
           </p>
-          <p className="flex justify-center items-center gap-2 font-semibold text-lg"></p>
         </div>
         <Link to="/agafayForm">
           <div className="flex justify-center">
-            <button className="py-1.5 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-              book
+            <button className="py-1.5 w-5/6 mx-auto !font-PoiretOne font-bold border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+              {t("book")}
             </button>
           </div>
         </Link>
@@ -317,56 +311,51 @@ const ExternalActivities = () => {
         variants={cardVariants}
         initial="initial"
         whileInView="animate"
-        className="relative border border-cozyGreen/10 border-dashed bg-gradient-to-bl from-lightGreen to-background text-cozyGreen rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
+        className="relative border border-cozyGreen/10 !font-PoiretOne font-bold border-dashed bg-gradient-to-bl from-lightGreen to-background text-cozyGreen rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
       >
         <div className="relative w-1/2 h-px rounded-xl bg-golden mb-3" />
         <div className="mx-2 md:mx-4 md:my-2">
-          <h4 className="my-4 font-black capitalize text-xl font-Marcellus">
-            pack 2
+          <h4 className="my-4 font-black capitalize text-xl !font-Italiana">
+            {t("pack2")}
           </h4>
           <ul className="flex flex-wrap gap-y-1">
             <div className="flex items-center gap-1.5 basis-full lg:basis-1/2">
               <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-              <li className="text-sm first-letter:uppercase">2hr de quad</li>
+              <li className="first-letter:uppercase">{t("quad2")}</li>
             </div>
 
             <div className="flex items-center gap-1.5 basis-full lg:basis-1/2">
               <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-              <li className="text-sm first-letter:uppercase">pause the</li>
+              <li className="first-letter:uppercase">{t("the")}</li>
             </div>
 
             <div className="flex items-center gap-1.5 basis-full lg:basis-1/2">
               <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-              <li className="text-sm first-letter:uppercase">pause photo</li>
+              <li className="first-letter:uppercase">{t("photo")}</li>
             </div>
 
             <div className="flex items-center gap-1.5 basis-full lg:basis-1/2">
               <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-              <li className="text-sm first-letter:uppercase ">
-                transport allez retour
-              </li>
+              <li className="first-letter:uppercase ">{t("transport")}</li>
             </div>
 
             <div className="invisible flex items-center gap-1.5 basis-full lg:basis-1/2">
               <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-              <li className="text-sm first-letter:uppercase ">
-                transport allez retour
-              </li>
+              <li className="first-letter:uppercase ">.</li>
             </div>
           </ul>
         </div>
         <div className="flex justify-center my-8 mx-2 md:mx-4">
           <p>
-            <span className="font-semibold text-xl">$55</span>
+            <span className="text-xl">$55</span>
             &nbsp;
-            <span className="text-xs">per person</span>
+            <span className="text-sm">/ {t("perPerson")}</span>
           </p>
-          <p className="flex justify-center items-center gap-2 font-semibold text-lg"></p>
         </div>
         <Link to="/agafayForm">
           <div className="flex justify-center">
-            <button className="py-1.5 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-              book
+            <button className="py-1.5 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+              {t("book")}
             </button>
           </div>
         </Link>
@@ -376,77 +365,67 @@ const ExternalActivities = () => {
         variants={cardVariants}
         initial="initial"
         whileInView="animate"
-        className="relative mb-6 border md:col-span-2 border-cozyGreen/10 border-dashed bg-gradient-to-bl from-lightGreen to-background text-cozyGreen rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
+        className="relative mb-6 border md:col-span-2 !font-PoiretOne font-bold border-cozyGreen/10 border-dashed bg-gradient-to-bl from-lightGreen to-background text-cozyGreen rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
       >
         <div className="relative w-1/2 h-px rounded-xl bg-golden mb-3" />
         <div className="mx-2 md:mx-4 md:my-2">
-          <h4 className="my-4 font-black capitalize text-xl font-Marcellus">
-            pack 3
+          <h4 className="my-4 font-black capitalize text-xl !font-Italiana">
+            {t("pack3")}
           </h4>
           <ul className="flex flex-wrap gap-y-2">
             <div className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
               <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-              <li className="text-sm first-letter:uppercase">
-                experience culinaire
-              </li>
+              <li className="first-letter:uppercase">{t("culinaire")}</li>
             </div>
 
             <div className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
               <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-              <li className="text-sm first-letter:uppercase">
-                dinner sous les etoiles d'agafay
-              </li>
+              <li className="first-letter:uppercase">{t("dinner")}</li>
             </div>
 
             <div className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
               <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-              <li className="text-sm first-letter:uppercase">
-                spectacle et animation
-              </li>
+              <li className="first-letter:uppercase">{t("spectacle")}</li>
             </div>
 
             <div className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
               <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-              <li className="text-sm first-letter:uppercase">1hr quad</li>
+              <li className="first-letter:uppercase">{t("quad")}</li>
             </div>
 
             <div className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
               <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-              <li className="text-sm first-letter:uppercase ">
-                1hr dromadaire
-              </li>
+              <li className="first-letter:uppercase ">{t("dromadaire")}</li>
             </div>
 
             <div className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
               <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-              <li className="text-sm first-letter:uppercase ">pause the</li>
+              <li className="first-letter:uppercase ">{t("the")}</li>
             </div>
 
             <div className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
               <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-              <li className="text-sm first-letter:uppercase ">pause photo</li>
+              <li className="first-letter:uppercase ">{t("photo")}</li>
             </div>
 
             <div className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
               <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-              <li className="text-sm first-letter:uppercase ">
-                transport allez retour
-              </li>
+              <li className="first-letter:uppercase ">{t("transport")}</li>
             </div>
           </ul>
         </div>
         <div className="flex justify-center my-8 mx-2 md:mx-4">
           <p>
-            <span className="font-semibold text-xl">$80</span>
+            <span className="text-xl">$80</span>
             &nbsp;
-            <span className="text-xs">per person</span>
+            <span className="text-sm">/ {t("perPerson")}</span>
           </p>
           <p className="flex justify-center items-center gap-2 font-semibold text-lg"></p>
         </div>
         <Link to="/agafayForm">
           <div className="flex justify-center">
-            <button className="py-1.5 w-5/6 md:w-1/2 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-              book
+            <button className="py-1.5 w-5/6 md:w-1/2 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+              {t("book")}
             </button>
           </div>
         </Link>
@@ -455,34 +434,34 @@ const ExternalActivities = () => {
   );
 };
 
-const MoreOfMarrakesh = () => {
+const MoreOfMarrakesh = ({ t }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-[90%] mx-auto mb-20">
       <motion.div
         variants={cardVariants}
         initial="initial"
         whileInView="animate"
-        className="relative border border-cozyGreen/10 border-dashed rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 bg-gradient-to-bl from-lightGreen to-background text-cozyGreen after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
+        className="relative !font-PoiretOne font-bold border border-cozyGreen/10 border-dashed rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 bg-gradient-to-bl from-lightGreen to-background text-cozyGreen after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
       >
         <div className="relative w-1/2 h-px rounded-xl bg-golden" />
         <div className="mx-2 md:mx-4">
-          <h4 className="mt-4 font-black capitalize text-xl font-Marcellus">
-            air baloon flight experience
+          <h4 className="mt-4 font-black capitalize text-xl !font-Italiana">
+            {t("balloonTitle")}
           </h4>
-          <p className="mt-2 text-sm text-pretty first-letter:uppercase">
-            Hot Air Balloon flight with Berber breakfast
+          <p className="mt-2 text-pretty first-letter:uppercase">
+            {t("balloonDiscrip")}
           </p>
           <div className="flex justify-center my-8 mx-2 md:mx-4">
             <p>
-              <span className="font-semibold text-xl">$190</span>
+              <span className="text-xl">$190</span>
               &nbsp;
-              <span className="text-xs">per person</span>
+              <span className="text-sm">/ {t("perPerson")}</span>
             </p>
           </div>
           <Link to="/moreOfMarrakeshForm">
             <div className="flex justify-center">
-              <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-                book
+              <button className="py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+                {t("book")}
               </button>
             </div>
           </Link>
@@ -493,27 +472,27 @@ const MoreOfMarrakesh = () => {
         variants={cardVariants}
         initial="initial"
         whileInView="animate"
-        className="relative border border-cozyGreen/10 border-dashed rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 bg-gradient-to-bl from-lightGreen to-background text-cozyGreen after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
+        className="relative !font-PoiretOne font-bold border border-cozyGreen/10 border-dashed rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 bg-gradient-to-bl from-lightGreen to-background text-cozyGreen after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
       >
         <div className="relative w-1/2 h-px rounded-xl bg-golden" />
         <div className="mx-2 md:mx-4">
-          <h4 className="mt-4 font-black capitalize text-xl font-Marcellus">
-            Ourika Valley
+          <h4 className="mt-4 font-black capitalize text-xl !font-Italiana">
+            {t("ourikaTitle")}
           </h4>
-          <p className="mt-2 text-sm text-pretty first-letter:uppercase">
-            Ourika Valley private round trip transfer + guide
+          <p className="mt-2 text-pretty first-letter:uppercase">
+            {t("balloonDisc")}
           </p>
           <div className="flex justify-center my-8 mx-2 md:mx-4">
             <p>
-              <span className="font-semibold text-xl">$100</span>
+              <span className="text-xl">$100</span>
               &nbsp;
-              <span className="text-xs">per person</span>
+              <span className="text-sm">/ {t("perPerson")}</span>
             </p>
           </div>
           <Link to="/moreOfMarrakeshForm">
             <div className="flex justify-center">
-              <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-                book
+              <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+                {t("book")}
               </button>
             </div>
           </Link>
@@ -524,27 +503,27 @@ const MoreOfMarrakesh = () => {
         variants={cardVariants}
         initial="initial"
         whileInView="animate"
-        className="relative border border-cozyGreen/10 border-dashed rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 bg-gradient-to-bl from-lightGreen to-background text-cozyGreen after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
+        className="relative !font-PoiretOne font-bold border border-cozyGreen/10 border-dashed rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 bg-gradient-to-bl from-lightGreen to-background text-cozyGreen after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
       >
         <div className="relative w-1/2 h-px rounded-xl bg-golden" />
         <div className="mx-2 md:mx-4">
-          <h4 className="mt-4 font-black capitalize text-xl font-Marcellus">
-            Horseback Ride
+          <h4 className="mt-4 font-black capitalize text-xl !font-Italiana">
+            {t("HorsebackTitle")}
           </h4>
-          <p className="mt-2 text-sm text-pretty first-letter:uppercase">
-            Horseback ride in the palm grove 2 hours of horseback riding
+          <p className="mt-2 text-pretty first-letter:uppercase">
+            {t("HorsebackDisc")}
           </p>
           <div className="flex justify-center my-8 mx-2 md:mx-4">
             <p>
-              <span className="font-semibold text-xl">$85</span>
+              <span className="text-xl">$85</span>
               &nbsp;
-              <span className="text-xs">per person</span>
+              <span className="text-sm">/ {t("perPerson")}</span>
             </p>
           </div>
           <Link to="/moreOfMarrakeshForm">
             <div className="flex justify-center">
-              <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-                book
+              <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+                {t("book")}
               </button>
             </div>
           </Link>
@@ -555,28 +534,27 @@ const MoreOfMarrakesh = () => {
         variants={cardVariants}
         initial="initial"
         whileInView="animate"
-        className="relative border border-cozyGreen/10 border-dashed rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 bg-gradient-to-bl from-lightGreen to-background text-cozyGreen after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
+        className="relative !font-PoiretOne font-bold border border-cozyGreen/10 border-dashed rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 bg-gradient-to-bl from-lightGreen to-background text-cozyGreen after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
       >
         <div className="relative w-1/2 h-px rounded-xl bg-golden" />
         <div className="mx-2 md:mx-4">
-          <h4 className="mt-4 font-black capitalize text-xl font-Marcellus">
-            Chez Ali Fantasia folk show
+          <h4 className="mt-4 font-black capitalize text-xl !font-Italiana">
+            {t("AliTitle")}
           </h4>
-          <p className="mt-2 text-sm text-pretty first-letter:uppercase">
-            Chez Ali Fantasia folk show with Moroccan dinner Transfers back and
-            forth
+          <p className="mt-2 text-pretty first-letter:uppercase">
+            {t("aliDisc")}
           </p>
           <div className="flex justify-center my-8 mx-2 md:mx-4">
             <p>
-              <span className="font-semibold text-xl">$60</span>
+              <span className="text-xl">$60</span>
               &nbsp;
-              <span className="text-xs">per person</span>
+              <span className="text-sm">/ {t("perPerson")}</span>
             </p>
           </div>
           <Link to="/moreOfMarrakeshForm">
             <div className="flex justify-center">
-              <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-                book
+              <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+                {t("book")}
               </button>
             </div>
           </Link>
@@ -587,42 +565,38 @@ const MoreOfMarrakesh = () => {
         variants={cardVariants}
         initial="initial"
         whileInView="animate"
-        className="relative border md:col-span-2 border-cozyGreen/10 border-dashed rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 bg-gradient-to-bl from-lightGreen to-background text-cozyGreen after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
+        className="relative !font-PoiretOne font-bold border md:col-span-2 border-cozyGreen/10 border-dashed rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 bg-gradient-to-bl from-lightGreen to-background text-cozyGreen after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
       >
         <div className="relative w-1/2 h-px rounded-xl bg-golden" />
         <div className="mx-2 md:mx-4">
-          <h4 className="mt-4 font-black capitalize text-xl font-Marcellus">
-            The 3 valleys Circuit of the Atlas Mountains, Imlil, Ouzoud, Lalla
-            Takerkoust Dam
+          <h4 className="mt-4 font-black capitalize text-xl !font-Italiana">
+            {t("CircuitTitle")}
           </h4>
-          <p className="my-4 text-sm text-pretty first-letter:uppercase">
-            On this day trip, you will travel to the Moroccan High Atlas
-            Mountains and discover the rural way of life. Surrounded by
-            breathtaking nature in all directions, you will visit Berber
-            villages
+          <p className="my-4 text-pretty first-letter:uppercase">
+            {t("CircuitDisc")}
           </p>
-          <div className="my-4 text-sm text-pretty flex justify-evenly gap-x-12 gap-y-1 lg:gap-y-0">
+          <div className="my-4 text-pretty flex justify-evenly gap-x-12 gap-y-1 lg:gap-y-0">
             <div className="flex items-center gap-2">
               <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-              <p className="first-letter:uppercase">Private driver</p>
+              <p className="first-letter:uppercase">{t("pDriver")}</p>
             </div>
 
             <div className="flex items-center gap-2">
               <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-              <p className="first-letter:uppercase">guide to and from</p>
+              <p className="first-letter:uppercase">{t("guide")}</p>
             </div>
           </div>
           <div className="flex justify-center my-8 mx-2 md:mx-4">
             <p>
-              <span className="font-semibold text-xl">$160</span>
+              <span className="text-xl">$160</span>
               &nbsp;
-              <span className="text-xs">per person</span>
+              <span className="text-sm">/ {t("perPerson")}</span>
             </p>
           </div>
           <Link to="/moreOfMarrakeshForm">
             <div className="flex justify-center">
-              <button className="py-2 lg:w-1/2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-semibold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-                book
+              <button className="py-2 lg:w-1/2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
+                {t("book")}
               </button>
             </div>
           </Link>
@@ -631,45 +605,6 @@ const MoreOfMarrakesh = () => {
     </div>
   );
 };
-
-const WellBeingData = [
-  {
-    id: 1,
-    genre: "relaxing massage",
-    definition:
-      "Massage therapy that focuses on overall relaxation, muscle tension relief, and improved blood circulation.",
-    time: "60 min",
-    price: "40",
-    person: "per person",
-  },
-  {
-    id: 2,
-    genre: "Toning Massage",
-    definition:
-      "A gentle form of massage used to aims to improve the body’s blood flow, body fluid balance, and immune function.",
-    time: "60 min",
-    price: "45",
-    person: "per person",
-  },
-  {
-    id: 3,
-    genre: "draining massage",
-    definition:
-      "A gentle form of massage used to relieve painful swelling in your arms and legs caused by lymphedema.",
-    time: "60 min",
-    price: "50",
-    person: "per person",
-  },
-  {
-    id: 4,
-    genre: "couple massage",
-    definition:
-      "A delightful experience where a couple receive a massage simultaneously in the same room but on separate massage tables.",
-    time: "60 min",
-    price: "100",
-    person: "for couple",
-  },
-];
 
 const cardVariants = {
   initial: {

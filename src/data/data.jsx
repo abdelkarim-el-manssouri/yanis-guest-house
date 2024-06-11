@@ -203,3 +203,38 @@ export const headerSlideImages = [
     content: "yanis guest house",
   },
 ];
+
+export const WellBeingData = [
+  {
+    id: 1,
+    genre: "genre1",
+    definition: "definition1",
+    time: "60 min",
+    price: "40",
+    person: "perPerson",
+  },
+  {
+    id: 2,
+    genre: "genre2",
+    definition: "definition2",
+    time: "60 min",
+    price: "45",
+    person: "perPerson",
+  },
+  {
+    id: 3,
+    genre: "genre3",
+    definition: "definition3",
+    time: "60 min",
+    price: "50",
+    person: "perPerson",
+  },
+  {
+    id: 4,
+    genre: "genre4",
+    definition: "definition4",
+    time: "60 min",
+    price: "100",
+    person: "forCouple",
+  },
+];

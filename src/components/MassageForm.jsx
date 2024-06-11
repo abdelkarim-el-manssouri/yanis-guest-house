@@ -76,7 +76,6 @@ const MassageForm = () => {
     emailjs
       .send(serviceId, templateId, templateParams, publicKey)
       .then(() => {
-        // console.log("email sent successfully", response);
         setDisable(true);
         toast.success(
           "your request successfully sent, we will contact you soon"
@@ -93,7 +92,6 @@ const MassageForm = () => {
       })
       .catch(() => {
         toast.error("something went wrong, please repeat later");
-        // console.error("error sending email", error);
       });
   };
 

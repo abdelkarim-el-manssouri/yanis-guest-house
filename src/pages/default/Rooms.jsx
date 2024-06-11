@@ -74,7 +74,7 @@ const RoomsHeader = ({ t }) => {
             duration: 1,
             delay: 1.3,
           }}
-          className="z-10 text-white font-bold text-3xl md:text-4xl lg:text-5xl font-Groillim tracking-wider capitalize underline underline-offset-8 decoration-2 [text-shadow:_1px_1px_0_#00464326]"
+          className="z-10 text-white font-bold !font-Italiana uppercase text-3xl md:text-4xl lg:text-5xl tracking-wide underline underline-offset-8 decoration-[3px] [text-shadow:_1px_1px_0_#00464326]"
         >
           {t("title")}
         </motion.p>

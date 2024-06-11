@@ -1,0 +1,14 @@
+{
+  "name": "nom complet",
+  "email": "email",
+  "phoneNumber": "numéro de téléphone",
+  "people": "nombre de personnes",
+  "date": "choisissez une date",
+  "selectPlan": "sélectionnez votre forfait approprié",
+  "pack1": "pack 1",
+  "pack2": "pack 2",
+  "pack3": "pack 3",
+  "mind": "qu'y a-t-il dans ta tête",
+  "typeHere": "tapez ici",
+  "send": "envoyer"
+}
