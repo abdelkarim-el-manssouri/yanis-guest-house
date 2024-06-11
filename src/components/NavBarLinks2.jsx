@@ -6,7 +6,7 @@ import room2 from "/src/assets/accommodations-photos/room2.jpg";
 import room3 from "/src/assets/accommodations-photos/room3.jpg";
 import room4 from "/src/assets/accommodations-photos/room4.jpg";
 
-const NavBarLinks2 = () => {
+const NavBarLinks2 = ({ t }) => {
   const [open, setOpen] = useState(false);
   const toggleOpen = () => {
     setOpen((pv) => !pv);
@@ -77,7 +77,12 @@ const NavBarLinks2 = () => {
                       key={i.id}
                       className="overflow-hidden"
                     >
-                      <Links setOpen={setOpen} title={i.title} href={i.link} />
+                      <Links
+                        setOpen={setOpen}
+                        title={i.title}
+                        href={i.link}
+                        t={t}
+                      />
                     </motion.div>
                   );
                 })}
@@ -107,14 +112,14 @@ const NavBarLinks2 = () => {
 
 export default NavBarLinks2;
 
-const Links = ({ title, setOpen, href }) => {
+const Links = ({ title, setOpen, href, t }) => {
   return (
     <motion.div
       onClick={() => setOpen(false)}
       variants={menuLinksVariants}
-      className="relative text-white/70 hover:text-white transition duration-300 uppercase text-xl md:text-3xl lg:text-4xl mb-8 md:mb-10 lg:mb-12 hover:after:absolute hover:after:-bottom-2 after:duration-300 after:bg-white after:left-0 after:-bottom-4 after:h-0.5 after:w-full"
+      className="relative text-white/70 hover:text-white transition duration-300 !font-Italiana font-medium uppercase text-xl md:text-3xl lg:text-4xl mb-8 md:mb-10 lg:mb-12 hover:after:absolute hover:after:-bottom-2 after:duration-300 after:bg-white after:left-0 after:-bottom-4 after:h-0.5 after:w-full"
     >
-      <Link to={href}>{title}</Link>
+      <Link to={href}>{t(title)}</Link>
     </motion.div>
   );
 };
@@ -125,7 +130,7 @@ const Pages = [
   { id: 3, title: "restoration", link: "restoration", image: room3 },
   {
     id: 4,
-    title: "activities & wellbeing",
+    title: "activities&wellbeing",
     link: "activities&wellbeing",
     image: room1,
   },
@@ -204,11 +209,3 @@ const exitButtonVariant = {
     },
   },
 };
-
-{
-  /* <div className="absolute inset-0 z-0">
-  <Canvas>
-    <Stars radius={50} count={2500} factor={4} fade speed={2} />
-  </Canvas>
-</div>; */
-}

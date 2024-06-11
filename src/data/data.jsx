@@ -181,7 +181,7 @@ export const footerLinks = [
   { code: "ho", link: "home" },
   { code: "ro", link: "accommodations" },
   { code: "re", link: "restoration" },
-  { code: "gal", link: "gallery" },
+  { code: "gal", link: "activities&wellbeing" },
 ];
 
 export const headerSlideImages = [

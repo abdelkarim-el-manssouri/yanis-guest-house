@@ -175,7 +175,7 @@ const RoomModal = ({ selected, setSelected, t }) => {
         </div>
 
         <div className="w-4/5 mx-auto">
-          <h3 className="relative text-center !font-Marcellus italic capitalize text-2xl md:text-3xl lg:text-4xl font-bold text-bordeaux before:absolute before:left-0 before:-bottom-2 md:before:-bottom-5 before:w-full before:h-0.5 before:bg-bordeaux before:rounded-full">
+          <h3 className="relative text-center !font-Italiana capitalize text-2xl md:text-3xl lg:text-4xl font-bold text-bordeaux before:absolute before:left-0 before:-bottom-2 md:before:-bottom-5 before:w-full before:h-0.5 before:bg-bordeaux before:rounded-full">
             {`${t(selected?.title)}`}
           </h3>
 
@@ -205,7 +205,7 @@ const RoomModal = ({ selected, setSelected, t }) => {
             </div>
           </div>
 
-          <h4 className="my-10 capitalize text-2xl md:text-2xl lg:text-3xl font-semibold w-full md:w-fit underline underline-offset-[6px] text-center md:text-left !font-Marcellus">
+          <h4 className="my-10 capitalize text-2xl md:text-2xl lg:text-3xl font-semibold w-full md:w-fit underline underline-offset-[6px] text-center md:text-left !font-Italiana">
             {t("roomAminities")}
           </h4>
 
@@ -244,7 +244,7 @@ const RoomModal = ({ selected, setSelected, t }) => {
             </div>
           </div>
 
-          <h4 className="my-10 capitalize text-2xl md:text-2xl lg:text-3xl font-semibold w-full md:w-fit underline underline-offset-[6px] text-center md:text-left !font-Marcellus">
+          <h4 className="my-10 capitalize text-2xl md:text-2xl lg:text-3xl !font-Italiana font-semibold w-full md:w-fit underline underline-offset-[6px] text-center md:text-left">
             {t("hotelAmenities")}
           </h4>
 
@@ -326,7 +326,7 @@ const RoomModal = ({ selected, setSelected, t }) => {
           </div>
 
           <div className="w-[90%] mx-auto flex flex-col md:flex-row md:justify-between items-center mt-14 mb-6 p-3 md:p-5 rounded-lg shadow-lg border border-dashed border-secondary/10">
-            <p className="capitalize text-lg !font-Arapey font-bold text-center md:text-left mb-4 md:mb-0">
+            <p className="capitalize text-lg !font-Italiana font-bold text-center md:text-left mb-4 md:mb-0">
               <span>
                 {t("beginWith")} {selected?.price} ${" "}
               </span>

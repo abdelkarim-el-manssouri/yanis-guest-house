@@ -8,13 +8,13 @@ import { footerLinks } from "../data/data";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const { t } = useTranslation("translation");
+  const { t } = useTranslation("footer");
   return (
     <footer>
-      <div className="bg-gradient-to-b from-secondary/40 via-beige to-golden h-screen grid grid-rows-5 md:grid-rows-6">
-        <section className="h-fit bg-gradient-to-b from-black to-cozyGreen text-white p-4 md:p-6 flex justify-center items-center flex-wrap tracking-widest">
-          <p className="w-full text-center">{t("footer.location")}</p>
-          <p className="w-full text-center">{t("footer.contact")}</p>
+      <div className="bg-gradient-to-b from-secondary/40 via-beige to-golden !font-PoiretOne font-bold h-screen grid grid-rows-5 md:grid-rows-6">
+        <section className="h-fit bg-gradient-to-b from-black to-cozyGreen text-white p-4 md:p-6 flex justify-center items-center flex-wrap tracking-wide">
+          <p className="w-full text-center">{t("location")}</p>
+          <p className="w-full text-center">{t("contact")}</p>
         </section>
         <section className="grid h-full items-center">
           <ul className="flex flex-wrap justify-evenly md:justify-center md:gap-x-20">
@@ -22,11 +22,10 @@ const Footer = () => {
               return (
                 <Link
                   key={link.code}
-                  // to={`/${link.link}`}
                   to={link.link}
                   className="relative after:block after:w-full after:h-0.5 after:bg-black after:scale-x-0 after:transition after:delay-75 after:ease-in after:rounded-full hover:after:scale-x-100"
                 >
-                  {link.link}
+                  {t(link.link)}
                 </Link>
               );
             })}
@@ -42,7 +41,7 @@ const Footer = () => {
         </section>
         <section className="flex justify-center flex-wrap h-fit">
           <p className="flex justify-center text-xl w-full mt-4 md:mt-0">
-            {t("footer.join")}
+            {t("join")}
           </p>
           <div className="flex justify-center gap-7 md:gap-10 my-5 md:my-6">
             <span className="size-7 md:size-9 group rounded-xl shadow-xl p-2 md:p-4 grid place-content-center active:shadow-none hover:scale-110 transition-all">
@@ -75,7 +74,7 @@ const Footer = () => {
         </section>
         <section className="h-full grid items-center">
           <div className="flex justify-center mx-8 pt-4 text-center relative before:absolute before:top-0 before:h-[0.5px] before:w-full before:bg-primary before:rounded-full">
-            &copy; {t("footer.rights")} - {currentYear}
+            &copy; {t("rights")} - {currentYear}
           </div>
         </section>
       </div>

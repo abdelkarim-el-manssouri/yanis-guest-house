@@ -68,7 +68,7 @@ const HeaderImageReveal = ({ t }) => {
         className="h-full bg-center bg-cover overflow-clip opacity-50 relative"
       />
       <div className="absolute inset-0 h-full w-full grid place-content-center">
-        <motion.p className="text-white [text-shadow:_1px_2px_0_rgb(0_0_0_/_40%)] text-xl md:text-4xl lg:text-5xl w-[25ch] lg:w-[30ch] lg:leading-none lg:tracking-wide text-center font-bold !font-Italiana capitalize">
+        <motion.p className="text-white [text-shadow:_1px_2px_0_rgb(0_0_0_/_40%)] text-xl md:text-3xl lg:text-4xl w-[25ch] lg:w-[30ch] lg:leading-none lg:tracking-wide text-center font-bold !font-Italiana capitalize">
           <motion.span
             ref={textRef}
             initial="hidden"

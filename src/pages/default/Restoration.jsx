@@ -119,7 +119,7 @@ const Sensation = ({ title, content, imageUrl, t }) => {
       ref={ref}
       className="group mb-10 last:mb-0"
     >
-      <section className="grid grid-rows-2 md:grid-rows-none bg-secondary/15 transition duration-500 hover:bg-secondary/25 w-[90%] shadow-2xl shadow-cozyGreen/30 md:w-4/5 mx-auto border-black/5 overflow-hidden md:relative h-96 md:h-80 rounded-md">
+      <section className="grid grid-rows-2 md:grid-rows-none bg-secondary/15 transition duration-500 hover:bg-secondary/25 w-[90%] shadow-2xl shadow-cozyGreen/30 md:w-4/5 mx-auto border-black/5 overflow-hidden md:relative md:h-80 rounded-md">
         <div className="grid md:grid-cols-layout lg:py-4 md:p-2 lg:px-5 sm:max-w-[50%] sm:mt-auto h-full md:group-even:ml-[19.3rem] lg:group-even:ml-[29.3rem]">
           <h3 className="grid place-content-center -mb-10 md:mb-0 text-2xl font-bold capitalize !font-Italiana">
             {`${t(title)}`}

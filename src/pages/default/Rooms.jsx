@@ -126,7 +126,7 @@ const ImageRoom = ({ scrollYProgress, t }) => {
                   loading="lazy"
                 />
                 <motion.div className="absolute left-0 bottom-0 px-4 md:px-6 lg:px-8 py-8 md:py-8 lg:py-12 flex flex-col md:flex-row gap-4 md:gap-0 md:justify-between items-center text-white lg:text-lg w-full bg-gradient-to-t from-black/90 to-black/0">
-                  <p className="font-extrabold font-Arapey tracking-wide capitalize relative after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white">
+                  <p className="font-extrabold !font-Italiana tracking-wide capitalize relative after:absolute after:left-0 after:-bottom-px after:w-full after:h-px after:bg-white">
                     {`${t(image.title)}`}
                   </p>
                   <Link
@@ -134,7 +134,7 @@ const ImageRoom = ({ scrollYProgress, t }) => {
                       setSelected(true);
                       setSelected(image);
                     }}
-                    className="font-extrabold font-Arapey"
+                    className="font-extrabold !font-PoiretOne"
                   >
                     <Button content={t("show")} />
                   </Link>
@@ -212,7 +212,7 @@ const RoomsOutro = ({ t }) => {
           variants={titleRevealVariant}
           initial="initial"
           whileInView="animate"
-          className="mb-4 lg:mb-8 text-center !font-Marcellus italic text-xl lg:text-2xl font-extrabold capitalize"
+          className="mb-4 lg:mb-8 text-center !font-Italiana italic text-xl lg:text-2xl font-bold capitalize"
         >
           {t("outroTitle")}
         </motion.h3>
