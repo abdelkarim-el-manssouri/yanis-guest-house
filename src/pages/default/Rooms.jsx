@@ -8,13 +8,13 @@ import RoomModal from "../../components/RoomModal";
 import { useTranslation } from "react-i18next";
 
 const Rooms = () => {
-  // useEffect(() => {
-  //   window.scrollTo({
-  //     top: 0,
-  //     left: 0,
-  //     behavior: "smooth",
-  //   });
-  // }, []);
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
   const container = useRef(null);
   const { scrollYProgress } = useScroll({

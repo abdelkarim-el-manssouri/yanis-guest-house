@@ -7,13 +7,13 @@ import { useTranslation } from "react-i18next";
 import { sensationsData } from "../../data/data";
 
 const Restoration = () => {
-  // useEffect(() => {
-  //   window.scrollTo({
-  //     top: 0,
-  //     left: 0,
-  //     behavior: "smooth",
-  //   });
-  // }, []);
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
   const { t } = useTranslation("restoration");
   return (
     <>

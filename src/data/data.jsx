@@ -4,6 +4,26 @@ import room3 from "./../assets/accommodations-photos/room3.jpg";
 import room4 from "./../assets/accommodations-photos/room4.jpg";
 import room5 from "./../assets/accommodations-photos/room5.jpg";
 
+import massage1 from "./../assets/activities-images/massage1.jpg";
+import massage2 from "./../assets/activities-images/massageCouple.webp";
+import massage3 from "./../assets/activities-images/massage2.jpg";
+import massage4 from "./../assets/activities-images/draining-massage.webp";
+
+import selfCare1 from "./../assets/activities-images/Nail-Salon.jpeg";
+import selfCare2 from "./../assets/activities-images/facial.jpg";
+import selfCare3 from "./../assets/activities-images/couv-3_.jpg";
+
+import agafay1 from "./../assets/activities-images/agafay1.jpg";
+import agafay2 from "./../assets/activities-images/agafay2.jpg";
+import agafay3 from "./../assets/activities-images/agafay3.jpg";
+import agafay4 from "./../assets/activities-images/agafay4.jpg";
+
+import moreOfMarrakesh1 from "./../assets/activities-images/airBaloon.jpg";
+import moreOfMarrakesh2 from "./../assets/activities-images/circuitTripjpg.jpg";
+import moreOfMarrakesh3 from "./../assets/activities-images/horseRide.jpg";
+import moreOfMarrakesh4 from "./../assets/activities-images/marrakech-chez-ali-fantasia1.jpg";
+import moreOfMarrakesh5 from "./../assets/activities-images/ourika-valley.webp";
+
 export const PhotosImages = [
   {
     folder: "header-images/",
@@ -236,5 +256,90 @@ export const WellBeingData = [
     time: "60 min",
     price: "100",
     person: "forCouple",
+  },
+];
+
+export const massageImages = [
+  {
+    id: 1,
+    imageUrl: massage1,
+    imageDescription: "genre1",
+  },
+  {
+    id: 2,
+    imageUrl: massage2,
+    imageDescription: "genre4",
+  },
+  {
+    id: 3,
+    imageUrl: massage3,
+    imageDescription: "genre2",
+  },
+  {
+    id: 4,
+    imageUrl: massage4,
+    imageDescription: "genre3",
+  },
+];
+
+export const selfCareImages = [
+  {
+    id: 1,
+    imageUrl: selfCare1,
+  },
+  {
+    id: 2,
+    imageUrl: selfCare2,
+  },
+  {
+    id: 3,
+    imageUrl: selfCare3,
+  },
+];
+
+export const agafayImages = [
+  {
+    id: 1,
+    imageUrl: agafay1,
+  },
+  {
+    id: 2,
+    imageUrl: agafay2,
+  },
+  {
+    id: 3,
+    imageUrl: agafay3,
+  },
+  {
+    id: 4,
+    imageUrl: agafay4,
+  },
+];
+
+export const moreOfMarrakeshImages = [
+  {
+    id: 1,
+    imageUrl: moreOfMarrakesh1,
+    imgDescription: "balloonTitle",
+  },
+  {
+    id: 2,
+    imageUrl: moreOfMarrakesh2,
+    imgDescription: "ourikaTitle",
+  },
+  {
+    id: 3,
+    imageUrl: moreOfMarrakesh3,
+    imgDescription: "HorsebackTitle",
+  },
+  {
+    id: 4,
+    imageUrl: moreOfMarrakesh4,
+    imgDescription: "AliTitle",
+  },
+  {
+    id: 5,
+    imageUrl: moreOfMarrakesh5,
+    imgDescription: "CircuitTitle",
   },
 ];
