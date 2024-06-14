@@ -91,7 +91,7 @@ const Footer = () => {
         >
           <button
             onClick={scrollToTop}
-            className="absolute right-10 bottom-10 z-20 bg-gradient-to-b from-black to-cozyGreen p-3 rounded-full hover:scale-105 active:scale-95 transition duration-300"
+            className="absolute right-10 bottom-10 z-20 bg-gradient-to-b from-black to-cozyGreen p-3 rounded-full hover:scale-105 active:scale-95 transition duration-300 shadow-lg"
           >
             <FaArrowDownLong className="rotate-180 size-5 text-background" />
           </button>
