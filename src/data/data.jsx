@@ -197,11 +197,85 @@ export const rooms = [
   },
 ];
 
+export const cards = [
+  {
+    id: 1,
+    url: "/src/assets/cozy-green-sofa.jpeg",
+    link: "/accommodations",
+    buttonContent: "accommodations",
+    title: "horiScrollTitle1",
+    content1: "horiScrollContent1",
+    content2: "horiScrollContent1_1",
+    content3: "horiScrollContent1_2",
+  },
+  {
+    id: 2,
+    url: "/src/assets/cozy-green-sofa.jpeg",
+    link: "/restoration",
+    buttonContent: "restaurants",
+    title: "horiScrollTitle2",
+    content1: "horiScrollContent2",
+    content2: "horiScrollContent2_1",
+  },
+  {
+    id: 3,
+    url: "/src/assets/cozy-green-sofa.jpeg",
+    link: "/activities&wellbeing",
+    buttonContent: "activities & wellbeing",
+    title: "horiScrollTitle3",
+    content1: "horiScrollContent3",
+    content2: "horiScrollContent3_1",
+  },
+];
+
+export const cards2 = [
+  {
+    id: 1,
+    url: "/src/assets/accommodations-photos/room1.jpg",
+    link: "/accommodations",
+    buttonContent: "accommodations",
+    title: "horiScrollTitle1",
+    content1: "horiScrollContent1",
+    content2: "horiScrollContent1_1",
+    content3: "horiScrollContent1_2",
+  },
+  {
+    id: 2,
+    url: "/src/assets/accommodations-photos/room2.jpg",
+    link: "/home",
+    buttonContent: "restaurants",
+    title: "horiScrollTitle2",
+    content1: "horiScrollContent2",
+    content2: "horiScrollContent2_1",
+  },
+  {
+    id: 3,
+    url: "/src/assets/accommodations-photos/room4.jpg",
+    link: "/activities",
+    buttonContent: "activities",
+    title: "horiScrollTitle3",
+  },
+];
+
+export const Pages = [
+  { id: 1, title: "home", link: "home", image: room1 },
+  { id: 2, title: "accommodations", link: "accommodations", image: room2 },
+  { id: 3, title: "restoration", link: "restoration", image: room3 },
+  {
+    id: 4,
+    title: "activities&wellbeing",
+    link: "activities&wellbeing",
+    image: room1,
+  },
+  { id: 5, title: "gallery", link: "gallery", image: room4 },
+];
+
 export const footerLinks = [
   { code: "ho", link: "home" },
   { code: "ro", link: "accommodations" },
   { code: "re", link: "restoration" },
-  { code: "gal", link: "activities&wellbeing" },
+  { code: "act", link: "activities&wellbeing" },
+  { code: "gal", link: "gallery" },
 ];
 
 export const headerSlideImages = [

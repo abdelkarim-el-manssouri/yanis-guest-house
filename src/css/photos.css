@@ -10,7 +10,6 @@ img {
   vertical-align: middle;
   display: inline-block;
 }
-
 .gallery {
   display: grid;
   grid-gap: 13px;

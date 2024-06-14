@@ -3,7 +3,6 @@ import { FiFacebook, FiInstagram, FiMail, FiPhone } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { footerLinks } from "../data/data";
-// import { AnimatedText } from "../UI/AnimatedText";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -17,7 +16,7 @@ const Footer = () => {
           <p className="w-full text-center">{t("contact")}</p>
         </section>
         <section className="grid h-full items-center">
-          <ul className="flex flex-wrap justify-evenly md:justify-center md:gap-x-20">
+          <ul className="flex flex-wrap justify-evenly md:justify-center md:gap-x-14">
             {footerLinks.map((link) => {
               return (
                 <Link

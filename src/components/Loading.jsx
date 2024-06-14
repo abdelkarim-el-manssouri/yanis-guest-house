@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const Loading = () => {
+  const { t } = useTranslation("navbar");
   return (
     <div className="flex flex-col justify-center items-center min-h-screen bg-gradient-to-tr from-black via-cozyGreen/80 to-background px-4 py-24">
       <BarLoader />
-      <p className="mt-6 text-white text-xl font-semibold font-Arapey capitalize text-center">
-        Please wait a moment
+      <p className="mt-6 text-white text-xl font-semibold font-Italiana capitalize text-center">
+        {t("wait")}
       </p>
     </div>
   );

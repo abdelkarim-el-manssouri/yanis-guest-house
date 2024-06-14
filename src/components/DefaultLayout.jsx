@@ -1,10 +1,9 @@
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { Outlet } from "react-router-dom";
 import Footer from "./Footer";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Navbar_v2 from "./Navbar_v2";
 import NavBarLinks2 from "./NavBarLinks2";
-import Header2 from "./Header2";
 import { useTranslation } from "react-i18next";
 
 const DefaultLayout = () => {
@@ -39,7 +38,7 @@ const DefaultLayout = () => {
           <Navbar_v2 t={t} />
         </motion.nav>
         <Outlet />
-        <div className="bg-neutral-950">{/* <NavbarButton /> */}</div>
+        <div className="bg-neutral-950"></div>
         <div className="h-screen">
           <Footer />
         </div>

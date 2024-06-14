@@ -48,7 +48,6 @@ const EmailForm = ({ t }) => {
     emailjs
       .send(serviceId, templateId, templateParams, publicKey)
       .then(() => {
-        // console.log("email sent successfully", response);
         setDisable(true);
         toast.success(
           "your request successfully sent, we will contact you soon"
@@ -82,7 +81,7 @@ const EmailForm = ({ t }) => {
     <motion.div
       ref={formRef}
       style={{ scale, opacity }}
-      className="w-full max-w-xs md:max-w-2xl lg:max-w-[950px] mx-auto p-10 mt-16 mb-28 bg-lightGreen hover:bg-secondary/20 transition-colors duration-500 rounded-xl shadow-2xl"
+      className="w-full max-w-xs md:max-w-2xl lg:max-w-[950px] font-PoiretOne font-bold mx-auto p-10 mt-16 mb-28 bg-lightGreen hover:bg-secondary/20 transition-colors duration-500 rounded-xl shadow-2xl"
     >
       <form onSubmit={handleSubmit}>
         <div className="grid md:grid-cols-2 gap-5">

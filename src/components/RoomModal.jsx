@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   IoBedOutline,
   IoChevronBack,
@@ -81,15 +81,6 @@ const modalVariants = {
       delay: 0.3,
       ease: [0.6, 0.01, 0.05, 0.9],
     },
-    // exit: {
-    //   y: "100%",
-    //   opacity: 0,
-    //   transition: {
-    //     duration: 1,
-    //     delay: 0.3,
-    //     ease: [0.6, 0.01, 0.05, 0.9],
-    //   },
-    // },
   },
 };
 
@@ -149,12 +140,10 @@ const RoomModal = ({ selected, setSelected, t }) => {
 
   if (!selected) return;
   return (
-    // <AnimatePresence>
     <motion.div
       variants={bgModalVariants}
       initial="initial"
       animate="animate"
-      // exit="exit"
       onClick={() => setSelected(null)}
       className="fixed inset-0 bg-background z-[700] cursor-pointer pr-10 w-[calc(100%+2.5rem)] overflow-y-scroll"
     >
@@ -163,7 +152,6 @@ const RoomModal = ({ selected, setSelected, t }) => {
         variants={modalVariants}
         initial="initial"
         animate="animate"
-        // exit="exit"
         onClick={(e) => e.stopPropagation()}
         className="w-full max-w-xs md:max-w-2xl lg:max-w-[950px] mx-auto mt-8 mb-20 py-3 md:py-4 lg:py-6 px-4 md:px-6 lg:px-8 cursor-default bg-lightGreen hover:bg-secondary/20 transition-colors duration-500 rounded-xl shadow-2xl"
       >
@@ -340,7 +328,6 @@ const RoomModal = ({ selected, setSelected, t }) => {
         </div>
       </motion.div>
     </motion.div>
-    // </AnimatePresence>
   );
 };
 

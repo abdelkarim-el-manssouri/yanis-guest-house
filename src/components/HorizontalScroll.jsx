@@ -2,6 +2,7 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import Button from "../UI/Button";
+import { cards } from "../data/data";
 
 const HorizontalScroll = ({ t }) => {
   return (
@@ -87,37 +88,6 @@ const Card = ({ card, t }) => {
 };
 
 export default HorizontalScroll;
-
-const cards = [
-  {
-    id: 1,
-    url: "/src/assets/cozy-green-sofa.jpeg",
-    link: "/accommodations",
-    buttonContent: "accommodations",
-    title: "horiScrollTitle1",
-    content1: "horiScrollContent1",
-    content2: "horiScrollContent1_1",
-    content3: "horiScrollContent1_2",
-  },
-  {
-    id: 2,
-    url: "/src/assets/cozy-green-sofa.jpeg",
-    link: "/restoration",
-    buttonContent: "restaurants",
-    title: "horiScrollTitle2",
-    content1: "horiScrollContent2",
-    content2: "horiScrollContent2_1",
-  },
-  {
-    id: 3,
-    url: "/src/assets/cozy-green-sofa.jpeg",
-    link: "/activities&wellbeing",
-    buttonContent: "activities & wellbeing",
-    title: "horiScrollTitle3",
-    content1: "horiScrollContent3",
-    content2: "horiScrollContent3_1",
-  },
-];
 
 const titleReveal = {
   initial: {

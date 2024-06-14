@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import SmallParagraph from "../../UI/SmallParagraph";
 import { IoTimerOutline } from "react-icons/io5";
@@ -12,14 +12,15 @@ import {
   moreOfMarrakeshImages,
   selfCareImages,
 } from "../../data/data";
+
 const Activities = () => {
-  // useEffect(() => {
-  //   window.scrollTo({
-  //     top: 0,
-  //     left: 0,
-  //     behavior: "smooth",
-  //   });
-  // }, []);
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
   const { t } = useTranslation("activities");
   return (
     <>
@@ -120,7 +121,7 @@ const WellBeing = ({ t }) => {
             }}
             custom={i}
             key={i}
-            className="relative h-[80%] w-full hover:w-[300%] odd:mt-[10%] grayscale hover:grayscale-0 transition-all duration-700 ease-hover-image [&:not(:hover),&:not(:first),&:not(:last)]:group-hover:w-full before:absolute before:bg-transparent before:top-0 before:bottom-0 before:left-[-10px] before:right-[-10px] hover:shadow-2xl shadow-cozyGreen/40"
+            className="relative h-[80%] w-full hover:w-[300%] odd:mt-[10%] grayscale hover:grayscale-0 transition-all duration-700 ease-hover-image [&:not(:hover),&:not(:first),&:not(:last)]:group-hover:w-full before:absolute before:bg-transparent before:top-0 before:bottom-0 before:left-[-10px] before:right-[-10px] even:hover:shadow-2xl shadow-cozyGreen/40"
           >
             <div className="relative w-full h-full overflow-hidden">
               <img
@@ -131,7 +132,7 @@ const WellBeing = ({ t }) => {
 
               <div className="opacity-0 translate-x-10 hover:translate-x-0 hover:opacity-100 absolute left-0 bottom-0 p-5 text-white w-full h-full flex items-end">
                 <div className="absolute left-0 bottom-0 w-full h-20 bg-gradient-to-t from-black to-black/0 flex items-center px-5 !font-Italiana font-extrabold tracking-wide">
-                  <p className="first-letter:uppercase hidden md:block">
+                  <p className="first-letter:uppercase hidden md:block underline underline-offset-[3px]">
                     {t(image.imageDescription)}
                   </p>
                 </div>
@@ -202,7 +203,7 @@ const SelfCare = ({ t }) => {
             }}
             custom={i}
             key={i}
-            className="relative h-[80%] w-full hover:w-[300%] lg:hover:w-[200%] odd:mt-[10%] grayscale hover:grayscale-0 transition-all duration-700 ease-hover-image [&:not(:hover),&:not(:first),&:not(:last)]:group-hover:w-full before:absolute before:bg-transparent before:top-0 before:bottom-0 before:left-[-10px] before:right-[-10px] hover:shadow-xl shadow-cozyGreen/40"
+            className="relative h-[80%] w-full hover:w-[300%] lg:hover:w-[200%] odd:mt-[10%] grayscale hover:grayscale-0 transition-all duration-700 ease-hover-image [&:not(:hover),&:not(:first),&:not(:last)]:group-hover:w-full before:absolute before:bg-transparent before:top-0 before:bottom-0 before:left-[-10px] before:right-[-10px] even:hover:shadow-xl shadow-cozyGreen/40"
           >
             <div className="relative w-full h-full overflow-hidden">
               <img
@@ -338,7 +339,7 @@ const ExternalActivities = ({ t }) => {
             }}
             custom={i}
             key={i}
-            className="relative h-[80%] w-full hover:w-[300%] lg:hover:w-[200%] first:-mt-[10%] last:-mt-[10%] mt-[5%] grayscale hover:grayscale-0 transition-all duration-700 ease-hover-image [&:not(:hover),&:not(:first),&:not(:last)]:group-hover:w-full before:absolute before:bg-transparent before:top-0 before:bottom-0 before:left-[-10px] before:right-[-10px] hover:shadow-2xl shadow-cozyGreen/40"
+            className="relative h-[80%] w-full hover:w-[300%] lg:hover:w-[200%] first:-mt-[10%] last:-mt-[10%] mt-[5%] grayscale hover:grayscale-0 transition-all duration-700 ease-hover-image [&:not(:hover),&:not(:first),&:not(:last)]:group-hover:w-full before:absolute before:bg-transparent before:top-0 before:bottom-0 before:left-[-10px] before:right-[-10px] first:hover:shadow-2xl last:hover:shadow-2xl shadow-cozyGreen/40"
           >
             <div className="relative w-full h-full overflow-hidden">
               <img
@@ -551,7 +552,7 @@ const MoreOfMarrakesh = ({ t }) => {
             }}
             custom={i}
             key={i}
-            className="relative h-[80%] w-full hover:w-[300%] odd:mt-[10%] grayscale hover:grayscale-0 transition-all duration-700 ease-hover-image [&:not(:hover),&:not(:first),&:not(:last)]:group-hover:w-full before:absolute before:bg-transparent before:top-0 before:bottom-0 before:left-[-10px] before:right-[-10px] hover:shadow-2xl shadow-cozyGreen/40"
+            className="relative h-[80%] w-full hover:w-[300%] odd:mt-[10%]  grayscale hover:grayscale-0 transition-all duration-700 ease-hover-image [&:not(:hover),&:not(:first),&:not(:last)]:group-hover:w-full before:absolute before:bg-transparent before:top-0 before:bottom-0 before:left-[-10px] before:right-[-10px] even:hover:shadow-2xl shadow-cozyGreen/40"
           >
             <div className="relative w-full h-full overflow-hidden">
               <img
@@ -562,7 +563,7 @@ const MoreOfMarrakesh = ({ t }) => {
 
               <div className="opacity-0 translate-x-10 hover:translate-x-0 hover:opacity-100 absolute left-0 bottom-0 p-5 text-white w-full h-full flex items-end">
                 <div className="absolute left-0 bottom-0 w-full h-20 bg-gradient-to-t from-black to-black/0 flex items-center px-5 !font-Italiana font-extrabold tracking-wide">
-                  <p className="first-letter:uppercase hidden md:block">
+                  <p className="first-letter:uppercase hidden md:block underline underline-offset-[3px]">
                     {t(agafay.imgDescription)}
                   </p>
                 </div>

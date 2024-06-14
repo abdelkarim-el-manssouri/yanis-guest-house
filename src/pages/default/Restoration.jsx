@@ -1,7 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 import SmallParagraph from "../../UI/SmallParagraph";
-import BookNow from "../../components/BookNow";
 import HorizontalScrollResto from "../../components/HorizontalScrollResto";
 import { useTranslation } from "react-i18next";
 import { sensationsData } from "../../data/data";
@@ -32,10 +31,6 @@ const Restoration = () => {
       </motion.section>
 
       <SmallParagraph text={t("parag2")} />
-
-      {/* <section>
-        <BookNow />
-      </section> */}
 
       <section className="relative z-10">
         <HorizontalScrollResto t={t} />
@@ -144,8 +139,6 @@ const Sensation = ({ title, content, imageUrl, t }) => {
           group-even:group-hover:translate-x-3
           group-even:group-hover:translate-y-3
           "
-          // group-hover:-rotate-2
-          // group-even:group-hover:rotate-2
         />
       </section>
     </motion.div>

@@ -9,7 +9,6 @@ import { imgs, rooms } from "../data/data";
 
 const ONE_SECOND = 1000;
 const AUTO_DELAY = ONE_SECOND * 10;
-// const AUTO_DELAY = ONE_SECOND * 100000;
 const DRAG_BUFFER = 50;
 
 const SPRING_OPTIONS = {

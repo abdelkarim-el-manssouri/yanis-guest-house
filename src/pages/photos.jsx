@@ -83,7 +83,7 @@ const GalleryHeader = () => {
       animate="animate"
       className="my-5 md:my-10 py-10 w-full grid place-content-center text-center bg-gradient-to-b from-black to-cozyGreen shadow-xl"
     >
-      <p className="uppercase text-2xl md:text-3xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-br from-background to-golden">
+      <p className="uppercase text-2xl md:text-3xl !font-Italiana font-black mb-4 text-transparent bg-clip-text bg-gradient-to-br from-background to-golden">
         {t("photo")}
       </p>
       <p className="text-xl md:text-2xl !font-PoiretOne capitalize font-semibold text-transparent bg-clip-text bg-gradient-to-bl from-background to-golden">

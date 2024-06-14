@@ -32,13 +32,13 @@ const AgafayForm = () => {
   const [checkedValues, setCheckedValues] = useState([]);
   const { t } = useTranslation("agafayForm");
 
-  // useEffect(() => {
-  //   window.scrollTo({
-  //     top: 0,
-  //     left: 0,
-  //     behavior: "smooth",
-  //   });
-  // }, []);
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
   const handleChange = (e) => {
     const { value, checked } = e.target;
@@ -96,7 +96,7 @@ const AgafayForm = () => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className="w-full max-w-xs md:max-w-2xl lg:max-w-[950px] mx-auto p-10 mb-28 mt-10 bg-lightGreen hover:bg-secondary/20 transition-colors duration-500 rounded-xl shadow-2xl"
+      className="w-full max-w-xs md:max-w-2xl lg:max-w-[950px] mx-auto p-10 mb-28 mt-10 !font-PoiretOne font-bold bg-lightGreen hover:bg-secondary/20 transition-colors duration-500 rounded-xl shadow-2xl"
     >
       <form onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

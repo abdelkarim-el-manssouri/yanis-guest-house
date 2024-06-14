@@ -97,7 +97,7 @@ const MassageForm = () => {
 
   return (
     <>
-      <div className="relative grid place-content-center my-10 p-8 w-[90%] md:w-3/4 lg:w-1/2 mx-auto rounded-xl shadow-lg shadow-red-200 hover:shadow-red-300 hover:shadow-xl transition duration-300 bg-gradient-to-br from-cozyGreen to-black text-background font-semibold">
+      <div className="relative grid place-content-center my-10 p-8 !font-PoiretOne font-bold w-[90%] md:w-3/4 lg:w-1/2 mx-auto rounded-xl shadow-lg shadow-red-200 hover:shadow-red-300 hover:shadow-xl transition duration-300 bg-gradient-to-br from-cozyGreen to-black text-background">
         <div className="absolute top-2 left-2">
           <PiWarningOctagonBold size="20" />
         </div>
@@ -121,7 +121,7 @@ const MassageForm = () => {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className="w-full max-w-xs md:max-w-2xl lg:max-w-[950px] mx-auto p-10 mb-28 bg-lightGreen hover:bg-secondary/20 transition-colors duration-500 rounded-xl shadow-2xl"
+        className="w-full max-w-xs md:max-w-2xl lg:max-w-[950px] mx-auto p-10 mb-28 !font-PoiretOne font-bold bg-lightGreen hover:bg-secondary/20 transition-colors duration-500 rounded-xl shadow-2xl"
       >
         <form onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

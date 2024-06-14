@@ -200,7 +200,7 @@ const Home = () => {
             variants={xAxisTextScroll}
             initial="initial"
             whileInView="animate"
-            className="flex items-end w-full h-full whitespace-nowrap text-white capitalize text-[3.5em] md:text-[7em] lg:text-[10em] font-bold !font-Marcellus transition-all duration-[5s] ease-move-mouse"
+            className="flex items-end w-full h-full whitespace-nowrap text-white capitalize text-[3.5em] md:text-[7em] lg:text-[10em] font-bold !font-Italiana transition-all duration-[5s] ease-move-mouse"
           >
             {t("enjoy")}
           </motion.h2>

@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import room1 from "/src/assets/accommodations-photos/room1.jpg";
-import room2 from "/src/assets/accommodations-photos/room2.jpg";
-import room3 from "/src/assets/accommodations-photos/room3.jpg";
-import room4 from "/src/assets/accommodations-photos/room4.jpg";
+import { Pages } from "../data/data";
 
 const NavBarLinks2 = ({ t }) => {
   const [open, setOpen] = useState(false);
@@ -123,19 +120,6 @@ const Links = ({ title, setOpen, href, t }) => {
     </motion.div>
   );
 };
-
-const Pages = [
-  { id: 1, title: "home", link: "home", image: room1 },
-  { id: 2, title: "accommodations", link: "accommodations", image: room2 },
-  { id: 3, title: "restoration", link: "restoration", image: room3 },
-  {
-    id: 4,
-    title: "activities&wellbeing",
-    link: "activities&wellbeing",
-    image: room1,
-  },
-  { id: 5, title: "gallery", link: "gallery", image: room4 },
-];
 
 const menuVariants = {
   initial: {

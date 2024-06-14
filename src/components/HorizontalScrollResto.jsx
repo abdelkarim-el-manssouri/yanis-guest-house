@@ -1,5 +1,6 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
+import { cards2 } from "../data/data";
 
 const HorizontalScrollResto = ({ t }) => {
   return (
@@ -21,7 +22,7 @@ const HorizontalScrollCarousel = ({ t }) => {
     <section ref={targetRef} className="relative h-[200vh] bg-cozyGreen">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-x-3 lg:gap-x-0">
-          {cards.map((card) => {
+          {cards2.map((card) => {
             return <Card card={card} key={card.id} t={t} />;
           })}
         </motion.div>
@@ -83,35 +84,6 @@ const Card = ({ card, t }) => {
 };
 
 export default HorizontalScrollResto;
-
-const cards = [
-  {
-    id: 1,
-    url: "/src/assets/accommodations-photos/room1.jpg",
-    link: "/accommodations",
-    buttonContent: "accommodations",
-    title: "horiScrollTitle1",
-    content1: "horiScrollContent1",
-    content2: "horiScrollContent1_1",
-    content3: "horiScrollContent1_2",
-  },
-  {
-    id: 2,
-    url: "/src/assets/accommodations-photos/room2.jpg",
-    link: "/home",
-    buttonContent: "restaurants",
-    title: "horiScrollTitle2",
-    content1: "horiScrollContent2",
-    content2: "horiScrollContent2_1",
-  },
-  {
-    id: 3,
-    url: "/src/assets/accommodations-photos/room4.jpg",
-    link: "/activities",
-    buttonContent: "activities",
-    title: "horiScrollTitle3",
-  },
-];
 
 const titleReveal = {
   initial: {

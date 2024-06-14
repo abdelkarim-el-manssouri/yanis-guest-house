@@ -96,7 +96,7 @@ const MoreOfMarrakeshForm = () => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className="w-full max-w-xs md:max-w-2xl lg:max-w-[950px] mx-auto p-10 mt-10 mb-28 bg-lightGreen hover:bg-secondary/20 transition-colors duration-500 rounded-xl shadow-2xl"
+      className="w-full max-w-xs md:max-w-2xl lg:max-w-[950px] mx-auto p-10 mt-10 mb-28 !font-PoiretOne font-bold bg-lightGreen hover:bg-secondary/20 transition-colors duration-500 rounded-xl shadow-2xl"
     >
       <form onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
