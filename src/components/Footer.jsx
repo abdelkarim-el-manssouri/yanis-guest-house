@@ -3,14 +3,22 @@ import { FiFacebook, FiInstagram, FiMail, FiPhone } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { footerLinks } from "../data/data";
+import { FaArrowDownLong } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
   const { t } = useTranslation("footer");
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <footer>
-      <div className="bg-gradient-to-b from-secondary/40 via-beige to-golden !font-PoiretOne font-bold h-screen grid grid-rows-5 md:grid-rows-6">
+      <div className="relative bg-gradient-to-b from-secondary/40 via-beige to-golden !font-PoiretOne font-bold h-screen grid grid-rows-5 md:grid-rows-6 overflow-x-hidden">
         <section className="h-fit bg-gradient-to-b from-black to-cozyGreen text-white p-4 md:p-6 flex justify-center items-center flex-wrap tracking-wide">
           <p className="w-full text-center">{t("location")}</p>
           <p className="w-full text-center">{t("contact")}</p>
@@ -76,9 +84,35 @@ const Footer = () => {
             &copy; {t("rights")} - {currentYear}
           </div>
         </section>
+        <motion.div
+          variants={scrollToTopButtonVariants}
+          initial="initial"
+          whileInView="animate"
+        >
+          <button
+            onClick={scrollToTop}
+            className="absolute right-10 bottom-10 z-20 bg-gradient-to-b from-black to-cozyGreen p-3 rounded-full hover:scale-105 active:scale-95 transition duration-300"
+          >
+            <FaArrowDownLong className="rotate-180 size-5 text-background" />
+          </button>
+        </motion.div>
       </div>
     </footer>
   );
 };
 
 export default Footer;
+
+const scrollToTopButtonVariants = {
+  initial: {
+    opacity: 0,
+    x: 100,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
