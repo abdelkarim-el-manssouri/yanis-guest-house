@@ -1,8 +1,13 @@
 import { motion } from "framer-motion";
 import { forms } from "../data/data";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const BookModal = ({ selected, setSelected, t }) => {
+  useEffect(() => {
+    const html = document.querySelector("html");
+    if (html) html.classList.toggle("overflow-hidden", selected);
+  }, [selected]);
   if (!selected) return;
   return (
     <motion.div
@@ -10,7 +15,7 @@ const BookModal = ({ selected, setSelected, t }) => {
       initial="initial"
       animate="animate"
       onClick={() => setSelected(null)}
-      className="fixed inset-0 bg-background z-[700] cursor-pointer pr-10 w-[calc(100%+2.5rem)]"
+      className="fixed inset-0 bg-background h-screen z-[1000] cursor-pointer pr-10 w-[calc(100%+2.5rem)] md:w-full md:mx-auto"
     >
       <motion.div
         variants={modalVariants}
@@ -27,25 +32,26 @@ const BookModal = ({ selected, setSelected, t }) => {
         </div>
 
         <div className="mx-auto w-4/5 py-10 mt-5">
-          <p className="!font-Italiana uppercase font-bold text-xl">
+          <p className="!font-Italiana uppercase font-bold text-xl lg:text-2xl">
             {t("your")} :
           </p>
           <ul className="ml-5 mt-6">
             {forms.map((form) => (
               <li
                 key={form.id}
-                className="relative my-3 capitalize !font-PoiretOne font-bold text-lg before:absolute before:h-4/5 before:mt-[1%] before:w-0.5 before:rounded-full before:-left-3 before:top-0 before:bg-golden"
+                onClick={() => setSelected(!selected)}
+                className="relative w-fit my-3 lg:my-5 last:mb-0 capitalize !font-PoiretOne font-bold text-lg lg:text-xl text-black/70 hover:text-black transition-colors duration-500 before:absolute h-full before:h-4/5 before:mt-[1%] md:before:mt-[0.5%] before:w-0.5 before:rounded-full before:-left-3 before:top-0 before:bg-golden hover:after:absolute hover:after:-bottom-1 after:duration-300 after:bg-black after:left-0 after:-bottom-4 after:h-0.5 after:w-full"
               >
                 <Link to={`/${form.link}`}>{t(form.name)}</Link>
               </li>
             ))}
           </ul>
         </div>
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center mt-10 md:mt-8 lg:mt-12">
           <img
             src="https://yanisguesthouse.com/images/logo.png"
             alt="logo"
-            className="w-28 h-14"
+            className="w-28 h-14 md:w-32 md:h-16 lg:w-36 lg:h-20"
           />
         </div>
       </motion.div>

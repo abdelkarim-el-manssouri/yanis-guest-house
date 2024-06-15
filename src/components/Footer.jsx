@@ -24,7 +24,7 @@ const Footer = () => {
           <p className="w-full text-center">{t("contact")}</p>
         </section>
         <section className="grid h-full items-center">
-          <ul className="flex flex-wrap justify-evenly md:justify-center md:gap-x-14">
+          <ul className="flex flex-wrap gap-x-10 gap-y-2 justify-center mt-4 md:mt-0 md:justify-center md:gap-x-14">
             {footerLinks.map((link) => {
               return (
                 <Link

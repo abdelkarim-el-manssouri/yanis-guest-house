@@ -1,13 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { headerSlideImages } from "../data/data";
-import {
-  motion,
-  useAnimate,
-  useAnimation,
-  useInView,
-  useMotionValueEvent,
-  useScroll,
-} from "framer-motion";
+import { motion, useAnimate, useAnimation, useInView } from "framer-motion";
 
 const Header2 = ({ t }) => {
   return <HeaderImageReveal t={t} />;
