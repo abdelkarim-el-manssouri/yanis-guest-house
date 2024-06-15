@@ -1,6 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { headerSlideImages } from "../data/data";
-import { motion, useAnimate, useAnimation, useInView } from "framer-motion";
+import {
+  motion,
+  useAnimate,
+  useAnimation,
+  useInView,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
 
 const Header2 = ({ t }) => {
   return <HeaderImageReveal t={t} />;
@@ -67,7 +74,7 @@ const HeaderImageReveal = ({ t }) => {
         }}
         className="h-full bg-center bg-cover overflow-clip opacity-50 relative"
       />
-      <div className="absolute inset-0 h-full w-full grid place-content-center">
+      <div className="absolute inset-0 h-full w-full grid place-content-center overflow-x-hidden">
         <motion.p className="text-white [text-shadow:_1px_2px_0_rgb(0_0_0_/_40%)] text-xl md:text-3xl lg:text-4xl w-[25ch] lg:w-[30ch] lg:leading-none lg:tracking-wide text-center font-bold !font-Italiana capitalize">
           <motion.span
             ref={textRef}

@@ -417,3 +417,26 @@ export const moreOfMarrakeshImages = [
     imgDescription: "CircuitTitle",
   },
 ];
+
+export const forms = [
+  {
+    id: 1,
+    name: "stay",
+    link: "book",
+  },
+  {
+    id: 2,
+    name: "massage",
+    link: "selfCareForm",
+  },
+  {
+    id: 3,
+    name: "agafay",
+    link: "agafayForm",
+  },
+  {
+    id: 4,
+    name: "other",
+    link: "moreOfMarrakeshForm",
+  },
+];

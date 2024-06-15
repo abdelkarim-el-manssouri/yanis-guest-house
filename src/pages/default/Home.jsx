@@ -90,7 +90,7 @@ const Home = () => {
 
       <SmallParagraph text={t("text1")} />
 
-      <section>
+      <section className="z-20">
         <HorizontalScroll t={t} />
       </section>
 
@@ -123,7 +123,7 @@ const Home = () => {
               viewport={{
                 once: true,
               }}
-              className="p-1.5 md:p-3 shadow-md md:mt-0 lg:p-6 mx-auto w-full !font-PoiretOne font-bold text-sm lg:text-base md:w-[40ch] lg:w-[45ch] text-mainText text-justify bg-background backdrop-blur-sm relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-right-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-right-3 md:before:top-0"
+              className="p-1.5 md:p-3 md:shadow-md md:mt-0 lg:p-6 mx-auto w-full !font-PoiretOne font-bold text-sm lg:text-base md:w-[40ch] lg:w-[45ch] text-mainText text-justify bg-background backdrop-blur-sm relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-right-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-right-3 md:before:top-0"
             >
               <p className="mb-2 md:mb-3 lg:mb-4">{t("toReturnContent1")}</p>
               <p>{t("toReturnContent2")}</p>
@@ -177,7 +177,7 @@ const Home = () => {
               viewport={{
                 once: true,
               }}
-              className="p-1.5 md:p-3 !font-PoiretOne shadow-md font-bold md:mt-0 md:ml-28 lg:p-6 mx-auto w-full text-sm lg:text-base md:w-[40ch] lg::w-[45ch] text-justify bg-background text-mainText backdrop-blur-sm relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-left-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-left-3 md:before:top-0"
+              className="p-1.5 md:p-3 !font-PoiretOne md:shadow-md font-bold md:mt-0 md:ml-28 lg:p-6 mx-auto w-full text-sm lg:text-base md:w-[40ch] lg::w-[45ch] text-justify bg-background text-mainText backdrop-blur-sm relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-left-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-left-3 md:before:top-0"
             >
               <p className="mb-2 md:mb-3 lg:mb-4">{t("uniqueContent1")}</p>
               <p>{t("uniqueContent2")}</p>

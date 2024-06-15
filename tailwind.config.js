@@ -41,6 +41,7 @@ export default {
         layout: "90px minmax(0, 1fr)",
         navbar: "0px minmax(0, 1fr)",
         card: "auto 1fr",
+        bookButton: "1fr auto",
       },
       fontFamily: {
         Arapey: ["Arapey, serif"],
