@@ -59,6 +59,7 @@ const Photos = () => {
                   onClick={() => {
                     setSelected(el);
                   }}
+                  className="cursor-pointer"
                 />
               </div>
             );

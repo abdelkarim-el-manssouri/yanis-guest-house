@@ -11,7 +11,7 @@ const RoomsImagesCarouselModal = ({ clickedImg, setClickedImg }) => {
       onClick={() => setClickedImg(null)}
       className="fixed grid place-content-center inset-0 bg-black/50 z-[700] cursor-pointer backdrop-blur-md overflow-y-scroll lg:w-[calc(100%+2.5rem)]"
     >
-      <div className="size-9 rounded-full bg-black/30 right-12 top-4 absolute grid place-content-center">
+      <div className="size-9 rounded-full bg-black/30 right-5 md:right-12 top-4 absolute grid place-content-center">
         <span className="w-1/2 h-0.5 bg-background rounded rotate-45 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></span>
         <span className="w-1/2 h-0.5 bg-background rounded -rotate-45 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></span>
       </div>
@@ -20,7 +20,7 @@ const RoomsImagesCarouselModal = ({ clickedImg, setClickedImg }) => {
         initial="initial"
         animate="animate"
         onClick={(e) => e.stopPropagation()}
-        className="w-full max-w-[65%] mx-auto px-8 cursor-default"
+        className="w-full md:max-w-[75%] lg:max-w-[70%] mx-auto px-8 cursor-default"
       >
         <motion.div layoutId={`image-${clickedImg}`}>
           <img
@@ -68,6 +68,7 @@ const modalVariants = {
     transition: {
       type: "tween",
       duration: 0.5,
+      delay: 0.2,
     },
   },
 };

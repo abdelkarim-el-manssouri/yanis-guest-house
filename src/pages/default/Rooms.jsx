@@ -89,7 +89,7 @@ const RevealText = ({ scrollYProgress, t }) => {
   return (
     <motion.section
       style={{ scale, opacity }}
-      className="mt-[-100vh] h-[400vh] [view-timeline-name:--reveal-wrapper] bg-background relative z-10"
+      className="mt-[-100vh] h-[350vh] [view-timeline-name:--reveal-wrapper] bg-background relative z-10"
     >
       <div className="min-h-screen sticky top-0 flex justify-center items-center w-3/4 mx-auto text-justify lg:text-center">
         <div>

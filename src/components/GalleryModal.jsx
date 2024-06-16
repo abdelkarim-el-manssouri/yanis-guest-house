@@ -1,11 +1,19 @@
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 const GalleryModal = ({ selected, setSelected }) => {
+  useEffect(() => {
+    const html = document.querySelector("html");
+    if (html) html.classList.toggle("overflow-hidden", selected);
+  }, [selected]);
   if (!selected) {
     return <></>;
   }
   return (
-    <div
+    <motion.div
+      variants={bgModalVariants}
+      initial="initial"
+      animate="animate"
       onClick={() => setSelected(null)}
       className="fixed inset-0 bg-black/50 z-[700] cursor-pointer backdrop-blur-md overflow-y-scroll lg:w-[calc(100%+2.5rem)]"
     >
@@ -15,14 +23,34 @@ const GalleryModal = ({ selected, setSelected }) => {
       </div>
       <div
         onClick={(e) => e.stopPropagation()}
-        className="w-full max-w-[700px] mx-auto my-8 px-8 cursor-default"
+        className="w-full max-w-[70%] mx-auto my-8 px-8 cursor-default"
       >
         <motion.div layoutId={`image-${selected}`}>
-          <img src={selected} alt={selected} />
+          <img src={selected} alt={selected} className="rounded-lg" />
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 export default GalleryModal;
+
+const bgModalVariants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: [0.43, 0.13, 0.23, 0.96],
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.43, 0.13, 0.23, 0.96],
+    },
+  },
+};
