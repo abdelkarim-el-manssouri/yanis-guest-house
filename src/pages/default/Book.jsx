@@ -71,7 +71,7 @@ const OurLocation = () => {
         src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d13583.900147907623!2d-8.052479!3d31.6619027!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0xdafeb44ce0e5cab%3A0xb70c52b8525dc823!2syanis%20guest%20house%20DR%20SOUDANI%20540%20Rte%20de%20Targa%20Marrakech%2040000!3m2!1d31.6619027!2d-8.052479!5e0!3m2!1sen!2sma!4v1716160140738!5m2!1sen!2sma"
         height="400"
         loading="lazy"
-        className="mx-auto w-full mb-32 shadow-xl rounded-2xl"
+        className="mx-auto w-[97%] mb-32 shadow-xl rounded-2xl"
       ></iframe>
     </>
   );

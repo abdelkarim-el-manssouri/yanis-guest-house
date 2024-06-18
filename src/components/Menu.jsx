@@ -257,8 +257,8 @@ const StaggeredDropDown = () => {
   const [open, setOpen] = useState(false);
   const languages = [
     { code: "en", lang: "English", flag: ukFlag },
-    { code: "fr", lang: "French", flag: franceFlag },
-    { code: "sp", lang: "Spanish", flag: spainFlag },
+    { code: "fr", lang: "Français", flag: franceFlag },
+    { code: "sp", lang: "Español", flag: spainFlag },
   ];
   const { i18n } = useTranslation();
   const changeLanguage = (lng) => {

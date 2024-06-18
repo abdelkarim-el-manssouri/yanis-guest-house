@@ -131,7 +131,7 @@ const WellBeing = ({ t }) => {
               />
 
               <div className="opacity-0 translate-x-10 hover:translate-x-0 hover:opacity-100 absolute left-0 bottom-0 p-5 text-white w-full h-full flex items-end">
-                <div className="absolute left-0 bottom-0 w-full h-20 bg-gradient-to-t from-black to-black/0 flex items-center px-5 !font-Italiana font-extrabold tracking-wide">
+                <div className="absolute left-0 bottom-0 w-full h-20 bg-gradient-to-t from-black to-transparent flex items-center px-5 !font-Italiana font-extrabold tracking-wide">
                   <p className="first-letter:uppercase hidden md:block underline underline-offset-[3px]">
                     {t(image.imageDescription)}
                   </p>
@@ -562,7 +562,7 @@ const MoreOfMarrakesh = ({ t }) => {
               />
 
               <div className="opacity-0 translate-x-10 hover:translate-x-0 hover:opacity-100 absolute left-0 bottom-0 p-5 text-white w-full h-full flex items-end">
-                <div className="absolute left-0 bottom-0 w-full h-20 bg-gradient-to-t from-black to-black/0 flex items-center px-5 !font-Italiana font-extrabold tracking-wide">
+                <div className="absolute left-0 bottom-0 w-full h-20 bg-gradient-to-t from-black to-transparent flex items-center px-5 !font-Italiana font-extrabold tracking-wide">
                   <p className="first-letter:uppercase hidden md:block underline underline-offset-[3px]">
                     {t(agafay.imgDescription)}
                   </p>

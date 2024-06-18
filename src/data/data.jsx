@@ -11,17 +11,17 @@ import massage4 from "./../assets/activities-images/draining-massage.webp";
 
 import selfCare1 from "./../assets/activities-images/Nail-Salon.jpeg";
 import selfCare2 from "./../assets/activities-images/facial.jpg";
-import selfCare3 from "./../assets/activities-images/couv-3_.jpg";
+import selfCare3 from "./../assets/activities-images/couv-3_.webp";
 
 import agafay1 from "./../assets/activities-images/agafay1.jpg";
 import agafay2 from "./../assets/activities-images/agafay2.jpg";
 import agafay3 from "./../assets/activities-images/agafay3.jpg";
 import agafay4 from "./../assets/activities-images/agafay4.jpg";
 
-import moreOfMarrakesh1 from "./../assets/activities-images/airBaloon.jpg";
+import moreOfMarrakesh1 from "./../assets/activities-images/airBaloon.webp";
 import moreOfMarrakesh2 from "./../assets/activities-images/circuitTripjpg.jpg";
-import moreOfMarrakesh3 from "./../assets/activities-images/horseRide.jpg";
-import moreOfMarrakesh4 from "./../assets/activities-images/marrakech-chez-ali-fantasia1.jpg";
+import moreOfMarrakesh3 from "./../assets/activities-images/horseRide.webp";
+import moreOfMarrakesh4 from "./../assets/activities-images/marrakech-chez-ali-fantasia1.webp";
 import moreOfMarrakesh5 from "./../assets/activities-images/ourika-valley.webp";
 
 export const PhotosImages = [

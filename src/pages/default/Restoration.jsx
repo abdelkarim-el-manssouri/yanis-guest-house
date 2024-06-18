@@ -119,7 +119,7 @@ const Sensation = ({ title, content, imageUrl, t }) => {
           <h3 className="grid place-content-center -mb-10 md:mb-0 text-2xl font-bold capitalize !font-Italiana">
             {`${t(title)}`}
           </h3>
-          <p className="grid place-content-center px-2 lg:px-4 text-center !font-PoiretOne font-semibold tracking-wide text-sm lg:text-base leading-relaxed">
+          <p className="grid place-content-center last:mt-6 md:last:mt-0 px-2 lg:px-4 text-center !font-PoiretOne font-semibold tracking-wide text-sm lg:text-base leading-relaxed">
             {`${t(content)}`}
           </p>
         </div>
@@ -150,7 +150,7 @@ const SeeMenu = ({ t }) => {
     <>
       <div className="grid place-content-center text-center min-h-[150vh] mt-[-100vh]">
         <div className="sticky top-[50%] mb-[calc(50%-25%)] md:mb-[calc(50%-38%)]">
-          <h4 className="mb-5 text-lg uppercase font-Marcellus italic font-semibold">
+          <h4 className="mb-5 text-lg uppercase font-Italiana font-semibold">
             {t("discover")}
           </h4>
           <button className="py-3 px-10 !font-PoiretOne font-bold bg-secondary/15 transition duration-300 hover:bg-secondary/25 text-mainText hover:text-background shadow-md hover:shadow-xl active:shadow-none hover:scale-105 active:scale-95 capitalize rounded-sm">
