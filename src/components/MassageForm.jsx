@@ -5,6 +5,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { motion } from "framer-motion";
 import { PiWarningOctagonBold } from "react-icons/pi";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 
 const formVariants = {
   initial: {
@@ -97,6 +98,11 @@ const MassageForm = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Yanis Guest House self care page</title>
+        <meta name="description" content="self care page" />
+        <link rel="canonical" href="/selfCareForm" />
+      </Helmet>
       <div className="relative grid place-content-center my-10 p-8 !font-PoiretOne font-bold w-[90%] md:w-3/4 lg:w-1/2 mx-auto rounded-xl shadow-lg shadow-red-200 hover:shadow-red-300 hover:shadow-xl transition duration-300 bg-gradient-to-br from-cozyGreen to-black text-background">
         <div className="absolute top-2 left-2">
           <PiWarningOctagonBold size="20" />

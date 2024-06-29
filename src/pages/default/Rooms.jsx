@@ -6,6 +6,7 @@ import Button from "../../UI/Button";
 import { Link } from "react-router-dom";
 import RoomModal from "../../components/RoomModal";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 
 const Rooms = () => {
   useEffect(() => {
@@ -24,6 +25,11 @@ const Rooms = () => {
   const { t } = useTranslation("accommodations");
   return (
     <>
+      <Helmet>
+        <title>Yanis Guest House accommodations page</title>
+        <meta name="description" content="accommodations page" />
+        <link rel="canonical" href="/accommodations" />
+      </Helmet>
       <RoomsHeader t={t} />
       <RevealText scrollYProgress={scrollYProgress} t={t} />
       <ImageRoom scrollYProgress={scrollYProgress} t={t} />
@@ -208,14 +214,14 @@ const RoomsOutro = ({ t }) => {
   return (
     <div className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 p-5 lg:p-14 gap-y-4 md:gap-y-0 lg:gap-x-10">
       <div className=" p-4 md:p-8 lg:p-10 grid place-content-center">
-        <motion.h3
+        <motion.h1
           variants={titleRevealVariant}
           initial="initial"
           whileInView="animate"
           className="mb-4 lg:mb-8 text-center !font-Italiana italic text-xl lg:text-2xl font-bold capitalize"
         >
           {t("outroTitle")}
-        </motion.h3>
+        </motion.h1>
         <motion.p
           variants={paragraphRevealVariant}
           initial="initial"

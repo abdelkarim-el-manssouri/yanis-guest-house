@@ -5,6 +5,7 @@ import { PhotosImages } from "../data/data";
 import { motion } from "framer-motion";
 import GalleryModal from "../components/GalleryModal";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 
 const imgTransition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
@@ -38,6 +39,11 @@ const Photos = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Yanis Guest House gallery page</title>
+        <meta name="description" content="gallery page" />
+        <link rel="canonical" href="/gallery" />
+      </Helmet>
       <GalleryHeader />
       <div className="w-[95%] mx-auto py-12">
         {/* <img src={"/src/assets/header-images/backround1.png?t=1710498099294"} /> */}

@@ -6,6 +6,7 @@ import { SwipeCarousel } from "../../components/Carousel";
 import SmallParagraph from "../../UI/SmallParagraph";
 import Header2 from "../../components/Header2";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -72,6 +73,12 @@ const Home = () => {
   const { t } = useTranslation("home");
   return (
     <>
+      <Helmet>
+        <title>Yanis Guest House home page</title>
+        <meta name="description" content="home page" />
+        <link rel="canonical" href="/home" />
+      </Helmet>
+
       <div className="w-full h-dvh overflow-hidden bg-black z-20 backdrop-blur-md -mt-20">
         <Header2 t={t} />
       </div>

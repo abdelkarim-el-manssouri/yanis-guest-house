@@ -3,11 +3,17 @@ import SmallParagraph from "../../UI/SmallParagraph";
 import EmailForm from "../../components/EmailForm";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 
 const Book = () => {
   const { t } = useTranslation("book");
   return (
     <>
+      <Helmet>
+        <title>Yanis Guest House book room page</title>
+        <meta name="description" content="book room page" />
+        <link rel="canonical" href="/book" />
+      </Helmet>
       <BookHeader t={t} />
       <SmallParagraph text={t("firstText")} />
       <EmailForm t={t} />

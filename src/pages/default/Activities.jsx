@@ -12,6 +12,7 @@ import {
   moreOfMarrakeshImages,
   selfCareImages,
 } from "../../data/data";
+import { Helmet } from "react-helmet-async";
 
 const Activities = () => {
   useEffect(() => {
@@ -24,6 +25,11 @@ const Activities = () => {
   const { t } = useTranslation("activities");
   return (
     <>
+      <Helmet>
+        <title>Yanis Guest House activities & wellbeing page</title>
+        <meta name="description" content="activities & wellbeing page" />
+        <link rel="canonical" href="/activities&wellbeing" />
+      </Helmet>
       <ActivitiesHeader t={t} />
       <SmallParagraph text={t("parag1")} />
       <Heading heading={t("heading1")} />
@@ -73,7 +79,7 @@ const ActivitiesHeader = ({ t }) => {
           alt="logo"
           className="w-44 h-20 md:w-52 lg:w-60 md:h-24 lg:h-32 z-10"
         />
-        <motion.p
+        <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -85,7 +91,7 @@ const ActivitiesHeader = ({ t }) => {
           className="z-10 text-white font-bold !font-Italiana uppercase text-3xl md:text-4xl lg:text-5xl tracking-wide underline underline-offset-8 decoration-[3px] [text-shadow:_1px_1px_0_#00464326]"
         >
           {t("headerTitle")}
-        </motion.p>
+        </motion.h1>
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import SmallParagraph from "../../UI/SmallParagraph";
 import HorizontalScrollResto from "../../components/HorizontalScrollResto";
 import { useTranslation } from "react-i18next";
 import { sensationsData } from "../../data/data";
+import { Helmet } from "react-helmet-async";
 
 const Restoration = () => {
   useEffect(() => {
@@ -16,6 +17,11 @@ const Restoration = () => {
   const { t } = useTranslation("restoration");
   return (
     <>
+      <Helmet>
+        <title>Yanis Guest House restoration page</title>
+        <meta name="description" content="restoration page" />
+        <link rel="canonical" href="/restoration" />
+      </Helmet>
       <RestoHeader t={t} />
 
       <SmallParagraph text={t("parag1")} />

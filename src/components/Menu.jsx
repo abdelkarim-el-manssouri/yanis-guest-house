@@ -308,7 +308,9 @@ const Option = ({ text, setOpen, Flag, language, changeLanguage }) => {
       className="flex items-center gap-3 w-full p-2 text-xs font-medium whitespace-nowrap rounded-md hover:bg-secondary/35 text-white transition-colors cursor-pointer"
     >
       <motion.span variants={actionIconVariants}>{Flag}</motion.span>
-      <span>{text}</span>
+      <span className="font-PoiretOne font-bold tracking-wider capitalize">
+        {text}
+      </span>
     </motion.li>
   );
 };

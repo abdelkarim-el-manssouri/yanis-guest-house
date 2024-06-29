@@ -46,14 +46,14 @@ const Card = ({ card, t }) => {
         loading="lazy"
       />
       <div className="h-full grid place-content-center gap-3 m-2 p-3 md:m-6 lg:m-0 lg:gap-6 lg:mx-6 overflow-y-auto lg:overflow-y-hidden">
-        <motion.h3
+        <motion.h2
           variants={titleReveal}
           initial="initial"
           whileInView="animate"
           className="!font-Italiana font-semibold mt-16 md:mt-0 md:text-xl text-center uppercase"
         >
           {t(card.title)}
-        </motion.h3>
+        </motion.h2>
         <div className="!font-PoiretOne font-semibold tracking-wide text-sm md:text-base">
           <motion.p
             variants={content1Reveal}
