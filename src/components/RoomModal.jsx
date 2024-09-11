@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
 import {
   IoBedOutline,
@@ -142,7 +143,14 @@ const RoomModal = ({ selected, setSelected, t }) => {
 
   useEffect(() => {
     const html = document.querySelector("html");
-    if (html) html.classList.toggle("overflow-hidden", selected);
+    if (html && selected) {
+      html.classList.add("overflow-hidden");
+    }
+    return () => {
+      if (html) {
+        html.classList.remove("overflow-hidden");
+      }
+    };
   }, [selected]);
 
   if (!selected) return;

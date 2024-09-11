@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { FiChevronDown } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { useState } from "react";

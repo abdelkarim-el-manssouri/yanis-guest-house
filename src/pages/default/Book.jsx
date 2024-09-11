@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useRef } from "react";
 import SmallParagraph from "../../UI/SmallParagraph";
 import EmailForm from "../../components/EmailForm";

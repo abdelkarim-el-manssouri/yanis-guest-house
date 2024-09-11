@@ -22,7 +22,7 @@
   }
 
   html {
-    @apply: bg-backround;
+    @apply bg-background selection:bg-cozyGreen selection:text-background;
   }
 
   @font-face {

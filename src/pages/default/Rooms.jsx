@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { motion, useScroll, useTransform } from "framer-motion";
 import "../../css/rooms.css";
 import { rooms } from "../../data/data";
