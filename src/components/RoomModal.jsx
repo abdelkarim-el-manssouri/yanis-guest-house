@@ -106,7 +106,7 @@ const bgModalVariants = {
   },
 };
 
-const slideWidth = 522;
+const slideWidth = 560;
 const sliderGap = 20;
 const scrollToSlide = (slider, slideIndex) => {
   if (!slider) return;
@@ -291,19 +291,17 @@ const RoomModal = ({ selected, setSelected, t }) => {
                   className="snap-x snap-mandatory lg:w-full h-[440px] pb-10 flex shrink-0 gap-x-5 overflow-x-auto"
                 >
                   {selected?.roomImages?.map((image, i) => (
-                    <>
-                      <img
-                        key={i}
-                        src={image}
-                        alt={`${selected?.title} image`}
-                        onClick={() => {
-                          setClickedImg(true);
-                          setClickedImg(image);
-                        }}
-                        className="snap-center snap-always rounded-xl object-cover bg-center aspect-[9/16] md:aspect-video md:w-[60vw] shadow-lg cursor-pointer"
-                        loading="lazy"
-                      />
-                    </>
+                    <img
+                      key={i}
+                      src={image}
+                      alt={`${selected?.title} image`}
+                      onClick={() => {
+                        setClickedImg(true);
+                        setClickedImg(image);
+                      }}
+                      className="snap-center snap-always rounded-xl object-cover bg-center aspect-[9/16] md:aspect-video md:w-[60vw] shadow-lg cursor-pointer"
+                      loading="lazy"
+                    />
                   ))}
                 </div>
               </li>
@@ -353,6 +351,8 @@ const RoomModal = ({ selected, setSelected, t }) => {
       <RoomsImagesCarouselModal
         clickedImg={clickedImg}
         setClickedImg={setClickedImg}
+        selected={selected}
+        setSelected={setSelected}
       />
     </>
   );

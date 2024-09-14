@@ -32,7 +32,7 @@ const DefaultLayout = () => {
   const { t } = useTranslation("navbar");
   return (
     <>
-      <main className="mx-auto bg-background md:max-w-7xl">
+      <main className="mx-auto bg-background max-w-[1440px]">
         <BookButton t={t} />
         <motion.nav
           variants={{

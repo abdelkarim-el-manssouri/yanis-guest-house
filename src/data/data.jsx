@@ -141,7 +141,7 @@ export const rooms = [
     bed: "bed1",
     bathroom: "bathroom1",
     view: "view1",
-    roomImages: [room5, room5, room5, room5],
+    roomImages: [room5, room5, room5, room5, room5],
   },
   {
     id: 1,

@@ -23,9 +23,7 @@ const Restoration = () => {
         <link rel="canonical" href="/restoration" />
       </Helmet>
       <RestoHeader t={t} />
-
       <SmallParagraph text={t("parag1")} />
-
       <motion.section>
         {sensationsData.map((sen) => {
           return (
@@ -52,13 +50,6 @@ const Restoration = () => {
 export default Restoration;
 
 const RestoHeader = ({ t }) => {
-  const firstTextRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: firstTextRef,
-    offset: ["center center", "start start"],
-  });
-  const y = useTransform(scrollYProgress, [0.1, 0.5], [0, -100]);
-  const opacity = useTransform(scrollYProgress, [0.2, 0.5], [1, 0]);
   return (
     <>
       <div
@@ -68,24 +59,9 @@ const RestoHeader = ({ t }) => {
         className="h-screen z-50 bg-cover bg-center -mt-20"
       >
         <div className="absolute inset-0 bg-black/30" />
-        <div className="flex flex-col justify-center items-center h-full gap-y-16">
-          <motion.img
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              type: "tween",
-              stifness: 50,
-              duration: 1,
-              delay: 1.3,
-            }}
-            ref={firstTextRef}
-            style={{ y, opacity }}
-            src="https://yanisguesthouse.com/images/logo.png"
-            alt="logo"
-            className="w-44 h-20 md:w-52 lg:w-60 md:h-24 lg:h-32 z-10"
-          />
+        <div className="flex justify-center items-center h-full gap-y-16">
           <motion.p
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
               type: "tween",

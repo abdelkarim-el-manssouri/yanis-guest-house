@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -82,64 +83,62 @@ const Images = ({ imgIndex, t }) => {
     <>
       {rooms.map((imgSrc) => {
         return (
-          <>
-            <motion.div
-              key={imgSrc.id}
-              style={{
-                backgroundImage: `url(${imgSrc.url})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-              animate={{
-                scale: imgIndex === imgSrc.id ? 0.95 : 0.85,
-              }}
-              transition={SPRING_OPTIONS}
-              className="relative aspect-carousel w-screen shrink-0 rounded-xl bg-neutral-800 object-cover hover:scale-125"
-            >
-              <div className="w-full h-full transition duration-[.6s] z-10 ease-in-out opacity-0 hover:opacity-100 hover:bg-cozyGreen/50 backdrop-blur-sm absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white">
-                <div className="grid h-full w-full relative">
-                  <div className="absolute left-2 md:left-4 top-2 md:top-4 uppercase !font-PoiretOne text-xs md:text-sm px-1.5 md:px-3 lg:px-5 py-1 lg:py-2 w-fit h-fit font-semibold text-golden bg-gradient-to-tl from-black to-black/20 border border-solid border-golden">
-                    {t("start")} {imgSrc?.price} $
-                  </div>
-                  <h2 className="flex justify-center !font-Italiana capitalize items-end md:pb-5 font-bold text-xl md:text-3xl lg:text-4xl">
-                    {`${t(imgSrc?.title)}`}
-                  </h2>
-                  <ul className="grid grid-cols-4 place-content-evenly md:gap-x-10 w-full md:w-3/4 mx-auto !font-PoiretOne">
-                    <li className="flex justify-center items-center gap-1.5 md:gap-2.5 lg:gap-4">
-                      <TbRulerMeasure className="w-6 lg:w-8 h-6 lg:h-8" />
-                      <span className="text-sm md:text-base lg:text-lg font-semibold">
-                        {imgSrc.surface} m<sup>2</sup>
-                      </span>
-                    </li>
-                    <li className="flex justify-center items-center md:gap-2.5 lg:gap-4">
-                      <HiOutlineUsers className="w-6 lg:w-8 h-6 lg:h-8" />
-                      <span className="text-sm md:text-base lg:text-lg font-semibold capitalize">
-                        {imgSrc.persones} {t("persons")}
-                      </span>
-                    </li>
-                    <li className="flex justify-center items-center gap-1.5 md:gap-2.5 lg:gap-4">
-                      <IoBedOutline className="w-6 lg:w-8 h-6 lg:h-8" />
-                      <span className="text-sm md:text-base lg:text-lg font-semibold capitalize">
-                        {`${t(imgSrc.bed)}`}
-                      </span>
-                    </li>
-                    <li className="flex justify-center items-center gap-1.5 md:gap-2.5 lg:gap-4">
-                      <GiBathtub className="w-6 lg:w-8 h-6 lg:h-8" />
-                      <span className="text-sm md:text-base lg:text-lg font-semibold capitalize">
-                        {`${t(imgSrc.bathroom)}`}
-                      </span>
-                    </li>
-                  </ul>
-                  <Link
-                    to="/accommodations"
-                    className="px-5 md:px-7 lg:px-10 py-0.5 md:py-1 lg:py-2 flex justify-self-center self-center w-fit h-fit text-sm md:text-base lg:text-lg font-bold uppercase !font-PoiretOne text-golden bg-gradient-to-br from-black to-black/20 relative before:absolute before:w-full before:h-0.5 before:left-0 before:-bottom-2 before:bg-gradient-to-bl before:from-black before:to-black/20 before:scale-x-0 before:transition before:delay-75 hover:before:scale-x-100"
-                  >
-                    {t("view")}
-                  </Link>
+          <motion.div
+            key={imgSrc.id}
+            style={{
+              backgroundImage: `url(${imgSrc.url})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+            animate={{
+              scale: imgIndex === imgSrc.id ? 0.95 : 0.85,
+            }}
+            transition={SPRING_OPTIONS}
+            className="relative aspect-carousel w-screen shrink-0 rounded-xl bg-neutral-800 object-cover hover:scale-125"
+          >
+            <div className="w-full h-full transition duration-[.6s] z-10 ease-in-out opacity-0 hover:opacity-100 hover:bg-cozyGreen/50 backdrop-blur-sm absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white">
+              <div className="grid h-full w-full relative">
+                <div className="absolute left-2 md:left-4 top-2 md:top-4 uppercase !font-PoiretOne text-xs md:text-sm px-1.5 md:px-3 lg:px-5 py-1 lg:py-2 w-fit h-fit font-semibold text-golden bg-gradient-to-tl from-black to-black/20 border border-solid border-golden">
+                  {t("start")} {imgSrc?.price} $
                 </div>
+                <h2 className="flex justify-center !font-Italiana capitalize items-end md:pb-5 font-bold text-xl md:text-3xl lg:text-4xl">
+                  {`${t(imgSrc?.title)}`}
+                </h2>
+                <ul className="grid grid-cols-4 place-content-evenly md:gap-x-10 w-full md:w-3/4 mx-auto !font-PoiretOne">
+                  <li className="flex justify-center items-center gap-1.5 md:gap-2.5 lg:gap-4">
+                    <TbRulerMeasure className="w-6 lg:w-8 h-6 lg:h-8" />
+                    <span className="text-sm md:text-base lg:text-lg font-semibold">
+                      {imgSrc.surface} m<sup>2</sup>
+                    </span>
+                  </li>
+                  <li className="flex justify-center items-center md:gap-2.5 lg:gap-4">
+                    <HiOutlineUsers className="w-6 lg:w-8 h-6 lg:h-8" />
+                    <span className="text-sm md:text-base lg:text-lg font-semibold capitalize">
+                      {imgSrc.persones} {t("persons")}
+                    </span>
+                  </li>
+                  <li className="flex justify-center items-center gap-1.5 md:gap-2.5 lg:gap-4">
+                    <IoBedOutline className="w-6 lg:w-8 h-6 lg:h-8" />
+                    <span className="text-sm md:text-base lg:text-lg font-semibold capitalize">
+                      {`${t(imgSrc.bed)}`}
+                    </span>
+                  </li>
+                  <li className="flex justify-center items-center gap-1.5 md:gap-2.5 lg:gap-4">
+                    <GiBathtub className="w-6 lg:w-8 h-6 lg:h-8" />
+                    <span className="text-sm md:text-base lg:text-lg font-semibold capitalize">
+                      {`${t(imgSrc.bathroom)}`}
+                    </span>
+                  </li>
+                </ul>
+                <Link
+                  to="/accommodations"
+                  className="px-5 md:px-7 lg:px-10 py-0.5 md:py-1 lg:py-2 flex justify-self-center self-center w-fit h-fit text-sm md:text-base lg:text-lg font-bold uppercase !font-PoiretOne text-golden bg-gradient-to-br from-black to-black/20 relative before:absolute before:w-full before:h-0.5 before:left-0 before:-bottom-2 before:bg-gradient-to-bl before:from-black before:to-black/20 before:scale-x-0 before:transition before:delay-75 hover:before:scale-x-100"
+                >
+                  {t("view")}
+                </Link>
               </div>
-            </motion.div>
-          </>
+            </div>
+          </motion.div>
         );
       })}
     </>

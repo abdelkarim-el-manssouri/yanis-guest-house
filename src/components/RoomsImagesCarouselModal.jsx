@@ -1,7 +1,51 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
+import { useCallback, useMemo, useRef, useState } from "react";
+import { IoChevronBack } from "react-icons/io5";
+import { rooms } from "../data/data";
 
-const RoomsImagesCarouselModal = ({ clickedImg, setClickedImg }) => {
+const slideWidth = 750;
+const sliderGap = 20;
+const scrollToSlide = (slider, slideIndex) => {
+  if (!slider) return;
+  slider.scrollTo({
+    left: slideIndex * (slideWidth + sliderGap),
+    behavior: "smooth",
+  });
+};
+
+const RoomsImagesCarouselModal = ({
+  clickedImg,
+  setClickedImg,
+  selected,
+  setSelected,
+}) => {
   if (!clickedImg) return <></>;
+
+  const sliderRef = useRef(null);
+  const [sliderPosition, setSliderPosition] = useState(0);
+  const currentSlide = useMemo(() => {
+    return Math.floor(sliderPosition / (slideWidth + sliderGap));
+  }, [sliderPosition]);
+
+  const scrolledToEndOfSlider = useMemo(() => {
+    if (!sliderRef.current) return false;
+    return (
+      sliderRef.current.scrollWidth -
+        sliderRef.current.scrollLeft -
+        sliderRef.current.clientWidth ===
+      0
+    );
+  }, [sliderPosition]);
+
+  const goToNextSlide = useCallback(() => {
+    scrollToSlide(sliderRef.current, currentSlide + 1);
+  }, [currentSlide]);
+  const goToPreviousSlide = useCallback(() => {
+    scrollToSlide(sliderRef.current, currentSlide - 1);
+  }, [currentSlide]);
+
   return (
     <motion.div
       variants={bgModalVariants}
@@ -15,6 +59,17 @@ const RoomsImagesCarouselModal = ({ clickedImg, setClickedImg }) => {
         <span className="w-1/2 h-0.5 bg-background rounded rotate-45 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></span>
         <span className="w-1/2 h-0.5 bg-background rounded -rotate-45 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></span>
       </div>
+      <button
+        disabled={currentSlide === 0}
+        onClick={(e) => {
+          e.stopPropagation();
+          goToPreviousSlide();
+        }}
+        className="hidden lg:absolute top-1/2 -translate-y-1/2 left-[10%] size-5 group active:scale-95 disabled:bg-none disabled:shadow-none bg-gradient-to-bl from-transparent to-black group rounded-xl shadow-xl p-4 lg:grid place-content-center active:shadow-none hover:scale-110 transition-all"
+      >
+        <span className="sr-only">previous</span>
+        <IoChevronBack className="group-active:scale-90 text-background group-disabled:text-transparent" />
+      </button>
       <motion.div
         variants={modalVariants}
         initial="initial"
@@ -22,15 +77,71 @@ const RoomsImagesCarouselModal = ({ clickedImg, setClickedImg }) => {
         onClick={(e) => e.stopPropagation()}
         className="w-full md:max-w-[75%] lg:max-w-[70%] mx-auto px-8 cursor-default"
       >
-        <motion.div layoutId={`image-${clickedImg}`}>
+        {/* <motion.div layoutId={`image-${clickedImg}`}>
           <img
             src={clickedImg}
             alt={clickedImg}
             className="rounded-md"
             loading="lazy"
           />
-        </motion.div>
+        </motion.div> */}
+        <ul>
+          <li className="h-[500px] md:h-[400px] lg:h-[500px] overflow-hidden">
+            <div
+              ref={sliderRef}
+              onScroll={(ev) => {
+                setSliderPosition(ev.currentTarget.scrollLeft);
+              }}
+              className="snap-x snap-mandatory lg:w-full h-[540px] md:h-[440px] lg:h-[540px] pb-10 flex shrink-0 gap-x-5 overflow-x-auto"
+            >
+              {selected?.roomImages?.map((image, i) => (
+                <img
+                  key={i}
+                  src={image}
+                  alt={`${selected?.title} image`}
+                  onClick={() => {
+                    setClickedImg(true);
+                    setClickedImg(image);
+                  }}
+                  className="snap-center snap-always rounded-xl object-cover bg-center aspect-[9/16] md:aspect-[16] md:w-[100vw]"
+                  loading="lazy"
+                />
+              ))}
+            </div>
+          </li>
+        </ul>
+        {/* <div className="flex">
+          {selected?.roomImages?.map((image, i) => (
+            <>
+              <img
+                key={i}
+                src={image}
+                alt={`${selected?.title} image`}
+                onClick={() => {
+                  setClickedImg(true);
+                  setClickedImg(image);
+                }}
+                className="snap-center snap-always rounded-xl object-cover bg-center aspect-[9/16] md:aspect-video md:w-[60vw] shadow-lg cursor-pointer"
+                loading="lazy"
+              />
+            </>
+          ))}
+        </div> */}
       </motion.div>
+      <button
+        disabled={
+          scrolledToEndOfSlider ||
+          currentSlide === selected?.roomImages?.length - 1
+        }
+        onClick={(e) => {
+          e.stopPropagation();
+          goToNextSlide();
+        }}
+        className="hidden lg:absolute top-1/2 -translate-y-1/2 right-[10%] size-5 active:scale-95 disabled:bg-none disabled:shadow-none group bg-gradient-to-br from-transparent to-black rounded-xl shadow-xl p-4 lg:grid place-content-center active:shadow-none hover:scale-110 transition-all"
+      >
+        <span className="sr-only">next</span>
+        <IoChevronBack className="rotate-180 group-active:scale-90 text-background group-disabled:text-transparent" />
+      </button>
     </motion.div>
   );
 };
