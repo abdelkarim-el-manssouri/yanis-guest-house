@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useRef, useState } from "react";
 import { headerSlideImages } from "../data/data";
 import { motion, useAnimate, useAnimation, useInView } from "framer-motion";
@@ -12,26 +13,26 @@ const HeaderImageReveal = ({ t }) => {
   const [currentImg, setCurrentImg] = useState(0);
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (currentImg === 2) {
+      if (currentImg === headerSlideImages.length - 1) {
         setCurrentImg(0);
       } else {
         setCurrentImg(currentImg + 1);
       }
-    }, 6000);
+    }, 8000);
     return () => clearTimeout(timer);
   }, [currentImg]);
 
   let runInterval = useRef();
   const [scope, animate] = useAnimate();
   const runAnimation = async () => {
-    await animate(scope.current, { opacity: 0 }, { duration: 2 });
+    await animate(scope.current, { opacity: 0 }, { duration: 0.5 });
     await animate(scope.current, { opacity: 0.5 }, { duration: 3 });
   };
 
   const startAnimation = () => {
     runInterval.current = setInterval(() => {
       runAnimation();
-    }, 6000);
+    }, 7000);
   };
 
   const controls = useAnimation();

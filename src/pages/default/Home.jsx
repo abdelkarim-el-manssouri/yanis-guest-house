@@ -50,6 +50,20 @@ const xAxisTextScroll = {
   },
 };
 
+const welcomeVariants = {
+  initial: {
+    opacity: 0,
+    filter: "blur(20px)",
+  },
+  animate: {
+    opacity: 1,
+    filter: "blur(0px)",
+    transition: {
+      duration: 1,
+    },
+  },
+};
+
 const Home = () => {
   useEffect(() => {
     window.scrollTo({
@@ -72,7 +86,7 @@ const Home = () => {
 
   const { t } = useTranslation("home");
   return (
-    <>
+    <motion.div variants={welcomeVariants} initial="initial" animate="animate">
       <Helmet>
         <title>Yanis Guest House home page</title>
         <meta name="description" content="home page" />
@@ -213,7 +227,7 @@ const Home = () => {
           </motion.h2>
         </div>
       </motion.section>
-    </>
+    </motion.div>
   );
 };
 
