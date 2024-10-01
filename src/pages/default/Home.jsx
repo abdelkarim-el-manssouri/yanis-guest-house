@@ -1,6 +1,12 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useRef } from "react";
 import { AnimatedText } from "../../UI/AnimatedText";
-import { motion, useScroll, useTransform } from "framer-motion";
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import HorizontalScroll from "../../components/HorizontalScroll";
 import { SwipeCarousel } from "../../components/Carousel";
 import SmallParagraph from "../../UI/SmallParagraph";
@@ -92,7 +98,6 @@ const Home = () => {
         <meta name="description" content="home page" />
         <link rel="canonical" href="/home" />
       </Helmet>
-
       <div className="w-full h-dvh overflow-hidden bg-black z-20 backdrop-blur-md -mt-20">
         <Header2 t={t} />
       </div>
@@ -108,13 +113,10 @@ const Home = () => {
           <AnimatedText text={t("textContent")} />
         </div>
       </motion.section>
-
       <SmallParagraph text={t("text1")} />
-
       <section className="z-20">
         <HorizontalScroll t={t} />
       </section>
-
       <motion.section
         variants={fadeInAnimationVariants}
         initial="initial"
@@ -160,7 +162,6 @@ const Home = () => {
           />
         </div>
       </motion.section>
-
       <motion.section
         variants={fadeInAnimationVariants}
         initial="initial"
@@ -206,29 +207,40 @@ const Home = () => {
           </div>
         </div>
       </motion.section>
-
       <SwipeCarousel t={t} />
-
-      <motion.section
-        style={{
-          scale: scale2Progress,
-          opacity: opacity2Progress,
-        }}
-        className="my-16 md:my-0 md:h-screen flex items-center overflow-hidden"
-      >
-        <div className="aspect-video lg:aspect-carousel w-full bg-cover opacity-80 bg-[url('/src/assets/cozy-green-sofa.jpeg')]">
-          <motion.h2
-            variants={xAxisTextScroll}
-            initial="initial"
-            whileInView="animate"
-            className="flex items-end w-full h-full whitespace-nowrap text-white capitalize text-[3.5em] md:text-[7em] lg:text-[10em] font-bold !font-Italiana transition-all duration-[5s] ease-move-mouse"
-          >
-            {t("enjoy")}
-          </motion.h2>
-        </div>
-      </motion.section>
+      <EnjoyStay t={t} />
     </motion.div>
   );
 };
 
 export default Home;
+
+const EnjoyStay = ({ t }) => {
+  const enjoyRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: enjoyRef,
+  });
+  const play = useTransform(scrollYProgress, [0.6, 0.9], [5000, -900]);
+  // const { scrollYProgress } = useScroll();
+  // useMotionValueEvent(scrollYProgress, "change");
+  return (
+    <motion.section
+      // style={{
+      //   scale: scale2Progress,
+      //   opacity: opacity2Progress,
+      // }}
+      className="my-16 md:my-0 md:h-screen flex items-center overflow-hidden"
+    >
+      <div className="aspect-video lg:aspect-carousel w-full bg-cover opacity-80 bg-[url('/src/assets/cozy-green-sofa.jpeg')]">
+        <motion.h2
+          style={{
+            x: play,
+          }}
+          className="flex items-end w-full h-full whitespace-nowrap text-white capitalize text-[3.5em] md:text-[7em] lg:text-[10em] font-bold !font-Italiana transition-all duration-500 ease-move-mouse"
+        >
+          {t("enjoy")}
+        </motion.h2>
+      </div>
+    </motion.section>
+  );
+};

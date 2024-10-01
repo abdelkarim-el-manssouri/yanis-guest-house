@@ -27,34 +27,17 @@ const Book = () => {
 export default Book;
 
 const BookHeader = ({ t }) => {
-  const firstTextRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: firstTextRef,
-    offset: ["center center", "start start"],
-  });
-  const y = useTransform(scrollYProgress, [0.1, 0.5], [0, -100]);
-  const opacity = useTransform(scrollYProgress, [0.2, 0.5], [1, 0]);
+  // const firstTextRef = useRef(null);
+  // const { scrollYProgress } = useScroll({
+  //   target: firstTextRef,
+  //   offset: ["center center", "start start"],
+  // });
   return (
     <div className="relative h-screen bg-cozyGreen -mt-20 grid place-content-center bg-[url('/src/assets/accommodations-photos/room2.jpg')] bg-center bg-cover bg-no-repeat">
       <div className="absolute inset-0 bg-black/30" />
-      <div className="flex flex-col justify-center z-10 items-center h-full gap-y-16">
-        <motion.img
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            type: "tween",
-            stifness: 50,
-            duration: 1,
-            delay: 1.3,
-          }}
-          ref={firstTextRef}
-          style={{ y, opacity }}
-          src="https://yanisguesthouse.com/images/logo.png"
-          alt="logo"
-          className="w-44 h-20 md:w-52 lg:w-60 md:h-24 lg:h-32"
-        />
+      <div className="flex justify-center z-10 items-center h-full">
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
             type: "tween",
