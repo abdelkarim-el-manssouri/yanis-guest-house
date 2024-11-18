@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
 import { forms } from "../data/data";
 import { Link } from "react-router-dom";

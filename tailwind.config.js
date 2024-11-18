@@ -36,6 +36,7 @@ export default {
       },
       aspectRatio: {
         carousel: "2.5 / 1",
+        carousel2: "2.3 / 1",
       },
       gridTemplateColumns: {
         layout: "90px minmax(0, 1fr)",

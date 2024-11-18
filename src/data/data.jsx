@@ -1,43 +1,134 @@
-import room1 from "./../assets/accommodations-photos/room1.jpg";
-import room2 from "./../assets/accommodations-photos/room2.jpg";
-import room3 from "./../assets/accommodations-photos/room3.jpg";
-import room4 from "./../assets/accommodations-photos/room4.jpg";
-import room5 from "./../assets/accommodations-photos/room5.jpg";
+import room1Image1 from "/images/accommodation/Suite-Royal/room1Image1.webp";
+import room1Image2 from "/images/accommodation/Suite-Royal/room1Image2.webp";
+import room1Image3 from "/images/accommodation/Suite-Royal/room1Image3.webp";
+import room1Image4 from "/images/accommodation/Suite-Royal/room1Image4.webp";
+import room1Image5 from "/images/accommodation/Suite-Royal/room1Image5.webp";
 
-import massage1 from "./../assets/activities-images/massage1.jpg";
-import massage2 from "./../assets/activities-images/massageCouple.webp";
-import massage3 from "./../assets/activities-images/massage2.jpg";
-import massage4 from "./../assets/activities-images/draining-massage.webp";
+import room2Image1 from "/images/accommodation/chambre-double/room2Image1.webp";
+import room2Image2 from "/images/accommodation/chambre-double/room2Image2.webp";
+import room2Image3 from "/images/accommodation/chambre-double/room2Image3.webp";
+import room2Image4 from "/images/accommodation/chambre-double/room2Image4.webp";
+import room2Image5 from "/images/accommodation/chambre-double/room2Image5.webp";
 
-import selfCare1 from "./../assets/activities-images/Nail-Salon.jpeg";
-import selfCare2 from "./../assets/activities-images/facial.jpg";
-import selfCare3 from "./../assets/activities-images/couv-3_.webp";
+import room3Image1 from "/images/accommodation/Suite-Parentale/room3Image1.webp";
+import room3Image2 from "/images/accommodation/Suite-Parentale/room3Image2.webp";
+import room3Image3 from "/images/accommodation/Suite-Parentale/room3Image3.webp";
+import room3Image4 from "/images/accommodation/Suite-Parentale/room3Image4.webp";
+import room3Image5 from "/images/accommodation/Suite-Parentale/room3Image5.webp";
 
-import agafay1 from "./../assets/activities-images/agafay1.jpg";
-import agafay2 from "./../assets/activities-images/agafay2.jpg";
-import agafay3 from "./../assets/activities-images/agafay3.jpg";
-import agafay4 from "./../assets/activities-images/agafay4.jpg";
+import room4Image1 from "/images/accommodation/Family-Suite-of-6-Peoples/image1-1.webp";
+import room4Image2 from "/images/accommodation/Family-Suite-of-6-Peoples/image1-2.webp";
+import room4Image3 from "/images/accommodation/Family-Suite-of-6-Peoples/image1-3.webp";
+import room4Image4 from "/images/accommodation/Family-Suite-of-6-Peoples/image1-4.webp";
+import room4Image5 from "/images/accommodation/Family-Suite-of-6-Peoples/image1-5.webp";
 
-import moreOfMarrakesh1 from "./../assets/activities-images/airBaloon.webp";
-import moreOfMarrakesh2 from "./../assets/activities-images/circuitTripjpg.jpg";
-import moreOfMarrakesh3 from "./../assets/activities-images/horseRide.webp";
-import moreOfMarrakesh4 from "./../assets/activities-images/marrakech-chez-ali-fantasia1.webp";
-import moreOfMarrakesh5 from "./../assets/activities-images/ourika-valley.webp";
+import room5Image1 from "/images/accommodation/Family-Suite-of-7-Peoples/room5Image1.webp";
+import room5Image2 from "/images/accommodation/Family-Suite-of-7-Peoples/room5Image2.webp";
+import room5Image3 from "/images/accommodation/Family-Suite-of-7-Peoples/room5Image3.webp";
+import room5Image4 from "/images/accommodation/Family-Suite-of-7-Peoples/room5Image4.webp";
+import room5Image5 from "/images/accommodation/Family-Suite-of-7-Peoples/room5Image5.webp";
+
+import homeImageHeader1 from "/images/homePage/homeHeaderImage1.webp";
+import homeImageHeader2 from "/images/homePage/homeHeaderImage2.webp";
+import homeImageHeader3 from "/images/homePage/homeHeaderImage3.webp";
+import homeImageHeader4 from "/images/homePage/homeHeaderImage4.webp";
+
+import homeLinkbkg from "/images/homePage/navbarLinks/homeLinkBkg2-1.webp";
+import accommodationLinkbkg from "/images/homePage/navbarLinks/accommodationLinkBkg2.webp";
+import restaurantLink from "/images/homePage/navbarLinks/restaurationbkg.webp";
+import galleryLink from "/images/homePage/navbarLinks/galleryLinkBkg.webp";
+
+import homeAccommodationPic3 from "/images/homePage/stairsPic.webp";
+import homeReastorationPic from "/images/homePage/terraceTable.webp";
+import homeActivitiesPic from "/images/homePage/picineByNight2.webp";
+
+import restorationSee from "/images/Restaurant/restorationSee.webp";
+import restorationTaste from "/images/Restaurant/restorationTaste.webp";
+import restorationSmell from "/images/Restaurant/restorationSmell.webp";
+import restorationFeel from "/images/Restaurant/restorationFeel.webp";
+import restorationHear from "/images/Restaurant/restorationHear.webp";
+import restaurationCarrou1 from "/images/Restaurant/restaurationCarrou1.webp";
+import restaurationCarrou2 from "/images/Restaurant/restaurationCarrou2.webp";
+import restaurationCarrou3 from "/images/Restaurant/restaurationCarrou3.webp";
+
+import massage1 from "/images/activities&wellbeing/massage1.webp";
+import massage2 from "/images/activities&wellbeing/massageCouple.webp";
+import massage3 from "/images/activities&wellbeing/massage2.webp";
+import massage4 from "/images/activities&wellbeing/draining-massage.webp";
+
+import selfCare1 from "/images/activities&wellbeing/manicure.webp";
+import selfCare2 from "/images/activities&wellbeing/facialtreatment.webp";
+import selfCare3 from "/images/activities&wellbeing/pedicure.webp";
+
+import agafay1 from "/images/activities&wellbeing/agafay1.webp";
+import agafay2 from "/images/activities&wellbeing/agafayCamel.webp";
+import agafay3 from "/images/activities&wellbeing/agafay3.webp";
+import agafay4 from "/images/activities&wellbeing/agafay4.webp";
+
+import moreOfMarrakesh1 from "/images/activities&wellbeing/airBaloon.webp";
+import moreOfMarrakesh2 from "/images/activities&wellbeing/cascadeOurika.webp";
+import moreOfMarrakesh3 from "/images/activities&wellbeing/horseRide.webp";
+import moreOfMarrakesh4 from "/images/activities&wellbeing/marrakech-chez-ali-fantasia1.webp";
+import moreOfMarrakesh5 from "/images/activities&wellbeing/ourika-valley.webp";
 
 export const PhotosImages = [
   {
-    folder: "header-images/",
+    folder: "gallery/",
     data: [
-      "backround1.png",
-      "islamic_wall3.png",
-      "kotoubia8.png",
-      "menara9.png",
-      "s9aya2.png",
+      "gallery1.webp",
+      "gallery4.webp",
+      "gallery5.webp",
+      "gallery6.webp",
+      "gallery7.webp",
+      "gallery8.webp",
+      "gallery9.webp",
+      "gallery10.webp",
+      "gallery11.webp",
+      "gallery3.webp",
+      "gallery12.webp",
+      "gallery13.webp",
+      "gallery14.webp",
+      "gallery15.webp",
+      "gallery2.webp",
+      "gallery16.webp",
+      "gallery17.webp",
+      "gallery19.webp",
+      "gallery20.webp",
+      "gallery21.webp",
+      "gallery28.webp",
+      "gallery23.webp",
+      "gallery24.webp",
+      "gallery25.webp",
+      "gallery22.webp",
+      "gallery26.webp",
+      "gallery51.webp",
+      "gallery27.webp",
+      "gallery29.webp",
+      "gallery30.webp",
+      "gallery18.webp",
+      "gallery31.webp",
+      "gallery32.webp",
+      "gallery34.webp",
+      "gallery35.webp",
+      "gallery37.webp",
+      "gallery38.webp",
+      "gallery39.webp",
+      "gallery40.webp",
+      "gallery53.webp",
+      "gallery33.webp",
+      "gallery41.webp",
+      "gallery42.webp",
+      "gallery43.webp",
+      "gallery44.webp",
+      "gallery45.webp",
+      "gallery36.webp",
+      "gallery46.webp",
+      "gallery47.webp",
+      "gallery48.webp",
+      "gallery49.webp",
+      "gallery50.webp",
+      "gallery52.webp",
     ],
-  },
-  {
-    folder: "",
-    data: ["cozy-green-sofa.jpeg", "cozy-grey-wall.jpeg"],
   },
 ];
 
@@ -46,38 +137,38 @@ export const sensationsData = [
     id: 1,
     title: "sen1title",
     content: "sens1content",
-    imageUrl: room1,
+    imageUrl: restorationSee,
   },
   {
     id: 2,
     title: "sen2title",
     content: "sens2content",
-    imageUrl: room2,
+    imageUrl: restorationHear,
   },
   {
     id: 3,
     title: "sen3title",
     content: "sens3content",
-    imageUrl: room3,
+    imageUrl: restorationSmell,
   },
   {
     id: 4,
     title: "sen4title",
     content: "sens4content",
-    imageUrl: room4,
+    imageUrl: restorationFeel,
   },
   {
     id: 5,
     title: "sen5title",
     content: "sens5content",
-    imageUrl: room5,
+    imageUrl: restorationTaste,
   },
 ];
 
 export const imgs = [
   {
     id: 1,
-    url: room3,
+    url: room2Image1,
     price: 60,
     title: "chambre double",
     surface: 20,
@@ -87,7 +178,7 @@ export const imgs = [
   },
   {
     id: 2,
-    url: room4,
+    url: room3Image1,
     price: 80,
     title: "suite parental",
     surface: 25,
@@ -97,7 +188,7 @@ export const imgs = [
   },
   {
     id: 3,
-    url: room5,
+    url: room1Image1,
     price: 120,
     title: "suite royale",
     surface: 30,
@@ -105,11 +196,11 @@ export const imgs = [
     bed: "1 double bed",
     bathroom: "1 bathroom",
     view: "garden view",
-    roomImages: [room5, room5, room5, room5],
+    roomImages: [room1Image1, room1Image1, room1Image1, room1Image1],
   },
   {
     id: 4,
-    url: room1,
+    url: room4Image1,
     price: 180,
     title: "family suite of 6 members",
     surface: 60,
@@ -119,7 +210,7 @@ export const imgs = [
   },
   {
     id: 5,
-    url: room2,
+    url: room5Image1,
     price: 190,
     title: "family suite of 7 members",
     surface: 60,
@@ -132,7 +223,7 @@ export const imgs = [
 export const rooms = [
   {
     id: 3,
-    url: room5,
+    url: room1Image1,
     price: 120,
     title: "imgTitle1",
     description: "description1",
@@ -141,11 +232,17 @@ export const rooms = [
     bed: "bed1",
     bathroom: "bathroom1",
     view: "view1",
-    roomImages: [room5, room5, room5, room5, room5],
+    roomImages: [
+      room1Image1,
+      room1Image2,
+      room1Image3,
+      room1Image4,
+      room1Image5,
+    ],
   },
   {
     id: 1,
-    url: room3,
+    url: room2Image1,
     price: 60,
     title: "imgTitle2",
     description: "description2",
@@ -154,11 +251,17 @@ export const rooms = [
     bed: "bed2",
     bathroom: "bathroom2",
     view: "view2",
-    roomImages: [room3, room3, room3, room3, room3],
+    roomImages: [
+      room2Image1,
+      room2Image2,
+      room2Image3,
+      room2Image4,
+      room2Image5,
+    ],
   },
   {
     id: 2,
-    url: room4,
+    url: room3Image1,
     price: 80,
     title: "imgTitle3",
     description: "description3",
@@ -167,11 +270,17 @@ export const rooms = [
     bed: "bed3",
     bathroom: "bathroom3",
     view: "view3",
-    roomImages: [room4, room4, room4, room4, room4],
+    roomImages: [
+      room3Image1,
+      room3Image2,
+      room3Image3,
+      room3Image4,
+      room3Image5,
+    ],
   },
   {
     id: 4,
-    url: room1,
+    url: room4Image1,
     price: 180,
     title: "imgTitle4",
     description: "description4",
@@ -180,11 +289,17 @@ export const rooms = [
     bed: "bed4",
     bathroom: "bathroom4",
     view: "view4",
-    roomImages: [room1, room1, room1, room1, room1],
+    roomImages: [
+      room4Image1,
+      room4Image2,
+      room4Image3,
+      room4Image4,
+      room4Image5,
+    ],
   },
   {
     id: 5,
-    url: room2,
+    url: room5Image1,
     price: 190,
     title: "imgTitle5",
     description: "description5",
@@ -193,14 +308,20 @@ export const rooms = [
     bed: "bed5",
     bathroom: "bathroom5",
     view: "view5",
-    roomImages: [room2, room2, room2, room2, room2],
+    roomImages: [
+      room5Image1,
+      room5Image2,
+      room5Image3,
+      room5Image4,
+      room5Image5,
+    ],
   },
 ];
 
 export const cards = [
   {
     id: 1,
-    url: "/src/assets/cozy-green-sofa.jpeg",
+    url: homeAccommodationPic3,
     link: "/accommodations",
     buttonContent: "accommodations",
     title: "horiScrollTitle1",
@@ -210,7 +331,7 @@ export const cards = [
   },
   {
     id: 2,
-    url: "/src/assets/cozy-green-sofa.jpeg",
+    url: homeReastorationPic,
     link: "/restoration",
     buttonContent: "restaurants",
     title: "horiScrollTitle2",
@@ -219,7 +340,7 @@ export const cards = [
   },
   {
     id: 3,
-    url: "/src/assets/cozy-green-sofa.jpeg",
+    url: homeActivitiesPic,
     link: "/activities&wellbeing",
     buttonContent: "activities & wellbeing",
     title: "horiScrollTitle3",
@@ -231,7 +352,7 @@ export const cards = [
 export const cards2 = [
   {
     id: 1,
-    url: "/src/assets/accommodations-photos/room1.jpg",
+    url: restaurationCarrou1,
     link: "/accommodations",
     buttonContent: "accommodations",
     title: "horiScrollTitle1",
@@ -241,7 +362,7 @@ export const cards2 = [
   },
   {
     id: 2,
-    url: "/src/assets/accommodations-photos/room2.jpg",
+    url: restaurationCarrou2,
     link: "/home",
     buttonContent: "restaurants",
     title: "horiScrollTitle2",
@@ -250,7 +371,7 @@ export const cards2 = [
   },
   {
     id: 3,
-    url: "/src/assets/accommodations-photos/room4.jpg",
+    url: restaurationCarrou3,
     link: "/activities",
     buttonContent: "activities",
     title: "horiScrollTitle3",
@@ -258,16 +379,21 @@ export const cards2 = [
 ];
 
 export const Pages = [
-  { id: 1, title: "home", link: "home", image: room1 },
-  { id: 2, title: "accommodations", link: "accommodations", image: room2 },
-  { id: 3, title: "restoration", link: "restoration", image: room3 },
+  { id: 1, title: "home", link: "home", image: homeLinkbkg },
+  {
+    id: 2,
+    title: "accommodations",
+    link: "accommodations",
+    image: accommodationLinkbkg,
+  },
+  { id: 3, title: "restoration", link: "restoration", image: restaurantLink },
   {
     id: 4,
     title: "activities&wellbeing",
     link: "activities&wellbeing",
-    image: room1,
+    image: room4Image1,
   },
-  { id: 5, title: "gallery", link: "gallery", image: room4 },
+  { id: 5, title: "gallery", link: "gallery", image: galleryLink },
 ];
 
 export const footerLinks = [
@@ -281,20 +407,19 @@ export const footerLinks = [
 export const headerSlideImages = [
   {
     id: 1,
-    picture: room1,
-    content:
-      "1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis rerum quae cumque.",
+    picture: homeImageHeader3,
   },
   {
     id: 2,
-    picture: room2,
-    content:
-      "2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis rerum quae cumque.",
+    picture: homeImageHeader1,
   },
   {
     id: 3,
-    picture: room3,
-    content: "yanis guest house",
+    picture: homeImageHeader4,
+  },
+  {
+    id: 4,
+    picture: homeImageHeader2,
   },
 ];
 
@@ -428,15 +553,5 @@ export const forms = [
     id: 2,
     name: "massage",
     link: "selfCareForm",
-  },
-  {
-    id: 3,
-    name: "agafay",
-    link: "agafayForm",
-  },
-  {
-    id: 4,
-    name: "other",
-    link: "moreOfMarrakeshForm",
   },
 ];

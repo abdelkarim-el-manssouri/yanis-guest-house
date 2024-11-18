@@ -1,5 +1,6 @@
-import { useEffect, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+/* eslint-disable react/prop-types */
+import { useEffect } from "react";
+import { motion } from "framer-motion";
 import SmallParagraph from "../../UI/SmallParagraph";
 import { IoTimerOutline } from "react-icons/io5";
 import { PiWarningOctagonBold } from "react-icons/pi";
@@ -383,7 +384,7 @@ const ExternalActivities = ({ t }) => {
               <span className="text-sm">/ {t("perPerson")}</span>
             </p>
           </div>
-          <Link to="/agafayForm">
+          <Link to="/selfCareForm">
             <div className="flex justify-center">
               <button className="py-1.5 w-5/6 mx-auto !font-PoiretOne font-bold border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
                 {t("book")}
@@ -438,7 +439,7 @@ const ExternalActivities = ({ t }) => {
               <span className="text-sm">/ {t("perPerson")}</span>
             </p>
           </div>
-          <Link to="/agafayForm">
+          <Link to="/selfCareForm">
             <div className="flex justify-center">
               <button className="py-1.5 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
                 {t("book")}
@@ -509,7 +510,7 @@ const ExternalActivities = ({ t }) => {
             </p>
             <p className="flex justify-center items-center gap-2 font-semibold text-lg"></p>
           </div>
-          <Link to="/agafayForm">
+          <Link to="/selfCareForm">
             <div className="flex justify-center">
               <button className="py-1.5 w-5/6 md:w-1/2 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
                 {t("book")}
@@ -580,7 +581,7 @@ const MoreOfMarrakesh = ({ t }) => {
                 <span className="text-sm">/ {t("perPerson")}</span>
               </p>
             </div>
-            <Link to="/moreOfMarrakeshForm">
+            <Link to="/selfCareForm">
               <div className="flex justify-center">
                 <button className="py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
                   {t("book")}
@@ -612,7 +613,7 @@ const MoreOfMarrakesh = ({ t }) => {
                 <span className="text-sm">/ {t("perPerson")}</span>
               </p>
             </div>
-            <Link to="/moreOfMarrakeshForm">
+            <Link to="/selfCareForm">
               <div className="flex justify-center">
                 <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
                   {t("book")}
@@ -644,7 +645,7 @@ const MoreOfMarrakesh = ({ t }) => {
                 <span className="text-sm">/ {t("perPerson")}</span>
               </p>
             </div>
-            <Link to="/moreOfMarrakeshForm">
+            <Link to="/selfCareForm">
               <div className="flex justify-center">
                 <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
                   {t("book")}
@@ -676,7 +677,7 @@ const MoreOfMarrakesh = ({ t }) => {
                 <span className="text-sm">/ {t("perPerson")}</span>
               </p>
             </div>
-            <Link to="/moreOfMarrakeshForm">
+            <Link to="/selfCareForm">
               <div className="flex justify-center">
                 <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
                   {t("book")}
@@ -719,7 +720,7 @@ const MoreOfMarrakesh = ({ t }) => {
                 <span className="text-sm">/ {t("perPerson")}</span>
               </p>
             </div>
-            <Link to="/moreOfMarrakeshForm">
+            <Link to="/selfCareForm">
               <div className="flex justify-center">
                 <button className="py-2 lg:w-1/2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
                   {t("book")}

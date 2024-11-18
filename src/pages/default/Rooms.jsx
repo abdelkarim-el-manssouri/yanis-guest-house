@@ -44,7 +44,8 @@ const RoomsHeader = ({ t }) => {
   return (
     <div
       style={{
-        backgroundImage: "url('/src/assets/accommodations-photos/room1.jpg')",
+        backgroundImage:
+          "url('/images/accommodation/Family-Suite-of-6-Peoples/image1-3.webp')",
       }}
       className="h-screen bg-black relative -mt-20 bg-cover bg-center z-50"
     >
@@ -215,7 +216,7 @@ const RoomsOutro = ({ t }) => {
         initial="initial"
         whileInView="animate"
         style={{
-          backgroundImage: "url('/src/assets/accommodations-photos/room1.jpg')",
+          backgroundImage: "url('/images/accommodation/roomsPageOutro.webp')",
         }}
         className="md:order-2 bg-cover bg-center shadow-xl overflow-hidden rounded-md relative before:absolute before:left-0 before:top-0 before:h-full before:w-[30%] before:bg-gradient-to-r before:from-black/70 before:to-transparent after:absolute after:right-0 after:top-0 after:h-full after:w-[30%] after:bg-gradient-to-l after:from-black/70 after:to-transparent"
       />

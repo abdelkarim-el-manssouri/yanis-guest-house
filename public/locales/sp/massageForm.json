@@ -2,6 +2,7 @@
   "makingAppointment": "hacer una cita",
   "afternoon": "la tarde del día siguiente",
   "morning": "por la mañana por la tarde",
+  "massage": "masaje",
   "name": "nombre completo",
   "email": "correo electrónico",
   "phoneNumber": "número de teléfono",
@@ -15,7 +16,18 @@
   "couple": "Masaje en Pareja",
   "manicure": "Manicura & Pedicura",
   "facial": "Tratamientos Faciales",
+  "discover": "descubre también",
+  "agafay": "desierto de agafay",
+  "more": "más de marrakech",
   "mind": "lo que está en tu mente",
   "typeHere": "escriba aquí...",
-  "send": "enviar"
+  "send": "enviar",
+  "pack1Agafay": "paquete 1",
+  "pack2Agafay": "paquete 2",
+  "pack3Agafay": "paquete 3",
+  "airBalloon": "Experiencia De Vuelo En Globo Aerostático",
+  "Ourika": "Valle De Ourika",
+  "Horseback": "Paseo A Caballo",
+  "Fantasia": "Espectáculo Folclórico Chez Ali Fantasia",
+  "Valleys": "El Circuito De Los 3 Valles Del Atlas"
 }

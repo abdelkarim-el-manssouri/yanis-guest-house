@@ -2,6 +2,7 @@
   "makingAppointment": "making an appointment",
   "afternoon": "the afternoon for the next day",
   "morning": "in the morning for the afternoon",
+  "massage": "massage",
   "name": "full name",
   "email": "email",
   "phoneNumber": "phone number",
@@ -15,7 +16,18 @@
   "couple": "Couple Massage",
   "manicure": "Manicure & Pedicure",
   "facial": "Facial Treatments",
+  "discover": "discover also",
+  "agafay": "agafay desert",
+  "more": "more of marrakesh",
   "mind": "what's in your mind",
   "typeHere": "type here...",
-  "send": "send"
+  "send": "send",
+  "pack1Agafay": "pack 1",
+  "pack2Agafay": "pack 2",
+  "pack3Agafay": "pack 3",
+  "airBalloon": "Air Baloon Flight Experience",
+  "Ourika": "Ourika Valley",
+  "Horseback": "Horseback Ride",
+  "Fantasia": "Chez Ali Fantasia Folk Show",
+  "Valleys": "The Circuit Of The 3 Valleys Of The Atlas"
 }

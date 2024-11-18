@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";

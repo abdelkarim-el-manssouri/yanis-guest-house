@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { useCallback, useMemo, useRef, useState } from "react";
 import { IoChevronBack } from "react-icons/io5";
-import { rooms } from "../data/data";
 
 const slideWidth = 750;
 const sliderGap = 20;
@@ -15,12 +14,7 @@ const scrollToSlide = (slider, slideIndex) => {
   });
 };
 
-const RoomsImagesCarouselModal = ({
-  clickedImg,
-  setClickedImg,
-  selected,
-  setSelected,
-}) => {
+const RoomsImagesCarouselModal = ({ clickedImg, setClickedImg, selected }) => {
   if (!clickedImg) return <></>;
 
   const sliderRef = useRef(null);
@@ -77,14 +71,6 @@ const RoomsImagesCarouselModal = ({
         onClick={(e) => e.stopPropagation()}
         className="w-full md:max-w-[75%] lg:max-w-[70%] mx-auto px-8 cursor-default"
       >
-        {/* <motion.div layoutId={`image-${clickedImg}`}>
-          <img
-            src={clickedImg}
-            alt={clickedImg}
-            className="rounded-md"
-            loading="lazy"
-          />
-        </motion.div> */}
         <ul>
           <li className="h-[500px] md:h-[400px] lg:h-[500px] overflow-hidden">
             <div
@@ -110,23 +96,6 @@ const RoomsImagesCarouselModal = ({
             </div>
           </li>
         </ul>
-        {/* <div className="flex">
-          {selected?.roomImages?.map((image, i) => (
-            <>
-              <img
-                key={i}
-                src={image}
-                alt={`${selected?.title} image`}
-                onClick={() => {
-                  setClickedImg(true);
-                  setClickedImg(image);
-                }}
-                className="snap-center snap-always rounded-xl object-cover bg-center aspect-[9/16] md:aspect-video md:w-[60vw] shadow-lg cursor-pointer"
-                loading="lazy"
-              />
-            </>
-          ))}
-        </div> */}
       </motion.div>
       <button
         disabled={

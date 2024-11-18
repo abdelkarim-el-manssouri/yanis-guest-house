@@ -1,8 +1,7 @@
 /* eslint-disable react/prop-types */
-import { useRef } from "react";
 import SmallParagraph from "../../UI/SmallParagraph";
 import EmailForm from "../../components/EmailForm";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 
@@ -27,11 +26,6 @@ const Book = () => {
 export default Book;
 
 const BookHeader = ({ t }) => {
-  // const firstTextRef = useRef(null);
-  // const { scrollYProgress } = useScroll({
-  //   target: firstTextRef,
-  //   offset: ["center center", "start start"],
-  // });
   return (
     <div className="relative h-screen bg-cozyGreen -mt-20 grid place-content-center bg-[url('/src/assets/accommodations-photos/room2.jpg')] bg-center bg-cover bg-no-repeat">
       <div className="absolute inset-0 bg-black/30" />

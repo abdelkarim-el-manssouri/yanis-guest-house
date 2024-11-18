@@ -2,6 +2,7 @@
   "makingAppointment": "prise de RDV",
   "afternoon": "la veille pour le lendemain",
   "morning": "le matin pour l’après-midi",
+  "massage": "massage",
   "name": "nom complet",
   "email": "email",
   "phoneNumber": "numéro de téléphone",
@@ -15,7 +16,18 @@
   "couple": "Massage Couple",
   "manicure": "Manucure & Pédicure",
   "facial": "Soins du Visage",
+  "discover": "découvrez aussi",
+  "agafay": "désert d'agafay",
+  "more": "plus de marrakech",
   "mind": "qu'y a-t-il dans ta tête",
   "typeHere": "tapez ici...",
-  "send": "envoyer"
+  "send": "envoyer",
+  "pack1Agafay": "pack 1",
+  "pack2Agafay": "pack 2",
+  "pack3Agafay": "pack 3",
+  "airBalloon": "Expérience De Vol En Montgolfière",
+  "Ourika": "Vallée D'Ourika",
+  "Horseback": "Balade À Cheval",
+  "Fantasia": "Chez Ali Fantasia Folk Show",
+  "Valleys": "Le Circuit Des 3 Vallées De L'Atlas"
 }

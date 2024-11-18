@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { Outlet } from "react-router-dom";
 import Footer from "./Footer";
@@ -11,7 +12,6 @@ import { PiHandTap } from "react-icons/pi";
 const DefaultLayout = () => {
   const [hidden, setHidden] = useState(false);
   const { scrollY } = useScroll();
-  // const vheight = window.innerHeight;
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
     if (latest > previous && latest > 90) {
@@ -21,14 +21,6 @@ const DefaultLayout = () => {
     }
   });
 
-  // useMotionValueEvent(scrollY, "change", (y) => {
-  //   const difference = y - lastYRef.current;
-  //   if (Math.abs(difference) > 50) {
-  //     setIsHidden(difference > 0);
-
-  //     lastYRef.current = y;
-  //   }
-  // });
   const { t } = useTranslation("navbar");
   return (
     <>
@@ -64,7 +56,6 @@ const BookButton = ({ t }) => {
   const [isHidden, setIsHidden] = useState(false);
   const [selected, setSelected] = useState(false);
   const { scrollY } = useScroll();
-  // const lastYRef = useRef(0);
 
   useMotionValueEvent(scrollY, "change", (y) => {
     if (y > 75) {

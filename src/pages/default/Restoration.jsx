@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 import SmallParagraph from "../../UI/SmallParagraph";
@@ -54,7 +55,7 @@ const RestoHeader = ({ t }) => {
     <>
       <div
         style={{
-          backgroundImage: "url('/src/assets/accommodations-photos/room1.jpg')",
+          backgroundImage: "url('/images/Restaurant/restaurantbkg.webp')",
         }}
         className="h-screen z-50 bg-cover bg-center -mt-20"
       >
@@ -136,7 +137,7 @@ const SeeMenu = ({ t }) => {
             {t("discover")}
           </h4>
           <button className="py-3 px-10 !font-PoiretOne font-bold bg-secondary/15 transition duration-300 hover:bg-secondary/25 text-mainText hover:text-background shadow-md hover:shadow-xl active:shadow-none hover:scale-105 active:scale-95 capitalize rounded-sm">
-            <a href="/pdf/sample.pdf" target="_blank">
+            <a href="/pdf/MenuRestaurant.pdf" target="_blank">
               {t("seeMenu")}
             </a>
           </button>

@@ -8,8 +8,6 @@ import Photos from "./pages/photos";
 import Restoration from "./pages/default/Restoration";
 import Book from "./pages/default/Book";
 import MassageForm from "./components/MassageForm";
-import AgafayForm from "./components/AgafayForm";
-import MoreOfMarrakeshForm from "./components/MoreOfMarrakeshForm";
 
 const router = createBrowserRouter([
   {
@@ -47,14 +45,6 @@ const router = createBrowserRouter([
       {
         path: "/selfCareForm",
         element: <MassageForm />,
-      },
-      {
-        path: "/agafayForm",
-        element: <AgafayForm />,
-      },
-      {
-        path: "/moreOfMarrakeshForm",
-        element: <MoreOfMarrakeshForm />,
       },
     ],
   },

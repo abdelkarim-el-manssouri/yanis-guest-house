@@ -30,7 +30,7 @@ const Footer = () => {
                 <Link
                   key={link.code}
                   to={link.link}
-                  className="relative after:block after:w-full after:h-0.5 after:bg-black after:scale-x-0 after:transition after:delay-75 after:ease-in after:rounded-full hover:after:scale-x-100"
+                  className="relative after:block after:w-full after:h-0.5 after:bg-black after:scale-x-0 after:transition after:delay-75 after:ease-in after:rounded-full hover:after:scale-x-100 capitalize"
                 >
                   {t(link.link)}
                 </Link>
@@ -80,7 +80,7 @@ const Footer = () => {
           </div>
         </section>
         <section className="h-full grid items-center">
-          <div className="flex justify-center mx-8 pt-4 text-center relative before:absolute before:top-0 before:h-[0.5px] before:w-full before:bg-primary before:rounded-full">
+          <div className="flex justify-center mx-8 pt-4 text-center relative before:absolute before:top-0 before:h-[0.5px] before:w-full before:bg-primary before:rounded-full capitalize">
             &copy; {t("rights")} - {currentYear}
           </div>
         </section>

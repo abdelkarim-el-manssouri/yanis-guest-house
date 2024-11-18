@@ -1,12 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useRef } from "react";
 import { AnimatedText } from "../../UI/AnimatedText";
-import {
-  motion,
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import HorizontalScroll from "../../components/HorizontalScroll";
 import { SwipeCarousel } from "../../components/Carousel";
 import SmallParagraph from "../../UI/SmallParagraph";
@@ -47,15 +42,6 @@ const fadeInRightXAxisAnimationVariants = {
   },
 };
 
-const xAxisTextScroll = {
-  initial: {
-    x: 150,
-  },
-  animate: {
-    x: -1000,
-  },
-};
-
 const welcomeVariants = {
   initial: {
     opacity: 0,
@@ -87,9 +73,6 @@ const Home = () => {
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
 
-  const scale2Progress = useTransform(scrollYProgress, [0, 1], [0, 1]);
-  const opacity2Progress = useTransform(scrollYProgress, [0, 1], [0, 1]);
-
   const { t } = useTranslation("home");
   return (
     <motion.div variants={welcomeVariants} initial="initial" animate="animate">
@@ -107,9 +90,10 @@ const Home = () => {
           opacity: opacityProgress,
         }}
         ref={ref}
-        className="flex justify-center h-screen w-full bg-cover bg-no-repeat bg-center bg-[url('/src/assets/cozy-grey-wall.jpeg')]"
+        className="flex relative justify-center h-screen w-full bg-cover bg-no-repeat bg-center bg-[url('/images/accommodation/Family-Suite-of-7-Peoples/room5Image4.webp')]"
       >
-        <div className="grid place-content-center -mt-44 leading-8 !font-Italiana w-[25ch] md:w-[50ch] lg:w-[80ch] uppercase [text-shadow:_1px_1px_0_rgb(0_0_0_/_40%)]">
+        <div className="absolute inset-0 bg-black/20" />
+        <div className="grid place-content-center z-10 -mt-44 leading-8 !font-Italiana w-[25ch] md:w-[50ch] lg:w-[80ch] uppercase [text-shadow:_1px_1px_0_rgb(0_0_0_/_40%)]">
           <AnimatedText text={t("textContent")} />
         </div>
       </motion.section>
@@ -153,11 +137,12 @@ const Home = () => {
             </motion.div>
           </div>
         </div>
-        <div className="md:col-span-2 md:shadow-2xl">
+        <div className="md:col-span-2 md:shadow-2xl relative">
+          <div className="absolute inset-0 bg-black/20" />
           <img
-            src="/src/assets/cozy-green-sofa_edited.jpg"
+            src="/images/homePage/homeToReturn.webp"
             alt="image"
-            className="h-full object-cover object-center"
+            className="lg:h-96 object-cover object-center rounded-sm w-full"
             loading="lazy"
           />
         </div>
@@ -169,11 +154,12 @@ const Home = () => {
         transition={{ type: "spring", stiffness: 100 }}
         className="h-3/4 grid gap-y-4 md:gap-y-0 md:grid-cols-3 mt-4 mb-8 md:my-16 md:w-11/12 mx-auto overflow-hidden"
       >
-        <div className="md:col-span-2 mt-4 md:mt-0 md:shadow-xl">
+        <div className="md:col-span-2 mt-4 md:mt-0 md:shadow-xl relative">
+          <div className="absolute inset-0 bg-black/20" />
           <img
-            src="/src/assets/cozy-green-sofa_edited.jpg"
+            src="/images/homePage/homeDiscover.webp"
             alt="image"
-            className="h-full object-cover object-center"
+            className="lg:h-96 w-full object-cover object-center rounded-sm"
             loading="lazy"
           />
         </div>
@@ -221,17 +207,10 @@ const EnjoyStay = ({ t }) => {
     target: enjoyRef,
   });
   const play = useTransform(scrollYProgress, [0.6, 0.9], [5000, -900]);
-  // const { scrollYProgress } = useScroll();
-  // useMotionValueEvent(scrollYProgress, "change");
   return (
-    <motion.section
-      // style={{
-      //   scale: scale2Progress,
-      //   opacity: opacity2Progress,
-      // }}
-      className="my-16 md:my-0 md:h-screen flex items-center overflow-hidden"
-    >
-      <div className="aspect-video lg:aspect-carousel w-full bg-cover opacity-80 bg-[url('/src/assets/cozy-green-sofa.jpeg')]">
+    <motion.section className="my-16 md:my-0 md:h-screen flex items-center overflow-hidden">
+      <div className="aspect-video lg:aspect-carousel2 w-full bg-cover bg-[url('/images/homePage/homeExplore.webp')] bg-bottom relative">
+        <div className="absolute inset-0 bg-black/20" />
         <motion.h2
           style={{
             x: play,

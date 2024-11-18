@@ -52,7 +52,7 @@ const BubbleText = ({ text }) => {
   }, []);
 
   return (
-    <h1 className="hover-text text-center text-2xl md:text-5xl lg:text-7xl text-mainText">
+    <h1 className="hover-text text-center text-2xl md:text-5xl lg:text-7xl text-[#Fac3c8]">
       <Text>{text}</Text>
     </h1>
   );

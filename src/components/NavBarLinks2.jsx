@@ -1,7 +1,9 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Pages } from "../data/data";
+import "../css/rooms.css";
 
 const NavBarLinks2 = ({ t }) => {
   const [open, setOpen] = useState(false);
@@ -10,7 +12,7 @@ const NavBarLinks2 = ({ t }) => {
   };
   const [revealImg, setRevealImg] = useState({
     show: false,
-    // image: "/src/assets/cozy-green-sofa.jpeg",
+    // image: "/images/homePage/homeHeaderImage3.webp",
     key: "0",
   });
 

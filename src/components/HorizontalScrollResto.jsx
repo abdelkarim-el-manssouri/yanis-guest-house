@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 import { cards2 } from "../data/data";
@@ -40,7 +41,7 @@ const Card = ({ card, t }) => {
       <img
         src={card.url}
         alt="image"
-        className="object-cover inset-0 transition-transform duration-1000 group-hover:scale-105 w-full md:h-full bg-transparent"
+        className="object-cover object-center inset-0 transition-transform duration-1000 group-hover:scale-105 w-full h-full bg-transparent"
         loading="lazy"
       />
       <div className="h-full grid place-content-center gap-3 m-2 p-3 md:m-6 lg:m-0 lg:gap-6 lg:mx-6 overflow-y-scroll lg:overflow-y-hidden">

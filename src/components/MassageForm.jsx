@@ -18,7 +18,6 @@ const formVariants = {
     transition: {
       type: "tween",
       duration: 1,
-      delay: 1,
     },
   },
 };
@@ -33,6 +32,14 @@ const MassageForm = () => {
   const [text, setText] = useState("");
   const [disable, setDisable] = useState(false);
   const [checkedValues, setCheckedValues] = useState([]);
+
+  const [adultNumberAgafay, setAdultNumberAgafay] = useState("");
+  const [dateAgafay, setDateAgafay] = useState("");
+  const [checkedValuesAgafay, setCheckedValuesAgafay] = useState([]);
+
+  const [adultNumberMore, setAdultNumberMore] = useState("");
+  const [dateMore, setDateMore] = useState("");
+  const [checkedValuesMore, setCheckedValuesMore] = useState([]);
 
   const { t } = useTranslation("massageForm");
 
@@ -55,6 +62,28 @@ const MassageForm = () => {
     }
   };
 
+  const handleChangeAgafay = (e) => {
+    const { value, checked } = e.target;
+    if (checked) {
+      setCheckedValuesAgafay((pre) => [...pre, value]);
+    } else {
+      setCheckedValuesAgafay((pre) => {
+        return [...pre.filter((plan) => plan !== value)];
+      });
+    }
+  };
+
+  const handleChangeMore = (e) => {
+    const { value, checked } = e.target;
+    if (checked) {
+      setCheckedValuesMore((pre) => [...pre, value]);
+    } else {
+      setCheckedValuesMore((pre) => {
+        return [...pre.filter((plan) => plan !== value)];
+      });
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -71,6 +100,12 @@ const MassageForm = () => {
       from_time: time,
       from_people_number: adultNumber,
       from_plan: checkedValues,
+      from_people_number_agafay: adultNumberAgafay,
+      date_agafay: dateAgafay,
+      from_plan_agafay: checkedValuesAgafay,
+      from_people_number_more: adultNumberMore,
+      date_more: dateMore,
+      from_plan_more: checkedValuesMore,
       message: text,
     };
 
@@ -88,6 +123,12 @@ const MassageForm = () => {
         setTime("");
         setAdultNumber("");
         setCheckedValues([]);
+        setAdultNumberAgafay("");
+        setDateAgafay("");
+        setCheckedValuesAgafay([]);
+        setAdultNumberMore("");
+        setDateMore("");
+        setCheckedValuesMore([]);
         setText("");
         setDisable(false);
       })
@@ -125,11 +166,14 @@ const MassageForm = () => {
       <motion.div
         variants={formVariants}
         initial="initial"
-        whileInView="animate"
+        animate="animate"
         viewport={{ once: true }}
         className="w-full max-w-xs md:max-w-2xl lg:max-w-[950px] mx-auto p-10 mb-28 !font-PoiretOne font-bold bg-lightGreen hover:bg-secondary/20 transition-colors duration-500 rounded-xl shadow-2xl"
       >
         <form onSubmit={handleSubmit}>
+          <p className="capitalize font-bold ml-1 my-4 text-xl mb-4 underline">
+            {t("massage")}
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div className="md:mt-6">
               <label>
@@ -214,7 +258,7 @@ const MassageForm = () => {
               </label>
             </div>
 
-            <div className="mt-3 md:mt-6 md:col-span-2 ">
+            <div className="mt-3 md:mt-6 md:col-span-2">
               <p className="capitalize font-bold ml-1">{t("selectPlan")}:</p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full mt-3 p-5 shadow-md border border-lightGreen rounded-lg">
                 <label className="flex gap-2 items-center justify-between border border-lightGreen shadow-md px-4 py-2 rounded-md bg-transparent hover:bg-secondary/20 transition duration-500 active:scale-95">
@@ -285,14 +329,199 @@ const MassageForm = () => {
                     onChange={handleChange}
                     className="rounded bg-transparent border-military text-golden focus:ring-1 focus:ring-golden"
                     type="checkbox"
-                    value="Facial Treatments"
+                    value="Facial Treatment"
                   />
                 </label>
               </div>
             </div>
           </div>
 
-          <div className="mt-6">
+          <div className="text-center font-black text-2xl uppercase my-20">
+            <span className="px-10 py-4 border-lightGreen border rounded-md shadow-md">
+              {" "}
+              {t("discover")}
+            </span>
+          </div>
+
+          <div className="mt-3 md:mt-6">
+            <p className="capitalize font-bold ml-1 text-xl mb-4 underline">
+              {t("agafay")}
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div className="mt-3 md:mt-6">
+                <label>
+                  <span className="capitalize font-bold ml-1">
+                    {t("people")}:
+                  </span>
+                  <input
+                    min="0"
+                    type="number"
+                    value={adultNumberAgafay}
+                    onChange={(e) => setAdultNumberAgafay(e.target.value)}
+                    className="w-full mt-3 px-3 py-2 shadow-md focus:outline-none focus:ring-1 focus:ring-golden focus:border-none bg-transparent focus:bg-secondary/20 hover:bg-secondary/20 transition-colors duration-500 border border-lightGreen rounded-lg"
+                  />
+                </label>
+              </div>
+
+              <div className="mt-3 md:mt-6">
+                <label>
+                  <span className="capitalize font-bold ml-1">
+                    {t("date")}:
+                  </span>
+                  <input
+                    type="date"
+                    value={dateAgafay}
+                    onChange={(e) => setDateAgafay(e.target.value)}
+                    className="w-full mt-3 px-3 py-2 shadow-md focus:outline-none focus:ring-1 focus:ring-golden focus:border-none bg-transparent focus:bg-secondary/20 hover:bg-secondary/20 transition-colors duration-500 border border-lightGreen rounded-lg"
+                  />
+                </label>
+              </div>
+            </div>
+
+            <div className="mt-3 md:mt-6">
+              <p className="capitalize font-bold ml-1">{t("selectPlan")}:</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full mt-3 p-5 shadow-md border border-lightGreen rounded-lg">
+                <label className="flex gap-2 items-center justify-between border border-lightGreen shadow-md px-4 py-2 rounded-md bg-transparent hover:bg-secondary/20 transition duration-500 active:scale-95">
+                  <span className="font-semibold first-letter:uppercase text-sm">
+                    {t("pack1Agafay")}
+                  </span>
+                  <input
+                    onChange={handleChangeAgafay}
+                    type="checkbox"
+                    value="Pack 1"
+                    className="rounded bg-transparent border-military text-golden focus:ring-1 focus:ring-golden"
+                  />
+                </label>
+
+                <label className="flex gap-2 items-center justify-between border border-lightGreen shadow-md px-4 py-2 rounded-md bg-transparent hover:bg-secondary/20 transition active:scale-95 duration-500">
+                  <span className="font-semibold first-letter:uppercase text-sm">
+                    {t("pack2Agafay")}
+                  </span>
+                  <input
+                    onChange={handleChangeAgafay}
+                    className="rounded bg-transparent border-military text-golden focus:ring-1 focus:ring-golden"
+                    type="checkbox"
+                    value="Pack 2"
+                  />
+                </label>
+
+                <label className="flex gap-2 items-center justify-between border border-lightGreen shadow-md px-4 py-2 rounded-md bg-transparent hover:bg-secondary/20 transition active:scale-95 duration-500">
+                  <span className="font-semibold first-letter:uppercase text-sm">
+                    {t("pack3Agafay")}
+                  </span>
+                  <input
+                    onChange={handleChangeAgafay}
+                    className="rounded bg-transparent border-military text-golden focus:ring-1 focus:ring-golden"
+                    type="checkbox"
+                    value="Pack 3"
+                  />
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-3 md:mt-6">
+            <p className="capitalize font-bold ml-1 mt-16 mb-4 text-xl underline">
+              {t("more")}
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div className="mt-3 md:mt-6">
+                <label>
+                  <span className="capitalize font-bold ml-1">
+                    {t("people")}:
+                  </span>
+                  <input
+                    min="0"
+                    type="number"
+                    value={adultNumberMore}
+                    onChange={(e) => setAdultNumberMore(e.target.value)}
+                    className="w-full mt-3 px-3 py-2 shadow-md focus:outline-none focus:ring-1 focus:ring-golden focus:border-none bg-transparent focus:bg-secondary/20 hover:bg-secondary/20 transition-colors duration-500 border border-lightGreen rounded-lg"
+                  />
+                </label>
+              </div>
+
+              <div className="mt-3 md:mt-6">
+                <label>
+                  <span className="capitalize font-bold ml-1">
+                    {t("date")}:
+                  </span>
+                  <input
+                    type="date"
+                    value={dateMore}
+                    onChange={(e) => setDateMore(e.target.value)}
+                    className="w-full mt-3 px-3 py-2 shadow-md focus:outline-none focus:ring-1 focus:ring-golden focus:border-none bg-transparent focus:bg-secondary/20 hover:bg-secondary/20 transition-colors duration-500 border border-lightGreen rounded-lg"
+                  />
+                </label>
+              </div>
+            </div>
+
+            <div className="mt-3 md:mt-6 md:col-span-2">
+              <p className="capitalize font-bold ml-1">{t("selectPlan")}:</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full mt-3 p-5 shadow-md border border-lightGreen rounded-lg">
+                <label className="flex gap-2 items-center justify-between border border-lightGreen shadow-md px-4 py-2 rounded-md bg-transparent hover:bg-secondary/20 transition duration-500 active:scale-95">
+                  <span className="font-semibold first-letter:uppercase text-sm">
+                    {t("airBalloon")}
+                  </span>
+                  <input
+                    onChange={handleChangeMore}
+                    type="checkbox"
+                    value="Air baloon"
+                    className="rounded bg-transparent border-military text-golden focus:ring-1 focus:ring-golden"
+                  />
+                </label>
+
+                <label className="flex gap-2 items-center justify-between border border-lightGreen shadow-md px-4 py-2 rounded-md bg-transparent hover:bg-secondary/20 transition active:scale-95 duration-500">
+                  <span className="font-semibold first-letter:uppercase text-sm">
+                    {t("Ourika")}
+                  </span>
+                  <input
+                    onChange={handleChangeMore}
+                    className="rounded bg-transparent border-military text-golden focus:ring-1 focus:ring-golden"
+                    type="checkbox"
+                    value="Ourika"
+                  />
+                </label>
+
+                <label className="flex gap-2 items-center justify-between border border-lightGreen shadow-md px-4 py-2 rounded-md bg-transparent hover:bg-secondary/20 transition active:scale-95 duration-500">
+                  <span className="font-semibold first-letter:uppercase text-sm">
+                    {t("Horseback")}
+                  </span>
+                  <input
+                    onChange={handleChangeMore}
+                    className="rounded bg-transparent border-military text-golden focus:ring-1 focus:ring-golden"
+                    type="checkbox"
+                    value="Horseback ride"
+                  />
+                </label>
+
+                <label className="flex gap-2 items-center justify-between border border-lightGreen shadow-md px-4 py-2 rounded-md bg-transparent hover:bg-secondary/20 transition active:scale-95 duration-500">
+                  <span className="font-semibold first-letter:uppercase text-sm">
+                    {t("Fantasia")}
+                  </span>
+                  <input
+                    onChange={handleChangeMore}
+                    className="rounded bg-transparent border-military text-golden focus:ring-1 focus:ring-golden"
+                    type="checkbox"
+                    value="Chez ali fantasia"
+                  />
+                </label>
+
+                <label className="flex gap-2 items-center justify-between md:col-span-2 border border-lightGreen shadow-md px-4 py-2 rounded-md bg-transparent hover:bg-secondary/20 transition active:scale-95 duration-500">
+                  <span className="font-semibold first-letter:uppercase text-sm">
+                    {t("Valleys")}
+                  </span>
+                  <input
+                    onChange={handleChangeMore}
+                    className="rounded bg-transparent border-military text-golden focus:ring-1 focus:ring-golden"
+                    type="checkbox"
+                    value="Valleys"
+                  />
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-16">
             <label>
               <span className="first-letter:uppercase font-bold ml-1">
                 {t("mind")}:

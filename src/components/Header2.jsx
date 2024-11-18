@@ -25,14 +25,14 @@ const HeaderImageReveal = ({ t }) => {
   let runInterval = useRef();
   const [scope, animate] = useAnimate();
   const runAnimation = async () => {
-    await animate(scope.current, { opacity: 0 }, { duration: 0.5 });
-    await animate(scope.current, { opacity: 0.5 }, { duration: 3 });
+    await animate(scope.current);
+    await animate(scope.current);
   };
 
   const startAnimation = () => {
     runInterval.current = setInterval(() => {
       runAnimation();
-    }, 7000);
+    }, 7900);
   };
 
   const controls = useAnimation();
