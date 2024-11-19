@@ -17,7 +17,6 @@ const Photos = () => {
   useEffect(() => {
     PhotosImages?.map((el) =>
       el?.data?.map((src, i) =>
-        // const imageUrl = require('packageName');
         import(dir + el.folder + src).then((res) =>
           setUrlArray((prev) => [...prev, res.default])
         )
@@ -53,8 +52,8 @@ const Photos = () => {
               >
                 <motion.img
                   layoutId={`image-${el}`}
-                  // src={el}
-                  src="/images/gallery/logo.png"
+                  src={el}
+                  // src="/images/gallery/homeHeaderImage3.jpg"
                   whileHover={{ scale: 1.1 }}
                   transition={imgTransition}
                   onClick={() => {
