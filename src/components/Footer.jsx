@@ -63,8 +63,9 @@ const Footer = () => {
               <a
                 target="_blank"
                 href="https://www.facebook.com/profile.php?id=61554812918518"
-              ></a>
-              <FiFacebook className="w-4 h-4 md:w-6 md:h-6 group-active:scale-90" />
+              >
+                <FiFacebook className="w-4 h-4 md:w-6 md:h-6 group-active:scale-90" />
+              </a>
             </span>
             <span className="size-7 md:size-9 group rounded-xl shadow-xl p-2 md:p-4 grid place-content-center active:shadow-none hover:scale-110 transition-all">
               <a target="_blank" href="tel:0808651872">

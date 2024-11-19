@@ -130,6 +130,10 @@ export const PhotosImages = [
       "gallery52.webp",
     ],
   },
+  {
+    folder: "test/",
+    data: ["logo.png", "homeHeaderImage3.jpg"],
+  },
 ];
 
 export const sensationsData = [

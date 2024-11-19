@@ -58,7 +58,7 @@ const Photos = () => {
                   onClick={() => {
                     setSelected(el);
                   }}
-                  className="cursor-pointer"
+                  className="cursor-zoom-in"
                 />
               </div>
             );

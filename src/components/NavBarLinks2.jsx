@@ -12,7 +12,7 @@ const NavBarLinks2 = ({ t }) => {
   };
   const [revealImg, setRevealImg] = useState({
     show: false,
-    // image: "/images/homePage/homeHeaderImage3.webp",
+    image: "/images/homePage/navbarLinks/homeLinkBkg2-1.webp",
     key: "0",
   });
 
