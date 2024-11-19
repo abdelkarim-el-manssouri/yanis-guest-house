@@ -12,6 +12,7 @@ export default defineConfig({
       "image/png": "image/png",
       "image/jpg": "image/jpg",
       "image/webp": "image/webp",
+      // "image/webp": "image/webp",
       "text/javascript": "application/javascript",
     },
   },
