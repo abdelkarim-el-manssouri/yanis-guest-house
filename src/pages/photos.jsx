@@ -17,6 +17,7 @@ const Photos = () => {
   useEffect(() => {
     PhotosImages?.map((el) =>
       el?.data?.map((src, i) =>
+        // const imageUrl = require('packageName');
         import(dir + el.folder + src).then((res) =>
           setUrlArray((prev) => [...prev, res.default])
         )
