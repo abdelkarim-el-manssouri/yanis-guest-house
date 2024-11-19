@@ -128,11 +128,9 @@ export const PhotosImages = [
       "gallery49.webp",
       "gallery50.webp",
       "gallery52.webp",
+      "logo.png",
+      "homeHeaderImage3.jpg",
     ],
-  },
-  {
-    folder: "test/",
-    data: ["logo.png", "homeHeaderImage3.jpg"],
   },
 ];
 
