@@ -55,7 +55,7 @@ const BookModal = ({ selected, setSelected, t }) => {
 
             <div className="flex justify-center md:self-end mt-20 md:mt-0">
               <img
-                src="https://yanisguesthouse.com/images/logo.png"
+                src="/images/logo.png"
                 alt="logo"
                 className="w-28 h-14 md:w-32 md:h-16 lg:w-36 lg:h-20"
               />

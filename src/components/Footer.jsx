@@ -40,7 +40,7 @@ const Footer = () => {
         </section>
         <section className="grid place-content-center h-full md:row-span-2">
           <img
-            src="https://yanisguesthouse.com/images/logo.png"
+            src="/images/logo.png"
             alt="yanis guest house logo"
             className="h-28 w-56 md:h-32 md:w-64 lg:h-40 lg:w-80"
             loading="lazy"
@@ -60,6 +60,10 @@ const Footer = () => {
               </a>
             </span>
             <span className="size-7 md:size-9 group rounded-xl shadow-xl p-2 md:p-4 grid place-content-center active:shadow-none hover:scale-110 transition-all">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/profile.php?id=61554812918518"
+              ></a>
               <FiFacebook className="w-4 h-4 md:w-6 md:h-6 group-active:scale-90" />
             </span>
             <span className="size-7 md:size-9 group rounded-xl shadow-xl p-2 md:p-4 grid place-content-center active:shadow-none hover:scale-110 transition-all">
