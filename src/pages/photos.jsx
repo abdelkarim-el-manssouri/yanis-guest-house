@@ -16,14 +16,17 @@ const Photos = () => {
 
   useEffect(() => {
     PhotosImages?.map((el) =>
-      el?.data?.map((src, i) =>
-        import(dir + el.folder + src).then((res) =>
-          setUrlArray((prev) => [...prev, res.default])
-        )
+      el?.data?.map((src, i) => {
+        // console.log('src : ' + i , src);
+        // console.log('new URL(`${dir}/gallery/${src}` : ' + i , new URL(`${dir}gallery/${src}`, import.meta.url).href);
+        
+        setUrlArray((prev) => [...prev, new URL(`${dir}gallery/${src}`, import.meta.url).href])
+      }
+        
       )
     );
 
-    setUrlArray([...new Set(url_array)]);
+    // setUrlArray([...new Set(url_array)]);
 
     window.scrollTo({
       top: 0,
