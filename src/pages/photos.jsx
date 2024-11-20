@@ -17,8 +17,8 @@ const Photos = () => {
   useEffect(() => {
     PhotosImages?.map((el) =>
       el?.data?.map((src, i) => {
-        // console.log('src : ' + i , src);
-        // console.log('new URL(`${dir}/gallery/${src}` : ' + i , new URL(`${dir}gallery/${src}`, import.meta.url).href);
+        console.log('src : ' + i , src);
+        console.log('new URL(`${dir}/gallery/${src}` : ' + i , new URL(`${dir}gallery/${src}`, import.meta.url).href);
         
         setUrlArray((prev) => [...prev, new URL(`${dir}gallery/${src}`, import.meta.url).href])
       }
