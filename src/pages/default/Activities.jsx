@@ -52,7 +52,8 @@ const ActivitiesHeader = ({ t }) => {
   return (
     <div
       style={{
-        backgroundImage: "url('/src/assets/accommodations-photos/room1.jpg')",
+        backgroundImage:
+          "url('/images/activities&wellbeing/activitiesBkg.webp')",
       }}
       className="h-screen bg-black relative -mt-20 bg-cover bg-center z-50"
     >

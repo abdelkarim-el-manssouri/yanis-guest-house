@@ -36,6 +36,7 @@ import homeImageHeader4 from "/images/homePage/homeHeaderImage4.webp";
 import homeLinkbkg from "/images/homePage/navbarLinks/homeLinkBkg2-1.webp";
 import accommodationLinkbkg from "/images/homePage/navbarLinks/accommodationLinkBkg2.webp";
 import restaurantLink from "/images/homePage/navbarLinks/restaurationbkg.webp";
+import activitiesLinkBkg from "/images/activities&wellbeing/activitiesBkg.webp";
 import galleryLink from "/images/homePage/navbarLinks/galleryLinkBkg.webp";
 
 import homeAccommodationPic3 from "/images/homePage/stairsPic.webp";
@@ -128,8 +129,6 @@ export const PhotosImages = [
       "gallery49.webp",
       "gallery50.webp",
       "gallery52.webp",
-      "logo.png",
-      "homeHeaderImage3.jpg",
     ],
   },
 ];
@@ -393,7 +392,7 @@ export const Pages = [
     id: 4,
     title: "activities&wellbeing",
     link: "activities&wellbeing",
-    image: room4Image1,
+    image: activitiesLinkBkg,
   },
   { id: 5, title: "gallery", link: "gallery", image: galleryLink },
 ];

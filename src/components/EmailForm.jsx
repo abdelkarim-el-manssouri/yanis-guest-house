@@ -196,11 +196,15 @@ const EmailForm = ({ t }) => {
                   {t("selectRoom")}
                 </option>
                 {/* <FaChevronDown /> */}
-                <option value="room 1">Suite Royale</option>
-                <option value="room 2">Chambre Double</option>
-                <option value="room 3">Suite Parental</option>
-                <option value="room 4">Family Suite Of 6 Members</option>
-                <option value="room 5">Family Suite Of 7 Members</option>
+                <option value="Suite Royale">Suite Royale</option>
+                <option value="Chambre Double">Chambre Double</option>
+                <option value="Suite Parental">Suite Parental</option>
+                <option value="Family Suite Of 6 Members">
+                  Family Suite Of 6 Members
+                </option>
+                <option value="Family Suite Of 7 Members">
+                  Family Suite Of 7 Members
+                </option>
               </select>
             </label>
           </div>

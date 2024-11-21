@@ -27,7 +27,7 @@ export default Book;
 
 const BookHeader = ({ t }) => {
   return (
-    <div className="relative h-screen bg-cozyGreen -mt-20 grid place-content-center bg-[url('/images/')] bg-center bg-cover bg-no-repeat">
+    <div className="relative h-screen bg-cozyGreen -mt-20 grid place-content-center bg-[url('/images/bookBkg.webp')] bg-center bg-cover bg-no-repeat">
       <div className="absolute inset-0 bg-black/30" />
       <div className="flex justify-center z-10 items-center h-full">
         <motion.p

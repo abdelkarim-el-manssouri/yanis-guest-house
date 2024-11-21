@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect } from "react";
 
 export const AnimatedText = (props) => {
@@ -52,7 +53,7 @@ const BubbleText = ({ text }) => {
   }, []);
 
   return (
-    <h1 className="hover-text text-center text-2xl md:text-5xl lg:text-7xl text-[#Fac3c8]">
+    <h1 className="hover-text text-center text-2xl md:text-5xl lg:text-7xl text-mainText">
       <Text>{text}</Text>
     </h1>
   );

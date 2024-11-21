@@ -95,7 +95,7 @@ const NavBarLinks2 = ({ t }) => {
                       exit={{ opacity: 0 }}
                       src={revealImg.image}
                       alt={`image of ${revealImg.key}`}
-                      className="object-cover object-center"
+                      className="object-cover object-center h-full w-full"
                       key={revealImg.key}
                     />
                   </AnimatePresence>

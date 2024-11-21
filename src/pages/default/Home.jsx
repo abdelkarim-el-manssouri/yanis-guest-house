@@ -92,7 +92,7 @@ const Home = () => {
         ref={ref}
         className="flex relative justify-center h-screen w-full bg-cover bg-no-repeat bg-center bg-[url('/images/accommodation/Family-Suite-of-7-Peoples/room5Image4.webp')]"
       >
-        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-black/10" />
         <div className="grid place-content-center z-10 -mt-44 leading-8 !font-Italiana w-[25ch] md:w-[50ch] lg:w-[80ch] uppercase [text-shadow:_1px_1px_0_rgb(0_0_0_/_40%)]">
           <AnimatedText text={t("textContent")} />
         </div>
