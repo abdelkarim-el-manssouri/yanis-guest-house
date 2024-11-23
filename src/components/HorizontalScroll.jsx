@@ -38,7 +38,7 @@ const Card = ({ card, t }) => {
   return (
     <div
       key={card.id}
-      className="group grid grid-flow-dense md:grid-rows-none md:grid-cols-2 h-[560px] w-[350px] md:w-[700px] lg:w-[1000px] overflow-hidden bg-neutral-100"
+      className="group grid grid-flow-dense md:grid-rows-none md:grid-cols-2 h-[720px] md:h-[650px] w-[350px] md:w-[700px] lg:w-[1000px] overflow-hidden bg-neutral-100"
     >
       <img
         src={card.url}
@@ -46,7 +46,7 @@ const Card = ({ card, t }) => {
         className="object-cover inset-0 transition-transform duration-1000 group-hover:scale-105 w-full md:h-full bg-transparent"
         loading="lazy"
       />
-      <div className="h-full grid place-content-center gap-3 m-2 p-3 md:m-6 lg:m-0 lg:gap-6 lg:mx-6 overflow-y-auto lg:overflow-y-hidden">
+      <div className="h-full grid place-content-center gap-3 m-2 -mt-5 md:-mt-0 p-3 md:m-6 lg:m-0 lg:gap-6 lg:mx-6 overflow-y-auto lg:overflow-y-hidden">
         <motion.h2
           variants={titleReveal}
           initial="initial"

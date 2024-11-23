@@ -151,7 +151,7 @@ const WellBeing = ({ t }) => {
               </p>
               <div className="flex justify-between my-8 mx-2 md:mx-4 !font-PoiretOne font-bold">
                 <p>
-                  <span className="text-lg">${i.price}</span>
+                  <span className="text-lg">€{i.price}</span>
                   &nbsp;
                   <span className="text-sm">/ {t(i.person)}</span>
                 </p>
@@ -220,7 +220,7 @@ const SelfCare = ({ t }) => {
             </p>
             <div className="flex justify-center my-8 mx-2 md:mx-4 !font-PoiretOne font-bold">
               <p className="">
-                <span className="text-xl">$40</span>
+                <span className="text-xl">€40</span>
                 &nbsp;
                 <span className="text-sm">/ {t("each")}</span>
               </p>
@@ -269,7 +269,7 @@ const SelfCare = ({ t }) => {
               </div>
             </div>
             <div className="flex justify-center my-6 mx-2 md:mx-4">
-              <p className="font-bold !font-PoiretOne text-xl">$50</p>
+              <p className="font-bold !font-PoiretOne text-xl">€50</p>
             </div>
             <Link to="/selfCareForm">
               <div className="flex justify-center">
@@ -380,7 +380,7 @@ const ExternalActivities = ({ t }) => {
           </div>
           <div className="flex justify-center my-8 mx-2 md:mx-4 !font-PoiretOne font-bold">
             <p>
-              <span className="text-xl">$55</span>
+              <span className="text-xl">€55</span>
               &nbsp;
               <span className="text-sm">/ {t("perPerson")}</span>
             </p>
@@ -435,7 +435,7 @@ const ExternalActivities = ({ t }) => {
           </div>
           <div className="flex justify-center my-8 mx-2 md:mx-4">
             <p>
-              <span className="text-xl">$55</span>
+              <span className="text-xl">€55</span>
               &nbsp;
               <span className="text-sm">/ {t("perPerson")}</span>
             </p>
@@ -505,7 +505,7 @@ const ExternalActivities = ({ t }) => {
           </div>
           <div className="flex justify-center my-8 mx-2 md:mx-4">
             <p>
-              <span className="text-xl">$80</span>
+              <span className="text-xl">€80</span>
               &nbsp;
               <span className="text-sm">/ {t("perPerson")}</span>
             </p>
@@ -577,7 +577,7 @@ const MoreOfMarrakesh = ({ t }) => {
             </p>
             <div className="flex justify-center my-8 mx-2 md:mx-4">
               <p>
-                <span className="text-xl">$190</span>
+                <span className="text-xl">€190</span>
                 &nbsp;
                 <span className="text-sm">/ {t("perPerson")}</span>
               </p>
@@ -609,7 +609,7 @@ const MoreOfMarrakesh = ({ t }) => {
             </p>
             <div className="flex justify-center my-8 mx-2 md:mx-4">
               <p>
-                <span className="text-xl">$100</span>
+                <span className="text-xl">€100</span>
                 &nbsp;
                 <span className="text-sm">/ {t("perPerson")}</span>
               </p>
@@ -641,7 +641,7 @@ const MoreOfMarrakesh = ({ t }) => {
             </p>
             <div className="flex justify-center my-8 mx-2 md:mx-4">
               <p>
-                <span className="text-xl">$85</span>
+                <span className="text-xl">€45</span>
                 &nbsp;
                 <span className="text-sm">/ {t("perPerson")}</span>
               </p>
@@ -673,7 +673,7 @@ const MoreOfMarrakesh = ({ t }) => {
             </p>
             <div className="flex justify-center my-8 mx-2 md:mx-4">
               <p>
-                <span className="text-xl">$60</span>
+                <span className="text-xl">€60</span>
                 &nbsp;
                 <span className="text-sm">/ {t("perPerson")}</span>
               </p>
@@ -716,9 +716,9 @@ const MoreOfMarrakesh = ({ t }) => {
             </div>
             <div className="flex justify-center my-8 mx-2 md:mx-4">
               <p>
-                <span className="text-xl">$160</span>
+                <span className="text-xl">€160</span>
                 &nbsp;
-                <span className="text-sm">/ {t("perPerson")}</span>
+                <span className="text-sm">/ {t("jusqua")}</span>
               </p>
             </div>
             <Link to="/selfCareForm">

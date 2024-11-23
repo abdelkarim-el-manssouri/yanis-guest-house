@@ -88,13 +88,15 @@ const MassageForm = () => {
     e.preventDefault();
 
     const serviceId = "service_1tlonrk";
+    // const templateId = "template_ewb40kl";
     const templateId = "template_ejnc764";
+    // const publicKey = "BCNpICZ-9M6WQ6WMp";
     const publicKey = "jKGK_J9pNuTsH65Rf";
 
     const templateParams = {
       from_name: name,
       from_email: email,
-      to_name: "abdelkarim el manssouri",
+      to_name: "Yanis Guest House",
       from_phone: phone,
       from_date: date,
       from_time: time,
@@ -113,9 +115,7 @@ const MassageForm = () => {
       .send(serviceId, templateId, templateParams, publicKey)
       .then(() => {
         setDisable(true);
-        toast.success(
-          "your request successfully sent, we will contact you soon"
-        );
+        toast.success(`${t("requestSuccess")}`);
         setName("");
         setEmail("");
         setPhone("");
@@ -133,7 +133,7 @@ const MassageForm = () => {
         setDisable(false);
       })
       .catch(() => {
-        toast.error("something went wrong, please repeat later");
+        toast.error(`${t("requestError")}`);
       });
   };
 
@@ -223,7 +223,7 @@ const MassageForm = () => {
                 </span>
                 <input
                   required
-                  min="0"
+                  min="1"
                   type="number"
                   value={adultNumber}
                   onChange={(e) => setAdultNumber(e.target.value)}

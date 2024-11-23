@@ -57,7 +57,7 @@ const RestoHeader = ({ t }) => {
         style={{
           backgroundImage: "url('/images/Restaurant/restaurantbkg.webp')",
         }}
-        className="h-screen z-50 bg-cover bg-center -mt-20"
+        className="h-screen z-50 bg-cover bg-center -mt-20 relative"
       >
         <div className="absolute inset-0 bg-black/30" />
         <div className="flex justify-center items-center h-full gap-y-16">

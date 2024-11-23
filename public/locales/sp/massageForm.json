@@ -29,5 +29,7 @@
   "Ourika": "Valle De Ourika",
   "Horseback": "Paseo A Caballo",
   "Fantasia": "Espectáculo Folclórico Chez Ali Fantasia",
-  "Valleys": "El Circuito De Los 3 Valles Del Atlas"
+  "Valleys": "El Circuito De Los 3 Valles Del Atlas",
+  "requestSuccess": "Su solicitud se ha enviado con éxito, nos pondremos en contacto con usted pronto.",
+  "requestError": "Algo salió mal, por favor intente nuevamente más tarde."
 }

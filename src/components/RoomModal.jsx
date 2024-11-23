@@ -187,7 +187,7 @@ const RoomModal = ({ selected, setSelected, t }) => {
               {`${t(selected?.description)}`}
             </p>
 
-            <div className="mt-12 md:mt-10 grid grid-cols-2 md:grid-cols-4 gap-3 text-sm lg:text-base capitalize !font-PoiretOne font-bold">
+            <div className="mt-12 md:mt-10 grid grid-cols-2 md:grid-cols-5 gap-3 text-sm lg:text-base capitalize !font-PoiretOne font-bold">
               <div className="flex flex-col items-center justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-3 shadow-lg md:shadow-md rounded-lg">
                 <IoBedOutline className="size-6 lg:size-8" />
                 <div>{`${t(selected?.bed)}`}</div>
@@ -203,7 +203,12 @@ const RoomModal = ({ selected, setSelected, t }) => {
                 </div>
               </div>
 
-              <div className="flex flex-col items-center justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-3 shadow-lg md:shadow-md rounded-lg">
+              <div className="flex flex-col items-center order-4 col-span-2 md:col-span-1 justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-3 shadow-lg md:shadow-md rounded-lg">
+                <IoRestaurantOutline className="size-6 lg:size-8" />
+                <div>{`${t(selected?.breakfast)}`}</div>
+              </div>
+
+              <div className="flex flex-col items-center order-3 justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-3 shadow-lg md:shadow-md rounded-lg">
                 <GiWindow className="size-6 lg:size-8" />
                 <div>{`${t(selected?.view)}`}</div>
               </div>
@@ -252,23 +257,7 @@ const RoomModal = ({ selected, setSelected, t }) => {
               {t("hotelAmenities")}
             </h4>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-x-3 md:gap-y-6 lg:gap-y-3 text-sm lg:text-base mt-8 md:mt-10 capitalize !font-PoiretOne font-bold">
-              <div className="flex flex-col items-center uppercase lg:p-5 gap-y-1 shadow-lg md:shadow-md md:gap-y-2 p-1 rounded-lg">
-                <LiaDumbbellSolid className="size-6 lg:size-8" />
-                <div>{t("gym")}</div>
-              </div>
-              <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
-                <TbParking className="size-6 lg:size-8" />
-                <div>{t("parking")}</div>
-              </div>
-              <div className="flex flex-col items-center uppercase lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
-                <TbMassage className="size-6 lg:size-8" />
-                <div>{t("spa")}</div>
-              </div>
-              <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
-                <IoRestaurantOutline className="size-6 lg:size-8" />
-                <div>{t("restaurant")}</div>
-              </div>
+            <div className="grid grid-cols-2 gap-4 md:gap-x-3 md:gap-y-6 lg:gap-y-3 text-sm lg:text-base mt-8 md:mt-10 capitalize !font-PoiretOne font-bold">
               <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
                 <MdOutlineRoomService className="size-6 lg:size-8" />
                 <div>{t("roomService")}</div>
@@ -278,6 +267,26 @@ const RoomModal = ({ selected, setSelected, t }) => {
                 <div>{t("swimmingPool")}</div>
               </div>
             </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-x-3 md:gap-y-6 lg:gap-y-3 text-sm lg:text-base mt-8 md:mt-10 capitalize !font-PoiretOne font-bold">
+              {/* <div className="flex flex-col items-center uppercase lg:p-5 gap-y-1 shadow-lg md:shadow-md md:gap-y-2 p-1 rounded-lg">
+                <LiaDumbbellSolid className="size-6 lg:size-8" />
+                <div>{t("gym")}</div>
+              </div> */}
+              <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
+                <TbParking className="size-6 lg:size-8" />
+                <div>{t("parking")}</div>
+              </div>
+              <div className="flex flex-col items-center uppercase lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
+                <TbMassage className="size-6 lg:size-8" />
+                <div>{t("spa")}</div>
+              </div>
+              <div className="flex flex-col items-center col-span-2 md:col-span-1 lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
+                <IoRestaurantOutline className="size-6 lg:size-8" />
+                <div>{t("restaurant")}</div>
+              </div>
+            </div>
+
             <div className="h-0.5 w-3/4 mx-auto bg-bordeaux rounded-full my-10 md:my-16" />
           </div>
           <div className="">

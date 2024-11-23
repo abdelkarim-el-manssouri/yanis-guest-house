@@ -2,14 +2,14 @@
 import { useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
 import { Link } from "react-router-dom";
-import { IoBedOutline } from "react-icons/io5";
+import { IoBedOutline, IoChevronBack } from "react-icons/io5";
 import { GiBathtub } from "react-icons/gi";
 import { TbRulerMeasure } from "react-icons/tb";
 import { HiOutlineUsers } from "react-icons/hi2";
 import { imgs, rooms } from "../data/data";
 
 const ONE_SECOND = 1000;
-const AUTO_DELAY = ONE_SECOND * 10;
+const AUTO_DELAY = ONE_SECOND * 30;
 const DRAG_BUFFER = 50;
 
 const SPRING_OPTIONS = {
@@ -96,7 +96,7 @@ const Images = ({ imgIndex, t }) => {
             transition={SPRING_OPTIONS}
             className="relative aspect-carousel w-screen shrink-0 rounded-xl bg-neutral-800 object-cover hover:scale-125"
           >
-            <div className="w-full h-full transition duration-[.6s] z-10 ease-in-out opacity-0 hover:opacity-100 hover:bg-cozyGreen/50 backdrop-blur-sm absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white">
+            <div className="absolute w-full h-full transition duration-[.6s] z-10 ease-in-out opacity-0 hover:opacity-100 hover:bg-cozyGreen/50 backdrop-blur-sm top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white">
               <div className="grid h-full w-full relative">
                 <div className="absolute left-2 md:left-4 top-2 md:top-4 uppercase !font-PoiretOne text-xs md:text-sm px-1.5 md:px-3 lg:px-5 py-1 lg:py-2 w-fit h-fit font-semibold text-golden bg-gradient-to-tl from-black to-black/20 border border-solid border-golden">
                   {t("start")} {imgSrc?.price} $
@@ -146,8 +146,28 @@ const Images = ({ imgIndex, t }) => {
 };
 
 const Dots = ({ imgIndex, setImgIndex }) => {
+  const goToPrev = () => {
+    const isFirstSlide = imgIndex === 0;
+    const newIndex = isFirstSlide ? imgs.length - 1 : imgIndex - 1;
+    setImgIndex(newIndex);
+  };
+  const goToNext = () => {
+    const isLastSlide = imgIndex === imgs.length - 1;
+    const newIndex = isLastSlide ? 0 : imgIndex + 1;
+    setImgIndex(newIndex);
+  };
   return (
-    <div className="mt-4 flex w-full justify-center gap-2">
+    <div className="mt-4 flex w-full justify-center items-center gap-2">
+      <button className="sr-only">prev</button>
+      <button
+        onClick={goToPrev}
+        className="size-1 lg:size-5 group rounded-xl shadow-xl p-4 mr-10 lg:mr-20 grid place-content-center active:shadow-none hover:scale-110 transition-all bg-gradient-to-tl from-beige to-beige/20"
+      >
+        <span className="group-active:scale-90">
+          <IoChevronBack />
+        </span>
+      </button>
+
       {imgs.map((_, idx) => {
         return (
           <button
@@ -161,6 +181,15 @@ const Dots = ({ imgIndex, setImgIndex }) => {
           />
         );
       })}
+      <button
+        onClick={goToNext}
+        className="size-5 group rounded-xl shadow-xl p-4 ml-10 lg:ml-20 grid place-content-center active:shadow-none hover:scale-110 transition-all bg-gradient-to-tr from-beige to-beige/20"
+      >
+        <span className="rotate-180 group-active:scale-90">
+          <IoChevronBack />
+        </span>
+      </button>
+      <button className="sr-only">next</button>
     </div>
   );
 };

@@ -28,10 +28,10 @@ import room5Image3 from "/images/accommodation/Family-Suite-of-7-Peoples/room5Im
 import room5Image4 from "/images/accommodation/Family-Suite-of-7-Peoples/room5Image4.webp";
 import room5Image5 from "/images/accommodation/Family-Suite-of-7-Peoples/room5Image5.webp";
 
-import homeImageHeader1 from "/images/homePage/homeHeaderImage1.webp";
+import homeImageHeader1 from "/images/homePage/homeHeaderImage4.webp";
 import homeImageHeader2 from "/images/homePage/homeHeaderImage2.webp";
 import homeImageHeader3 from "/images/homePage/homeHeaderImage3.webp";
-import homeImageHeader4 from "/images/homePage/homeHeaderImage4.webp";
+import homeImageHeader4 from "/images/homePage/homeDiscover.webp";
 
 import homeLinkbkg from "/images/homePage/navbarLinks/homeLinkBkg2-1.webp";
 import accommodationLinkbkg from "/images/homePage/navbarLinks/accommodationLinkBkg2.webp";
@@ -233,6 +233,7 @@ export const rooms = [
     bed: "bed1",
     bathroom: "bathroom1",
     view: "view1",
+    breakfast: "breakfast",
     roomImages: [
       room1Image1,
       room1Image2,
@@ -248,10 +249,11 @@ export const rooms = [
     title: "imgTitle2",
     description: "description2",
     surface: 20,
-    persones: "2 - 3",
+    persones: "2",
     bed: "bed2",
     bathroom: "bathroom2",
     view: "view2",
+    breakfast: "breakfast",
     roomImages: [
       room2Image1,
       room2Image2,
@@ -267,10 +269,11 @@ export const rooms = [
     title: "imgTitle3",
     description: "description3",
     surface: 25,
-    persones: "2 - 3",
+    persones: "2",
     bed: "bed3",
     bathroom: "bathroom3",
     view: "view3",
+    breakfast: "breakfast",
     roomImages: [
       room3Image1,
       room3Image2,
@@ -286,10 +289,11 @@ export const rooms = [
     title: "imgTitle4",
     description: "description4",
     surface: 60,
-    persones: "4 - 7",
+    persones: "4 - 6",
     bed: "bed4",
     bathroom: "bathroom4",
     view: "view4",
+    breakfast: "breakfast",
     roomImages: [
       room4Image1,
       room4Image2,
@@ -305,10 +309,11 @@ export const rooms = [
     title: "imgTitle5",
     description: "description5",
     surface: 60,
-    persones: "4 - 8",
+    persones: "4 - 6",
     bed: "bed5",
     bathroom: "bathroom5",
     view: "view5",
+    breakfast: "breakfast",
     roomImages: [
       room5Image1,
       room5Image2,
@@ -322,6 +327,15 @@ export const rooms = [
 export const cards = [
   {
     id: 1,
+    url: homeReastorationPic,
+    link: "/restoration",
+    buttonContent: "restaurants",
+    title: "horiScrollTitle2",
+    content1: "horiScrollContent2",
+    content2: "horiScrollContent2_1",
+  },
+  {
+    id: 2,
     url: homeAccommodationPic3,
     link: "/accommodations",
     buttonContent: "accommodations",
@@ -331,22 +345,12 @@ export const cards = [
     content3: "horiScrollContent1_2",
   },
   {
-    id: 2,
-    url: homeReastorationPic,
-    link: "/restoration",
-    buttonContent: "restaurants",
-    title: "horiScrollTitle2",
-    content1: "horiScrollContent2",
-    content2: "horiScrollContent2_1",
-  },
-  {
     id: 3,
     url: homeActivitiesPic,
     link: "/activities&wellbeing",
     buttonContent: "activities & wellbeing",
     title: "horiScrollTitle3",
     content1: "horiScrollContent3",
-    content2: "horiScrollContent3_1",
   },
 ];
 
@@ -412,15 +416,15 @@ export const headerSlideImages = [
   },
   {
     id: 2,
-    picture: homeImageHeader1,
-  },
-  {
-    id: 3,
     picture: homeImageHeader4,
   },
   {
-    id: 4,
+    id: 3,
     picture: homeImageHeader2,
+  },
+  {
+    id: 4,
+    picture: homeImageHeader1,
   },
 ];
 
@@ -541,18 +545,5 @@ export const moreOfMarrakeshImages = [
     id: 5,
     imageUrl: moreOfMarrakesh5,
     imgDescription: "CircuitTitle",
-  },
-];
-
-export const forms = [
-  {
-    id: 1,
-    name: "stay",
-    link: "book",
-  },
-  {
-    id: 2,
-    name: "massage",
-    link: "selfCareForm",
   },
 ];

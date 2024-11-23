@@ -29,5 +29,7 @@
   "Ourika": "Ourika Valley",
   "Horseback": "Horseback Ride",
   "Fantasia": "Chez Ali Fantasia Folk Show",
-  "Valleys": "The Circuit Of The 3 Valleys Of The Atlas"
+  "Valleys": "The Circuit Of The 3 Valleys Of The Atlas",
+  "requestSuccess": "your request was successfully sent, we will contact you soon",
+  "requestError": "something went wrong, please repeat later"
 }

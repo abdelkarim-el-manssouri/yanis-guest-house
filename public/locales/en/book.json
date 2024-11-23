@@ -13,5 +13,10 @@
   "message": "whats in your mind",
   "typeHere": "type here...",
   "send": "send",
-  "location": "our location"
+  "location": "our location",
+  "imgTitle1": "executive suite",
+  "imgTitle2": "Double Room",
+  "imgTitle3": "junior suite",
+  "imgTitle4": "Presidential Suite",
+  "imgTitle5": "Family Suite"
 }

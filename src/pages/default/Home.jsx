@@ -195,6 +195,21 @@ const Home = () => {
       </motion.section>
       <SwipeCarousel t={t} />
       <EnjoyStay t={t} />
+      {/* <div className="w-full h-[600px] bg-cozyGreen grid place-content-center">
+        <iframe
+          className="w-[1000px] h-[500px]"
+          src="https://yanis-guest-house.amenitiz.io/fr/bookingroom"
+          // style={{"border:0px, bo #FFFFFF none"}}
+          name="myiFrame"
+          // scrolling="no"
+          // frameBorder="1"
+          // marginHeight="0px"
+          // marginWidth="0px"
+          // height="500px"
+          // width="auto"
+          // allowfullscreen
+        ></iframe>
+      </div> */}
     </motion.div>
   );
 };
@@ -206,7 +221,7 @@ const EnjoyStay = ({ t }) => {
   const { scrollYProgress } = useScroll({
     target: enjoyRef,
   });
-  const play = useTransform(scrollYProgress, [0.6, 0.9], [5000, -900]);
+  const play = useTransform(scrollYProgress, [0.6, 0.9], [5000, -500]);
   return (
     <motion.section className="my-16 md:my-0 md:h-screen flex items-center overflow-hidden">
       <div className="aspect-video lg:aspect-carousel2 w-full bg-cover bg-[url('/images/homePage/homeExplore.webp')] bg-bottom relative">
@@ -215,7 +230,7 @@ const EnjoyStay = ({ t }) => {
           style={{
             x: play,
           }}
-          className="flex items-end w-full h-full whitespace-nowrap text-white capitalize text-[3.5em] md:text-[7em] lg:text-[10em] font-bold !font-Italiana transition-all duration-500 ease-move-mouse"
+          className="flex items-end w-full h-full whitespace-nowrap text-white capitalize text-[3.5em] md:text-[7em] lg:text-[8em] font-bold !font-Italiana transition-all duration-500 ease-move-mouse"
         >
           {t("enjoy")}
         </motion.h2>

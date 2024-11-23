@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import { FaTelegramPlane } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const EmailForm = ({ t }) => {
   const [name, setName] = useState("");
@@ -196,15 +197,11 @@ const EmailForm = ({ t }) => {
                   {t("selectRoom")}
                 </option>
                 {/* <FaChevronDown /> */}
-                <option value="Suite Royale">Suite Royale</option>
-                <option value="Chambre Double">Chambre Double</option>
-                <option value="Suite Parental">Suite Parental</option>
-                <option value="Family Suite Of 6 Members">
-                  Family Suite Of 6 Members
-                </option>
-                <option value="Family Suite Of 7 Members">
-                  Family Suite Of 7 Members
-                </option>
+                <option value="suite exécutif">{t("imgTitle1")}</option>
+                <option value="chambre double">{t("imgTitle2")}</option>
+                <option value="suite junior">{t("imgTitle3")}</option>
+                <option value="Suite Presidentielle">{t("imgTitle4")}</option>
+                <option value="suite familiale">{t("imgTitle5")}</option>
               </select>
             </label>
           </div>
