@@ -18,5 +18,7 @@
   "imgTitle2": "chambre double",
   "imgTitle3": "suite junior",
   "imgTitle4": "Suite Presidentielle",
-  "imgTitle5": " suite familiale"
+  "imgTitle5": " suite familiale",
+  "requestSuccess": "Votre demande a été envoyée avec succès, nous vous contacterons bientôt.",
+  "requestError": "Une erreur s'est produite, veuillez réessayer plus tard."
 }

@@ -45,7 +45,7 @@ const HeaderImageReveal = ({ t }) => {
       let timeOut = setTimeout(async () => {
         await controls.start("hidden");
         controls.start("visible");
-      }, 8000);
+      }, 10000);
       return () => clearTimeout(timeOut);
     };
 

@@ -7,6 +7,7 @@ import { GiBathtub } from "react-icons/gi";
 import { TbRulerMeasure } from "react-icons/tb";
 import { HiOutlineUsers } from "react-icons/hi2";
 import { imgs, rooms } from "../data/data";
+import RoomModal from "./RoomModal";
 
 const ONE_SECOND = 1000;
 const AUTO_DELAY = ONE_SECOND * 30;
@@ -79,19 +80,20 @@ export const SwipeCarousel = ({ t }) => {
 };
 
 const Images = ({ imgIndex, t }) => {
+  const [selected, setSelected] = useState(false);
   return (
     <>
-      {rooms.map((imgSrc) => {
+      {rooms.map((image) => {
         return (
           <motion.div
-            key={imgSrc.id}
+            key={image.id}
             style={{
-              backgroundImage: `url(${imgSrc.url})`,
+              backgroundImage: `url(${image.url})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
             animate={{
-              scale: imgIndex === imgSrc.id ? 0.95 : 0.85,
+              scale: imgIndex === image.id ? 0.95 : 0.85,
             }}
             transition={SPRING_OPTIONS}
             className="relative aspect-carousel w-screen shrink-0 rounded-xl bg-neutral-800 object-cover hover:scale-125"
@@ -99,45 +101,50 @@ const Images = ({ imgIndex, t }) => {
             <div className="absolute w-full h-full transition duration-[.6s] z-10 ease-in-out opacity-0 hover:opacity-100 hover:bg-cozyGreen/50 backdrop-blur-sm top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white">
               <div className="grid h-full w-full relative">
                 <div className="absolute left-2 md:left-4 top-2 md:top-4 uppercase !font-PoiretOne text-xs md:text-sm px-1.5 md:px-3 lg:px-5 py-1 lg:py-2 w-fit h-fit font-semibold text-golden bg-gradient-to-tl from-black to-black/20 border border-solid border-golden">
-                  {t("start")} {imgSrc?.price} $
+                  {t("start")} {image?.price} $
                 </div>
                 <h2 className="flex justify-center !font-Italiana capitalize items-end md:pb-5 font-bold text-xl md:text-3xl lg:text-4xl">
-                  {`${t(imgSrc?.title)}`}
+                  {`${t(image?.title)}`}
                 </h2>
                 <ul className="grid grid-cols-4 place-content-evenly md:gap-x-10 w-full md:w-3/4 mx-auto !font-PoiretOne">
                   <li className="flex justify-center items-center gap-1.5 md:gap-2.5 lg:gap-4">
                     <TbRulerMeasure className="w-6 lg:w-8 h-6 lg:h-8" />
                     <span className="text-sm md:text-base lg:text-lg font-semibold">
-                      {imgSrc.surface} m<sup>2</sup>
+                      {image.surface} m<sup>2</sup>
                     </span>
                   </li>
                   <li className="flex justify-center items-center md:gap-2.5 lg:gap-4">
                     <HiOutlineUsers className="w-6 lg:w-8 h-6 lg:h-8" />
                     <span className="text-sm md:text-base lg:text-lg font-semibold capitalize">
-                      {imgSrc.persones} {t("persons")}
+                      {image.persones} {t("persons")}
                     </span>
                   </li>
                   <li className="flex justify-center items-center gap-1.5 md:gap-2.5 lg:gap-4">
                     <IoBedOutline className="w-6 lg:w-8 h-6 lg:h-8" />
                     <span className="text-sm md:text-base lg:text-lg font-semibold capitalize">
-                      {`${t(imgSrc.bed)}`}
+                      {`${t(image.bed)}`}
                     </span>
                   </li>
                   <li className="flex justify-center items-center gap-1.5 md:gap-2.5 lg:gap-4">
                     <GiBathtub className="w-6 lg:w-8 h-6 lg:h-8" />
                     <span className="text-sm md:text-base lg:text-lg font-semibold capitalize">
-                      {`${t(imgSrc.bathroom)}`}
+                      {`${t(image.bathroom)}`}
                     </span>
                   </li>
                 </ul>
                 <Link
-                  to="/accommodations"
+                  onClick={() => {
+                    setSelected(true);
+                    setSelected(image);
+                  }}
+                  // to="/accommodations"
                   className="px-5 md:px-7 lg:px-10 py-0.5 md:py-1 lg:py-2 flex justify-self-center self-center w-fit h-fit text-sm md:text-base lg:text-lg font-bold uppercase !font-PoiretOne text-golden bg-gradient-to-br from-black to-black/20 relative before:absolute before:w-full before:h-0.5 before:left-0 before:-bottom-2 before:bg-gradient-to-bl before:from-black before:to-black/20 before:scale-x-0 before:transition before:delay-75 hover:before:scale-x-100"
                 >
                   {t("view")}
                 </Link>
               </div>
             </div>
+            <RoomModal selected={selected} setSelected={setSelected} t={t} />
           </motion.div>
         );
       })}
@@ -161,9 +168,9 @@ const Dots = ({ imgIndex, setImgIndex }) => {
       <button className="sr-only">prev</button>
       <button
         onClick={goToPrev}
-        className="size-1 lg:size-5 group rounded-xl shadow-xl p-4 mr-10 lg:mr-20 grid place-content-center active:shadow-none hover:scale-110 transition-all bg-gradient-to-tl from-beige to-beige/20"
+        className="size-1 lg:size-5 group rounded-xl shadow-xl p-4 mr-10 lg:mr-20 grid place-content-center active:shadow-none hover:scale-110 transition-all bg-gradient-to-tl from-cozyGreen to-golden"
       >
-        <span className="group-active:scale-90">
+        <span className="group-active:scale-90 text-background">
           <IoChevronBack />
         </span>
       </button>
@@ -175,7 +182,7 @@ const Dots = ({ imgIndex, setImgIndex }) => {
             onClick={() => setImgIndex(idx)}
             className={`h-2 md:h-3 w-2 md:w-3 rounded-full transition-colors ${
               idx === imgIndex
-                ? "bg-gradient-to-br from-beige via-bordeaux/10 to-beige/20"
+                ? "bg-gradient-to-br from-golden via-bordeaux/10 to-golden/20"
                 : "bg-gradient-to-br from-aubergine via-beige/10 to-aubergine/10"
             }`}
           />
@@ -183,9 +190,9 @@ const Dots = ({ imgIndex, setImgIndex }) => {
       })}
       <button
         onClick={goToNext}
-        className="size-5 group rounded-xl shadow-xl p-4 ml-10 lg:ml-20 grid place-content-center active:shadow-none hover:scale-110 transition-all bg-gradient-to-tr from-beige to-beige/20"
+        className="size-5 group rounded-xl shadow-xl p-4 ml-10 lg:ml-20 grid place-content-center active:shadow-none hover:scale-110 transition-all bg-gradient-to-tr from-cozyGreen to-golden"
       >
-        <span className="rotate-180 group-active:scale-90">
+        <span className="rotate-180 group-active:scale-90 text-background">
           <IoChevronBack />
         </span>
       </button>

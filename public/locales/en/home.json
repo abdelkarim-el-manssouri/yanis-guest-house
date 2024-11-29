@@ -24,11 +24,11 @@
 
   "start": "start with",
 
-  "imgTitle1": "suite royale",
-  "imgTitle2": "chambre double",
-  "imgTitle3": "suite parental",
-  "imgTitle4": "family suite of 6 members",
-  "imgTitle5": "family suite of 7 members",
+  "imgTitle1": "executive suite",
+  "imgTitle2": "Double Room",
+  "imgTitle3": "junior suite",
+  "imgTitle4": "Presidential Suite",
+  "imgTitle5": "Family Suite",
 
   "persons": "persons",
   "bed1": "1 double bed",

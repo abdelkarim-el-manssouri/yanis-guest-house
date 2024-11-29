@@ -223,7 +223,7 @@ export const imgs = [
 
 export const rooms = [
   {
-    id: 3,
+    id: 0,
     url: room1Image1,
     price: 120,
     title: "imgTitle1",
@@ -283,7 +283,7 @@ export const rooms = [
     ],
   },
   {
-    id: 4,
+    id: 3,
     url: room4Image1,
     price: 180,
     title: "imgTitle4",
@@ -303,7 +303,7 @@ export const rooms = [
     ],
   },
   {
-    id: 5,
+    id: 4,
     url: room5Image1,
     price: 190,
     title: "imgTitle5",

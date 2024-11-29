@@ -116,7 +116,7 @@ const scrollToSlide = (slider, slideIndex) => {
   });
 };
 
-const RoomModal = ({ selected, setSelected, t }) => {
+const RoomModalHome = ({ selected, setSelected, t }) => {
   const [clickedImg, setClickedImg] = useState(null);
   const sliderRef = useRef(null);
   const [sliderPosition, setSliderPosition] = useState(0);
@@ -367,4 +367,4 @@ const RoomModal = ({ selected, setSelected, t }) => {
   );
 };
 
-export default RoomModal;
+export default RoomModalHome;
