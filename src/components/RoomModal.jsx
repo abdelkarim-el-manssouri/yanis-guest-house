@@ -116,7 +116,9 @@ const scrollToSlide = (slider, slideIndex) => {
   });
 };
 
-const RoomModal = ({ selected, setSelected, t, position = 'absolute' }) => {
+const RoomModal = ({ selected, setSelected, t, position = 'fixed' }) => {
+  console.log('modal selected', position);
+  
   const [clickedImg, setClickedImg] = useState(null);
   const sliderRef = useRef(null);
   const [sliderPosition, setSliderPosition] = useState(0);
@@ -161,7 +163,7 @@ const RoomModal = ({ selected, setSelected, t, position = 'absolute' }) => {
         initial="initial"
         animate="animate"
         onClick={() => setSelected(null)}
-        className={`!${position} inset-0 bg-background z-[700] cursor-pointer pr-10 w-[calc(100%+2.5rem)] overflow-y-scroll`}
+        className={`${position} inset-0 bg-background z-[700] cursor-pointer pr-10 w-[calc(100%+2.5rem)] overflow-y-scroll`}
       >
         <motion.div
           key="modal"

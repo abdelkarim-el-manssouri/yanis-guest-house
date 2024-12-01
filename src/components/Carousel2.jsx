@@ -115,8 +115,8 @@ const Images = ({ imgIndex, t }) => {
       </div>
       
     </motion.section>
-      <div className="!w-full !h-screen" style={{position: 'fixed',top: '-2px',left: '0',width: '100% !important',height: '100vh !important',paddingTop: '90px !important',zIndex: 9999999}}>
-        <RoomModal selected={selected} setSelected={setSelected} t={t} />
+      <div className="!w-full !h-screen !overflow-x-hidden !overflow-y-auto" style={{position: 'fixed',top: '-2px',left: '0',width: '100% !important',height: '100vh !important',paddingTop: '90px !important',zIndex: 9999999}}>
+        <RoomModal selected={selected} setSelected={setSelected} t={t} position="absolute" />
       </div>
     </>
   );
