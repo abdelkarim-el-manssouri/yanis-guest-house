@@ -32,6 +32,7 @@ export const SwipeCarousel = ({ t }) => {
 const Images = ({ imgIndex, t }) => {
   const [selected, setSelected] = useState(false);
   return (
+    <>
     <motion.section className="">
       <div className="overflow-hidden h-[620px]">
         <div className="pb-10 h-[calc(620px+2.5rem)] flex items-center snap-x snap-mandatory px-5">
@@ -96,6 +97,9 @@ const Images = ({ imgIndex, t }) => {
                       onClick={() => {
                         setSelected(true);
                         setSelected(image);
+                        window.scrollTo({
+                          top: 0
+                        })
                       }}
                       // to="/accommodations"
                       className="px-5 md:px-7 lg:px-10 py-0.5 md:py-1 lg:py-2 flex justify-self-center self-center w-fit h-fit text-sm md:text-base lg:text-lg font-bold uppercase !font-PoiretOne text-golden bg-gradient-to-br from-black to-black/20 relative before:absolute before:w-full before:h-0.5 before:left-0 before:-bottom-2 before:bg-gradient-to-bl before:from-black before:to-black/20 before:scale-x-0 before:transition before:delay-75 hover:before:scale-x-100"
@@ -109,10 +113,12 @@ const Images = ({ imgIndex, t }) => {
           })}
         </div>
       </div>
-      <div className="top-0 left-0">
+      
+    </motion.section>
+      <div className="!w-full !h-screen" style={{position: 'fixed',top: '-2px',left: '0',width: '100% !important',height: '100vh !important',paddingTop: '90px !important',zIndex: 9999999}}>
         <RoomModal selected={selected} setSelected={setSelected} t={t} />
       </div>
-    </motion.section>
+    </>
   );
 };
 
