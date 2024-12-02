@@ -39,7 +39,7 @@ import restaurantLink from "/images/homePage/navbarLinks/restaurationbkg.webp";
 import activitiesLinkBkg from "/images/activities&wellbeing/activitiesBkg.webp";
 import galleryLink from "/images/homePage/navbarLinks/galleryLinkBkg.webp";
 
-import homeAccommodationPic3 from "/images/homePage/stairsPic.webp";
+import homeAccommodationPic3 from "/images/gallery/gallery38.webp";
 import homeReastorationPic from "/images/homePage/terraceTable.webp";
 import homeActivitiesPic from "/images/homePage/picineByNight2.webp";
 

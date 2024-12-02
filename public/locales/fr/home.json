@@ -24,18 +24,28 @@
 
   "start": "à partir de",
 
+  "title": "les hébergements",
+
+  "revealTextRoom": "Yanis Guest House, nichée dans la ville animée de Marrakech, offre un délicieux mélange de luxe et de confort. Nos chambres et suites élégantes allient un design intemporel à une beauté simple, vous assurant un séjour mémorable. En entrant dans notre oasis, vous découvrirez une piscine extérieure et un jardin luxuriant. Que ce soit pour les affaires ou les loisirs, Yanis Guest House promet un séjour inoubliable.",
+  "description1": "2 suites et salon moderne au rez-de-chaussée de la ville d'une superficie totale de 60 M2. Suite élégante et moderne avec une touche traditionnelle et joliment décorée. Ils sont très accueillants, créent une sensation de confort, parfaits pour ces moments spéciaux et pour un séjour de détente.",
+  "description2": "Un parfait équilibre entre modernité et tradition, notre chambre double vous accueille dans un cadre chaleureux et raffiné. Équipée d’une salle de bain privative avec douche à l’italienne, elle est idéale pour un moment de détente. Vous avez la possibilité d’opter pour un lit double ou deux lits simples séparés, selon vos préférences.",
+  "description3": "2 suites et salon moderne au rez-de-chaussée de la ville d'une superficie totale de 60 M2. Suite moderne et élégante, avec des détails contemporains et une décoration raffinée. Très accueillantes, elles offrent une sensation de confort intemporel créée pour des moments privilégiés et un séjour paisible.",
+  "description4": "2 suites et salon moderne au rez-de-chaussée de la ville d'une superficie totale de 60 M2.",
+  "description5": "2 suites et salon moderne au rez-de-chaussée de la ville d'une superficie totale de 60 M2.",
+
   "imgTitle1": "suite exécutif",
   "imgTitle2": "chambre double",
   "imgTitle3": "suite junior",
   "imgTitle4": "Suite Presidentielle",
   "imgTitle5": "suite familiale",
+  "show": "montrer plus",
 
   "persons": "personnes",
-  "bed1": "1 lit double",
-  "bed2": "2 lits",
-  "bed3": "1 lit double",
-  "bed4": "2 lits doubles",
-  "bed5": "2 lits doubles",
+  "bed1": "1 lit king size",
+  "bed2": "1 lit",
+  "bed3": "1 lit king size",
+  "bed4": "2 lits king size",
+  "bed5": "2 lits king size",
 
   "bathroom1": "1 salle de bain",
   "bathroom2": "1 salle de bain",
@@ -44,6 +54,35 @@
   "bathroom5": "1 salle de bain",
 
   "view": "vue",
+  "view1": "vue sur le jardin",
+  "view2": "-",
+  "view3": "Vue sur la piscine",
+  "view4": "Vue sur le jardin et la piscine",
+  "view5": "Vue sur le jardin et la piscine",
+  "breakfast": "petit-déjeuner inclus",
+
+  "roomAminities": "Équipements des chambres",
+  "shower": "douche",
+  "safe": "coffre-fort",
+  "wifi": "wifi",
+  "airConditioner": "climatiseur",
+  "phone": "téléphone",
+  "tv": "tv",
+  "heater": "chauffage",
+  "hairDryer": "sèche-cheveux",
+
+  "hotelAmenities": "équipements de l'hôtel",
+  "gym": "gym",
+  "parking": "parking",
+  "spa": "spa",
+  "restaurant": "restaurant",
+  "roomService": "service de chambre",
+  "swimmingPool": "la piscine",
+  "beginWith": "commencez par",
+  "night": "par nuit",
+
+  "outroTitle": "profitez de nos différentes listes de chambres et suites",
+  "outroParag": "Réparties sur différents étages de la villa, chacune de nos chambres de Yanis Guest House offre une expérience unique conçue pour rehausser votre séjour. Que vous regardiez les jardins luxuriants ou la piscine étincelante, ou que vous profitiez d'un moment de tranquillité sur votre balcon privé, nos chambres allient confort et charme. Ils vous invitent à savourer le temps de la manière la plus délicieuse possible.",
 
   "enjoy": "explorez un séjour inoubliable"
 }

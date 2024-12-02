@@ -23,7 +23,7 @@ const Rooms = () => {
     target: container,
     offset: ["start start", "end end"],
   });
-  const { t } = useTranslation("accommodations");
+  const { t } = useTranslation("home");
   return (
     <>
       <Helmet>
@@ -80,7 +80,7 @@ const RevealText = ({ scrollYProgress, t }) => {
       <div className="min-h-screen sticky top-0 flex justify-center items-center w-3/4 mx-auto text-justify lg:text-center">
         <div>
           <p className="text-xl md:text-3xl supports-[animation-timeline]:reveal-text !font-PoiretOne font-bold md:leading-[2.3rem] lg:leading-[3rem] text-black [text-shadow:_0.5px_0.5px_0_#00464326]">
-            {t("revealText")}
+            {t("revealTextRoom")}
           </p>
         </div>
       </div>

@@ -116,9 +116,7 @@ const scrollToSlide = (slider, slideIndex) => {
   });
 };
 
-const RoomModal = ({ selected, setSelected, t, position = 'fixed' }) => {
-  console.log('modal selected', position);
-  
+const RoomModal = ({ selected, setSelected, t, position = "fixed" }) => {
   const [clickedImg, setClickedImg] = useState(null);
   const sliderRef = useRef(null);
   const [sliderPosition, setSliderPosition] = useState(0);

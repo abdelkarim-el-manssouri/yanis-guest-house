@@ -72,13 +72,13 @@ const RoomsImagesCarouselModal = ({ clickedImg, setClickedImg, selected }) => {
         className="w-full md:max-w-[75%] lg:max-w-[70%] mx-auto px-8 cursor-default"
       >
         <ul>
-          <li className="h-[500px] md:h-[400px] lg:h-[500px] overflow-hidden">
+          <li className="h-[210px] md:h-[400px] lg:h-[500px] overflow-hidden">
             <div
               ref={sliderRef}
               onScroll={(ev) => {
                 setSliderPosition(ev.currentTarget.scrollLeft);
               }}
-              className="snap-x snap-mandatory lg:w-full h-[540px] md:h-[440px] lg:h-[540px] pb-10 flex shrink-0 gap-x-5 overflow-x-auto"
+              className="snap-x snap-mandatory lg:w-full h-[250px] md:h-[440px] lg:h-[540px] pb-10 flex shrink-0 gap-x-5 overflow-x-auto"
             >
               {selected?.roomImages?.map((image, i) => (
                 <img
@@ -89,7 +89,7 @@ const RoomsImagesCarouselModal = ({ clickedImg, setClickedImg, selected }) => {
                     setClickedImg(true);
                     setClickedImg(image);
                   }}
-                  className="snap-center snap-always rounded-xl object-cover bg-center aspect-[9/16] md:aspect-[16] md:w-[100vw]"
+                  className="snap-center snap-always rounded-lg md:rounded-xl object-cover bg-center aspect-video md:w-[100vw]"
                   loading="lazy"
                 />
               ))}
