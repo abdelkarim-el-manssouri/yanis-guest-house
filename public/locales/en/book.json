@@ -18,5 +18,7 @@
   "imgTitle2": "Double Room",
   "imgTitle3": "junior suite",
   "imgTitle4": "Presidential Suite",
-  "imgTitle5": "Family Suite"
+  "imgTitle5": "Family Suite",
+  "requestSuccess": "your request was successfully sent, we will contact you soon",
+  "requestError": "something went wrong, please repeat later"
 }

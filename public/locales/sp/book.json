@@ -18,5 +18,7 @@
   "imgTitle2": "Habitación Doble",
   "imgTitle3": "suite junior",
   "imgTitle4": "Suite Presidencial",
-  "imgTitle5": "Suite Familiar"
+  "imgTitle5": "Suite Familiar",
+  "requestSuccess": "Su solicitud se ha enviado con éxito, nos pondremos en contacto con usted pronto.",
+  "requestError": "Algo salió mal, por favor intente nuevamente más tarde."
 }

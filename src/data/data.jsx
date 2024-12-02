@@ -39,7 +39,7 @@ import restaurantLink from "/images/homePage/navbarLinks/restaurationbkg.webp";
 import activitiesLinkBkg from "/images/activities&wellbeing/activitiesBkg.webp";
 import galleryLink from "/images/homePage/navbarLinks/galleryLinkBkg.webp";
 
-import homeAccommodationPic3 from "/images/homePage/stairsPic.webp";
+import homeAccommodationPic3 from "/images/gallery/gallery38.webp";
 import homeReastorationPic from "/images/homePage/terraceTable.webp";
 import homeActivitiesPic from "/images/homePage/picineByNight2.webp";
 
@@ -223,7 +223,7 @@ export const imgs = [
 
 export const rooms = [
   {
-    id: 3,
+    id: 0,
     url: room1Image1,
     price: 120,
     title: "imgTitle1",
@@ -283,7 +283,7 @@ export const rooms = [
     ],
   },
   {
-    id: 4,
+    id: 3,
     url: room4Image1,
     price: 180,
     title: "imgTitle4",
@@ -303,7 +303,7 @@ export const rooms = [
     ],
   },
   {
-    id: 5,
+    id: 4,
     url: room5Image1,
     price: 190,
     title: "imgTitle5",

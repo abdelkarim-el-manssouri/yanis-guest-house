@@ -116,7 +116,7 @@ const scrollToSlide = (slider, slideIndex) => {
   });
 };
 
-const RoomModal = ({ selected, setSelected, t, position = "fixed" }) => {
+const RoomModalHome = ({ selected, setSelected, t }) => {
   const [clickedImg, setClickedImg] = useState(null);
   const sliderRef = useRef(null);
   const [sliderPosition, setSliderPosition] = useState(0);
@@ -161,7 +161,7 @@ const RoomModal = ({ selected, setSelected, t, position = "fixed" }) => {
         initial="initial"
         animate="animate"
         onClick={() => setSelected(null)}
-        className={`${position} inset-0 bg-background z-[700] cursor-pointer pr-10 w-[calc(100%+2.5rem)] overflow-y-scroll`}
+        className="fixed inset-0 bg-background z-[700] cursor-pointer pr-10 w-[calc(100%+2.5rem)] overflow-y-scroll"
       >
         <motion.div
           key="modal"
@@ -169,7 +169,7 @@ const RoomModal = ({ selected, setSelected, t, position = "fixed" }) => {
           initial="initial"
           animate="animate"
           onClick={(e) => e.stopPropagation()}
-          className="w-full max-w-xs md:max-w-2xl mt-[90px] lg:max-w-[950px] mx-auto mb-20 py-3 md:py-4 lg:py-6 px-4 md:px-6 lg:px-8 cursor-default bg-lightGreen hover:bg-secondary/20 transition-colors duration-500 rounded-xl shadow-2xl"
+          className="w-full max-w-xs md:max-w-2xl lg:max-w-[950px] mx-auto mt-8 mb-20 py-3 md:py-4 lg:py-6 px-4 md:px-6 lg:px-8 cursor-default bg-lightGreen hover:bg-secondary/20 transition-colors duration-500 rounded-xl shadow-2xl"
         >
           <div className="flex justify-end mr-1">
             <button onClick={() => setSelected(!selected)} className="p-4">
@@ -367,4 +367,4 @@ const RoomModal = ({ selected, setSelected, t, position = "fixed" }) => {
   );
 };
 
-export default RoomModal;
+export default RoomModalHome;

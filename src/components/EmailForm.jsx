@@ -4,7 +4,6 @@ import emailjs from "@emailjs/browser";
 import { FaTelegramPlane } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useTranslation } from "react-i18next";
 
 const EmailForm = ({ t }) => {
   const [name, setName] = useState("");
@@ -30,14 +29,14 @@ const EmailForm = ({ t }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const serviceId = "service_1tlonrk";
-    const templateId = "template_xaey3pe";
-    const publicKey = "jKGK_J9pNuTsH65Rf";
+    const serviceId = "service_1u67apo";
+    const templateId = "template_giedyfq";
+    const publicKey = "vqeY5q7qdH7ahJQHO";
 
     const templateParams = {
       from_name: name,
       from_email: email,
-      to_name: "abdelkarim el manssouri",
+      to_name: "Yanis Guest House",
       from_phone: phone,
       from_begin_date: beginDate,
       from_end_date: endDate,
@@ -51,9 +50,7 @@ const EmailForm = ({ t }) => {
       .send(serviceId, templateId, templateParams, publicKey)
       .then(() => {
         setDisable(true);
-        toast.success(
-          "your request successfully sent, we will contact you soon"
-        );
+        toast.success(`${t("requestSuccess")}`);
         setName("");
         setEmail("");
         setPhone("");
@@ -65,9 +62,8 @@ const EmailForm = ({ t }) => {
         setText("");
         setDisable(false);
       })
-      .catch((error) => {
-        toast.error("something went wrong, please repeat later");
-        console.error("error sending email", error);
+      .catch(() => {
+        toast.error(`${t("requestError")}`);
       });
   };
 

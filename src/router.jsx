@@ -8,6 +8,7 @@ import Photos from "./pages/photos";
 import Restoration from "./pages/default/Restoration";
 import Book from "./pages/default/Book";
 import MassageForm from "./components/MassageForm";
+import EmailForm from "./components/EmailForm";
 
 const router = createBrowserRouter([
   {

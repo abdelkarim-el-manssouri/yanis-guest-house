@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import { AnimatedText } from "../../UI/AnimatedText";
 import { motion, useScroll, useTransform } from "framer-motion";
 import HorizontalScroll from "../../components/HorizontalScroll";
-import { SwipeCarousel } from "../../components/Carousel";
+import { SwipeCarousel } from "../../components/Carousel2";
 import SmallParagraph from "../../UI/SmallParagraph";
 import Header2 from "../../components/Header2";
 import { useTranslation } from "react-i18next";
@@ -223,7 +223,7 @@ const EnjoyStay = ({ t }) => {
   });
   const play = useTransform(scrollYProgress, [0.6, 0.9], [5000, -500]);
   return (
-    <motion.section className="my-16 md:my-0 md:h-screen flex items-center overflow-hidden">
+    <motion.section className="my-16 md:my-0 md:h-screen flex items-center overflow-hidden bg-gradient-to-b from-bordeaux via-bordeaux to-black">
       <div className="aspect-video lg:aspect-carousel2 w-full bg-cover bg-[url('/images/homePage/homeExplore.webp')] bg-bottom relative">
         <div className="absolute inset-0 bg-black/20" />
         <motion.h2

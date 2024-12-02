@@ -52,7 +52,6 @@ const Photos = () => {
                 <motion.img
                   layoutId={`image-${el}`}
                   src={el}
-                  // src="/images/gallery/homeHeaderImage3.jpg"
                   whileHover={{ scale: 1.1 }}
                   transition={imgTransition}
                   onClick={() => {

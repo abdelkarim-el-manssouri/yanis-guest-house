@@ -87,11 +87,9 @@ const MassageForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const serviceId = "service_1tlonrk";
-    // const templateId = "template_ewb40kl";
-    const templateId = "template_ejnc764";
-    // const publicKey = "BCNpICZ-9M6WQ6WMp";
-    const publicKey = "jKGK_J9pNuTsH65Rf";
+    const serviceId = "service_1u67apo";
+    const templateId = "template_q8huheb";
+    const publicKey = "vqeY5q7qdH7ahJQHO";
 
     const templateParams = {
       from_name: name,
