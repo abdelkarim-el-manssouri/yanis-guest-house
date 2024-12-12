@@ -103,7 +103,7 @@ const ImageRoom = ({ scrollYProgress, t }) => {
             {rooms.map((image) => (
               <div
                 key={image.id}
-                className="shrink-0 aspect-[9/16] shadow-2xl md:aspect-video w-[65vw] md:w-[60vw] rounded-2xl overflow-clip relative snap-center snap-always"
+                className="shrink-0 aspect-[7/16] shadow-2xl md:aspect-video w-[65vw] md:w-[60vw] rounded-2xl overflow-clip relative snap-center snap-always"
               >
                 <img
                   className="w-full h-full object-cover"

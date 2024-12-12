@@ -345,7 +345,8 @@ const RoomModal = ({ selected, setSelected, t, position = "fixed" }) => {
             <div className="w-[90%] mx-auto flex flex-col md:flex-row md:justify-between items-center mt-14 mb-6 p-3 md:p-5 rounded-lg shadow-lg border border-dashed border-secondary/10">
               <p className="capitalize text-lg !font-Italiana font-bold text-center md:text-left mb-4 md:mb-0">
                 <span>
-                  {t("beginWith")} {selected?.price} ${" "}
+                  {t("beginWith")} {selected?.price}{" "}
+                  <span className="font-normal">€</span>
                 </span>
                 <br />
                 <span className="text-sm -mt-10">{t("night")}</span>

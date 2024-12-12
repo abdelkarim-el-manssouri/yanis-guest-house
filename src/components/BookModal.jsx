@@ -40,23 +40,23 @@ const BookModal = ({ selected, setSelected, t }) => {
                 {t("your")} :
               </p>
               <ul className="ml-10 mt-4">
-                {/* <li
-                  onClick={() => setSelected(!selected)}
+                <li
+                  // onClick={() => setSelected(!selected)}
                   className="relative w-fit my-3 lg:my-5 first:mt-0 last:mb-0 capitalize !font-PoiretOne font-bold text-lg lg:text-xl text-black/70 hover:text-black transition-colors duration-500 before:absolute h-full before:h-4/5 before:mt-[1%] md:before:mt-[0.5%] before:w-0.5 before:rounded-full before:-left-3 before:top-0 before:bg-golden hover:after:absolute hover:after:-bottom-1 after:duration-300 after:bg-black after:left-0 after:-bottom-4 after:h-0.5 after:w-full"
                 >
                   <a
-                    href="https://yanis-guest-house.amenitiz.io/fr/bookingroom"
+                    href="https://yanis-guest-house.hotelrunner.com/bv3"
                     target="_blank"
                   >
                     {t("stay")}
                   </a>
-                </li> */}
-                <li
+                </li>
+                {/* <li
                   onClick={() => setSelected(!selected)}
                   className="relative w-fit my-3 lg:my-5 first:mt-0 last:mb-0 capitalize !font-PoiretOne font-bold text-lg lg:text-xl text-black/70 hover:text-black transition-colors duration-500 before:absolute h-full before:h-4/5 before:mt-[1%] md:before:mt-[0.5%] before:w-0.5 before:rounded-full before:-left-3 before:top-0 before:bg-golden hover:after:absolute hover:after:-bottom-1 after:duration-300 after:bg-black after:left-0 after:-bottom-4 after:h-0.5 after:w-full"
                 >
                   <Link to="/book">{t("stay")}</Link>
-                </li>
+                </li> */}
                 <li
                   onClick={() => setSelected(!selected)}
                   className="relative w-fit my-3 lg:my-5 first:mt-0 last:mb-0 capitalize !font-PoiretOne font-bold text-lg lg:text-xl text-black/70 hover:text-black transition-colors duration-500 before:absolute h-full before:h-4/5 before:mt-[1%] md:before:mt-[0.5%] before:w-0.5 before:rounded-full before:-left-3 before:top-0 before:bg-golden hover:after:absolute hover:after:-bottom-1 after:duration-300 after:bg-black after:left-0 after:-bottom-4 after:h-0.5 after:w-full"

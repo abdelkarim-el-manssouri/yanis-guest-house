@@ -322,6 +322,26 @@ export const rooms = [
       room5Image5,
     ],
   },
+  // {
+  //   id: 5,
+  //   url: room5Image1,
+  //   price: 80,
+  //   title: "imgTitle6",
+  //   description: "description6",
+  //   surface: 25,
+  //   persones: "2",
+  //   bed: "bed3",
+  //   bathroom: "bathroom3",
+  //   view: "view6",
+  //   breakfast: "breakfast",
+  //   roomImages: [
+  //     room5Image1,
+  //     room5Image2,
+  //     room5Image3,
+  //     room5Image4,
+  //     room5Image5,
+  //   ],
+  // },
 ];
 
 export const cards = [

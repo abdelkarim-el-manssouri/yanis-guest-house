@@ -27,17 +27,19 @@
   "title": "the accommodations",
 
   "revealTextRoom": "Yanis Guest House, nestled in the vibrant city of Marrakesh, offers a delightful blend of luxury and comfort. Our elegant rooms and suites combine timeless design with simple beauty, ensuring a memorable stay. As you step into our oasis, you’ll discover an outdoor swimming pool and a lush garden. Whether for business or leisure, Yanis Guest House promises an unforgettable stay.",
-  "description1": "2 suites and modern living room on the ground floor of the city with a total area of 60 M². Elegant and modern suite with a traditional touch and nicely decorated. They are very welcoming, create a feeling of comfort, perfect for those special moments and for a relaxing stay.",
+  "description1": "Dive into a warm and elegant atmosphere, where the refinement of traditional moldings harmonizes with modern design. This room offers a comfortable bed for restful nights, in a carefully decorated setting. Every detail has been thought out to create a soothing atmosphere, ideal for an exceptional stay. Enjoy a comfortable bed and a welcome tea for a serene stay.",
   "description2": "A perfect balance of modernity and tradition, our double room welcomes you into a warm and refined setting. Equipped with a private bathroom featuring a walk-in shower, it is perfect for a relaxing stay. You can choose between a double bed or two separate single beds, depending on your needs.",
-  "description3": "2 suites and modern living room on the ground floor of the city with a total area of 60 M². Modern and elegant suite, with contemporary details and refined decor. Very welcoming, they offer a feeling of timeless comfort created for special moments and a peaceful stay.",
-  "description4": "2 suites and modern living room on the ground floor of the city with a total area of 60 M².",
-  "description5": "2 suites and modern living room on the ground floor of the city with a total area of 60 M².",
+  "description3": "With its refined style and intimate atmosphere, this junior suite is designed for a serene stay. Featuring a king-size bed and an elegant living room, it offers a comfortable and warm space. Enjoy a welcome tea upon arrival and savor an included breakfast to start the day off right.",
+  "description4": "Sumptuous and spacious, the presidential suite combines luxury and authenticity in an exceptional setting. It features two bedrooms, each with its own bathroom, and a beautifully furnished Moroccan living room, ideal for sharing unique moments. Designed to offer comfort and refinement, it promises an unforgettable stay, accompanied by a welcome tea and an included breakfast.",
+  "description5": "Ideal for family or friends' stays, this spacious suite can accommodate up to 6 people. It features a private living room and two bedrooms, each with its own bathroom for absolute comfort. Elegance, intimacy, and conviviality come together to create an unforgettable experience, enhanced by a welcome tea and an included breakfast.",
+  "description6": "Offering a soothing view of the pool, this junior suite combines elegance and comfort. It features a king-size bed, a welcoming living area, and a bright and warm atmosphere. A welcome tea and an included breakfast complete your stay.",
 
   "imgTitle1": "executive suite",
   "imgTitle2": "Double Room",
   "imgTitle3": "junior suite",
   "imgTitle4": "Presidential Suite",
   "imgTitle5": "Family Suite",
+  "imgTitle6": "Junior Suite Pool View",
   "show": "show more",
 
   "persons": "persons",
@@ -60,6 +62,7 @@
   "view3": "swimming pool view",
   "view4": "Garden and swimming pool view",
   "view5": "Garden and swimming pool view",
+  "view6": "swimming pool view",
   "breakfast": "Breakfast included",
 
   "roomAminities": "Room amenities",

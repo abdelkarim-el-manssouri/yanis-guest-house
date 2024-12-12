@@ -5,7 +5,7 @@
   "email": "email",
   "phoneNumber": "numéro de téléphone",
   "checkin": "Date d’arrivée",
-  "checkOut": "régler la note",
+  "checkOut": "date de départ",
   "adults": "nombre d'adultes",
   "kids": "nombre d'enfants",
   "room": "chambre",
