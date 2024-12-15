@@ -46,7 +46,7 @@ const Images = ({ imgIndex, setImgIndex, t }) => {
             <button className="sr-only">prev</button>
             <button
               onClick={goToPrev}
-              className="size-1 lg:size-5 absolute top-1/2 -translate-y-1/2 left-5 md:left-14 z-50 grid group rounded-xl shadow-xl p-4 mr-10 lg:mr-20 place-content-center active:shadow-none hover:scale-110 active:scale-95 transition-all "
+              className="size-1 lg:size-5 absolute top-1/2 -translate-y-1/2 left-5 md:left-14 grid group rounded-xl shadow-xl p-4 mr-10 lg:mr-20 place-content-center active:shadow-none hover:scale-110 active:scale-95 transition-all z-[999999]"
             >
               <span className="group-active:scale-90 text-background">
                 <IoChevronBack className="size-9 md:size-12" />
@@ -131,7 +131,7 @@ const Images = ({ imgIndex, setImgIndex, t }) => {
 
             <button
               onClick={goToNext}
-              className="size-5 absolute top-1/2 -translate-y-1/2 right-5 md:right-14 group rounded-xl shadow-xl p-4 ml-10 lg:ml-20 grid place-content-center active:shadow-none hover:scale-110 active:scale-95 transition-all"
+              className="size-5 absolute top-1/2 -translate-y-1/2 right-5 md:right-14 group z-[99999] rounded-xl shadow-xl p-4 ml-10 lg:ml-20 grid place-content-center active:shadow-none hover:scale-110 active:scale-95 transition-all"
             >
               <span className="rotate-180 group-active:scale-90 text-background">
                 <IoChevronBack className="size-9 md:size-12" />

@@ -193,23 +193,10 @@ const Home = () => {
           </div>
         </div>
       </motion.section>
-      <SwipeCarousel t={t} />
+      <div style={{ zIndex: "999999 !important" }}>
+        <SwipeCarousel t={t} />
+      </div>
       <EnjoyStay t={t} />
-      {/* <div className="w-full h-[600px] bg-cozyGreen grid place-content-center">
-        <iframe
-          className="w-[1000px] h-[500px]"
-          src="https://yanis-guest-house.amenitiz.io/fr/bookingroom"
-          // style={{"border:0px, bo #FFFFFF none"}}
-          name="myiFrame"
-          // scrolling="no"
-          // frameBorder="1"
-          // marginHeight="0px"
-          // marginWidth="0px"
-          // height="500px"
-          // width="auto"
-          // allowfullscreen
-        ></iframe>
-      </div> */}
     </motion.div>
   );
 };

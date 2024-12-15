@@ -351,9 +351,13 @@ const RoomModal = ({ selected, setSelected, t, position = "fixed" }) => {
                 <br />
                 <span className="text-sm -mt-10">{t("night")}</span>
               </p>
-              <Link to="/book">
+              <a
+                href="https://yanis-guest-house.hotelrunner.com/bv3"
+                target="_blank"
+                // to="/book"
+              >
                 <Button content="book" />
-              </Link>
+              </a>
             </div>
           </div>
         </motion.div>
