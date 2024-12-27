@@ -45,7 +45,7 @@ const RoomsHeader = ({ t }) => {
     <div
       style={{
         backgroundImage:
-          "url('/images/accommodation/Family-Suite-of-6-Peoples/image1-3.webp')",
+          "url('/images/accommodation/Family-Suite/room5Image3.webp')",
       }}
       className="h-screen bg-black relative -mt-20 bg-cover bg-center z-50"
     >
@@ -60,7 +60,7 @@ const RoomsHeader = ({ t }) => {
             duration: 1,
             delay: 1.3,
           }}
-          className="z-10 text-white font-bold !font-Italiana uppercase text-3xl md:text-4xl lg:text-5xl tracking-wide underline underline-offset-8 decoration-[3px] [text-shadow:_1px_1px_0_#00464326]"
+          className="z-10 text-white font-bold !font-Italiana uppercase text-3xl md:text-4xl lg:text-5xl tracking-wide [text-shadow:_1px_1px_0_#00464326]"
         >
           {t("title")}
         </motion.p>
@@ -96,7 +96,7 @@ const ImageRoom = ({ scrollYProgress, t }) => {
     <>
       <motion.section
         style={{ scale, opacity }}
-        className="h-[160vh] mt-[-100vh] bg-cozyGreen relative"
+        className="h-[160vh] mt-[-100vh] bg-gradient-to-b from-transparent via-golden to-transparent relative"
       >
         <div className="sticky top-0 h-screen overflow-hidden">
           <div className="h-[calc(100vh+2.5rem)] pb-10 flex items-center gap-5 overflow-x-auto snap-x snap-mandatory px-5">

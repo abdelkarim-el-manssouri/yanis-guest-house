@@ -90,7 +90,7 @@ const Home = () => {
           opacity: opacityProgress,
         }}
         ref={ref}
-        className="flex relative justify-center h-screen w-full bg-cover bg-no-repeat bg-center bg-[url('/images/accommodation/Family-Suite-of-7-Peoples/room5Image4.webp')]"
+        className="flex relative justify-center h-screen w-full bg-cover bg-no-repeat bg-center bg-[url('/images/accommodation/Presidentiel-suite/room4Image4.webp')]"
       >
         <div className="absolute inset-0 bg-black/10" />
         <div className="grid place-content-center z-10 -mt-44 leading-8 !font-Italiana w-[25ch] md:w-[50ch] lg:w-[80ch] uppercase [text-shadow:_1px_1px_0_rgb(0_0_0_/_40%)]">
@@ -210,7 +210,7 @@ const EnjoyStay = ({ t }) => {
   });
   const play = useTransform(scrollYProgress, [0.6, 0.9], [5000, -500]);
   return (
-    <motion.section className="my-16 md:my-0 md:h-screen flex items-center overflow-hidden bg-gradient-to-b from-bordeaux via-bordeaux to-black">
+    <motion.section className="my-16 md:my-0 md:h-screen flex items-center overflow-hidden">
       <div className="aspect-video lg:aspect-carousel2 w-full bg-cover bg-[url('/images/homePage/homeExplore.webp')] bg-bottom relative">
         <div className="absolute inset-0 bg-black/20" />
         <motion.h2

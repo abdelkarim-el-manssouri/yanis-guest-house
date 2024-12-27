@@ -68,7 +68,7 @@ const ActivitiesHeader = ({ t }) => {
             duration: 1,
             delay: 1.3,
           }}
-          className="z-10 text-white font-bold !font-Italiana uppercase text-3xl md:text-4xl lg:text-5xl tracking-wide underline underline-offset-8 decoration-[3px] [text-shadow:_1px_1px_0_#00464326]"
+          className="z-10 text-white font-bold !font-Italiana uppercase text-3xl md:text-4xl lg:text-5xl tracking-wide [text-shadow:_1px_1px_0_#00464326]"
         >
           {t("headerTitle")}
         </motion.h1>
@@ -160,13 +160,16 @@ const WellBeing = ({ t }) => {
                   {i.time}
                 </p>
               </div>
-              <Link to="/selfCareForm">
+              <a
+                href="https://yanis-guest-house.hotelrunner.com/bv3"
+                target="_blank"
+              >
                 <div className="flex justify-center">
                   <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg !font-PoiretOne font-bold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
                     {t("book")}
                   </button>
                 </div>
-              </Link>
+              </a>
             </div>
           </motion.div>
         ))}
@@ -225,13 +228,16 @@ const SelfCare = ({ t }) => {
                 <span className="text-sm">/ {t("each")}</span>
               </p>
             </div>
-            <Link to="/selfCareForm">
+            <a
+              href="https://yanis-guest-house.hotelrunner.com/bv3"
+              target="_blank"
+            >
               <div className="flex justify-center">
                 <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg !font-PoiretOne font-bold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
                   {t("book")}
                 </button>
               </div>
-            </Link>
+            </a>
           </div>
         </motion.div>
 
@@ -271,13 +277,16 @@ const SelfCare = ({ t }) => {
             <div className="flex justify-center my-6 mx-2 md:mx-4">
               <p className="font-bold !font-PoiretOne text-xl">€50</p>
             </div>
-            <Link to="/selfCareForm">
+            <a
+              href="https://yanis-guest-house.hotelrunner.com/bv3"
+              target="_blank"
+            >
               <div className="flex justify-center">
                 <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-bold !font-PoiretOne capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
                   {t("book")}
                 </button>
               </div>
-            </Link>
+            </a>
           </div>
         </motion.div>
       </div>
@@ -385,13 +394,16 @@ const ExternalActivities = ({ t }) => {
               <span className="text-sm">/ {t("perPerson")}</span>
             </p>
           </div>
-          <Link to="/selfCareForm">
+          <a
+            href="https://yanis-guest-house.hotelrunner.com/bv3"
+            target="_blank"
+          >
             <div className="flex justify-center">
               <button className="py-1.5 w-5/6 mx-auto !font-PoiretOne font-bold border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
                 {t("book")}
               </button>
             </div>
-          </Link>
+          </a>
         </motion.div>
 
         <motion.div
@@ -440,13 +452,16 @@ const ExternalActivities = ({ t }) => {
               <span className="text-sm">/ {t("perPerson")}</span>
             </p>
           </div>
-          <Link to="/selfCareForm">
+          <a
+            href="https://yanis-guest-house.hotelrunner.com/bv3"
+            target="_blank"
+          >
             <div className="flex justify-center">
               <button className="py-1.5 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
                 {t("book")}
               </button>
             </div>
-          </Link>
+          </a>
         </motion.div>
 
         <motion.div
@@ -511,13 +526,16 @@ const ExternalActivities = ({ t }) => {
             </p>
             <p className="flex justify-center items-center gap-2 font-semibold text-lg"></p>
           </div>
-          <Link to="/selfCareForm">
+          <a
+            href="https://yanis-guest-house.hotelrunner.com/bv3"
+            target="_blank"
+          >
             <div className="flex justify-center">
               <button className="py-1.5 w-5/6 md:w-1/2 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
                 {t("book")}
               </button>
             </div>
-          </Link>
+          </a>
         </motion.div>
       </div>
     </>
@@ -582,13 +600,16 @@ const MoreOfMarrakesh = ({ t }) => {
                 <span className="text-sm">/ {t("perPerson")}</span>
               </p>
             </div>
-            <Link to="/selfCareForm">
+            <a
+              href="https://yanis-guest-house.hotelrunner.com/bv3"
+              target="_blank"
+            >
               <div className="flex justify-center">
                 <button className="py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
                   {t("book")}
                 </button>
               </div>
-            </Link>
+            </a>
           </div>
         </motion.div>
 
@@ -614,13 +635,16 @@ const MoreOfMarrakesh = ({ t }) => {
                 <span className="text-sm">/ {t("perPerson")}</span>
               </p>
             </div>
-            <Link to="/selfCareForm">
+            <a
+              href="https://yanis-guest-house.hotelrunner.com/bv3"
+              target="_blank"
+            >
               <div className="flex justify-center">
                 <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
                   {t("book")}
                 </button>
               </div>
-            </Link>
+            </a>
           </div>
         </motion.div>
 
@@ -646,13 +670,16 @@ const MoreOfMarrakesh = ({ t }) => {
                 <span className="text-sm">/ {t("perPerson")}</span>
               </p>
             </div>
-            <Link to="/selfCareForm">
+            <a
+              href="https://yanis-guest-house.hotelrunner.com/bv3"
+              target="_blank"
+            >
               <div className="flex justify-center">
                 <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
                   {t("book")}
                 </button>
               </div>
-            </Link>
+            </a>
           </div>
         </motion.div>
 
@@ -678,13 +705,16 @@ const MoreOfMarrakesh = ({ t }) => {
                 <span className="text-sm">/ {t("perPerson")}</span>
               </p>
             </div>
-            <Link to="/selfCareForm">
+            <a
+              href="https://yanis-guest-house.hotelrunner.com/bv3"
+              target="_blank"
+            >
               <div className="flex justify-center">
                 <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
                   {t("book")}
                 </button>
               </div>
-            </Link>
+            </a>
           </div>
         </motion.div>
 
@@ -721,13 +751,16 @@ const MoreOfMarrakesh = ({ t }) => {
                 <span className="text-sm">/ {t("jusqua")}</span>
               </p>
             </div>
-            <Link to="/selfCareForm">
+            <a
+              href="https://yanis-guest-house.hotelrunner.com/bv3"
+              target="_blank"
+            >
               <div className="flex justify-center">
                 <button className="py-2 lg:w-1/2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
                   {t("book")}
                 </button>
               </div>
-            </Link>
+            </a>
           </div>
         </motion.div>
       </div>

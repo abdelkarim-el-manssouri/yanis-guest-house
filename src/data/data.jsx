@@ -1,8 +1,8 @@
-import room1Image1 from "/images/accommodation/Suite-Royal/room1Image1.webp";
-import room1Image2 from "/images/accommodation/Suite-Royal/room1Image2.webp";
-import room1Image3 from "/images/accommodation/Suite-Royal/room1Image3.webp";
-import room1Image4 from "/images/accommodation/Suite-Royal/room1Image4.webp";
-import room1Image5 from "/images/accommodation/Suite-Royal/room1Image5.webp";
+import room1Image1 from "/images/accommodation/Executive-suite/room1Image1.webp";
+import room1Image2 from "/images/accommodation/Executive-suite/room1Image2.webp";
+import room1Image3 from "/images/accommodation/Executive-suite/room1Image3.webp";
+import room1Image4 from "/images/accommodation/Executive-suite/room1Image4.webp";
+import room1Image5 from "/images/accommodation/Executive-suite/room1Image5.webp";
 
 import room2Image1 from "/images/accommodation/chambre-double/room2Image1.webp";
 import room2Image2 from "/images/accommodation/chambre-double/room2Image2.webp";
@@ -10,23 +10,29 @@ import room2Image3 from "/images/accommodation/chambre-double/room2Image3.webp";
 import room2Image4 from "/images/accommodation/chambre-double/room2Image4.webp";
 import room2Image5 from "/images/accommodation/chambre-double/room2Image5.webp";
 
-import room3Image1 from "/images/accommodation/Suite-Parentale/room3Image1.webp";
-import room3Image2 from "/images/accommodation/Suite-Parentale/room3Image2.webp";
-import room3Image3 from "/images/accommodation/Suite-Parentale/room3Image3.webp";
-import room3Image4 from "/images/accommodation/Suite-Parentale/room3Image4.webp";
-import room3Image5 from "/images/accommodation/Suite-Parentale/room3Image5.webp";
+import room3Image1 from "/images/accommodation/junior-suite/room3Image1.webp";
+import room3Image2 from "/images/accommodation/junior-suite/room3Image2.webp";
+import room3Image3 from "/images/accommodation/junior-suite/room3Image3.webp";
+import room3Image4 from "/images/accommodation/junior-suite/room3Image4.webp";
+import room3Image5 from "/images/accommodation/junior-suite/room3Image5.webp";
 
-import room4Image1 from "/images/accommodation/Family-Suite-of-6-Peoples/image1-1.webp";
-import room4Image2 from "/images/accommodation/Family-Suite-of-6-Peoples/image1-2.webp";
-import room4Image3 from "/images/accommodation/Family-Suite-of-6-Peoples/image1-3.webp";
-import room4Image4 from "/images/accommodation/Family-Suite-of-6-Peoples/image1-4.webp";
-import room4Image5 from "/images/accommodation/Family-Suite-of-6-Peoples/image1-5.webp";
+import room4Image1 from "/images/accommodation/Presidentiel-suite/room4Image1.webp";
+import room4Image2 from "/images/accommodation/Presidentiel-suite/room4Image2.webp";
+import room4Image3 from "/images/accommodation/Presidentiel-suite/room4Image3.webp";
+import room4Image4 from "/images/accommodation/Presidentiel-suite/room4Image4.webp";
+import room4Image5 from "/images/accommodation/Presidentiel-suite/room4Image5.webp";
 
-import room5Image1 from "/images/accommodation/Family-Suite-of-7-Peoples/room5Image1.webp";
-import room5Image2 from "/images/accommodation/Family-Suite-of-7-Peoples/room5Image2.webp";
-import room5Image3 from "/images/accommodation/Family-Suite-of-7-Peoples/room5Image3.webp";
-import room5Image4 from "/images/accommodation/Family-Suite-of-7-Peoples/room5Image4.webp";
-import room5Image5 from "/images/accommodation/Family-Suite-of-7-Peoples/room5Image5.webp";
+import room5Image1 from "/images/accommodation/Family-Suite/room5Image1.webp";
+import room5Image2 from "/images/accommodation/Family-Suite/room5Image2.webp";
+import room5Image3 from "/images/accommodation/Family-Suite/room5Image3.webp";
+import room5Image4 from "/images/accommodation/Family-Suite/room5Image4.webp";
+import room5Image5 from "/images/accommodation/Family-Suite/room5Image5.webp";
+
+import room6Image1 from "/images/accommodation/junior-suite-piscine-vue/room6Image1.webp";
+import room6Image2 from "/images/accommodation/junior-suite-piscine-vue/room6Image2.webp";
+import room6Image3 from "/images/accommodation/junior-suite-piscine-vue/room6Image3.webp";
+import room6Image4 from "/images/accommodation/junior-suite-piscine-vue/room6Image4.webp";
+import room6Image5 from "/images/accommodation/junior-suite-piscine-vue/room6Image5.webp";
 
 import homeImageHeader1 from "/images/homePage/homeHeaderImage4.webp";
 import homeImageHeader2 from "/images/homePage/homeHeaderImage2.webp";
@@ -129,6 +135,13 @@ export const PhotosImages = [
       "gallery49.webp",
       "gallery50.webp",
       "gallery52.webp",
+      "gallery53.webp",
+      "gallery54.webp",
+      "gallery55.webp",
+      "gallery56.webp",
+      "gallery57.webp",
+      "gallery58.webp",
+      "gallery59.webp",
     ],
   },
 ];
@@ -322,26 +335,26 @@ export const rooms = [
       room5Image5,
     ],
   },
-  // {
-  //   id: 5,
-  //   url: room5Image1,
-  //   price: 80,
-  //   title: "imgTitle6",
-  //   description: "description6",
-  //   surface: 25,
-  //   persones: "2",
-  //   bed: "bed3",
-  //   bathroom: "bathroom3",
-  //   view: "view6",
-  //   breakfast: "breakfast",
-  //   roomImages: [
-  //     room5Image1,
-  //     room5Image2,
-  //     room5Image3,
-  //     room5Image4,
-  //     room5Image5,
-  //   ],
-  // },
+  {
+    id: 5,
+    url: room6Image1,
+    price: 80,
+    title: "imgTitle6",
+    description: "description6",
+    surface: 25,
+    persones: "2",
+    bed: "bed3",
+    bathroom: "bathroom3",
+    view: "view6",
+    breakfast: "breakfast",
+    roomImages: [
+      room6Image1,
+      room6Image2,
+      room6Image3,
+      room6Image4,
+      room6Image5,
+    ],
+  },
 ];
 
 export const cards = [

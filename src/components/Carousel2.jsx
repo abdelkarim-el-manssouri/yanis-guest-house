@@ -20,7 +20,7 @@ export const SwipeCarousel = ({ t }) => {
   const [imgIndex, setImgIndex] = useState(0);
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-b from-transparent via-black to-bordeaux py-8">
+    <div className="relative overflow-hidden bg-gradient-to-b from-transparent via-golden to-transparent">
       <Images imgIndex={imgIndex} setImgIndex={setImgIndex} t={t} />
     </div>
   );
@@ -42,13 +42,13 @@ const Images = ({ imgIndex, setImgIndex, t }) => {
     <>
       <motion.section className="">
         <div className="overflow-hidden h-[620px]">
-          <div className="pb-10 h-[calc(620px+2.5rem)] flex items-center snap-x snap-mandatory px-5">
+          <div className="pb-10 h-[calc(620px+2.5rem)] flex items-center snap-x snap-mandatory overflow-x-auto px-5">
             <button className="sr-only">prev</button>
             <button
               onClick={goToPrev}
-              className="size-1 lg:size-5 absolute top-1/2 -translate-y-1/2 left-5 md:left-14 grid group rounded-xl shadow-xl p-4 mr-10 lg:mr-20 place-content-center active:shadow-none hover:scale-110 active:scale-95 transition-all z-[999999]"
+              className="hidden size-1 lg:size-10 absolute top-1/2 -translate-y-1/2 left-5 md:left-24 lg:grid group p-4 mr-10 lg:mr-20 place-content-center active:shadow-none hover:scale-110 active:scale-95 transition-all z-[999999]"
             >
-              <span className="group-active:scale-90 text-background">
+              <span className="group-active:scale-90 text-black">
                 <IoChevronBack className="size-9 md:size-12" />
               </span>
             </button>
@@ -69,9 +69,9 @@ const Images = ({ imgIndex, setImgIndex, t }) => {
                   }}
                   animate={{
                     translateX: `-${imgIndex * 100}%`,
-                    scale: imgIndex === image.id ? 0.95 : 0.8,
-                    // marginTop: imgIndex === image.id ? 0 : "20px",
-                    filter: imgIndex === image.id ? "blur(0px)" : "blur(5px)",
+                    scale: 0.9,
+                    // // marginTop: imgIndex === image.id ? 0 : "20px",
+                    // filter: imgIndex === image.id ? "blur(0px)" : "blur(5px)",
                   }}
                   transition={SPRING_OPTIONS}
                   className="shrink-0 aspect-[10/20] shadow-md md:aspect-video w-[65vw] md:w-[80vw] lg:w-[1000px] 2xl:w-[1100px] rounded-md overflow-clip relative snap-center snap-always"
@@ -131,9 +131,9 @@ const Images = ({ imgIndex, setImgIndex, t }) => {
 
             <button
               onClick={goToNext}
-              className="size-5 absolute top-1/2 -translate-y-1/2 right-5 md:right-14 group z-[99999] rounded-xl shadow-xl p-4 ml-10 lg:ml-20 grid place-content-center active:shadow-none hover:scale-110 active:scale-95 transition-all"
+              className="hidden size-5 md:size-10 absolute top-1/2 -translate-y-1/2 right-5 md:right-24 group z-[99999] p-4 ml-10 lg:ml-20 lg:grid place-content-center active:shadow-none hover:scale-110 active:scale-95 transition-all"
             >
-              <span className="rotate-180 group-active:scale-90 text-background">
+              <span className="rotate-180 group-active:scale-90 text-black">
                 <IoChevronBack className="size-9 md:size-12" />
               </span>
             </button>
