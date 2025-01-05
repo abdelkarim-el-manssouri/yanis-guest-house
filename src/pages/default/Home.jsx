@@ -195,7 +195,7 @@ const Home = () => {
           </div>
         </div>
       </motion.section>
-      <div style={{ zIndex: "999999 !important" }}>
+      <div style={{ zIndex: "999999999 !important" }}>
         <SwipeCarousel t={t} />
       </div>
       <EnjoyStay t={t} />
