@@ -22,7 +22,7 @@ export const SwipeCarousel = ({ t }) => {
   return (
     <div
       // style={{ zIndex: "999999999 !important" }}
-      className="relative overflow-hidden bg-gradient-to-b from-transparent via-golden to-transparent !z-[999999999]"
+      className="relative overflow-hidden bg-gradient-to-b from-transparent via-golden to-transparent"
     >
       <Images imgIndex={imgIndex} setImgIndex={setImgIndex} t={t} />
     </div>
