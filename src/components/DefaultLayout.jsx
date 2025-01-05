@@ -76,10 +76,15 @@ const BookButton = ({ t }) => {
       >
         <div className="w-full h-full grid grid-cols-bookButton items-center gap-x-2">
           <button
-            onClick={() => setSelected(true)}
+            // onClick={() => setSelected(true)}
             className="text-background !font-PoiretOne font-bold capitalize"
           >
-            {t("book")}
+            <a
+              href="https://yanis-guest-house.hotelrunner.com/bv3"
+              target="_blank"
+            >
+              {t("book")}
+            </a>
           </button>
 
           <span className="text-background ">
