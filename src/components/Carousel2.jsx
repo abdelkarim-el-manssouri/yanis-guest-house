@@ -43,7 +43,7 @@ const Images = ({ imgIndex, setImgIndex, t }) => {
       <motion.section className="">
         <div className="overflow-hidden h-[620px]">
           <div className="pb-10 h-[calc(620px+2.5rem)] flex items-center snap-x snap-mandatory overflow-x-auto px-5">
-            {/* <button className="sr-only">prev</button>
+            <button className="sr-only">prev</button>
             <button
               onClick={goToPrev}
               className="hidden size-1 lg:size-10 absolute top-1/2 -translate-y-1/2 left-5 md:left-24 lg:grid group p-4 mr-10 lg:mr-20 place-content-center active:shadow-none hover:scale-110 active:scale-95 transition-all z-[999999]"
@@ -51,7 +51,7 @@ const Images = ({ imgIndex, setImgIndex, t }) => {
               <span className="group-active:scale-90 text-black">
                 <IoChevronBack className="size-9 md:size-12" />
               </span>
-            </button> */}
+            </button>
 
             {rooms.map((image) => {
               return (
@@ -129,18 +129,18 @@ const Images = ({ imgIndex, setImgIndex, t }) => {
               );
             })}
 
-            {/* <button
+            <button
               onClick={goToNext}
-              className="hidden size-5 md:size-10 absolute top-1/2 -translate-y-1/2 right-5 md:right-24 group z-[99999] p-4 ml-10 lg:ml-20 lg:grid place-content-center active:shadow-none hover:scale-110 active:scale-95 transition-all"
+              className="hidden size-5 md:size-10 absolute top-1/2 -translate-y-1/2 right-5 md:right-24 group p-4 ml-10 lg:ml-20 lg:grid place-content-center active:shadow-none hover:scale-110 active:scale-95 transition-all"
             >
               <span className="rotate-180 group-active:scale-90 text-black">
                 <IoChevronBack className="size-9 md:size-12" />
               </span>
             </button>
-            <button className="sr-only">next</button> */}
+            <button className="sr-only">next</button>
           </div>
         </div>
-        <div>
+        {/* <div>
           <button className="sr-only">prev</button>
           <button
             onClick={goToPrev}
@@ -160,7 +160,7 @@ const Images = ({ imgIndex, setImgIndex, t }) => {
             </span>
           </button>
           <button className="sr-only">next</button>
-        </div>
+        </div> */}
       </motion.section>
       <div
         className="!w-full !h-screen !overflow-x-hidden !overflow-y-auto"
