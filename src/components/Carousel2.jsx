@@ -20,7 +20,7 @@ export const SwipeCarousel = ({ t }) => {
   const [imgIndex, setImgIndex] = useState(0);
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-b from-transparent via-golden to-transparent z-[99999]">
+    <div className="relative overflow-hidden bg-gradient-to-b from-transparent via-golden to-transparent z-[99999999]">
       <Images imgIndex={imgIndex} setImgIndex={setImgIndex} t={t} />
     </div>
   );
