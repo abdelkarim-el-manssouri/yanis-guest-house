@@ -20,7 +20,7 @@ export const SwipeCarousel = ({ t }) => {
   const [imgIndex, setImgIndex] = useState(0);
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-b from-transparent via-golden to-transparent">
+    <div className="relative overflow-hidden bg-gradient-to-b from-transparent via-golden to-transparent z-50">
       <Images imgIndex={imgIndex} setImgIndex={setImgIndex} t={t} />
     </div>
   );
@@ -153,7 +153,7 @@ const Images = ({ imgIndex, setImgIndex, t }) => {
 
           <button
             onClick={goToNext}
-            className="hidden size-5 md:size-10 absolute top-1/2 -translate-y-1/2 right-5 md:right-24 group z-[99999] p-4 ml-10 lg:ml-20 lg:grid place-content-center active:shadow-none hover:scale-110 active:scale-95 transition-all"
+            className="hidden size-5 md:size-10 absolute top-1/2 -translate-y-1/2 right-5 md:right-24 group p-4 ml-10 lg:ml-20 lg:grid place-content-center active:shadow-none hover:scale-110 active:scale-95 transition-all"
           >
             <span className="rotate-180 group-active:scale-90 text-black">
               <IoChevronBack className="size-9 md:size-12" />
