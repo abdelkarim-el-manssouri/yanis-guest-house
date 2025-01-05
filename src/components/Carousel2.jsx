@@ -77,7 +77,7 @@ const Images = ({ imgIndex, setImgIndex, t }) => {
                     // filter: imgIndex === image.id ? "blur(0px)" : "blur(5px)",
                   }}
                   transition={SPRING_OPTIONS}
-                  className="shrink-0 aspect-[10/20] shadow-md md:aspect-video w-[65vw] md:w-[80vw] lg:w-[1000px] 2xl:w-[1100px] rounded-md overflow-clip relative snap-center snap-always"
+                  className="shrink-0 aspect-[10/20] shadow-md md:aspect-video w-[65vw] md:w-[80vw] lg:w-[1000px] 2xl:w-[1100px] rounded-md overflow-clip relative z-[999999999] snap-center snap-always"
                 >
                   <div className="absolute w-full h-full transition duration-[.6s] z-10 ease-in-out opacity-0 hover:opacity-100 hover:bg-black/50 backdrop-blur-md top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white">
                     <div className="grid h-full w-full relative">
