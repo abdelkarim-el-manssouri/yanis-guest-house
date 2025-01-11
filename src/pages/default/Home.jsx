@@ -8,8 +8,6 @@ import SmallParagraph from "../../UI/SmallParagraph";
 import Header2 from "../../components/Header2";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
-import ImageRoom from "../../components/RoomCarousel";
-// import { ImageRoom } from "./Rooms";
 
 const fadeInAnimationVariants = {
   initial: {
