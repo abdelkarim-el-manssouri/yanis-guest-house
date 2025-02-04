@@ -297,7 +297,7 @@ export const rooms = [
   },
   {
     id: 3,
-    url: room4Image1,
+    url: room4Image4,
     price: 180,
     title: "imgTitle4",
     description: "description4",
@@ -317,7 +317,7 @@ export const rooms = [
   },
   {
     id: 4,
-    url: room5Image1,
+    url: room5Image3,
     price: 190,
     title: "imgTitle5",
     description: "description5",
@@ -360,15 +360,6 @@ export const rooms = [
 export const cards = [
   {
     id: 1,
-    url: homeReastorationPic,
-    link: "/restoration",
-    buttonContent: "restaurants",
-    title: "horiScrollTitle2",
-    content1: "horiScrollContent2",
-    content2: "horiScrollContent2_1",
-  },
-  {
-    id: 2,
     url: homeAccommodationPic3,
     link: "/accommodations",
     buttonContent: "accommodations",
@@ -378,7 +369,26 @@ export const cards = [
     content3: "horiScrollContent1_2",
   },
   {
+    id: 2,
+    url: homeActivitiesPic,
+    link: "/activities&wellbeing",
+    buttonContent: "activities & wellbeing",
+    title: "horiScrollTitle4",
+    content1: "horiScrollContent4",
+    content2: "horiScrollContent4_1",
+    content3: "horiScrollContent4_2",
+  },
+  {
     id: 3,
+    url: homeReastorationPic,
+    link: "/restoration",
+    buttonContent: "restaurants",
+    title: "horiScrollTitle2",
+    content1: "horiScrollContent2",
+    content2: "horiScrollContent2_1",
+  },
+  {
+    id: 4,
     url: homeActivitiesPic,
     link: "/activities&wellbeing",
     buttonContent: "activities & wellbeing",
@@ -446,18 +456,22 @@ export const headerSlideImages = [
   {
     id: 1,
     picture: homeImageHeader3,
+    title: "heroImageTiltle1",
   },
   {
     id: 2,
     picture: homeImageHeader4,
+    title: "heroImageTiltle2",
   },
   {
     id: 3,
     picture: homeImageHeader2,
+    title: "heroImageTiltle3",
   },
   {
     id: 4,
     picture: homeImageHeader1,
+    title: "heroImageTiltle4",
   },
 ];
 

@@ -35,6 +35,11 @@
     src: url("/fonts/poiretone-regular-webfont.woff2") format("woff2"),
       url("/fonts/poiretone-regular-webfont.woff") format("woff");
   }
+  @font-face {
+    font-family: "butler";
+    src: url("/fonts/butler/butler.woff") format("woff"),
+      url("/fonts/butler/butler.woff2") format("woff2");
+  }
 }
 @layer utilities {
   .slide-center {

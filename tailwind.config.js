@@ -48,6 +48,7 @@ export default {
         Arapey: ["Arapey, serif"],
         PoiretOne: ["PoiretOne, sans-serif"],
         Italiana: ["Italiana, sans-serif"],
+        butler: ["butler"],
       },
     },
   },

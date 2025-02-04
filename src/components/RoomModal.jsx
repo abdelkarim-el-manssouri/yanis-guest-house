@@ -169,7 +169,7 @@ const RoomModal = ({ selected, setSelected, t, position = "fixed" }) => {
           initial="initial"
           animate="animate"
           onClick={(e) => e.stopPropagation()}
-          className="w-full max-w-xs md:max-w-2xl mt-[90px] lg:max-w-[950px] mx-auto mb-20 py-3 md:py-4 lg:py-6 px-4 md:px-6 lg:px-8 cursor-default bg-lightGreen hover:bg-secondary/20 transition-colors duration-500 rounded-xl shadow-2xl"
+          className="w-full max-w-xs md:max-w-2xl mt-[40px] lg:max-w-[950px] mx-auto mb-20 py-3 md:py-4 lg:py-6 px-4 md:px-6 lg:px-8 cursor-default bg-lightGreen hover:bg-secondary/20 transition-colors duration-500 rounded-xl shadow-2xl"
         >
           <div className="flex justify-end mr-1">
             <button onClick={() => setSelected(!selected)} className="p-4">
@@ -187,161 +187,165 @@ const RoomModal = ({ selected, setSelected, t, position = "fixed" }) => {
               {`${t(selected?.description)}`}
             </p>
 
-            <div className="mt-12 md:mt-10 grid grid-cols-2 md:grid-cols-5 gap-3 text-sm lg:text-base capitalize !font-PoiretOne font-bold">
-              <div className="flex flex-col items-center justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-3 shadow-lg md:shadow-md rounded-lg">
-                <IoBedOutline className="size-6 lg:size-8" />
-                <div>{`${t(selected?.bed)}`}</div>
-              </div>
-              <div className="flex flex-col items-center justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-3 shadow-lg md:shadow-md rounded-lg">
-                <HiOutlineUsers className="size-6 lg:size-8" />
-                <div>{selected?.persones}</div>
-              </div>
-              <div className="flex flex-col items-center justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-3 shadow-lg md:shadow-md rounded-lg">
-                <TbRulerMeasure className="size-6 lg:size-8" />
-                <div>
-                  {selected?.surface} m<sup>2</sup>
+            <div className="h-0.5 w-1/2 mx-auto bg-bordeaux rounded-full my-10 md:my-11" />
+
+            <div className="">
+              <ul>
+                <li className="h-[400px] overflow-hidden">
+                  <div
+                    ref={sliderRef}
+                    onScroll={(ev) => {
+                      setSliderPosition(ev.currentTarget.scrollLeft);
+                    }}
+                    className="snap-x snap-mandatory lg:w-full h-[440px] pb-10 flex shrink-0 gap-x-5 overflow-x-auto"
+                  >
+                    {selected?.roomImages?.map((image, i) => (
+                      <img
+                        key={i}
+                        src={image}
+                        alt={`${selected?.title} image`}
+                        onClick={() => {
+                          setClickedImg(true);
+                          setClickedImg(image);
+                        }}
+                        className="snap-center snap-always rounded-xl object-cover bg-center aspect-[9/16] md:aspect-video md:w-[60vw] shadow-lg cursor-pointer"
+                        loading="lazy"
+                      />
+                    ))}
+                  </div>
+                </li>
+              </ul>
+
+              <div className="hidden lg:block">
+                <div className="flex justify-center items-center gap-10 mt-6">
+                  <button
+                    disabled={currentSlide === 0}
+                    onClick={() => goToPreviousSlide()}
+                    className="disabled:shadow-none disabled:text-gray-500 size-5 group rounded-xl shadow-xl p-4 grid place-content-center active:shadow-none hover:scale-110 transition-all"
+                  >
+                    <span className="group-active:scale-90">
+                      <IoChevronBack />
+                    </span>
+                  </button>
+                  <button
+                    disabled={
+                      scrolledToEndOfSlider ||
+                      currentSlide === selected?.roomImages?.length - 1
+                    }
+                    onClick={() => goToNextSlide()}
+                    className="disabled:shadow-none disabled:text-gray-500 size-5 group rounded-xl shadow-xl p-4 grid place-content-center active:shadow-none hover:scale-110 transition-all"
+                  >
+                    <span className="rotate-180 group-active:scale-90">
+                      <IoChevronBack />
+                    </span>
+                  </button>
                 </div>
               </div>
 
-              <div className="flex flex-col items-center order-4 md:order-4 col-span-2 md:col-span-1 justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-3 shadow-lg md:shadow-md rounded-lg">
-                <IoRestaurantOutline className="size-6 lg:size-8" />
-                <div>{`${t(selected?.breakfast)}`}</div>
+              <div className="h-0.5 w-1/2 mx-auto bg-bordeaux rounded-full my-10 md:my-16" />
+
+              <div className="mt-12 md:mt-10 grid grid-cols-2 md:grid-cols-5 gap-3 text-sm lg:text-base capitalize !font-PoiretOne font-bold">
+                <div className="flex flex-col items-center justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-3 shadow-lg md:shadow-md rounded-lg">
+                  <IoBedOutline className="size-6 lg:size-8" />
+                  <div>{`${t(selected?.bed)}`}</div>
+                </div>
+                <div className="flex flex-col items-center justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-3 shadow-lg md:shadow-md rounded-lg">
+                  <HiOutlineUsers className="size-6 lg:size-8" />
+                  <div>{selected?.persones}</div>
+                </div>
+                <div className="flex flex-col items-center justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-3 shadow-lg md:shadow-md rounded-lg">
+                  <TbRulerMeasure className="size-6 lg:size-8" />
+                  <div>
+                    {selected?.surface} m<sup>2</sup>
+                  </div>
+                </div>
+
+                <div className="flex flex-col items-center order-4 md:order-4 col-span-2 md:col-span-1 justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-3 shadow-lg md:shadow-md rounded-lg">
+                  <IoRestaurantOutline className="size-6 lg:size-8" />
+                  <div>{`${t(selected?.breakfast)}`}</div>
+                </div>
+
+                <div className="flex flex-col items-center order-3 md:order-4 justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-3 shadow-lg md:shadow-md rounded-lg">
+                  <GiWindow className="size-6 lg:size-8" />
+                  <div>{`${t(selected?.view)}`}</div>
+                </div>
               </div>
 
-              <div className="flex flex-col items-center order-3 md:order-4 justify-center text-center lg:p-5 gap-y-1 md:gap-y-2 p-3 shadow-lg md:shadow-md rounded-lg">
-                <GiWindow className="size-6 lg:size-8" />
-                <div>{`${t(selected?.view)}`}</div>
-              </div>
-            </div>
+              <h4 className="my-10 capitalize text-2xl md:text-2xl lg:text-3xl font-semibold w-full md:w-fit underline underline-offset-[6px] text-center md:text-left !font-Italiana">
+                {t("roomAminities")}
+              </h4>
 
-            <h4 className="my-10 capitalize text-2xl md:text-2xl lg:text-3xl font-semibold w-full md:w-fit underline underline-offset-[6px] text-center md:text-left !font-Italiana">
-              {t("roomAminities")}
-            </h4>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-x-3 md:gap-y-6 lg:gap-y-3 text-sm lg:text-base mt-8 md:mt-10 capitalize !font-PoiretOne font-bold">
+                <div className="flex flex-col items-center lg:p-5 gap-y-1 shadow-lg md:shadow-md md:gap-y-2 p-1 rounded-lg">
+                  <GiBathtub className="size-6 lg:size-8" />
+                  <div>{t("shower")}</div>
+                </div>
+                <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
+                  <RiSafe2Fill className="size-6 lg:size-8" />
+                  <div>{t("safe")}</div>
+                </div>
+                <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
+                  <FaWifi className="size-6 lg:size-8" />
+                  <div>{t("wifi")}</div>
+                </div>
+                <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
+                  <TbAirConditioning className="size-6 lg:size-8" />
+                  <div>{t("airConditioner")}</div>
+                </div>
+                <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
+                  <GiRotaryPhone className="size-6 lg:size-8" />
+                  <div>{t("phone")}</div>
+                </div>
+                <div className="flex flex-col items-center uppercase lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
+                  <PiTelevisionSimple className="size-6 lg:size-8" />
+                  <div>{t("tv")}</div>
+                </div>
+                <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
+                  <TbWashDryDip className="size-6 lg:size-8" />
+                  <div>{t("heater")}</div>
+                </div>
+                <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
+                  <span className="size-6 lg:size-8">{hairDryerSvg}</span>
+                  <div>{t("hairDryer")}</div>
+                </div>
+              </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-x-3 md:gap-y-6 lg:gap-y-3 text-sm lg:text-base mt-8 md:mt-10 capitalize !font-PoiretOne font-bold">
-              <div className="flex flex-col items-center lg:p-5 gap-y-1 shadow-lg md:shadow-md md:gap-y-2 p-1 rounded-lg">
-                <GiBathtub className="size-6 lg:size-8" />
-                <div>{t("shower")}</div>
-              </div>
-              <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
-                <RiSafe2Fill className="size-6 lg:size-8" />
-                <div>{t("safe")}</div>
-              </div>
-              <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
-                <FaWifi className="size-6 lg:size-8" />
-                <div>{t("wifi")}</div>
-              </div>
-              <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
-                <TbAirConditioning className="size-6 lg:size-8" />
-                <div>{t("airConditioner")}</div>
-              </div>
-              <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
-                <GiRotaryPhone className="size-6 lg:size-8" />
-                <div>{t("phone")}</div>
-              </div>
-              <div className="flex flex-col items-center uppercase lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
-                <PiTelevisionSimple className="size-6 lg:size-8" />
-                <div>{t("tv")}</div>
-              </div>
-              <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
-                <TbWashDryDip className="size-6 lg:size-8" />
-                <div>{t("heater")}</div>
-              </div>
-              <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
-                <span className="size-6 lg:size-8">{hairDryerSvg}</span>
-                <div>{t("hairDryer")}</div>
-              </div>
-            </div>
+              <h4 className="my-10 capitalize text-2xl md:text-2xl lg:text-3xl !font-Italiana font-semibold w-full md:w-fit underline underline-offset-[6px] text-center md:text-left">
+                {t("hotelAmenities")}
+              </h4>
 
-            <h4 className="my-10 capitalize text-2xl md:text-2xl lg:text-3xl !font-Italiana font-semibold w-full md:w-fit underline underline-offset-[6px] text-center md:text-left">
-              {t("hotelAmenities")}
-            </h4>
-
-            <div className="grid grid-cols-2 gap-4 md:gap-x-3 md:gap-y-6 lg:gap-y-3 text-sm lg:text-base mt-8 md:mt-10 capitalize !font-PoiretOne font-bold">
-              <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
-                <MdOutlineRoomService className="size-6 lg:size-8" />
-                <div>{t("roomService")}</div>
+              <div className="grid grid-cols-2 gap-4 md:gap-x-3 md:gap-y-6 lg:gap-y-3 text-sm lg:text-base mt-8 md:mt-10 capitalize !font-PoiretOne font-bold">
+                <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
+                  <MdOutlineRoomService className="size-6 lg:size-8" />
+                  <div>{t("roomService")}</div>
+                </div>
+                <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
+                  <LiaSwimmingPoolSolid className="size-6 lg:size-8" />
+                  <div>{t("swimmingPool")}</div>
+                </div>
               </div>
-              <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
-                <LiaSwimmingPoolSolid className="size-6 lg:size-8" />
-                <div>{t("swimmingPool")}</div>
-              </div>
-            </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-x-3 md:gap-y-6 lg:gap-y-3 text-sm lg:text-base mt-8 md:mt-10 capitalize !font-PoiretOne font-bold">
-              {/* <div className="flex flex-col items-center uppercase lg:p-5 gap-y-1 shadow-lg md:shadow-md md:gap-y-2 p-1 rounded-lg">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-x-3 md:gap-y-6 lg:gap-y-3 text-sm lg:text-base mt-8 md:mt-10 capitalize !font-PoiretOne font-bold">
+                {/* <div className="flex flex-col items-center uppercase lg:p-5 gap-y-1 shadow-lg md:shadow-md md:gap-y-2 p-1 rounded-lg">
                 <LiaDumbbellSolid className="size-6 lg:size-8" />
                 <div>{t("gym")}</div>
               </div> */}
-              <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
-                <TbParking className="size-6 lg:size-8" />
-                <div>{t("parking")}</div>
-              </div>
-              <div className="flex flex-col items-center uppercase lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
-                <TbMassage className="size-6 lg:size-8" />
-                <div>{t("spa")}</div>
-              </div>
-              <div className="flex flex-col items-center col-span-2 md:col-span-1 lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
-                <IoRestaurantOutline className="size-6 lg:size-8" />
-                <div>{t("restaurant")}</div>
-              </div>
-            </div>
-
-            <div className="h-0.5 w-3/4 mx-auto bg-bordeaux rounded-full my-10 md:my-16" />
-          </div>
-          <div className="">
-            <ul>
-              <li className="h-[400px] overflow-hidden">
-                <div
-                  ref={sliderRef}
-                  onScroll={(ev) => {
-                    setSliderPosition(ev.currentTarget.scrollLeft);
-                  }}
-                  className="snap-x snap-mandatory lg:w-full h-[440px] pb-10 flex shrink-0 gap-x-5 overflow-x-auto"
-                >
-                  {selected?.roomImages?.map((image, i) => (
-                    <img
-                      key={i}
-                      src={image}
-                      alt={`${selected?.title} image`}
-                      onClick={() => {
-                        setClickedImg(true);
-                        setClickedImg(image);
-                      }}
-                      className="snap-center snap-always rounded-xl object-cover bg-center aspect-[9/16] md:aspect-video md:w-[60vw] shadow-lg cursor-pointer"
-                      loading="lazy"
-                    />
-                  ))}
+                <div className="flex flex-col items-center lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
+                  <TbParking className="size-6 lg:size-8" />
+                  <div>{t("parking")}</div>
                 </div>
-              </li>
-            </ul>
-
-            <div className="hidden lg:block">
-              <div className="flex justify-center items-center gap-10 mt-6">
-                <button
-                  disabled={currentSlide === 0}
-                  onClick={() => goToPreviousSlide()}
-                  className="disabled:shadow-none disabled:text-gray-500 size-5 group rounded-xl shadow-xl p-4 grid place-content-center active:shadow-none hover:scale-110 transition-all"
-                >
-                  <span className="group-active:scale-90">
-                    <IoChevronBack />
-                  </span>
-                </button>
-                <button
-                  disabled={
-                    scrolledToEndOfSlider ||
-                    currentSlide === selected?.roomImages?.length - 1
-                  }
-                  onClick={() => goToNextSlide()}
-                  className="disabled:shadow-none disabled:text-gray-500 size-5 group rounded-xl shadow-xl p-4 grid place-content-center active:shadow-none hover:scale-110 transition-all"
-                >
-                  <span className="rotate-180 group-active:scale-90">
-                    <IoChevronBack />
-                  </span>
-                </button>
+                <div className="flex flex-col items-center uppercase lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
+                  <TbMassage className="size-6 lg:size-8" />
+                  <div>{t("spa")}</div>
+                </div>
+                <div className="flex flex-col items-center col-span-2 md:col-span-1 lg:p-5 gap-y-1 md:gap-y-2 p-1 shadow-lg md:shadow-md rounded-lg">
+                  <IoRestaurantOutline className="size-6 lg:size-8" />
+                  <div>{t("restaurant")}</div>
+                </div>
               </div>
-            </div>
 
+              <div className="h-0.5 w-3/4 mx-auto bg-bordeaux rounded-full my-10 md:my-16" />
+            </div>
             <div className="w-[90%] mx-auto flex flex-col md:flex-row md:justify-between items-center mt-14 mb-6 p-3 md:p-5 rounded-lg shadow-lg border border-dashed border-secondary/10">
               <p className="capitalize text-lg !font-Italiana font-bold text-center md:text-left mb-4 md:mb-0">
                 <span>
@@ -354,9 +358,8 @@ const RoomModal = ({ selected, setSelected, t, position = "fixed" }) => {
               <a
                 href="https://yanis-guest-house.hotelrunner.com/bv3"
                 target="_blank"
-                // to="/book"
               >
-                <Button content="book" />
+                <Button content={t("book")} />
               </a>
             </div>
           </div>

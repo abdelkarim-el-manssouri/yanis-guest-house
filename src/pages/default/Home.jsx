@@ -8,6 +8,7 @@ import SmallParagraph from "../../UI/SmallParagraph";
 import Header2 from "../../components/Header2";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
+import Header from "../../components/Header";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -78,11 +79,29 @@ const Home = () => {
     <motion.div variants={welcomeVariants} initial="initial" animate="animate">
       <Helmet>
         <title>Yanis Guest House home page</title>
-        <meta name="description" content="home page" />
+        <meta
+          name="description"
+          content="guest house marrakech​
+                  guest houses in marrakech morocco
+                  marrakech maison d hote
+                  maison d hote marrakech luxe​
+                  maison d hote a marrakech​
+                  maison d hotes marrakech avec piscine
+                  riad maison d hotes marrakech
+                  suite hotel a marrakech
+                  suite hotel marrakech
+                  suite de luxe marrakech
+                  piscine chauffée marrakech
+                  hotel piscine chauffée marrakech
+                  hotel marrakech piscine interieure chauffée​
+                  riad avec piscine chauffée marrakech
+​"
+        />
         <link rel="canonical" href="/home" />
       </Helmet>
       <div className="w-full h-dvh overflow-hidden bg-black z-20 backdrop-blur-md -mt-20">
-        <Header2 t={t} />
+        {/* <Header2 t={t} /> */}
+        <Header t={t} />
       </div>
       <motion.section
         style={{
@@ -97,7 +116,9 @@ const Home = () => {
           <AnimatedText text={t("textContent")} />
         </div>
       </motion.section>
+      {/* <div className="bg-[url('/images/homePage/homeDiscover.webp')] bg-center bg-cover"> */}
       <SmallParagraph text={t("text1")} />
+      {/* </div> */}
       <section className="z-20">
         <HorizontalScroll t={t} />
       </section>

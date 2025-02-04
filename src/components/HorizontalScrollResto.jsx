@@ -20,7 +20,10 @@ const HorizontalScrollCarousel = ({ t }) => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-65%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[200vh] bg-cozyGreen">
+    <section
+      ref={targetRef}
+      className="relative h-[200vh] bg-gradient-to-b from-background from-10% via-golden via-60% to-background"
+    >
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-x-3 lg:gap-x-0">
           {cards2.map((card) => {
@@ -36,7 +39,7 @@ const Card = ({ card, t }) => {
   return (
     <div
       key={card.id}
-      className="group grid grid-flow-dense md:grid-rows-none md:grid-cols-2 h-[720px] md:h-[650px] w-[350px] md:w-[700px] lg:w-[1000px] overflow-hidden bg-neutral-100"
+      className="group grid grid-flow-dense md:grid-rows-none md:grid-cols-2 h-[720px] md:h-[650px] w-[350px] md:w-[700px] lg:w-[1000px] overflow-hidden bg-background"
     >
       <img
         src={card.url}

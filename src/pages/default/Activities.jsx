@@ -28,7 +28,34 @@ const Activities = () => {
     <>
       <Helmet>
         <title>Yanis Guest House activities & wellbeing page</title>
-        <meta name="description" content="activities & wellbeing page" />
+        <meta
+          name="description"
+          content="massage relaxant​ ; massage marrakech​ ; massage thai marrakech​ ; massage marrakech pas cher​ ; massage pas cher marrakech
+marrakech massage ; massage in marrakech ; best massage marrakech
+meilleur massage marrakech ; massage couple marrakech ; cheap massage marrakech  massage duo marrakech 
+massage tonifiant​ ; massage relaxant et tonifiant​
+massage drainant anti cellulite​ ; massage drainant​
+massage couple​ ; massage couple marrakech​ ; cadeau massage couple​ ; massage pour couple ; massage en couple​ ; massage des couples ; massage en couple marrakech
+"
+        />
+        <meta
+          name="description"
+          content="manicure & pedicure salon​ ; manicure pedicure ; manicure and pedicure ; manicure marrakech
+anti aging facial treatment ; mesotherapy facial treatment​ ; natural facial treatment​ ; facial treatment​
+soin facial​"
+        />
+        <meta
+          name="description"
+          content="agafay desert ; desert d agafay ; desert agafay ; agafay desert luxury camp​ ; agafay desert camp ; la pause agafay desert​
+desert agafay marrakech ; agafay desert day trip​ ; agafay desert marrakech ; agafay desert tours​
+quad desert agafay ​; agafay desert dinner​ ; agafay desert morocco ; excursion desert agafay
+le montgolfiere​ ; prix vol montgolfiere marrakech​"
+        />
+        <meta
+          name="description"
+          content="ourika valley ; ourika valley waterfalls​ ; ourika waterfalls ; vallée de l ourika​ ; ourika marrakech ; cascade ourika ; la muraille de l ourika ; ourika valley marrakech​ ; ourika valley day trip
+cheval marrakech​ ; equitation marrakech ; equitation a marrakech"
+        />
         <link rel="canonical" href="/activities&wellbeing" />
       </Helmet>
       <ActivitiesHeader t={t} />
@@ -86,7 +113,7 @@ const Heading = ({ heading }) => {
       viewport={{
         once: true,
       }}
-      className="text-center md:w-[50ch] mx-auto text-xl md:text-2xl !font-Italiana font-bold capitalize text-transparent bg-clip-text bg-gradient-to-br from-golden to-black my-10"
+      className="text-center md:w-[50ch] mx-auto text-xl md:text-3xl underline xl:text-4xl !font-Italiana font-bold capitalize text-transparent bg-clip-text bg-gradient-to-br from-golden to-black my-10"
     >
       {heading}
     </motion.h3>
@@ -113,7 +140,7 @@ const WellBeing = ({ t }) => {
               <img
                 src={image.imageUrl}
                 alt={image.imgDescription}
-                className="absolute w-full h-full object-cover object-center max-w-none"
+                className="absolute w-full h-full object-cover object-center max-w-none rounded-lg"
               />
 
               <div className="opacity-0 translate-x-10 hover:translate-x-0 hover:opacity-100 absolute left-0 bottom-0 p-5 text-white w-full h-full flex items-end">
@@ -142,7 +169,7 @@ const WellBeing = ({ t }) => {
             className="relative border border-cozyGreen/10 border-dashed rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 bg-gradient-to-bl from-lightGreen to-background text-cozyGreen after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
           >
             <div className="relative w-1/2 h-px rounded-xl bg-golden" />
-            <div className="mx-2 md:mx-4">
+            <div className="mx-2 md:mx-4 grid grid-rows-[auto_1fr_auto_auto] min-h-full">
               <h4 className="mt-4 font-black capitalize text-xl !font-Italiana">
                 {t(i.genre)}
               </h4>
@@ -198,7 +225,7 @@ const SelfCare = ({ t }) => {
               <img
                 src={care.imageUrl}
                 alt={care.imgDescription}
-                className="absolute w-full h-full object-cover object-center max-w-none"
+                className="absolute w-full h-full object-cover object-center max-w-none rounded-lg"
               />
             </div>
           </motion.li>
@@ -214,7 +241,7 @@ const SelfCare = ({ t }) => {
           className="relative border border-cozyGreen/10 border-dashed rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 bg-gradient-to-bl from-lightGreen to-background text-cozyGreen after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
         >
           <div className="relative w-1/2 h-px rounded-xl bg-golden" />
-          <div className="mx-2 md:mx-4">
+          <div className="mx-2 md:mx-4 grid grid-rows-[auto_1fr_auto_auto] min-h-full">
             <h4 className="mt-4 font-bold capitalize text-xl !font-Italiana">
               {t("manicure")}
             </h4>
@@ -249,7 +276,7 @@ const SelfCare = ({ t }) => {
           className="relative border border-cozyGreen/10 border-dashed rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 bg-gradient-to-bl from-lightGreen to-background text-cozyGreen after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
         >
           <div className="relative w-1/2 h-px rounded-xl bg-golden" />
-          <div className="mx-2 md:mx-4">
+          <div className="mx-2 md:mx-4 grid grid-rows-[auto_auto_1fr_auto] min-h-full">
             <h4 className="mt-4 font-bold capitalize text-xl !font-Italiana">
               {t("facial")}
             </h4>
@@ -274,7 +301,7 @@ const SelfCare = ({ t }) => {
                 <p className="first-letter:uppercase">{t("antiAging")}</p>
               </div>
             </div>
-            <div className="flex justify-center my-6 mx-2 md:mx-4">
+            <div className="flex justify-center my-6 mx-2 md:mx-4 mt-auto">
               <p className="font-bold !font-PoiretOne text-xl">€50</p>
             </div>
             <a
@@ -340,7 +367,7 @@ const ExternalActivities = ({ t }) => {
               <img
                 src={agafay.imageUrl}
                 alt={agafay.imgDescription}
-                className="absolute w-full h-full object-cover object-center max-w-none"
+                className="absolute w-full h-full object-cover object-center max-w-none rounded-lg"
               />
             </div>
           </motion.li>
@@ -562,7 +589,7 @@ const MoreOfMarrakesh = ({ t }) => {
               <img
                 src={agafay.imageUrl}
                 alt={agafay.imgDescription}
-                className="absolute w-full h-full object-cover object-center max-w-none"
+                className="absolute w-full h-full object-cover object-center max-w-none rounded-lg"
               />
 
               <div className="opacity-0 translate-x-10 hover:translate-x-0 hover:opacity-100 absolute left-0 bottom-0 p-5 text-white w-full h-full flex items-end">
@@ -656,7 +683,7 @@ const MoreOfMarrakesh = ({ t }) => {
           className="relative !font-PoiretOne font-bold border border-cozyGreen/10 border-dashed rounded-lg transition-shadow hover:shadow-sm shadow-lg p-6 bg-gradient-to-bl from-lightGreen to-background text-cozyGreen after:absolute after:right-6 after:bottom-[10%] after:w-px after:h-[40%] after:rounded-xl after:bg-golden"
         >
           <div className="relative w-1/2 h-px rounded-xl bg-golden" />
-          <div className="mx-2 md:mx-4">
+          <div className="mx-2 md:mx-4 grid grid-rows-[auto_1fr_auto_auto] min-h-full">
             <h4 className="mt-4 font-black capitalize text-xl !font-Italiana">
               {t("HorsebackTitle")}
             </h4>
