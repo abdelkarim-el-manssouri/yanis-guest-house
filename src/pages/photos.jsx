@@ -50,6 +50,7 @@ const Photos = () => {
                 } group overflow-hidden shadow-sm`}
               >
                 <motion.img
+                  alt="gallery image"
                   layoutId={`image-${el}`}
                   src={el}
                   whileHover={{ scale: 1.1 }}

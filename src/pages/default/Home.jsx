@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import HorizontalScroll from "../../components/HorizontalScroll";
 import { SwipeCarousel } from "../../components/Carousel2";
 import SmallParagraph from "../../UI/SmallParagraph";
-import Header2 from "../../components/Header2";
+// import Header2 from "../../components/Header2";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import Header from "../../components/Header";
@@ -81,21 +81,15 @@ const Home = () => {
         <title>Yanis Guest House home page</title>
         <meta
           name="description"
-          content="guest house marrakech​
-                  guest houses in marrakech morocco
-                  marrakech maison d hote
-                  maison d hote marrakech luxe​
-                  maison d hote a marrakech​
-                  maison d hotes marrakech avec piscine
-                  riad maison d hotes marrakech
-                  suite hotel a marrakech
-                  suite hotel marrakech
-                  suite de luxe marrakech
-                  piscine chauffée marrakech
-                  hotel piscine chauffée marrakech
-                  hotel marrakech piscine interieure chauffée​
-                  riad avec piscine chauffée marrakech
-​"
+          content="guest house marrakech​ guest houses in marrakech morocco marrakech maison d hote maison d hote marrakech luxe​ maison d hote a marrakech"
+        />
+        <meta
+          name="description"
+          content="maison d hotes marrakech avec piscine riad maison d hotes marrakech suite hotel a marrakech suite hotel marrakech suite de luxe marrakech"
+        />
+        <meta
+          name="description"
+          content="​piscine chauffée marrakech hotel piscine chauffée marrakech hotel marrakech piscine interieure chauffée​ riad avec piscine chauffée marrakech​"
         />
         <link rel="canonical" href="/home" />
       </Helmet>
@@ -139,7 +133,7 @@ const Home = () => {
               viewport={{
                 once: true,
               }}
-              className="!font-Italiana font-bold uppercase mx-auto p-1.5 lg:p-3 my-3 lg:my-5 text-sm text-mainText md:text-lg lg:text-2xl md:whitespace-nowrap text-center md:text-left w-[30ch] md:w-[45ch] bg-background backdrop-blur-sm md:relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-right-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-right-3 md:before:top-0"
+              className="!font-Italiana font-bold uppercase mx-auto p-1.5 lg:p-3 my-3 lg:my-5 text-sm text-mainText md:text-lg lg:text-2xl md:whitespace-nowrap text-center md:text-left w-[30ch] md:w-[50ch] bg-background backdrop-blur-sm md:relative md:after:absolute md:after:w-0.5 md:after:h-full md:after:bg-beige md:after:-right-1.5 md:after:top-0 md:before:absolute md:before:w-1 md:before:h-full md:before:bg-beige md:before:-right-3 md:before:top-0"
             >
               {t("toReturnTitle")}
             </motion.h3>
@@ -163,7 +157,7 @@ const Home = () => {
           <img
             src="/images/homePage/homeToReturn.webp"
             alt="image"
-            className="lg:h-96 object-cover object-center rounded-sm w-full"
+            className="lg:h-[26rem] object-cover object-center rounded-sm w-full"
             loading="lazy"
           />
         </div>

@@ -48,6 +48,7 @@ import galleryLink from "/images/homePage/navbarLinks/galleryLinkBkg.webp";
 import homeAccommodationPic3 from "/images/gallery/gallery38.webp";
 import homeReastorationPic from "/images/homePage/terraceTable.webp";
 import homeActivitiesPic from "/images/homePage/picineByNight2.webp";
+import homeActivitiesPic2 from "/images/gallery/gallery26.webp";
 
 import restorationSee from "/images/Restaurant/restorationSee.webp";
 import restorationTaste from "/images/Restaurant/restorationTaste.webp";
@@ -362,17 +363,17 @@ export const cards = [
     id: 1,
     url: homeAccommodationPic3,
     link: "/accommodations",
-    buttonContent: "accommodations",
+    buttonContent: "horiScrollButton1",
     title: "horiScrollTitle1",
     content1: "horiScrollContent1",
     content2: "horiScrollContent1_1",
-    content3: "horiScrollContent1_2",
+    // content3: "horiScrollContent1_2",
   },
   {
     id: 2,
     url: homeActivitiesPic,
     link: "/activities&wellbeing",
-    buttonContent: "activities & wellbeing",
+    buttonContent: "horiScrollButton3",
     title: "horiScrollTitle4",
     content1: "horiScrollContent4",
     content2: "horiScrollContent4_1",
@@ -382,16 +383,16 @@ export const cards = [
     id: 3,
     url: homeReastorationPic,
     link: "/restoration",
-    buttonContent: "restaurants",
+    buttonContent: "horiScrollButton2",
     title: "horiScrollTitle2",
     content1: "horiScrollContent2",
     content2: "horiScrollContent2_1",
   },
   {
     id: 4,
-    url: homeActivitiesPic,
+    url: homeActivitiesPic2,
     link: "/activities&wellbeing",
-    buttonContent: "activities & wellbeing",
+    buttonContent: "horiScrollButton3",
     title: "horiScrollTitle3",
     content1: "horiScrollContent3",
   },

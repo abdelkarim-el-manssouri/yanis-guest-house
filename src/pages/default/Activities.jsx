@@ -30,31 +30,39 @@ const Activities = () => {
         <title>Yanis Guest House activities & wellbeing page</title>
         <meta
           name="description"
-          content="massage relaxant​ ; massage marrakech​ ; massage thai marrakech​ ; massage marrakech pas cher​ ; massage pas cher marrakech
-marrakech massage ; massage in marrakech ; best massage marrakech
-meilleur massage marrakech ; massage couple marrakech ; cheap massage marrakech  massage duo marrakech 
-massage tonifiant​ ; massage relaxant et tonifiant​
-massage drainant anti cellulite​ ; massage drainant​
-massage couple​ ; massage couple marrakech​ ; cadeau massage couple​ ; massage pour couple ; massage en couple​ ; massage des couples ; massage en couple marrakech
-"
+          content="massage relaxant​ massage marrakech​ massage thai marrakech​ massage marrakech pas cher​ massage pas cher marrakech marrakech massage massage in marrakech"
         />
         <meta
           name="description"
-          content="manicure & pedicure salon​ ; manicure pedicure ; manicure and pedicure ; manicure marrakech
-anti aging facial treatment ; mesotherapy facial treatment​ ; natural facial treatment​ ; facial treatment​
-soin facial​"
+          content="best massage marrakech meilleur massage marrakech massage couple marrakech cheap massage marrakech massage duo marrakech massage tonifiant​ massage relaxant et tonifiant"
         />
         <meta
           name="description"
-          content="agafay desert ; desert d agafay ; desert agafay ; agafay desert luxury camp​ ; agafay desert camp ; la pause agafay desert​
-desert agafay marrakech ; agafay desert day trip​ ; agafay desert marrakech ; agafay desert tours​
-quad desert agafay ​; agafay desert dinner​ ; agafay desert morocco ; excursion desert agafay
-le montgolfiere​ ; prix vol montgolfiere marrakech​"
+          content="massage drainant anti cellulite​ massage drainant​ massage couple​ massage couple marrakech​ cadeau massage couple​ massage pour couple massage en couple"
         />
         <meta
           name="description"
-          content="ourika valley ; ourika valley waterfalls​ ; ourika waterfalls ; vallée de l ourika​ ; ourika marrakech ; cascade ourika ; la muraille de l ourika ; ourika valley marrakech​ ; ourika valley day trip
-cheval marrakech​ ; equitation marrakech ; equitation a marrakech"
+          content="​facial treatment​ soin facial ​vol montgolfiere marrakech ​massage des couples massage en couple marrakech​"
+        />
+        <meta
+          name="description"
+          content="manicure & pedicure salon​ manicure pedicure manicure and pedicure manicure marrakech anti aging facial treatment mesotherapy facial treatment​ natural facial treatment"
+        />
+        <meta
+          name="description"
+          content="agafay desert desert d agafay desert agafay agafay desert luxury camp​ agafay desert camp la pause agafay desert​ desert agafay marrakech agafay desert day trip"
+        />
+        <meta
+          name="description"
+          content="agafay desert marrakech agafay desert tours​ quad desert agafay agafay desert dinner​ agafay desert morocco excursion desert agafay le montgolfiere​ prix"
+        />
+        <meta
+          name="description"
+          content="valley day trip cheval marrakech​ equitation marrakech equitation a marrakech"
+        />
+        <meta
+          name="description"
+          content="ourika valley ourika valley waterfalls​ ourika waterfalls vallée de l ourika​ ourika marrakech cascade ourika la muraille de l ourika ourika valley marrakech​ ourika"
         />
         <link rel="canonical" href="/activities&wellbeing" />
       </Helmet>
@@ -139,7 +147,7 @@ const WellBeing = ({ t }) => {
             <div className="relative w-full h-full overflow-hidden">
               <img
                 src={image.imageUrl}
-                alt={image.imgDescription}
+                alt="massage image"
                 className="absolute w-full h-full object-cover object-center max-w-none rounded-lg"
               />
 
@@ -187,16 +195,19 @@ const WellBeing = ({ t }) => {
                   {i.time}
                 </p>
               </div>
-              <a
+              {/* <a
                 href="https://yanis-guest-house.hotelrunner.com/bv3"
                 target="_blank"
-              >
-                <div className="flex justify-center">
-                  <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg !font-PoiretOne font-bold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-                    {t("book")}
-                  </button>
-                </div>
-              </a>
+              > */}
+              <div className="flex justify-center">
+                <Link
+                  to="/selfCareForm"
+                  className=" py-2 w-5/6 mx-auto text-center border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg !font-PoiretOne font-bold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition"
+                >
+                  {t("book")}
+                </Link>
+              </div>
+              {/* </a> */}
             </div>
           </motion.div>
         ))}
@@ -224,7 +235,7 @@ const SelfCare = ({ t }) => {
             <div className="relative w-full h-full overflow-hidden">
               <img
                 src={care.imageUrl}
-                alt={care.imgDescription}
+                alt="selfcare image"
                 className="absolute w-full h-full object-cover object-center max-w-none rounded-lg"
               />
             </div>
@@ -255,16 +266,19 @@ const SelfCare = ({ t }) => {
                 <span className="text-sm">/ {t("each")}</span>
               </p>
             </div>
-            <a
+            {/* <a
               href="https://yanis-guest-house.hotelrunner.com/bv3"
               target="_blank"
-            >
-              <div className="flex justify-center">
-                <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg !font-PoiretOne font-bold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-                  {t("book")}
-                </button>
-              </div>
-            </a>
+            > */}
+            <div className="flex justify-center">
+              <Link
+                to="/selfCareForm"
+                className=" py-2 w-5/6 mx-auto text-center border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg !font-PoiretOne font-bold capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition"
+              >
+                {t("book")}
+              </Link>
+            </div>
+            {/* </a> */}
           </div>
         </motion.div>
 
@@ -304,16 +318,19 @@ const SelfCare = ({ t }) => {
             <div className="flex justify-center my-6 mx-2 md:mx-4 mt-auto">
               <p className="font-bold !font-PoiretOne text-xl">€50</p>
             </div>
-            <a
+            {/* <a
               href="https://yanis-guest-house.hotelrunner.com/bv3"
               target="_blank"
-            >
-              <div className="flex justify-center">
-                <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-bold !font-PoiretOne capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-                  {t("book")}
-                </button>
-              </div>
-            </a>
+            > */}
+            <div className="flex justify-center">
+              <Link
+                to="/selfCareForm"
+                className=" py-2 w-5/6 mx-auto text-center border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg font-bold !font-PoiretOne capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition"
+              >
+                {t("book")}
+              </Link>
+            </div>
+            {/* </a> */}
           </div>
         </motion.div>
       </div>
@@ -366,7 +383,7 @@ const ExternalActivities = ({ t }) => {
             <div className="relative w-full h-full overflow-hidden">
               <img
                 src={agafay.imageUrl}
-                alt={agafay.imgDescription}
+                alt="agafay image"
                 className="absolute w-full h-full object-cover object-center max-w-none rounded-lg"
               />
             </div>
@@ -421,16 +438,19 @@ const ExternalActivities = ({ t }) => {
               <span className="text-sm">/ {t("perPerson")}</span>
             </p>
           </div>
-          <a
+          {/* <a
             href="https://yanis-guest-house.hotelrunner.com/bv3"
             target="_blank"
-          >
-            <div className="flex justify-center">
-              <button className="py-1.5 w-5/6 mx-auto !font-PoiretOne font-bold border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-                {t("book")}
-              </button>
-            </div>
-          </a>
+          > */}
+          <div className="flex justify-center">
+            <Link
+              to="/selfCareForm"
+              className="py-1.5 w-5/6 mx-auto text-center !font-PoiretOne font-bold border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition"
+            >
+              {t("book")}
+            </Link>
+          </div>
+          {/* </a> */}
         </motion.div>
 
         <motion.div
@@ -479,16 +499,19 @@ const ExternalActivities = ({ t }) => {
               <span className="text-sm">/ {t("perPerson")}</span>
             </p>
           </div>
-          <a
+          {/* <a
             href="https://yanis-guest-house.hotelrunner.com/bv3"
             target="_blank"
-          >
-            <div className="flex justify-center">
-              <button className="py-1.5 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-                {t("book")}
-              </button>
-            </div>
-          </a>
+          > */}
+          <div className="flex justify-center">
+            <Link
+              to="/selfCareForm"
+              className="py-1.5 w-5/6 mx-auto text-center border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition"
+            >
+              {t("book")}
+            </Link>
+          </div>
+          {/* </a> */}
         </motion.div>
 
         <motion.div
@@ -553,16 +576,19 @@ const ExternalActivities = ({ t }) => {
             </p>
             <p className="flex justify-center items-center gap-2 font-semibold text-lg"></p>
           </div>
-          <a
+          {/* <a
             href="https://yanis-guest-house.hotelrunner.com/bv3"
             target="_blank"
-          >
-            <div className="flex justify-center">
-              <button className="py-1.5 w-5/6 md:w-1/2 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-                {t("book")}
-              </button>
-            </div>
-          </a>
+          > */}
+          <div className="flex justify-center">
+            <Link
+              to="/selfCareForm"
+              className="py-1.5 w-5/6 md:w-1/2 mx-auto text-center border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition"
+            >
+              {t("book")}
+            </Link>
+          </div>
+          {/* </a> */}
         </motion.div>
       </div>
     </>
@@ -588,7 +614,7 @@ const MoreOfMarrakesh = ({ t }) => {
             <div className="relative w-full h-full overflow-hidden">
               <img
                 src={agafay.imageUrl}
-                alt={agafay.imgDescription}
+                alt="countryside image"
                 className="absolute w-full h-full object-cover object-center max-w-none rounded-lg"
               />
 
@@ -627,16 +653,19 @@ const MoreOfMarrakesh = ({ t }) => {
                 <span className="text-sm">/ {t("perPerson")}</span>
               </p>
             </div>
-            <a
+            {/* <a
               href="https://yanis-guest-house.hotelrunner.com/bv3"
               target="_blank"
-            >
-              <div className="flex justify-center">
-                <button className="py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-                  {t("book")}
-                </button>
-              </div>
-            </a>
+            > */}
+            <div className="flex justify-center">
+              <Link
+                to="/selfCareForm"
+                className="py-2 w-5/6 mx-auto text-center border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition"
+              >
+                {t("book")}
+              </Link>
+            </div>
+            {/* </a> */}
           </div>
         </motion.div>
 
@@ -662,16 +691,19 @@ const MoreOfMarrakesh = ({ t }) => {
                 <span className="text-sm">/ {t("perPerson")}</span>
               </p>
             </div>
-            <a
+            {/* <a
               href="https://yanis-guest-house.hotelrunner.com/bv3"
               target="_blank"
-            >
-              <div className="flex justify-center">
-                <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-                  {t("book")}
-                </button>
-              </div>
-            </a>
+            > */}
+            <div className="flex justify-center">
+              <Link
+                to="/selfCareForm"
+                className=" py-2 w-5/6 mx-auto text-center border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition"
+              >
+                {t("book")}
+              </Link>
+            </div>
+            {/* </a> */}
           </div>
         </motion.div>
 
@@ -697,16 +729,19 @@ const MoreOfMarrakesh = ({ t }) => {
                 <span className="text-sm">/ {t("perPerson")}</span>
               </p>
             </div>
-            <a
+            {/* <a
               href="https://yanis-guest-house.hotelrunner.com/bv3"
               target="_blank"
-            >
-              <div className="flex justify-center">
-                <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-                  {t("book")}
-                </button>
-              </div>
-            </a>
+            > */}
+            <div className="flex justify-center">
+              <Link
+                to="/selfCareForm"
+                className=" py-2 w-5/6 mx-auto text-center border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition"
+              >
+                {t("book")}
+              </Link>
+            </div>
+            {/* </a> */}
           </div>
         </motion.div>
 
@@ -732,16 +767,19 @@ const MoreOfMarrakesh = ({ t }) => {
                 <span className="text-sm">/ {t("perPerson")}</span>
               </p>
             </div>
-            <a
+            {/* <a
               href="https://yanis-guest-house.hotelrunner.com/bv3"
               target="_blank"
-            >
-              <div className="flex justify-center">
-                <button className=" py-2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-                  {t("book")}
-                </button>
-              </div>
-            </a>
+            > */}
+            <div className="flex justify-center">
+              <Link
+                to="/selfCareForm"
+                className=" py-2 w-5/6 mx-auto text-center border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition"
+              >
+                {t("book")}
+              </Link>
+            </div>
+            {/* </a> */}
           </div>
         </motion.div>
 
@@ -778,16 +816,19 @@ const MoreOfMarrakesh = ({ t }) => {
                 <span className="text-sm">/ {t("jusqua")}</span>
               </p>
             </div>
-            <a
+            {/* <a
               href="https://yanis-guest-house.hotelrunner.com/bv3"
               target="_blank"
-            >
-              <div className="flex justify-center">
-                <button className="py-2 lg:w-1/2 w-5/6 mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition">
-                  {t("book")}
-                </button>
-              </div>
-            </a>
+            > */}
+            <div className="flex justify-center">
+              <Link
+                to="/selfCareForm"
+                className="py-2 lg:w-1/2 w-5/6 text-center mx-auto border border-cozyGreen/10 border-dashed shadow-md hover:shadow-sm rounded-lg capitalize bg-gradient-to-bl active:scale-95 active:shadow-none active:border-none transition"
+              >
+                {t("book")}
+              </Link>
+            </div>
+            {/* </a> */}
           </div>
         </motion.div>
       </div>

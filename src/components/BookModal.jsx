@@ -27,7 +27,7 @@ const BookModal = ({ selected, setSelected, t }) => {
           onClick={(e) => e.stopPropagation()}
           className="h-[80%] lg:h-[65%] w-full max-w-xs md:max-w-2xl lg:max-w-[950px] mx-auto py-3 md:py-4 px-4 md:px-6 lg:px-8 cursor-default bg-lightGreen hover:bg-secondary/20 hover:shadow-xl transition duration-500 rounded-xl shadow-2xl"
         >
-          <div className="px-4 pt-14 md:py-0 md:ml-10 h-full flex-row md:flex justify-between items-center relative">
+          <div className="md:ml-10 h-full relative">
             <div className="grid place-content-center absolute top-0 -right-1 md:top-0 md:-right-3 size-8 md:size-10 bg-secondary/10 rounded-full">
               <button onClick={() => setSelected(!selected)}>
                 <span className="bg-bordeaux h-px w-1/2 rounded rotate-45 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 " />
@@ -35,43 +35,45 @@ const BookModal = ({ selected, setSelected, t }) => {
               </button>
             </div>
 
-            <div>
-              <p className="!font-Italiana uppercase font-bold text-xl lg:text-2xl">
-                {t("your")} :
-              </p>
-              <ul className="ml-10 mt-4">
-                <li
-                  // onClick={() => setSelected(!selected)}
-                  className="relative w-fit my-3 lg:my-5 first:mt-0 last:mb-0 capitalize !font-PoiretOne font-bold text-lg lg:text-xl text-black/70 hover:text-black transition-colors duration-500 before:absolute h-full before:h-4/5 before:mt-[1%] md:before:mt-[0.5%] before:w-0.5 before:rounded-full before:-left-3 before:top-0 before:bg-golden hover:after:absolute hover:after:-bottom-1 after:duration-300 after:bg-black after:left-0 after:-bottom-4 after:h-0.5 after:w-full"
-                >
-                  <a
-                    href="https://yanis-guest-house.hotelrunner.com/bv3"
-                    target="_blank"
+            <div className="grid grid-rows-[1fr,auto] min-h-full">
+              <div className="px-4 pt-14 md:pt-32">
+                <p className="!font-Italiana uppercase font-bold text-xl lg:text-2xl">
+                  {t("your")} :
+                </p>
+                <ul className="ml-10 mt-4">
+                  <li
+                    // onClick={() => setSelected(!selected)}
+                    className="relative w-fit my-3 lg:my-5 first:mt-0 last:mb-0 capitalize !font-PoiretOne font-bold text-lg lg:text-xl text-black/70 hover:text-black transition-colors duration-500 before:absolute h-full before:h-4/5 before:mt-[1%] md:before:mt-[0.5%] before:w-0.5 before:rounded-full before:-left-3 before:top-0 before:bg-golden hover:after:absolute hover:after:-bottom-1 after:duration-300 after:bg-black after:left-0 after:-bottom-4 after:h-0.5 after:w-full"
                   >
-                    {t("stay")}
-                  </a>
-                </li>
-                {/* <li
+                    <a
+                      href="https://yanis-guest-house.hotelrunner.com/bv3"
+                      target="_blank"
+                    >
+                      {t("stay")}
+                    </a>
+                  </li>
+                  {/* <li
                   onClick={() => setSelected(!selected)}
                   className="relative w-fit my-3 lg:my-5 first:mt-0 last:mb-0 capitalize !font-PoiretOne font-bold text-lg lg:text-xl text-black/70 hover:text-black transition-colors duration-500 before:absolute h-full before:h-4/5 before:mt-[1%] md:before:mt-[0.5%] before:w-0.5 before:rounded-full before:-left-3 before:top-0 before:bg-golden hover:after:absolute hover:after:-bottom-1 after:duration-300 after:bg-black after:left-0 after:-bottom-4 after:h-0.5 after:w-full"
                 >
                   <Link to="/book">{t("stay")}</Link>
                 </li> */}
-                <li
-                  onClick={() => setSelected(!selected)}
-                  className="relative w-fit my-3 lg:my-5 first:mt-0 last:mb-0 capitalize !font-PoiretOne font-bold text-lg lg:text-xl text-black/70 hover:text-black transition-colors duration-500 before:absolute h-full before:h-4/5 before:mt-[1%] md:before:mt-[0.5%] before:w-0.5 before:rounded-full before:-left-3 before:top-0 before:bg-golden hover:after:absolute hover:after:-bottom-1 after:duration-300 after:bg-black after:left-0 after:-bottom-4 after:h-0.5 after:w-full"
-                >
-                  <Link to="/selfCareForm">{t("massage")}</Link>
-                </li>
-              </ul>
-            </div>
+                  <li
+                    onClick={() => setSelected(!selected)}
+                    className="relative w-fit my-3 lg:my-5 first:mt-0 last:mb-0 capitalize !font-PoiretOne font-bold text-lg lg:text-xl text-black/70 hover:text-black transition-colors duration-500 before:absolute h-full before:h-4/5 before:mt-[1%] md:before:mt-[0.5%] before:w-0.5 before:rounded-full before:-left-3 before:top-0 before:bg-golden hover:after:absolute hover:after:-bottom-1 after:duration-300 after:bg-black after:left-0 after:-bottom-4 after:h-0.5 after:w-full"
+                  >
+                    <Link to="/selfCareForm">{t("massage")}</Link>
+                  </li>
+                </ul>
+              </div>
 
-            <div className="flex justify-center md:self-end mt-20 md:mt-0">
-              <img
-                src="/images/logo.png"
-                alt="logo"
-                className="w-28 h-14 md:w-32 md:h-16 lg:w-36 lg:h-20"
-              />
+              <div className="flex justify-center md:justify-self-end my-16 md:mx-6">
+                <img
+                  src="/images/logo.png"
+                  alt="logo"
+                  className="w-28 h-14 md:w-32 md:h-16 lg:w-36 lg:h-20"
+                />
+              </div>
             </div>
           </div>
         </div>

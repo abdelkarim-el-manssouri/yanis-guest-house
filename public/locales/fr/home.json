@@ -1,41 +1,49 @@
 {
-  "textContent": "Yanis Guest House, votre meilleur spot à Marrakech",
-  "text1": "Évadez-vous pour des vacances de rêve et plongez-vous dans l'oasis de luxe tranquille nichée dans l'un des plus beaux endroits de Marrakech.",
-  "revealText": "Offrez-vous le luxe simple de la vie à Yanis Guest House, où nous nous engageons à vous chouchouter.",
+  "textContent": "Yanis Guest House, votre ticket pour une aventure épique à Marrakech.",
+  "text1": "Oubliez les pièges à touristes ! Ici, tout tourne autour de la bonne vie ,Pensez aux matins paresseux, aux délicieux petits déjeuners, peut-être à un plongeon dans la piscine chauffée, et à l'ambiance « je suis à la maison ». Nous avons tout ce qu'il vous faut.",
+  "revealText": "À la maison d'hôtes Yanis, Vos souhaits guident nos pas.",
 
   "heroImageTiltle1": "À la maison d'hôtes Yanis, vos souhaits sont nos exigences.",
   "heroImageTiltle2": "Un plongé hivernal sans frissons : La perfection d'une piscine chauffée à 31°C",
   "heroImageTiltle3": "Installez-vous et profitez d'un confort sans effort.",
   "heroImageTiltle4": "Laissez-vous porter par la culture, à la manière marocaine.",
+  "horiScrollButton1": "hébergements",
+  "horiScrollButton2": "restaurant",
+  "horiScrollButton3": "activités et bien-être",
 
-  "horiScrollTitle1": "Embarquez pour un voyage sensoriel à la Maison d'hôtes Yanis",
-  "horiScrollContent1": "À votre arrivée à Yanis Guest House, préparez-vous à être enchanté par le mélange homogène d'environnements, de matériaux luxueux et d'un savoir-faire impeccable.",
-  "horiScrollContent1_1": "Partout où vous regardez, vous rencontrerez une grandeur qui vous invite à tendre la main et à en faire l'expérience: la douceur veloutée des tissus, les détails complexes du plâtre sculpté et des carreaux de zellige, et la fraîcheur rafraîchissante du marbre.",
+  "horiScrollTitle1": "Ressentez l'essence de l'hospitalité marocaine",
+  "horiScrollContent1": "Si vous êtes un passionné de culture. à la recherche d'une expérience marocaine authentique, ne cherchez pas plus loin, vous venez de trouver votre refuge.",
+  "horiScrollContent1_1": "Chaque détail raconte une histoire : la fraîcheur du marbre sous vos doigts, la douceur veloutée des coussins, l’élégance des motifs complexes du zellige sculptés avec soin.",
 
-  "horiScrollTitle2": "Découvrez le restaurant Yanis Guest House, où un parfum délicat et exclusif crée une ambiance irrésistiblement savoureuse.",
-  "horiScrollContent2": "Notre menu simple mais élégant de cuisine marocaine classique, avec une touche distincte de Marrakech, ajoute une autre dimension à votre expérience culinaire.",
-  "horiScrollContent2_1": "Savourez des spécialités locales, familiarisez-vous avec une liste différente de plats marocains célèbres et terminez votre dîner sur une note sucrée avec un somptueux choix de desserts.",
+  "horiScrollTitle2": "Que diriez-vous d'un endroit confortable où l'air sent si bon que vous avez l'impression d'entrer dans la cuisine de votre grand-mère ? Bienvenue au restaurant de la maison d'hôtes Yanis.",
+  "horiScrollContent2": "Le menu ? Tous vos classiques marocains préférés revisités avec toute la magie de Marrakech.",
+  "horiScrollContent2_1": "Commencez par les pastillas (évidemment), peut-être un tajin ou un plat de couscous si exquis qu'il mérite son propre fan club, puis terminez par des desserts si bons qui remettront en question tout ce que vous pensiez savoir sur un bon repas.Croyez-nous, vous repartirez le ventre plein et le sourire aux lèvres… en pensant déjà à votre prochaine visite.",
 
-  "horiScrollTitle3": "Laissez-vous tenter par Yanis Guest House: Une Pléthore d'activités Vous attendent",
-  "horiScrollContent3": "Explorez la beauté captivante de Marrakech, une ville riche en histoire et en géologie, et découvrez-la sous un angle nouveau grâce à des visites enrichissantes mêlant anecdotes, aventures et plaisirs gourmands.",
+  "horiScrollTitle3": "Faites comme chez vous : à la maison d'hôtes Yanis où le plaisir ne s'arrête jamais.",
+  "horiScrollContent3": "Avez-vous eu la chance d'être enchanté par la beauté exotique de Marrakech ? Cette ville est à la fois historique, culturelle et chaotique (dans le bon sens du terme). Vous aurez l'occasion d'explorer tout cela et bien plus encore grâce à des visites pleines de rires, de moments inattendus et, bien sûr, de nourriture en abondance pour vous permettre de tenir le coup. Car soyons réalistes, aucune aventure n'est complète sans s’accorder une petite pause gourmande !",
 
-  "toReturnTitle": "POUR REVENIR À Yanis Guest House MAINTES ET MAINTES FOIS.",
-  "toReturnContent1": "Yanis Guest House se nourrit d'efforts inlassables, d'un dévouement indéfectible des employés, d'une réflexion continue sur soi et d'innovations audacieuses mais respectueuses. Cet établissement historique allie harmonieusement tradition et modernité, restant une destination légendaire qui évolue avec le présent.",
-  "toReturnContent2": "Notre récompense la plus chère réside dans la fidélité de nos clients, qui reviennent encore et encore parce qu'ils se sentent comme chez eux.",
+  "horiScrollTitle4": "Un plongeon hivernale sans frissons : La perfection d'une piscine chauffée à 31°C",
+  "horiScrollContent4": " Nager en plein hiver ? Qui n’a jamais eu cette idée  à un moment donné. Pas de panique, ici pas d'orteils gelés ! À la maison d'hôtes Yanis, notre piscine chauffée réglée à une température parfaite de 31°C vous invite à plonger, même lorsque l'air de Marrakech est glacial.",
+  "horiScrollContent4_1": "Qui a besoin d'un chocolat chaud quand on a une piscine chauffée,un véritable cocon aquatique pour se détendre ? Sérieusement, cette piscine est si chaude que vous vous demanderez pourquoi vous n'avez jamais envisagé de nager en hiver. Vous ne frissonnerez pas en flottant comme un pingouin désorienté. ",
+  "horiScrollContent4_2": "L'eau tempérée vous attend.",
 
-  "uniqueTitle": "Découvrez les Charmes Uniques de Yanis Guest House",
-  "uniqueContent1": "notre hospitalité est tissée dans chaque détail. Dès votre première visite, nous nous engageons à mémoriser vos préférences: la température ambiante parfaite, votre café préféré, les boissons et les plats qui ravissent vos sens.",
-  "uniqueContent2": "ainsi, notre souci du détail ne se limite pas à assurer votre confort pendant votre séjour. Nous nous réjouissons également de vous surprendre, en créant une expérience qui reste perpétuellement fraîche et invitante.",
+  "toReturnTitle": "Maison d'hôtes Yanis : L'endroit où vous reviendrez toujours",
+  "toReturnContent1": "Laissez-nous vous dévoiler un aperçu de notre recette secrète : un soupçon de tradition, une pincée de perspective moderne et beaucoup de cœur. Notre équipe travaille sans relâche (avec un peu de caféine) et consacre son énergie à la création d'un espace où le charme de l'old-school rencontre le luxe moderne. Il ne s'agit pas de suivre les tendances, mais de rester fidèle à ce qui rend cet endroit inoubliable.",
+  "toReturnContent2": "Mais franchement, ce ne sont pas les commentaires élogieux qui constituent le plus grand compliment, c'est plutôt le fait de voir des visages familiers franchir la porte encore et encore. Car une fois que vous êtes venu ici, ce n'est plus une simple maison d'hôtes, c'est votre maison loin de chez vous.",
+
+  "uniqueTitle": "Découvrez les merveilles cachées de la maison d'hôtes Yanis.",
+  "uniqueContent1": "Dès votre arrivée, nous prenons soin de vous. Nous prêtons attention aux moindres détails, que ce soit la température parfaite de la pièce, votre café favori ou les plats qui vous font sourire. Tout est pensé pour que vous vous sentiez chez vous.",
+  "uniqueContent2": "Mais ce n’est pas tout : nous adorons ajouter une touche de surprise. Nous veillons à ce que votre séjour soit frais, amusant et accueillant, pour que chaque moment soit spécial.",
 
   "start": "à partir de",
 
   "title": "les hébergements",
 
-  "revealTextRoom": "Yanis Guest House, nichée dans la ville animée de Marrakech, offre un délicieux mélange de luxe et de confort. Nos chambres et suites élégantes allient un design intemporel à une beauté simple, vous assurant un séjour mémorable. En entrant dans notre oasis, vous découvrirez une piscine extérieure et un jardin luxuriant. Que ce soit pour les affaires ou les loisirs, Yanis Guest House promet un séjour inoubliable.",
-  "description1": "Plongez dans une ambiance chaleureuse et élégante, où le raffinement des moulures traditionnelles s’harmonise avec un design moderne. Cette chambre offre un lit confortable pour des nuits reposantes, dans un cadre soigneusement décoré. Chaque détail a été pensé pour créer une atmosphère apaisante, idéale pour un séjour d’exception. Profitez d’un lit confortable et d’un thé d’accueil pour un séjour tout en sérénité.",
-  "description2": "Un parfait équilibre entre modernité et tradition, notre chambre double vous accueille dans un cadre chaleureux et raffiné. Équipée d’une salle de bain privative avec douche à l’italienne, elle est idéale pour un moment de détente. Vous avez la possibilité d’opter pour un lit double ou deux lits simples séparés, selon vos préférences.",
+  "revealTextRoom": "Yanis Guest House, une retraite charmante qui vous attend au cœur de Marrakech Pensez-y comme votre chez-vous, loin de chez vous. Nos chambres et suites ? Un mélange de charme traditionnel et de beauté simple, bien aménagé pour un séjour mémorable. Et puis, nous avons aussi une piscine et un jardin, car pourquoi ne pas ajouter un peu de zen à votre voyage ?",
+  "description1": "Entrez dans votre chambre, détendez-vous et respirez profondément. Dès votre arrivée,un thé de bienvenue vous attend, fidèle à la tradition des foyers marocains.Puis vous vous installerez dans votre lit, prêt pour une nuit de sommeil bien méritée, après la fatigue d'avoir erré toute la journée dans la ville, un éclairage doux et tous les bons détails pour que votre séjour ressemble à une mini-vacance pendant vos vacances. Nous avons pensé à tout.",
+  "description2": "Vous cherchez quelque chose de moderne avec un peu de tradition ? Nos chambres doubles sont faites pour ça. Elles sont chaleureuses et accueillantes, avec une salle de bain privée et une douche à l'italienne qui vous fera vous demander pourquoi un tel endroit ne fait pas déjà partie de vos découvertes . De plus, que vous souhaitiez un lit double ou deux lits simples, nous avons ce qu'il vous faut.",
   "description3": "Avec son style raffiné et son atmosphère intime, cette suite junior est conçue pour un séjour empreint de sérénité. Dotée d’un lit king size et d’un salon élégant, elle offre un espace confortable et chaleureux. Dégustez un thé d’accueil dès votre arrivée et savourez un petit-déjeuner inclus pour bien commencer la journée.",
-  "description4": "Somptueuse et spacieuse, la suite présidentielle allie luxe et authenticité dans un cadre d’exception. Elle dispose de deux chambres, chacune avec sa propre salle de bain, et d’un salon marocain magnifiquement aménagé, idéal pour partager des moments uniques. Conçue pour offrir confort et raffinement, elle promet un séjour inoubliable, accompagné d’un thé d’accueil et d’un petit-déjeuner inclus.",
+  "description4": "Somptueuse et spacieuse, la suite présidentielle allie luxe et authenticité dans un cadre d’exception. Elle dispose de deux chambres, chacune avec sa propre salle de bain, et d’un salon marocain magnifiquement aménagé, idéal pour partager des moments uniques. Conçue pour offrir confort et raffinement, elle promet un séjour inoubliable, accompagné d’un thé d’accueil et d’un petit-déjeuner inclus.",
   "description5": "Idéale pour les séjours en famille ou entre amis, cette suite spacieuse peut accueillir jusqu’à 6 personnes. Elle est dotée d’un salon privé et de deux chambres, chacune disposant de sa propre salle de bain pour un confort absolu. Élégance, intimité et convivialité s’unissent pour créer une expérience inoubliable, sublimée par un thé d’accueil et un petit-déjeuner inclus.",
   "description6": "Offrant une vue apaisante sur la piscine, cette suite junior combine élégance et confort. Elle dispose d’un lit king size, d’un espace salon accueillant et d’une atmosphère lumineuse et chaleureuse. Un thé d’accueil et un petit-déjeuner inclus viennent parfaire votre séjour.",
 
@@ -60,7 +68,7 @@
   "bathroom4": "1 salle de bain",
   "bathroom5": "1 salle de bain",
 
-  "view": "vue",
+  "view": "découvrez",
   "view1": "vue sur le jardin",
   "view2": "-",
   "view3": "Vue sur la piscine",
@@ -90,7 +98,7 @@
   "night": "par nuit",
 
   "outroTitle": "profitez de nos différentes listes de chambres et suites",
-  "outroParag": "Réparties sur différents étages de la villa, chacune de nos chambres de Yanis Guest House offre une expérience unique conçue pour rehausser votre séjour. Que vous regardiez les jardins luxuriants ou la piscine étincelante, ou que vous profitiez d'un moment de tranquillité sur votre balcon privé, nos chambres allient confort et charme. Ils vous invitent à savourer le temps de la manière la plus délicieuse possible.",
+  "outroParag": "Les chambres sont parfaitement réparties sur les différents étages de la villa et ont chacune leur propre caractère, Chaque pièce a son propre caractère et promet une expérience qui vous attire, chaque détail étant conçu pour laisser une impression durable. Laissez vos pensées se perdre au bord de la piscine ou sentez la tranquillité de votre balcon privé, C'est douillet, c'est charmant et, honnêtement, c'est le genre d'endroit qui vous donne envie de rester en pantoufles toute la journée. Le temps semble plus léger ici, ce qui vous encourage à vous détendre et à vous amuser.",
 
   "enjoy": "explorez un séjour inoubliable",
   "book": "voir les disponibilité"

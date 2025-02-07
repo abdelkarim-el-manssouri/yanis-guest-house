@@ -87,8 +87,10 @@ const Images = ({ t }) => {
             className="h-dvh w-full shrink-0 object-cover relative"
           >
             <div className="absolute inset-0 bg-black/50 pointer-events-none" />
-            <div className="absolute inset-0 text-center text-2xl lg:text-4xl 2xl:text-6xl grid place-self-center text-background !font-Italiana  font-bold tracking-wide z-50 w-3/4 md:w-1/2 [text-shadow:_1px_2px_0_rgb(0_0_0_/_40%)]">
-              {t(`${imgSrc.title}`)}
+            <div className="grid place-content-center h-full">
+              <p className="h-full mx-auto z-50 text-background !font-Italiana font-bold tracking-wide w-3/4 lg:w-5/6 [text-shadow:_1px_2px_0_rgb(0_0_0_/_40%)] text-center text-2xl lg:text-4xl 2xl:text-6xl">
+                {t(`${imgSrc.title}`)}
+              </p>
             </div>
           </motion.div>
         );
