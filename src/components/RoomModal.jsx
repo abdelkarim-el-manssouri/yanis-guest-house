@@ -17,11 +17,10 @@ import { HiOutlineUsers } from "react-icons/hi2";
 import { RiSafe2Fill } from "react-icons/ri";
 import { FaWifi } from "react-icons/fa";
 import { PiTelevisionSimple } from "react-icons/pi";
-import { LiaDumbbellSolid, LiaSwimmingPoolSolid } from "react-icons/lia";
+import { LiaSwimmingPoolSolid } from "react-icons/lia";
 import { MdOutlineRoomService } from "react-icons/md";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Button from "../UI/Button";
-import { Link } from "react-router-dom";
 import RoomsImagesCarouselModal from "./RoomsImagesCarouselModal";
 
 const hairDryerSvg = (

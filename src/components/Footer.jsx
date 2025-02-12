@@ -44,7 +44,6 @@ const Footer = () => {
             src="/images/yanisGeustHouseLogo.svg"
             alt="yanis guest house logo"
             className="h-44 w-72 lg:h-60 lg:w-96"
-            loading="lazy"
           />
         </section>
         <section className="flex justify-center flex-wrap h-fit">

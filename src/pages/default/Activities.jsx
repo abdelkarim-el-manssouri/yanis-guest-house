@@ -152,6 +152,7 @@ const WellBeing = ({ t }) => {
                 src={image.imageUrl}
                 alt="massage image"
                 className="absolute w-full h-full object-cover object-center max-w-none rounded-lg"
+                loading="lazy"
               />
 
               <div className="opacity-0 translate-x-10 hover:translate-x-0 hover:opacity-100 absolute left-0 bottom-0 p-5 text-white w-full h-full flex items-end">
@@ -240,6 +241,7 @@ const SelfCare = ({ t }) => {
                 src={care.imageUrl}
                 alt="selfcare image"
                 className="absolute w-full h-full object-cover object-center max-w-none rounded-lg"
+                loading="lazy"
               />
             </div>
           </motion.li>
@@ -388,6 +390,7 @@ const ExternalActivities = ({ t }) => {
                 src={agafay.imageUrl}
                 alt="agafay image"
                 className="absolute w-full h-full object-cover object-center max-w-none rounded-lg"
+                loading="lazy"
               />
             </div>
           </motion.li>
@@ -619,6 +622,7 @@ const MoreOfMarrakesh = ({ t }) => {
                 src={agafay.imageUrl}
                 alt="countryside image"
                 className="absolute w-full h-full object-cover object-center max-w-none rounded-lg"
+                loading="lazy"
               />
 
               <div className="opacity-0 translate-x-10 hover:translate-x-0 hover:opacity-100 absolute left-0 bottom-0 p-5 text-white w-full h-full flex items-end">
