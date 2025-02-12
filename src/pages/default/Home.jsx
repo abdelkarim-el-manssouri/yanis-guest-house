@@ -149,14 +149,15 @@ const Home = () => {
             </motion.div>
           </div>
         </div>
-        <div className="md:col-span-2 md:shadow-2xl relative">
+        <div
+          style={{
+            backgroundImage: "url('/images/homePage/homeToReturn.webp')",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+          className="md:col-span-2 md:shadow-2xl relative lg:h-[26rem] rounded-sm h-72 w-full"
+        >
           <div className="absolute inset-0 bg-black/20" />
-          <img
-            src="/images/homePage/homeToReturn.webp"
-            alt="image"
-            className="lg:h-[26rem] object-cover object-center rounded-sm w-full h-full"
-            loading="lazy"
-          />
         </div>
       </motion.section>
       <motion.section
@@ -166,14 +167,15 @@ const Home = () => {
         transition={{ type: "spring", stiffness: 100 }}
         className="h-3/4 grid gap-y-4 md:gap-y-0 md:grid-cols-3 mt-4 mb-8 md:my-16 md:w-11/12 mx-auto overflow-hidden"
       >
-        <div className="md:col-span-2 mt-4 md:mt-0 md:shadow-xl relative">
+        <div
+          style={{
+            backgroundImage: "url('/images/homePage/homeDiscover.webp')",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+          className="md:col-span-2 md:shadow-2xl relative lg:h-[26rem] rounded-sm h-72 w-full mt-4 md:mt-0"
+        >
           <div className="absolute inset-0 bg-black/20" />
-          <img
-            src="/images/homePage/homeDiscover.webp"
-            alt="image"
-            className="lg:h-96 w-full object-cover object-center rounded-sm h-full"
-            loading="lazy"
-          />
         </div>
         <div className="h-full w-full md:flex md:justify-center md:items-end md:relative">
           <div className="md:z-10 md:absolute md:top-1/2 md:right-3/4 md:-translate-x-60 md:-translate-y-1/2 w-[90%] md:p-5 mx-auto">

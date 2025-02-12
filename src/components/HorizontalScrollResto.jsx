@@ -36,15 +36,17 @@ const Card = ({ card, t }) => {
   return (
     <div
       key={card.id}
-      className="group grid grid-flow-dense md:grid-rows-none md:grid-cols-2 h-[720px] md:h-[650px] w-[350px] md:w-[700px] lg:w-[1000px] overflow-hidden bg-gradient-to-tl from-golden to-lightGreen"
+      className="group grid grid-rows-4 grid-flow-dense md:grid-rows-none md:grid-cols-2 h-[720px] md:h-[650px] w-[350px] md:w-[700px] lg:w-[1000px] overflow-hidden bg-gradient-to-tl from-golden to-lightGreen"
     >
-      <img
-        src={card.url}
-        alt="image"
-        className="object-cover object-center inset-0 transition-transform duration-1000 group-hover:scale-105 w-full h-full bg-transparent"
-        loading="lazy"
+      <div
+        style={{
+          backgroundImage: `url(${card.url})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
+        className="transition-transform duration-1000 group-hover:scale-105 w-full h-full row-span-1 md:row-span-4"
       />
-      <div className="h-full grid place-content-center gap-3 m-2 -mt-4 md:-mt-0 p-3 md:m-6 lg:m-0 lg:gap-6 lg:mx-6 overflow-y-scroll lg:overflow-y-hidden">
+      <div className="h-full row-span-3 grid place-content-center gap-3 m-2 -mt-4 md:-mt-0 p-3 md:m-6 lg:m-0 lg:gap-6 lg:mx-6 overflow-y-scroll lg:overflow-y-hidden">
         <motion.h3
           variants={titleReveal}
           initial="initial"
