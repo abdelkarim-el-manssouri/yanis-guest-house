@@ -29,11 +29,13 @@
     font-family: "Italiana";
     src: url("/fonts/italiana-regular-webfont.woff2") format("woff2"),
       url("/fonts/italiana-regular-webfont.woff") format("woff");
+    font-display: swap;
   }
   @font-face {
     font-family: "PoiretOne";
     src: url("/fonts/poiretone-regular-webfont.woff2") format("woff2"),
       url("/fonts/poiretone-regular-webfont.woff") format("woff");
+    font-display: swap;
   }
 }
 @layer utilities {

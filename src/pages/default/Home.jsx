@@ -247,6 +247,7 @@ const OurLocation = () => {
         height={1}
         width={1}
         loading="lazy"
+        title="yanis guest house location"
         className="mx-auto w-[97%] h-80 md:h-[28rem] mb-32 shadow-xl rounded-2xl mt-20 md:mt-28"
       ></iframe>
     </>
