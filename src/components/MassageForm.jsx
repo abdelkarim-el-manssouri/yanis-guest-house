@@ -334,8 +334,8 @@ const MassageForm = () => {
             </div>
           </div>
 
-          <div className="text-center font-black text-xl md:text-2xl uppercase my-20">
-            <span className="px-10 py-4 border-lightGreen border rounded-md shadow-md">
+          <div className="text-center font-black text-lg md:text-2xl uppercase my-20">
+            <span className="px-6 md:px-10 py-4 border-lightGreen border rounded-md shadow-md">
               {" "}
               {t("discover")}
             </span>

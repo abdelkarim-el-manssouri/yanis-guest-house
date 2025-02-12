@@ -91,10 +91,9 @@ const Home = () => {
           name="description"
           content="​piscine chauffée marrakech hotel piscine chauffée marrakech hotel marrakech piscine interieure chauffée​ riad avec piscine chauffée marrakech​"
         />
-        <link rel="canonical" href="/home" />
+        <link rel="canonical" href="https://yanisguesthouse.com/home" />
       </Helmet>
       <div className="w-full h-dvh overflow-hidden bg-black z-20 backdrop-blur-md -mt-20">
-        {/* <Header2 t={t} /> */}
         <Header t={t} />
       </div>
       <motion.section
@@ -110,9 +109,7 @@ const Home = () => {
           <AnimatedText text={t("textContent")} />
         </div>
       </motion.section>
-      {/* <div className="bg-[url('/images/homePage/homeDiscover.webp')] bg-center bg-cover"> */}
       <SmallParagraph text={t("text1")} />
-      {/* </div> */}
       <section className="z-20">
         <HorizontalScroll t={t} />
       </section>
@@ -157,7 +154,7 @@ const Home = () => {
           <img
             src="/images/homePage/homeToReturn.webp"
             alt="image"
-            className="lg:h-[26rem] object-cover object-center rounded-sm w-full"
+            className="lg:h-[26rem] object-cover object-center rounded-sm w-full h-full"
             loading="lazy"
           />
         </div>
@@ -174,7 +171,7 @@ const Home = () => {
           <img
             src="/images/homePage/homeDiscover.webp"
             alt="image"
-            className="lg:h-96 w-full object-cover object-center rounded-sm"
+            className="lg:h-96 w-full object-cover object-center rounded-sm h-full"
             loading="lazy"
           />
         </div>

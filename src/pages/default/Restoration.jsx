@@ -21,7 +21,7 @@ const Restoration = () => {
       <Helmet>
         <title>Yanis Guest House restoration page</title>
         <meta name="description" content="restoration page" />
-        <link rel="canonical" href="/restoration" />
+        <link rel="canonical" href="https://yanisguesthouse.com/restoration" />
       </Helmet>
       <RestoHeader t={t} />
       <SmallParagraph text={t("parag1")} />

@@ -27,13 +27,14 @@ const Footer = () => {
           <ul className="flex flex-wrap gap-x-10 gap-y-2 justify-center mt-4 md:mt-0 md:justify-center md:gap-x-14">
             {footerLinks.map((link) => {
               return (
-                <Link
-                  key={link.code}
-                  to={link.link}
-                  className="relative after:block after:w-full after:h-0.5 after:bg-black after:scale-x-0 after:transition after:delay-75 after:ease-in after:rounded-full hover:after:scale-x-100 capitalize"
-                >
-                  {t(link.link)}
-                </Link>
+                <li key={link.code}>
+                  <Link
+                    to={link.link}
+                    className="relative after:block after:w-full after:h-0.5 after:bg-black after:scale-x-0 after:transition after:delay-75 after:ease-in after:rounded-full hover:after:scale-x-100 capitalize"
+                  >
+                    {t(link.link)}
+                  </Link>
+                </li>
               );
             })}
           </ul>
@@ -56,6 +57,7 @@ const Footer = () => {
                 target="_blank"
                 href="https://www.instagram.com/yanisguesthouse/?igshid=YmMyMTA2M2Y%3D"
               >
+                <span className="sr-only">yanis guest house instagram</span>
                 <FiInstagram className="w-4 h-4 md:w-6 md:h-6 group-active:scale-90" />
               </a>
             </span>
@@ -64,21 +66,25 @@ const Footer = () => {
                 target="_blank"
                 href="https://www.facebook.com/profile.php?id=61554812918518"
               >
+                <span className="sr-only">yanis guest house facebook</span>
                 <FiFacebook className="w-4 h-4 md:w-6 md:h-6 group-active:scale-90" />
               </a>
             </span>
             <span className="size-7 md:size-9 group rounded-xl shadow-xl p-2 md:p-4 grid place-content-center active:shadow-none hover:scale-110 transition-all">
               <a target="_blank" href="tel:0808651872">
+                <span className="sr-only">yanis guest house phone</span>
                 <FiPhone className="w-4 h-4 md:w-6 md:h-6 group-active:scale-90" />
               </a>
             </span>
             <span className="size-7 md:size-9 group rounded-xl shadow-xl p-2 md:p-4 grid place-content-center active:shadow-none hover:scale-110 transition-all">
               <a target="_blank" href="https://wa.me/+212632219063">
+                <span className="sr-only">yanis guest house whatsapp</span>
                 <FaWhatsapp className="w-4 h-4 md:w-6 md:h-6 group-active:scale-90" />
               </a>
             </span>
             <span className="size-7 md:size-9 group rounded-xl shadow-xl p-2 md:p-4 grid place-content-center active:shadow-none hover:scale-110 transition-all">
               <a target="_blank" href="mailto:contact@yanisguesthouse.com">
+                <span className="sr-only">yanis guest house email</span>
                 <FiMail className="w-4 h-4 md:w-6 md:h-6 group-active:scale-90" />
               </a>
             </span>
@@ -98,6 +104,7 @@ const Footer = () => {
             onClick={scrollToTop}
             className="absolute right-10 bottom-10 z-20 bg-gradient-to-b from-black to-cozyGreen p-3 rounded-full hover:scale-105 active:scale-95 transition duration-300 shadow-lg"
           >
+            <span className="sr-only">scroll to top</span>
             <FaArrowDownLong className="rotate-180 size-5 text-background" />
           </button>
         </motion.div>

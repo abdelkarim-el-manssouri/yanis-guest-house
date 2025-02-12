@@ -34,7 +34,10 @@ const Rooms = () => {
       <Helmet>
         <title>Yanis Guest House accommodations page</title>
         <meta name="description" content="accommodations page" />
-        <link rel="canonical" href="/accommodations" />
+        <link
+          rel="canonical"
+          href="https://yanisguesthouse.com/accommodations"
+        />
       </Helmet>
       <RoomsHeader t={t} />
       <RevealText scrollYProgress={scrollYProgress} t={t} />

@@ -5,7 +5,23 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   // plugins: [react(), vitePluginRequire.default()],
   plugins: [react()],
-  build: { outDir: "dist", dynamicImportVars: true },
+  build: {
+    outDir: "dist",
+    dynamicImportVars: true,
+    sourcemap: true,
+    minify: "terser",
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        pure_funcs: ["console.log"],
+      },
+    },
+    rollupOptions: {
+      output: {
+        sourcemapExcludeSources: true,
+      },
+    },
+  },
   server: {
     mimeTypes: {
       "image/jpeg": "image/jpeg",

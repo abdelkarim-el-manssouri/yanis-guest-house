@@ -43,10 +43,12 @@ const Card = ({ card, t }) => {
       <img
         src={card.url}
         alt="image"
-        className="object-cover inset-0 transition-transform duration-1000 group-hover:scale-105 w-full md:h-full bg-transparent"
+        className="object-cover inset-0 transition-transform duration-1000 group-hover:scale-105 md:h-full bg-transparent h-full w-full"
         loading="lazy"
+        width={1}
+        height={1}
       />
-      <div className="h-full grid place-content-center gap-3 m-2 -mt-5 md:-mt-0 p-3 md:m-6 lg:m-0 lg:gap-6 lg:mx-6 overflow-y-auto lg:overflow-y-hidden">
+      <div className="h-full grid place-content-center gap-3 m-2 -mt-5 md:-mt-0 p-3 md:m-6 lg:m-0 lg:gap-6 lg:mx-6 overflow-y-scroll lg:overflow-y-hidden">
         <motion.h2
           variants={titleReveal}
           initial="initial"

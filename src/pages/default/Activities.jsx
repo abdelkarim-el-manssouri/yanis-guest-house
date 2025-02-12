@@ -64,7 +64,10 @@ const Activities = () => {
           name="description"
           content="ourika valley ourika valley waterfalls​ ourika waterfalls vallée de l ourika​ ourika marrakech cascade ourika la muraille de l ourika ourika valley marrakech​ ourika"
         />
-        <link rel="canonical" href="/activities&wellbeing" />
+        <link
+          rel="canonical"
+          href="https://yanisguesthouse.com/activities&wellbeing"
+        />
       </Helmet>
       <ActivitiesHeader t={t} />
       <SmallParagraph text={t("parag1")} />

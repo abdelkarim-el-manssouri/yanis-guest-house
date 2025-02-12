@@ -36,7 +36,7 @@ const Photos = () => {
       <Helmet>
         <title>Yanis Guest House gallery page</title>
         <meta name="description" content="gallery page" />
-        <link rel="canonical" href="/gallery" />
+        <link rel="canonical" href="https://yanisguesthouse.com/gallery" />
       </Helmet>
       <GalleryHeader />
       <div className="w-[95%] mx-auto py-12">

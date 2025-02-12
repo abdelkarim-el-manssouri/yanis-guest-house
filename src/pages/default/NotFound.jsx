@@ -43,7 +43,7 @@ const AuroraHero = () => {
       <Helmet>
         <title>not found page</title>
         <meta name="description" content="not found page" />
-        <link rel="canonical" href="*" />
+        <link rel="canonical" href="https://yanisguesthouse.com/*" />
       </Helmet>
       <motion.section
         style={{

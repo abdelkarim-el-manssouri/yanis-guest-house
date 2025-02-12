@@ -48,7 +48,7 @@ import galleryLink from "/images/homePage/navbarLinks/galleryLinkBkg.webp";
 import homeAccommodationPic3 from "/images/gallery/gallery38.webp";
 import homeReastorationPic from "/images/homePage/terraceTable.webp";
 import homeActivitiesPic from "/images/homePage/picineByNight2.webp";
-import homeActivitiesPic2 from "/images/gallery/gallery26.webp";
+import homeActivitiesPic2 from "/images/homePage/womenToning.webp";
 
 import restorationSee from "/images/Restaurant/restorationSee.webp";
 import restorationTaste from "/images/Restaurant/restorationTaste.webp";

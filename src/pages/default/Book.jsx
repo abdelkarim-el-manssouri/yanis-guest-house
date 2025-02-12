@@ -12,7 +12,7 @@ const Book = () => {
       <Helmet>
         <title>Yanis Guest House book room page</title>
         <meta name="description" content="book room page" />
-        <link rel="canonical" href="/book" />
+        <link rel="canonical" href="https://yanisguesthouse.com/book" />
       </Helmet>
       <BookHeader t={t} />
       <SmallParagraph text={t("firstText")} />
