@@ -27,6 +27,7 @@ const NavBarLinks2 = ({ t }) => {
         onClick={toggleOpen}
         className="relative size-10 rounded-full bg-white/0 transition-colors hover:bg-white/20 p-6"
       >
+        <span className="sr-only">open menu</span>
         <span className="absolute h-0.5 w-5 bg-background left-1/4 top-[35%] " />
         <span className="absolute h-0.5 w-5 bg-background top-1/2 left-1/4" />
         <span className="absolute h-0.5 w-2.5 bg-background top-[65%] left-1/4" />
@@ -46,6 +47,7 @@ const NavBarLinks2 = ({ t }) => {
                 onClick={toggleOpen}
                 className="left-5 top-5 relative size-10 rounded-full bg-white/0 transition-colors hover:bg-white/20"
               >
+                <span className="sr-only">close menu</span>
                 <span className="absolute h-0.5 w-5 bg-white left-1/4 top-1/2 rotate-45" />
                 <span className="absolute h-0.5 w-5 bg-white top-1/2 left-1/4 -rotate-45" />
               </motion.button>

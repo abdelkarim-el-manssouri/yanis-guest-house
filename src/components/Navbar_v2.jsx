@@ -21,7 +21,7 @@ const Navbar_v2 = ({ t }) => {
           <span className="invisible md:visible">
             <button
               onClick={() => setSelected(true)}
-              className="grid place-content-center cursor-pointer !font-PoiretOne font-bold relative w-fit px-3 h-8 rounded-md overflow-hidden bg-gradient-to-b from-background/30 via-black/40 to-transparent text-background text-sm transition-all duration-300 hover:scale-105 active:scale-95 capitalize before:absolute before:-left-10 before:w-8 before:h-[120%] before:bg-white/35 before:-skew-x-12 before:blur-sm before:hover:translate-x-48 before:transition-all before:duration-700"
+              className="grid place-content-center cursor-pointer !font-PoiretOne font-bold relative w-fit p-2 px-3 h-8 rounded-md overflow-hidden bg-gradient-to-b from-background/30 via-black/40 to-transparent text-background text-sm transition-all duration-300 hover:scale-105 active:scale-95 capitalize before:absolute before:-left-10 before:w-8 before:h-[120%] before:bg-white/35 before:-skew-x-12 before:blur-sm before:hover:translate-x-48 before:transition-all before:duration-700"
             >
               {/* <a
                 href="https://yanis-guest-house.hotelrunner.com/bv3"
