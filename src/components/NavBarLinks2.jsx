@@ -25,7 +25,7 @@ const NavBarLinks2 = ({ t }) => {
     <>
       <button
         onClick={toggleOpen}
-        className="relative size-10 rounded-full bg-white/0 transition-colors hover:bg-white/20 p-6"
+        className="relative size-10 rounded-full bg-white/0 transition-colors hover:bg-white/20 p-6 md:p-0 mt-2"
       >
         <span className="sr-only">open menu</span>
         <span className="absolute h-0.5 w-5 bg-background left-1/4 top-[35%] " />

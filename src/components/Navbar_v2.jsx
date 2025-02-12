@@ -13,7 +13,11 @@ const Navbar_v2 = ({ t }) => {
 
         <div className="grid place-content-center hover:scale-105 active:scale-95 transition duration-500">
           <Link to="/home">
-            <img src="/images/logo.png" alt="logo" className="w-28 h-14" />
+            <img
+              src="/images/yanisGeustHouseLogo.svg"
+              alt="logo"
+              className="w-36 h-[4.5rem] md:w-48"
+            />
           </Link>
         </div>
 

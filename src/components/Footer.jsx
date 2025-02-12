@@ -41,9 +41,9 @@ const Footer = () => {
         </section>
         <section className="grid place-content-center h-full md:row-span-2">
           <img
-            src="/images/logo.png"
+            src="/images/yanisGeustHouseLogo.svg"
             alt="yanis guest house logo"
-            className="h-28 w-56 md:h-32 md:w-64 lg:h-40 lg:w-80"
+            className="h-44 w-72 lg:h-60 lg:w-96"
             loading="lazy"
           />
         </section>
