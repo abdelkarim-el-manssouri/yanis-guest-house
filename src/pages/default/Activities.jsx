@@ -117,7 +117,7 @@ const ActivitiesHeader = ({ t }) => {
 
 const Heading = ({ heading }) => {
   return (
-    <motion.h3
+    <motion.h2
       variants={headingVariants}
       initial="initial"
       whileInView="animate"
@@ -127,7 +127,7 @@ const Heading = ({ heading }) => {
       className="text-center md:w-[50ch] mx-auto text-xl md:text-3xl underline xl:text-4xl !font-Italiana font-bold capitalize text-transparent bg-clip-text bg-gradient-to-br from-golden to-black my-10"
     >
       {heading}
-    </motion.h3>
+    </motion.h2>
   );
 };
 
@@ -182,9 +182,9 @@ const WellBeing = ({ t }) => {
           >
             <div className="relative w-1/2 h-px rounded-xl bg-golden" />
             <div className="mx-2 md:mx-4 grid grid-rows-[auto_1fr_auto_auto] min-h-full">
-              <h4 className="mt-4 font-black capitalize text-xl !font-Italiana">
+              <h3 className="mt-4 font-black capitalize text-xl !font-Italiana">
                 {t(i.genre)}
-              </h4>
+              </h3>
               <p className="mt-2 text-pretty !font-PoiretOne font-bold">
                 {t(i.definition)}
               </p>
@@ -258,9 +258,9 @@ const SelfCare = ({ t }) => {
         >
           <div className="relative w-1/2 h-px rounded-xl bg-golden" />
           <div className="mx-2 md:mx-4 grid grid-rows-[auto_1fr_auto_auto] min-h-full">
-            <h4 className="mt-4 font-bold capitalize text-xl !font-Italiana">
+            <h3 className="mt-4 font-bold capitalize text-xl !font-Italiana">
               {t("manicure")}
-            </h4>
+            </h3>
             <p className="mt-2 !font-PoiretOne font-bold text-pretty first-letter:uppercase">
               {t("manDescription")}
             </p>
@@ -296,9 +296,9 @@ const SelfCare = ({ t }) => {
         >
           <div className="relative w-1/2 h-px rounded-xl bg-golden" />
           <div className="mx-2 md:mx-4 grid grid-rows-[auto_auto_1fr_auto] min-h-full">
-            <h4 className="mt-4 font-bold capitalize text-xl !font-Italiana">
+            <h3 className="mt-4 font-bold capitalize text-xl !font-Italiana">
               {t("facial")}
-            </h4>
+            </h3>
             <div className="mt-2 !font-PoiretOne font-bold text-pretty grid lg:grid-cols-card gap-x-12 gap-y-1 lg:gap-y-0">
               <div className="flex items-center gap-2">
                 <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
@@ -407,34 +407,34 @@ const ExternalActivities = ({ t }) => {
         >
           <div className="relative w-1/2 h-px rounded-xl bg-golden mb-3" />
           <div className="mx-2 md:mx-4 md:my-2">
-            <h4 className="my-4 font-bold capitalize text-xl !font-Italiana">
+            <h3 className="my-4 font-bold capitalize text-xl !font-Italiana">
               {t("pack1")}
-            </h4>
+            </h3>
             <ul className="flex flex-wrap gap-y-1 !font-PoiretOne font-bold">
-              <div className="flex items-center gap-1.5 basis-full lg:basis-1/2">
+              <li className="flex items-center gap-1.5 basis-full lg:basis-1/2">
                 <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-                <li className="first-letter:uppercase">{t("quad")}</li>
-              </div>
+                <p className="first-letter:uppercase">{t("quad")}</p>
+              </li>
 
-              <div className="flex items-center gap-1.5 basis-full lg:basis-1/2">
+              <li className="flex items-center gap-1.5 basis-full lg:basis-1/2">
                 <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-                <li className="first-letter:uppercase">{t("dromadaire")}</li>
-              </div>
+                <p className="first-letter:uppercase">{t("dromadaire")}</p>
+              </li>
 
-              <div className="flex items-center gap-1.5 basis-full lg:basis-1/2">
+              <li className="flex items-center gap-1.5 basis-full lg:basis-1/2">
                 <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-                <li className="first-letter:uppercase">{t("the")}</li>
-              </div>
+                <p className="first-letter:uppercase">{t("the")}</p>
+              </li>
 
-              <div className="flex items-center gap-1.5 basis-full lg:basis-1/2">
+              <li className="flex items-center gap-1.5 basis-full lg:basis-1/2">
                 <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-                <li className="first-letter:uppercase">{t("photo")}</li>
-              </div>
+                <p className="first-letter:uppercase">{t("photo")}</p>
+              </li>
 
-              <div className="flex items-center gap-1.5 basis-full">
+              <li className="flex items-center gap-1.5 basis-full">
                 <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-                <li className="first-letter:uppercase ">{t("transport")}</li>
-              </div>
+                <p className="first-letter:uppercase ">{t("transport")}</p>
+              </li>
             </ul>
           </div>
           <div className="flex justify-center my-8 mx-2 md:mx-4 !font-PoiretOne font-bold">
@@ -468,34 +468,34 @@ const ExternalActivities = ({ t }) => {
         >
           <div className="relative w-1/2 h-px rounded-xl bg-golden mb-3" />
           <div className="mx-2 md:mx-4 md:my-2">
-            <h4 className="my-4 font-black capitalize text-xl !font-Italiana">
+            <h3 className="my-4 font-black capitalize text-xl !font-Italiana">
               {t("pack2")}
-            </h4>
+            </h3>
             <ul className="flex flex-wrap gap-y-1">
-              <div className="flex items-center gap-1.5 basis-full lg:basis-1/2">
+              <li className="flex items-center gap-1.5 basis-full lg:basis-1/2">
                 <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-                <li className="first-letter:uppercase">{t("quad2")}</li>
-              </div>
+                <p className="first-letter:uppercase">{t("quad2")}</p>
+              </li>
 
-              <div className="flex items-center gap-1.5 basis-full lg:basis-1/2">
+              <li className="flex items-center gap-1.5 basis-full lg:basis-1/2">
                 <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-                <li className="first-letter:uppercase">{t("the")}</li>
-              </div>
+                <p className="first-letter:uppercase">{t("the")}</p>
+              </li>
 
-              <div className="flex items-center gap-1.5 basis-full lg:basis-1/2">
+              <li className="flex items-center gap-1.5 basis-full lg:basis-1/2">
                 <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-                <li className="first-letter:uppercase">{t("photo")}</li>
-              </div>
+                <p className="first-letter:uppercase">{t("photo")}</p>
+              </li>
 
-              <div className="flex items-center gap-1.5 basis-full lg:basis-1/2">
+              <li className="flex items-center gap-1.5 basis-full lg:basis-1/2">
                 <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-                <li className="first-letter:uppercase ">{t("transport")}</li>
-              </div>
+                <p className="first-letter:uppercase ">{t("transport")}</p>
+              </li>
 
-              <div className="invisible flex items-center gap-1.5 basis-full lg:basis-1/2">
+              <li className="invisible flex items-center gap-1.5 basis-full lg:basis-1/2">
                 <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-                <li className="first-letter:uppercase ">.</li>
-              </div>
+                <p className="first-letter:uppercase ">.</p>
+              </li>
             </ul>
           </div>
           <div className="flex justify-center my-8 mx-2 md:mx-4">
@@ -529,49 +529,49 @@ const ExternalActivities = ({ t }) => {
         >
           <div className="relative w-1/2 h-px rounded-xl bg-golden mb-3" />
           <div className="mx-2 md:mx-4 md:my-2">
-            <h4 className="my-4 font-black capitalize text-xl !font-Italiana">
+            <h3 className="my-4 font-black capitalize text-xl !font-Italiana">
               {t("pack3")}
-            </h4>
+            </h3>
             <ul className="flex flex-wrap gap-y-2">
-              <div className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
+              <li className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
                 <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-                <li className="first-letter:uppercase">{t("culinaire")}</li>
-              </div>
+                <p className="first-letter:uppercase">{t("culinaire")}</p>
+              </li>
 
-              <div className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
+              <li className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
                 <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-                <li className="first-letter:uppercase">{t("dinner")}</li>
-              </div>
+                <p className="first-letter:uppercase">{t("dinner")}</p>
+              </li>
 
-              <div className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
+              <li className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
                 <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-                <li className="first-letter:uppercase">{t("spectacle")}</li>
-              </div>
+                <p className="first-letter:uppercase">{t("spectacle")}</p>
+              </li>
 
-              <div className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
+              <li className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
                 <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-                <li className="first-letter:uppercase">{t("quad")}</li>
-              </div>
+                <p className="first-letter:uppercase">{t("quad")}</p>
+              </li>
 
-              <div className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
+              <li className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
                 <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-                <li className="first-letter:uppercase ">{t("dromadaire")}</li>
-              </div>
+                <p className="first-letter:uppercase ">{t("dromadaire")}</p>
+              </li>
 
-              <div className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
+              <li className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
                 <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-                <li className="first-letter:uppercase ">{t("the")}</li>
-              </div>
+                <p className="first-letter:uppercase ">{t("the")}</p>
+              </li>
 
-              <div className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
+              <li className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
                 <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-                <li className="first-letter:uppercase ">{t("photo")}</li>
-              </div>
+                <p className="first-letter:uppercase ">{t("photo")}</p>
+              </li>
 
-              <div className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
+              <li className="flex items-center gap-1.5 basis-full md:basis-1/2 lg:basis-1/4">
                 <div className="size-3 rounded-full bg-gradient-to-bl from-golden to-background" />
-                <li className="first-letter:uppercase ">{t("transport")}</li>
-              </div>
+                <p className="first-letter:uppercase ">{t("transport")}</p>
+              </li>
             </ul>
           </div>
           <div className="flex justify-center my-8 mx-2 md:mx-4">
@@ -647,9 +647,9 @@ const MoreOfMarrakesh = ({ t }) => {
         >
           <div className="relative w-1/2 h-px rounded-xl bg-golden" />
           <div className="mx-2 md:mx-4">
-            <h4 className="mt-4 font-black capitalize text-xl !font-Italiana">
+            <h3 className="mt-4 font-black capitalize text-xl !font-Italiana">
               {t("balloonTitle")}
-            </h4>
+            </h3>
             <p className="mt-2 text-pretty first-letter:uppercase">
               {t("balloonDiscrip")}
             </p>
@@ -685,9 +685,9 @@ const MoreOfMarrakesh = ({ t }) => {
         >
           <div className="relative w-1/2 h-px rounded-xl bg-golden" />
           <div className="mx-2 md:mx-4">
-            <h4 className="mt-4 font-black capitalize text-xl !font-Italiana">
+            <h3 className="mt-4 font-black capitalize text-xl !font-Italiana">
               {t("ourikaTitle")}
-            </h4>
+            </h3>
             <p className="mt-2 text-pretty first-letter:uppercase">
               {t("balloonDisc")}
             </p>
@@ -723,9 +723,9 @@ const MoreOfMarrakesh = ({ t }) => {
         >
           <div className="relative w-1/2 h-px rounded-xl bg-golden" />
           <div className="mx-2 md:mx-4 grid grid-rows-[auto_1fr_auto_auto] min-h-full">
-            <h4 className="mt-4 font-black capitalize text-xl !font-Italiana">
+            <h3 className="mt-4 font-black capitalize text-xl !font-Italiana">
               {t("HorsebackTitle")}
-            </h4>
+            </h3>
             <p className="mt-2 text-pretty first-letter:uppercase">
               {t("HorsebackDisc")}
             </p>
@@ -761,9 +761,9 @@ const MoreOfMarrakesh = ({ t }) => {
         >
           <div className="relative w-1/2 h-px rounded-xl bg-golden" />
           <div className="mx-2 md:mx-4">
-            <h4 className="mt-4 font-black capitalize text-xl !font-Italiana">
+            <h3 className="mt-4 font-black capitalize text-xl !font-Italiana">
               {t("AliTitle")}
-            </h4>
+            </h3>
             <p className="mt-2 text-pretty first-letter:uppercase">
               {t("aliDisc")}
             </p>
@@ -799,9 +799,9 @@ const MoreOfMarrakesh = ({ t }) => {
         >
           <div className="relative w-1/2 h-px rounded-xl bg-golden" />
           <div className="mx-2 md:mx-4">
-            <h4 className="mt-4 font-black capitalize text-xl !font-Italiana">
+            <h3 className="mt-4 font-black capitalize text-xl !font-Italiana">
               {t("CircuitTitle")}
-            </h4>
+            </h3>
             <p className="my-4 text-pretty first-letter:uppercase">
               {t("CircuitDisc")}
             </p>

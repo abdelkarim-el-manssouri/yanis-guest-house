@@ -99,9 +99,9 @@ const Sensation = ({ title, content, imageUrl, t }) => {
     >
       <section className="grid grid-rows-2 md:grid-rows-none bg-secondary/15 transition duration-500 hover:bg-secondary/25 w-[90%] shadow-2xl shadow-cozyGreen/30 md:w-[1000px] mx-auto border-black/5 overflow-hidden md:relative md:h-[26rem] pt-4 rounded-md">
         <div className="grid gap-y-4 md:grid-cols-layout lg:py-4 md:p-2 lg:px-5 sm:max-w-[50%] sm:mt-auto h-full md:group-even:ml-[19.3rem] lg:group-even:ml-[29.3rem]">
-          <h3 className="grid place-content-center -mb-10 md:mb-0 text-2xl font-bold capitalize !font-Italiana">
+          <h2 className="grid place-content-center -mb-10 md:mb-0 text-2xl font-bold capitalize !font-Italiana">
             {`${t(title)}`}
-          </h3>
+          </h2>
           <p className="grid place-content-center last:mt-6 md:last:mt-0 px-2 lg:px-4 py-4 md:py-0 text-center !font-PoiretOne font-semibold tracking-wide text-sm lg:text-base leading-relaxed">
             {`${t(content)}`}
           </p>
@@ -133,9 +133,9 @@ const SeeMenu = ({ t }) => {
     <>
       <div className="grid place-content-center text-center min-h-[150vh] mt-[-100vh]">
         <div className="sticky top-[50%] mb-[calc(50%-25%)] md:mb-[calc(50%-38%)]">
-          <h4 className="mb-5 text-lg uppercase font-Italiana font-semibold">
+          <h3 className="mb-5 text-lg uppercase font-Italiana font-semibold">
             {t("discover")}
-          </h4>
+          </h3>
           <button className="py-3 px-10 !font-PoiretOne font-bold bg-secondary/15 transition duration-300 hover:bg-secondary/25 text-mainText hover:text-background shadow-md hover:shadow-xl active:shadow-none hover:scale-105 active:scale-95 capitalize rounded-sm">
             <a href="/pdf/MenuRestaurant.pdf" target="_blank">
               {t("seeMenu")}
