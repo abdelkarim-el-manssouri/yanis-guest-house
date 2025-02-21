@@ -43,19 +43,19 @@ const fadeInRightXAxisAnimationVariants = {
   },
 };
 
-const welcomeVariants = {
-  initial: {
-    opacity: 0,
-    filter: "blur(20px)",
-  },
-  animate: {
-    opacity: 1,
-    filter: "blur(0px)",
-    transition: {
-      duration: 1,
-    },
-  },
-};
+// const welcomeVariants = {
+//   initial: {
+//     opacity: 0,
+//     filter: "blur(20px)",
+//   },
+//   animate: {
+//     opacity: 1,
+//     filter: "blur(0px)",
+//     transition: {
+//       duration: 1,
+//     },
+//   },
+// };
 
 const Home = () => {
   useEffect(() => {
@@ -76,7 +76,7 @@ const Home = () => {
 
   const { t } = useTranslation("home");
   return (
-    <motion.div variants={welcomeVariants} initial="initial" animate="animate">
+    <div>
       <Helmet>
         <title>Yanis Guest House home page</title>
         <meta
@@ -212,7 +212,7 @@ const Home = () => {
       </div>
       <OurLocation />
       <EnjoyStay t={t} />
-    </motion.div>
+    </div>
   );
 };
 
