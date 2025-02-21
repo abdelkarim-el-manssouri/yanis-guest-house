@@ -1,8 +1,7 @@
 import { Suspense } from "react";
-import Loading from "./Loading";
 
 const SuspenseWrapper = (Component) => (
-  <Suspense fallback={<Loading />}>
+  <Suspense>
     <Component />
   </Suspense>
 );

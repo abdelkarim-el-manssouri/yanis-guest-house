@@ -97,19 +97,9 @@ const ActivitiesHeader = ({ t }) => {
     >
       <div className="absolute inset-0 bg-black/30" />
       <div className="flex justify-center z-[60] items-center h-full gap-y-16">
-        <motion.h1
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            type: "tween",
-            stifness: 20,
-            duration: 1,
-            delay: 1.3,
-          }}
-          className="z-10 text-white font-bold !font-Italiana uppercase text-3xl md:text-4xl lg:text-5xl tracking-wide [text-shadow:_1px_1px_0_#00464326]"
-        >
+        <h1 className="z-10 text-white font-bold !font-Italiana uppercase text-3xl md:text-4xl lg:text-5xl tracking-wide [text-shadow:_1px_1px_0_#00464326]">
           {t("headerTitle")}
-        </motion.h1>
+        </h1>
       </div>
     </div>
   );
