@@ -18,7 +18,7 @@ const Footer = () => {
   };
   return (
     <footer>
-      <div className="relative bg-gradient-to-b from-secondary/40 via-beige to-golden !font-PoiretOne font-bold h-screen grid grid-rows-5 md:grid-rows-6 overflow-x-hidden">
+      <div className="relative bg-gradient-to-b from-secondary/40 via-beige to-golden !font-PoiretOne font-bold grid grid-rows-5 md:grid-rows-6 overflow-x-hidden">
         <section className="h-fit bg-gradient-to-b from-black to-cozyGreen text-white p-4 md:p-6 flex justify-center items-center flex-wrap tracking-wide">
           <p className="w-full text-center">{t("location")}</p>
           <p className="w-full text-center">{t("contact")}</p>

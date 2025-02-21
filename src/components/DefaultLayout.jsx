@@ -42,7 +42,7 @@ const DefaultLayout = () => {
           <Navbar_v2 t={t} />
         </motion.nav>
         <Outlet />
-        <div className="h-screen">
+        <div className="">
           <Footer />
         </div>
       </main>
