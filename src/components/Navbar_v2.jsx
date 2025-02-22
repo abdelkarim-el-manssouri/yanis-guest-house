@@ -16,7 +16,7 @@ const Navbar_v2 = ({ t }) => {
             <img
               src="/images/YanisGeustHouseLogo.webp"
               alt="logo"
-              className="md:w-32 aspect-video"
+              className="w-full h-full md:w-28 md:h-[70px]"
             />
           </Link>
         </div>

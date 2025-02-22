@@ -42,9 +42,7 @@ const DefaultLayout = () => {
           <Navbar_v2 t={t} />
         </motion.nav>
         <Outlet />
-        <div className="">
-          <Footer />
-        </div>
+        <Footer />
       </main>
     </>
   );
