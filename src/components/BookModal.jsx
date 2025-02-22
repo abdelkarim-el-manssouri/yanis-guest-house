@@ -69,7 +69,7 @@ const BookModal = ({ selected, setSelected, t }) => {
 
               <div className="flex justify-center md:justify-self-end my-16 md:mx-6">
                 <img
-                  src="/images/yanisGeustHouseLogo.svg"
+                  src="/images/YanisGeustHouseLogo.webp"
                   alt="logo"
                   className="w-44 h-28 lg:w-48 lg:h-32"
                 />

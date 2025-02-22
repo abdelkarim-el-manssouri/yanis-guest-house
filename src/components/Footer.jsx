@@ -18,13 +18,13 @@ const Footer = () => {
   };
   return (
     <footer>
-      <div className="relative bg-gradient-to-b from-secondary/40 via-beige to-golden !font-PoiretOne font-bold grid grid-rows-5 md:grid-rows-6 overflow-x-hidden">
+      <div className="relative bg-gradient-to-b from-secondary/40 via-beige to-golden !font-PoiretOne font-bold grid overflow-x-hidden">
         <section className="h-fit bg-gradient-to-b from-black to-cozyGreen text-white p-4 md:p-6 flex justify-center items-center flex-wrap tracking-wide">
           <p className="w-full text-center">{t("location")}</p>
           <p className="w-full text-center">{t("contact")}</p>
         </section>
-        <section className="grid h-full items-center">
-          <ul className="flex flex-wrap gap-x-10 gap-y-2 justify-center mt-4 md:mt-0 md:justify-center md:gap-x-14">
+        <section className="my-10">
+          <ul className="flex flex-wrap gap-x-10 gap-y-2 justify-center md:justify-center md:gap-x-14">
             {footerLinks.map((link) => {
               return (
                 <li key={link.code}>
@@ -39,9 +39,9 @@ const Footer = () => {
             })}
           </ul>
         </section>
-        <section className="grid place-content-center h-full md:row-span-2">
+        <section className="grid place-content-center h-full">
           <img
-            src="/images/yanisGeustHouseLogo.svg"
+            src="/images/YanisGeustHouseLogo.webp"
             alt="yanis guest house logo"
             className="h-44 w-72 lg:h-60 lg:w-96"
           />
@@ -90,7 +90,7 @@ const Footer = () => {
           </div>
         </section>
         <section className="h-full grid items-center">
-          <div className="flex justify-center mx-8 pt-4 text-center relative before:absolute before:top-0 before:h-[0.5px] before:w-full before:bg-primary before:rounded-full capitalize">
+          <div className="flex justify-center mx-8 py-4 text-center relative before:absolute before:top-0 before:h-[0.5px] before:w-full before:bg-primary before:rounded-full capitalize">
             &copy; {t("rights")} - {currentYear}
           </div>
         </section>
