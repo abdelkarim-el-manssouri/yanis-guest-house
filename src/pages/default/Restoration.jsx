@@ -20,7 +20,11 @@ const Restoration = () => {
     <>
       <Helmet>
         <title>Yanis Guest House restoration page</title>
-        <meta name="description" content="restoration page" />
+        <meta
+          name="description"
+          content="Restoration: Join us for a dining experience at the restaurant of yanis guest house Our menu features Moroccan classics with a modern twist."
+        />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://yanisguesthouse.com/restoration" />
       </Helmet>
       <RestoHeader t={t} />

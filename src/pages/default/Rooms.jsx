@@ -33,7 +33,11 @@ const Rooms = () => {
     <>
       <Helmet>
         <title>Yanis Guest House accommodations page</title>
-        <meta name="description" content="accommodations page" />
+        <meta
+          name="description"
+          content="Accommodations: Whether you want a single, a double room with a double bed or two singles,the junior suite or the presidential one we’ve got you sorted."
+        />
+        <meta name="robots" content="index, follow" />
         <link
           rel="canonical"
           href="https://yanisguesthouse.com/accommodations"

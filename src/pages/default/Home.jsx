@@ -81,6 +81,24 @@ const Home = () => {
         <title>Yanis Guest House home page</title>
         <meta
           name="description"
+          content="Welcome to Yanis Guest House. If you're a culture enthusiast seeking an authentic Moroccan experience, look no further, you just found your refuge."
+        />
+
+        <meta name="robots" content="index, follow" />
+
+        <meta property="og:title" content="" />
+        <meta
+          property="og:description"
+          content="Welcome to Yanis Guest House. If you're a culture enthusiast seeking an authentic Moroccan experience, look no further, you just found your refuge."
+        />
+        <meta
+          property="og:image"
+          content="https://www.yanisguesthouse.com/images/YanisGeustHouseLogo.webp"
+        />
+        <meta property="og:url" content="https://www.yanisguesthouse.com" />
+
+        <meta
+          name="description"
           content="guest house marrakech​ guest houses in marrakech morocco marrakech maison d hote maison d hote marrakech luxe​ maison d hote a marrakech"
         />
         <meta
@@ -92,6 +110,22 @@ const Home = () => {
           content="​piscine chauffée marrakech hotel piscine chauffée marrakech hotel marrakech piscine interieure chauffée​ riad avec piscine chauffée marrakech​"
         />
         <link rel="canonical" href="https://yanisguesthouse.com/home" />
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "Residence",
+            name: "Yanis guest house",
+            description: "Welcome to Yanis Guest House. If you're a culture enthusiast seeking an authentic Moroccan experience, look no further, you just found your refuge.",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress:
+                "DR SOUDANI 540 route de targa, marrakech, maroc. DR SOUDANI 540 targa road, marrakesh, morocco",
+              addressLocality: "Marrakech. Marrakesh",
+              addressCountry: "Maroc. Morocco",
+            },
+            url: "https://www.yanisguesthouse.com",
+          }`}
+        </script>
       </Helmet>
       <div className="w-full h-dvh overflow-hidden bg-black z-20 backdrop-blur-md -mt-20">
         <Header t={t} />

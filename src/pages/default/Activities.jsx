@@ -30,8 +30,9 @@ const Activities = () => {
         <title>Yanis Guest House activities & wellbeing page</title>
         <meta
           name="description"
-          content="massage relaxant​ massage marrakech​ massage thai marrakech​ massage marrakech pas cher​ massage pas cher marrakech marrakech massage massage in marrakech"
+          content="rediscover the small pleasures of life our massage collection,manicure & pedicure sessions or spice things up a bit with our unforgettable excursions from AGafay desert all the way to the 3 valleys."
         />
+        <meta name="robots" content="index, follow" />
         <meta
           name="description"
           content="best massage marrakech meilleur massage marrakech massage couple marrakech cheap massage marrakech massage duo marrakech massage tonifiant​ massage relaxant et tonifiant"
